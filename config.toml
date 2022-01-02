@@ -1,4 +1,13 @@
 baseURL = 'https://DilemmaRabbit.github.io/'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
+title = 'Dilemma Rabbit'
 theme = 'm10c'
+
+[[menu.main]]
+identifier = "tags"
+name = "Tags"
+url = "/tags/"
+
+[params.style]
+lightestColor = "#f7f7f7"
+primaryColor = "#7EE8FA"
