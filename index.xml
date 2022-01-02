@@ -6,7 +6,107 @@
     <description>Recent content on My New Hugo Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 02 Jan 2022 13:54:40 +0800</lastBuildDate><atom:link href="https://DilemmaRabbit.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 02 Jan 2022 16:13:28 +0800</lastBuildDate><atom:link href="https://DilemmaRabbit.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Test10</title>
+      <link>https://DilemmaRabbit.github.io/posts/test10/</link>
+      <pubDate>Sun, 02 Jan 2022 16:13:28 +0800</pubDate>
+      
+      <guid>https://DilemmaRabbit.github.io/posts/test10/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Test9</title>
+      <link>https://DilemmaRabbit.github.io/posts/test9/</link>
+      <pubDate>Sun, 02 Jan 2022 16:13:27 +0800</pubDate>
+      
+      <guid>https://DilemmaRabbit.github.io/posts/test9/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Test8</title>
+      <link>https://DilemmaRabbit.github.io/posts/test8/</link>
+      <pubDate>Sun, 02 Jan 2022 16:13:25 +0800</pubDate>
+      
+      <guid>https://DilemmaRabbit.github.io/posts/test8/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Test7</title>
+      <link>https://DilemmaRabbit.github.io/posts/test7/</link>
+      <pubDate>Sun, 02 Jan 2022 16:13:24 +0800</pubDate>
+      
+      <guid>https://DilemmaRabbit.github.io/posts/test7/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Test6</title>
+      <link>https://DilemmaRabbit.github.io/posts/test6/</link>
+      <pubDate>Sun, 02 Jan 2022 16:13:22 +0800</pubDate>
+      
+      <guid>https://DilemmaRabbit.github.io/posts/test6/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Test5</title>
+      <link>https://DilemmaRabbit.github.io/posts/test5/</link>
+      <pubDate>Sun, 02 Jan 2022 16:13:20 +0800</pubDate>
+      
+      <guid>https://DilemmaRabbit.github.io/posts/test5/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Test4</title>
+      <link>https://DilemmaRabbit.github.io/posts/test4/</link>
+      <pubDate>Sun, 02 Jan 2022 16:13:19 +0800</pubDate>
+      
+      <guid>https://DilemmaRabbit.github.io/posts/test4/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Test3</title>
+      <link>https://DilemmaRabbit.github.io/posts/test3/</link>
+      <pubDate>Sun, 02 Jan 2022 16:11:51 +0800</pubDate>
+      
+      <guid>https://DilemmaRabbit.github.io/posts/test3/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Test2</title>
+      <link>https://DilemmaRabbit.github.io/posts/test2/</link>
+      <pubDate>Sun, 02 Jan 2022 16:11:49 +0800</pubDate>
+      
+      <guid>https://DilemmaRabbit.github.io/posts/test2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Test1</title>
+      <link>https://DilemmaRabbit.github.io/posts/test1/</link>
+      <pubDate>Sun, 02 Jan 2022 16:11:47 +0800</pubDate>
+      
+      <guid>https://DilemmaRabbit.github.io/posts/test1/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Hugo x  Github Page 架設紀錄</title>
+      <link>https://DilemmaRabbit.github.io/posts/hugo-x-github-page-%E6%9E%B6%E8%A8%AD%E7%B4%80%E9%8C%84/</link>
+      <pubDate>Sun, 02 Jan 2022 15:31:23 +0800</pubDate>
+      
+      <guid>https://DilemmaRabbit.github.io/posts/hugo-x-github-page-%E6%9E%B6%E8%A8%AD%E7%B4%80%E9%8C%84/</guid>
+      <description>前言 Github Page 建立 brew install hugo
+Hugo 安裝 Hugo 主題安裝 文章建立 本機 Hugo Server 建立分支 建立 Github action 問題(採坑)集 延伸學習 </description>
+    </item>
+    
     <item>
       <title>Second</title>
       <link>https://DilemmaRabbit.github.io/posts/second/</link>
