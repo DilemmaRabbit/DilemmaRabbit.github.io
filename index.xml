@@ -2,26 +2,26 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>My New Hugo Site</title>
-    <link>https://example.org/</link>
+    <link>https://DilemmaRabbit.github.io/</link>
     <description>Recent content on My New Hugo Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 02 Jan 2022 13:54:40 +0800</lastBuildDate><atom:link href="https://example.org/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 02 Jan 2022 13:54:40 +0800</lastBuildDate><atom:link href="https://DilemmaRabbit.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Second</title>
-      <link>https://example.org/posts/second/</link>
+      <link>https://DilemmaRabbit.github.io/posts/second/</link>
       <pubDate>Sun, 02 Jan 2022 13:54:40 +0800</pubDate>
       
-      <guid>https://example.org/posts/second/</guid>
+      <guid>https://DilemmaRabbit.github.io/posts/second/</guid>
       <description>second test </description>
     </item>
     
     <item>
       <title>Initial Post</title>
-      <link>https://example.org/posts/initial-post/</link>
+      <link>https://DilemmaRabbit.github.io/posts/initial-post/</link>
       <pubDate>Sat, 01 Jan 2022 15:21:48 +0800</pubDate>
       
-      <guid>https://example.org/posts/initial-post/</guid>
+      <guid>https://DilemmaRabbit.github.io/posts/initial-post/</guid>
       <description>test </description>
     </item>
     
