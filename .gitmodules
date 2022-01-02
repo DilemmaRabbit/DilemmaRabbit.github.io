@@ -1,6 +1,3 @@
 [submodule "themes/anatole"]
 	path = themes/anatole
 	url = https://github.com/lxndrblz/anatole.git
-[submodule "hugo-theme-m10c"]
-	path = hugo-theme-m10c
-	url = git@github.com:vaga/hugo-theme-m10c.git
