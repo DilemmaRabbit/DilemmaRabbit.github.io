@@ -2,8 +2,18 @@
 title: "Hugo x GitHub Pages 架設紀錄"
 date: 2022-01-02T15:31:23+08:00
 draft: true
-Tags: ["Hugo","GitHub-Pages"]
+Tags: ["Hugo","GitHub-Pages","Tutorial"]
 ---
+
+# 目錄
+
+1. [前言](#前言)
+2. [先前準備](#i-先前準備)
+3. [本機建立](#ii-本機建立網站)
+4. [GitHub自動部署](#iii-丟到-github-做自動化部署)
+5. [問題集](#問題採坑集)
+6. [延伸學習](#延伸學習)
+
 
 # 前言
 
@@ -58,6 +68,16 @@ hugo new site <username.github.io> --force # 如果資料夾內有其他資料�
 
 此 blog 的主題為 [m10c](https://github.com/vaga/hugo-theme-m10c)
 
+優點
+1. 簡單明瞭，對寫技術文章來說很方便
+2. 配置簡單直觀，不用設定太多額外的東西就可以使用
+
+缺點
+1. 能客製化部份偏少
+2. 右邊有一大塊不明用途的區塊
+3. 許多 md 語法的背景沒有顏色，需要自己額外加 scss (有人有發 issue，可以參考去改)
+4. 不支援留言功能
+
 ### 2. 透過 **submodule** 的方式將主題加入 repo 中的 /themes
 
 ```
@@ -75,13 +95,13 @@ theme = "<theme name>"
 
 ### 1. 建立一篇新的文章
 
-hugo 預設的文章資料夾為 **/content/posts/**
+hugo 預設的文章資料夾為 **/content/posts/** ※你也可以把 post 改成任何想要的路徑或分類
 
 ```
 hugo new posts/<filename>.md
 ```
 
-打開剛剛建立的 md 可以發現以下資訊
+前往 /content/posts 打開剛剛建立的 md 可以發現以下資訊
 
 ```
 title: # 文章標題
@@ -205,31 +225,39 @@ commit 後便會自動 deploy 一次，如果正常的話會在你的 gh-pages �
 
 ## 將目前的預設 branch 改成新的 branch
 
-Settings -> Pages，將 source 改成新的分支，就大公告成了，可以嘗試 username.github.io 觀看網頁是否正常了
+Settings -> Pages，將 source 改成新的分支，就可以嘗試 username.github.io 觀看網頁是否正常了
 
 ![](https://i.imgur.com/K7MARDb.png)
 
+## 🎉最後從本機端產生一個 push，觀看是否會自動進行更新及部署🎉
+
 ---
 
-## 問題(~~採坑~~)集(待補)
+## 問題(~~採坑~~)集
 
 1. **server / GitHub Pages 開啟後白畫面**
    
-   * **問題**
-   * **原因**
-   * **解決方法**
+   * **問題**：一進入網頁看不到任何資料
+   * **原因**：主題設定錯誤或遺失
+   * **解決方法**：通常是 **config** 沒有按照指定格式或是 **typo**(透過使用 **hugo** 通常可以看到錯誤資訊(本機端))，也有可能是 **submodule** 造成的問題，請看下方問題3
 
 2. **GitHub Pages 開啟後無 css 渲染**
    
-   * **問題**
-   * **原因**
-   * **解決方法**
+   * **問題**：看得到內容，但是主題所提供的效果消失
+   * **原因**：透過開發人員工具可看見問題，css 只接受 https，但是預設的 ```http://example.com``` 使用的是 http
+   * **解決方法**：在 **config** 的 **baseurl** 改成目前所使用的 **Github Page url** (記得 **https**)
 
 3. **submodule 消失問題**
    
-   * **問題**
-   * **原因**
-   * **解決方法**
+   * **問題**：當進入另外一個分支後，假如把 submodule 直接刪除並提交的話，會發現主分支的 submodule 會一併消失
+   * **原因**：[stackoverflow](https://stackoverflow.com/questions/52345460/remove-git-submodule-from-a-specific-branch)
+   * **解決方法**：把 master 的 sunmodule index 重新洗掉後直接在加入一次 submodule（※暴力解注意，雖然有用但還是建議搞懂 submodule 的運作原理）
+        
+        ```
+        git rm -r --cached themes/<theme directory>
+        git submodule add <theme repo> <theme directory>
+        ```
+
 
 4. **文章無法顯示問題**
 
@@ -243,10 +271,10 @@ Settings -> Pages，將 source 改成新的分支，就大公告成了，可以�
    * **原因**：tag 中間不能有空白，會導致無法正常顯示(雖然分類會正常顯示)
    * **解決方法**：用 - 代替空白 (GitHub Pages -> GitHub-Pages) 即可正常顯示空白
 
-## 延伸學習(待補)
+## 延伸學習
 
-1. 這個紀錄所用到的 git
+1. 紀錄所用到的 git 技巧
 
 2. git submodule
    
-3. github ssh key(待補)
+3. github ssh key

@@ -3,10 +3,21 @@ languageCode = 'en-us'
 title = 'Dilemma Rabbit'
 theme = 'm10c'
 
+
+[menu]
 [[menu.main]]
 identifier = "tags"
 name = "Tags"
 url = "/tags/"
+[[menu.main]]
+identifier = "home"
+name = "Home"
+url = "/"
+
+[params]
+author = "DilemmaRabbit"
+description = "Programer"
+menu_item_separator = " | "
 
 [params.style]
 lightestColor = "#f7f7f7"
