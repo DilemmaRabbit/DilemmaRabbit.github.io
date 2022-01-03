@@ -233,7 +233,7 @@ Settings -> Pages，將 source 改成新的分支，就可以嘗試 username.git
 
 ---
 
-## 問題(~~採坑~~)集
+## 問題(~~踩坑~~)集
 
 1. **server / GitHub Pages 開啟後白畫面**
    
