@@ -106,7 +106,8 @@ If the town judge exists, then:
 You are given an array trust where trust[i] = [ai, bi] representing that the person labeled ai trusts the person labeled bi.
 
 Return the label of the town judge if the town judge exists and can be identified, or return -1 otherwise.
-</code></pre><h3 id="測資">測資</h3>
+</code></pre><hr>
+<h3 id="測資">測資</h3>
 <pre tabindex="0"><code>Example 1:
 Input: n = 2, trust = [[1,2]]
 Output: 2
@@ -127,7 +128,8 @@ Example 5:
 Input: n = 3, trust = [[1,2],[2,3]]
 Output: 
 
-</code></pre><h3 id="題目中文">題目（中文）</h3>
+</code></pre><hr>
+<h3 id="題目中文">題目（中文）</h3>
 <pre tabindex="0"><code>在城鎮中有 n 個人，分別標示 1 ~ n。並且在這 n 個人之中，藏著一位鎮法官
 
 鎮法官及其他人有以下特徵
@@ -139,11 +141,13 @@ Output:
 現在具有一份每個人相信的名單 trust ，其中 [ai, bi] 代表 ai 相信 bi
 
 請找出可能的鎮法官編號，或者返回 -1
-</code></pre><h2 id="思路">思路</h2>
+</code></pre><hr>
+<h2 id="思路">思路</h2>
 <ol>
 <li>鎮法官必定被所有人相信，所以如果在鎮法官存在的情況下，bi 出現的次數一定是 n-1</li>
 <li>鎮法官一定不會相信任何人，對可能存在的鎮法官編號，不可能在 ai 中出現</li>
 </ol>
+<hr>
 <h2 id="程式碼">程式碼</h2>
 <pre tabindex="0"><code>class Solution {
 public:
@@ -171,8 +175,10 @@ public:
         return possible;
     }
 };
-</code></pre><h2 id="結果">結果</h2>
+</code></pre><hr>
+<h2 id="結果">結果</h2>
 <p><img src="https://i.imgur.com/LwjDxGm.png" alt=""></p>
+<hr>
 <h2 id="評論區做法">評論區做法</h2>
 <p>透過一個 vector 紀錄 judge 的可能，被當成 ai 就 -1, 當成 bi 就 +1，最後判斷 vector 中最大的值來確定是否有 judge</p>
 <p>※把剛剛提到的兩個思路合併在一起了，不但免去使用了 hash_table，想法也更直觀</p>
@@ -198,6 +204,7 @@ public:
     }
 };
 </code></pre><p>!z<a href="https://i.imgur.com/H94MZYW.png"></a></p>
+<hr>
 <h2 id="結語">結語</h2>
 <p>第一篇值得紀念(<del>?</del>)的刷題文，雖然只是easy(<del>然後效率跟記憶體使用率還不怎麼高</del>)
 原本看到的時候想用 graph 做的，因為既然鎮法官不會相信任何人，代表只要經過鎮法官後的 edge 不會有任何可以連出去的 line，但也要同時確保所有的 edge 都有連到鎮法官的 line，想想還是要確定鎮法官的存在，好像不會比用 hash_table 計算來的方便，就直接放棄用 graph 做了。</p>
