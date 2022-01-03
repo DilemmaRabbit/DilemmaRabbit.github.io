@@ -107,6 +107,38 @@ public:
 
 ![](https://i.imgur.com/LwjDxGm.png)
 
+## 評論區做法
+
+透過一個 vector 紀錄 judge 的可能，被當成 ai 就 -1, 當成 bi 就 +1，最後判斷 vector 中最大的值來確定是否有 judge
+
+※把剛剛提到的兩個思路合併在一起了，不但免去使用了 hash_table，想法也更直觀
+
+```
+class Solution {
+public:
+    int findJudge(int n, vector<vector<int>>& trust) {
+        
+        int i;
+        vector<int> v(n);
+        
+        for(i=0;i<trust.size();i++){
+            v[trust[i][0]-1] -= 1;
+            v[trust[i][1]-1] += 1;
+        }
+        
+        for(i=0;i<v.size();i++){
+            if(v[i] == n-1){
+                return i+1;
+            }
+        }
+            
+        return -1;
+    }
+};
+```
+
+!z[](https://i.imgur.com/H94MZYW.png)
+
 ## 結語
 第一篇值得紀念(~~?~~)的刷題文，雖然只是easy(~~然後效率跟記憶體使用率還不怎麼高~~)
 原本看到的時候想用 graph 做的，因為既然鎮法官不會相信任何人，代表只要經過鎮法官後的 edge 不會有任何可以連出去的 line，但也要同時確保所有的 edge 都有連到鎮法官的 line，想想還是要確定鎮法官的存在，好像不會比用 hash_table 計算來的方便，就直接放棄用 graph 做了。

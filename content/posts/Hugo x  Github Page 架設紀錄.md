@@ -246,6 +246,7 @@ Settings -> Pages，將 source 改成新的分支，就可以嘗試 username.git
    * **問題**：看得到內容，但是主題所提供的效果消失
    * **原因**：透過開發人員工具可看見問題，css 只接受 https，但是預設的 ```http://example.com``` 使用的是 http
    * **解決方法**：在 **config** 的 **baseurl** 改成目前所使用的 **Github Page url** (記得 **https**)
+   * **參考資料**：[Hugo](https://discourse.gohugo.io/t/css-files-do-not-load-due-to-not-being-https/12627)
 
 3. **submodule 消失問題**
    
