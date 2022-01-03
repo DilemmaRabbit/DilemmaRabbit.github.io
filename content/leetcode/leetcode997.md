@@ -25,6 +25,8 @@ You are given an array trust where trust[i] = [ai, bi] representing that the per
 Return the label of the town judge if the town judge exists and can be identified, or return -1 otherwise.
 ```
 
+---
+
 ### 測資
 
 ```
@@ -50,6 +52,8 @@ Output:
 
 ```
 
+---
+
 ### 題目（中文）
 
 ```
@@ -66,11 +70,14 @@ Output:
 請找出可能的鎮法官編號，或者返回 -1
 ```
 
+---
+
 ## 思路
 
 1. 鎮法官必定被所有人相信，所以如果在鎮法官存在的情況下，bi 出現的次數一定是 n-1
 2. 鎮法官一定不會相信任何人，對可能存在的鎮法官編號，不可能在 ai 中出現
 
+---
 
 ## 程式碼
 
@@ -103,9 +110,13 @@ public:
 };
 ```
 
+---
+
 ## 結果
 
 ![](https://i.imgur.com/LwjDxGm.png)
+
+---
 
 ## 評論區做法
 
@@ -138,6 +149,8 @@ public:
 ```
 
 !z[](https://i.imgur.com/H94MZYW.png)
+
+---
 
 ## 結語
 第一篇值得紀念(~~?~~)的刷題文，雖然只是easy(~~然後效率跟記憶體使用率還不怎麼高~~)
