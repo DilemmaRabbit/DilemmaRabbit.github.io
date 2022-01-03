@@ -152,7 +152,7 @@ git rm -rf .
 ```
 git add .
 git commit -m "<message>"
-git push origin gh-pages
+git push -u origin gh-pages
 ```
 
 ![](https://i.imgur.com/TozoSLF.png)
