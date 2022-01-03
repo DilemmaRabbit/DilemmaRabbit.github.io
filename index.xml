@@ -6,7 +6,16 @@
     <description>Recent content on Dilemma Rabbit</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 03 Jan 2022 16:26:29 +0800</lastBuildDate><atom:link href="https://DilemmaRabbit.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 03 Jan 2022 18:12:22 +0800</lastBuildDate><atom:link href="https://DilemmaRabbit.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Prompt2win</title>
+      <link>https://DilemmaRabbit.github.io/security/prompt2win/</link>
+      <pubDate>Mon, 03 Jan 2022 18:12:22 +0800</pubDate>
+      
+      <guid>https://DilemmaRabbit.github.io/security/prompt2win/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Leetcode1010</title>
       <link>https://DilemmaRabbit.github.io/leetcode/leetcode1010/</link>
