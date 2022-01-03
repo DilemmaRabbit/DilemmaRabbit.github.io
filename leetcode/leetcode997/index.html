@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <title>Leetcode 997 // Dilemma Rabbit</title>
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.91.2" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="DilemmaRabbit" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="https://DilemmaRabbit.github.io/css/main.min.dc7bd8735a57ef73c20e8a83e31d56f24512c666564f61a8705f834f8731105c.css" />
+
+    
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Leetcode 997"/>
+<meta name="twitter:description" content="問題描述 分類：🟢 easy 🟢 相關主題：Graph, Hash_table, Array 題目（英文） In a town, there are n people labeled from 1 to n. There is a rumor that one of these people is secretly the town judge. If the town judge exists, then: 1. The town judge trusts nobody. 2. Everybody (except for the town judge) trusts the town judge. 3. There is exactly one person that satisfies properties 1 and 2. You are given an array trust where trust[i] = [ai, bi] representing that the person labeled ai trusts the person labeled bi."/>
+
+    <meta property="og:title" content="Leetcode 997" />
+<meta property="og:description" content="問題描述 分類：🟢 easy 🟢 相關主題：Graph, Hash_table, Array 題目（英文） In a town, there are n people labeled from 1 to n. There is a rumor that one of these people is secretly the town judge. If the town judge exists, then: 1. The town judge trusts nobody. 2. Everybody (except for the town judge) trusts the town judge. 3. There is exactly one person that satisfies properties 1 and 2. You are given an array trust where trust[i] = [ai, bi] representing that the person labeled ai trusts the person labeled bi." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://DilemmaRabbit.github.io/leetcode/leetcode997/" /><meta property="article:section" content="leetcode" />
+<meta property="article:published_time" content="2022-01-03T13:14:32+08:00" />
+<meta property="article:modified_time" content="2022-01-03T13:14:32+08:00" />
+
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="https://DilemmaRabbit.github.io/"><img class="app-header-avatar" src="/avatar.jpg" alt="DilemmaRabbit" /></a>
+      <h1>Dilemma Rabbit</h1>
+      <nav class="app-header-menu">
+          <a class="app-header-menu-item" href="/">Home</a>
+             | 
+          
+          <a class="app-header-menu-item" href="/tags/">Tags</a>
+      </nav>
+      <p>Programer</p>
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">Leetcode 997</h1>
+      <div class="post-meta">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          Jan 3, 2022
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          2 min read
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tag">
+  <title>tag</title>
+  <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line>
+</svg>
+              <a class="tag" href="https://DilemmaRabbit.github.io/tags/leetcode/">LeetCode</a>
+        </div>
+      </div>
+    </header>
+    <div class="post-content">
+      <h2 id="問題描述">問題描述</h2>
+<h3 id="分類-easy-">分類：🟢 easy 🟢</h3>
+<h3 id="相關主題graph-hash_table-array">相關主題：Graph, Hash_table, Array</h3>
+<h3 id="題目英文">題目（英文）</h3>
+<pre tabindex="0"><code>In a town, there are n people labeled from 1 to n. There is a rumor that one of these people is secretly the town judge.
+
+If the town judge exists, then:
+
+    1. The town judge trusts nobody.
+    2. Everybody (except for the town judge) trusts the town judge.
+    3. There is exactly one person that satisfies properties 1 and 2.
+
+You are given an array trust where trust[i] = [ai, bi] representing that the person labeled ai trusts the person labeled bi.
+
+Return the label of the town judge if the town judge exists and can be identified, or return -1 otherwise.
+</code></pre><h3 id="測資">測資</h3>
+<pre tabindex="0"><code>Example 1:
+Input: n = 2, trust = [[1,2]]
+Output: 2
+
+Example 2:
+Input: n = 3, trust = [[1,3],[2,3]]
+Output: 3
+
+Example 3:
+Input: n = 3, trust = [[1,3],[2,3],[3,1]]
+Output: -1
+
+Example 4:
+Input: n = 3, trust = [[1,3],[1,4],[2,3],[2,4],[4,3]]
+Output: -3
+
+Example 5:
+Input: n = 3, trust = [[1,2],[2,3]]
+Output: 
+
+</code></pre><h3 id="題目中文">題目（中文）</h3>
+<pre tabindex="0"><code>在城鎮中有 n 個人，分別標示 1 ~ n。並且在這 n 個人之中，藏著一位鎮法官
+
+鎮法官及其他人有以下特徵
+
+1. 鎮法官不相信任何人
+2. 其他人必定會相信鎮法官(也可能會相信其他正常人)
+3. 每個人只會有前者兩種情況的其中一個
+
+現在具有一份每個人相信的名單 trust ，其中 [ai, bi] 代表 ai 相信 bi
+
+請找出可能的鎮法官編號，或者返回 -1
+</code></pre><h2 id="思路">思路</h2>
+<ol>
+<li>鎮法官必定被所有人相信，所以如果在鎮法官存在的情況下，bi 出現的次數一定是 n-1</li>
+<li>鎮法官一定不會相信任何人，對可能存在的鎮法官編號，不可能在 ai 中出現</li>
+</ol>
+<h2 id="程式碼">程式碼</h2>
+<pre tabindex="0"><code>class Solution {
+public:
+    int findJudge(int n, vector&lt;vector&lt;int&gt;&gt;&amp; trust) {
+        
+        int i, possible=-1;
+        map&lt;int, int&gt; table;
+        
+        for(i=0; i&lt;trust.size(); i++){
+            table[trust[i][1]] += 1;
+        }
+        
+        for(i = 1; i &lt;= n; i++){
+            if(table[i] == n-1){
+                possible = i;
+            }
+        }
+        
+        for(i = 0; i&lt;trust.size();i++){
+            if(trust[i][0] == possible){
+                return -1;
+            }
+        }
+        
+        return possible;
+    }
+};
+</code></pre><h2 id="結果">結果</h2>
+<p><img src="https://i.imgur.com/LwjDxGm.png" alt=""></p>
+<h2 id="結語">結語</h2>
+<p>第一篇值得紀念(<del>?</del>)的刷題文，雖然只是easy(<del>然後效率跟記憶體使用率還不怎麼高</del>)
+原本看到的時候想用 graph 做的，因為既然鎮法官不會相信任何人，代表只要經過鎮法官後的 edge 不會有任何可以連出去的 line，但也要同時確保所有的 edge 都有連到鎮法官的 line，想想還是要確定鎮法官的存在，好像不會比用 hash_table 計算來的方便，就直接放棄用 graph 做了。</p>
+
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>

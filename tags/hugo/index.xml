@@ -13,10 +13,10 @@
       <pubDate>Sun, 02 Jan 2022 15:31:23 +0800</pubDate>
       
       <guid>https://DilemmaRabbit.github.io/posts/hugo-x-github-page-%E6%9E%B6%E8%A8%AD%E7%B4%80%E9%8C%84/</guid>
-      <description>前言 終於把 Hugo 跟 GitHub Pages 成功架起來了(就是你現在在看的東西🥳)，途中不知道刪了幾次 repo，也遇到了不少 Hugo 以外的問題，除了學習 Hugo 外也重新把 git 的一些相關知識重新認識了一遍，不過途中還是有遇到目前原因不明但解決的問題，會列在下面的採坑集跟延伸學習裡面，如果有解決方法不吝指教～
+      <description>目錄  前言 先前準備 本機建立 GitHub自動部署 問題集 延伸學習  前言 終於把 Hugo 跟 GitHub Pages 成功架起來了(就是你現在在看的東西🥳)，途中不知道刪了幾次 repo，也遇到了不少 Hugo 以外的問題，除了學習 Hugo 外也重新把 git 的一些相關知識重新認識了一遍，不過途中還是有遇到目前原因不明但解決的問題，會列在下面的採坑集跟延伸學習裡面，如果有解決方法不吝指教～
 I. 先前準備 環境 系統: ubuntu 20.04
 Github Page 建立 1. 建立一個名稱為 username.github.io 的 repo 2. 從 github clone 到本機 git clone &amp;lt;username.github.io&amp;gt;  II. 本機建立網站 Hugo 安裝 brew 安裝 brew 安裝教學
-1. 透過 brew 安裝 Hugo brew install hugo 建立一個新的網頁 1. 目標資料夾下建立一個新的網頁 hugo new site &amp;lt;username.github.io&amp;gt; hugo new site &amp;lt;username.github.io&amp;gt; --force # 如果資料夾內有其他資料則需要強制建立 (e.g.README) Hugo 主題安裝 1.</description>
+1. 透過 brew 安裝 Hugo brew install hugo 建立一個新的網頁 1. 目標資料夾下建立一個新的網頁 hugo new site &amp;lt;username.github.io&amp;gt; hugo new site &amp;lt;username.</description>
     </item>
     
   </channel>

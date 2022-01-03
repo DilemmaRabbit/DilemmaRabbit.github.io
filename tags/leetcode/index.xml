@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>LeetCode on Dilemma Rabbit</title>
+    <link>https://DilemmaRabbit.github.io/tags/leetcode/</link>
+    <description>Recent content in LeetCode on Dilemma Rabbit</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 03 Jan 2022 13:14:32 +0800</lastBuildDate><atom:link href="https://DilemmaRabbit.github.io/tags/leetcode/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Leetcode 997</title>
+      <link>https://DilemmaRabbit.github.io/leetcode/leetcode997/</link>
+      <pubDate>Mon, 03 Jan 2022 13:14:32 +0800</pubDate>
+      
+      <guid>https://DilemmaRabbit.github.io/leetcode/leetcode997/</guid>
+      <description>問題描述 分類：🟢 easy 🟢 相關主題：Graph, Hash_table, Array 題目（英文） In a town, there are n people labeled from 1 to n. There is a rumor that one of these people is secretly the town judge. If the town judge exists, then: 1. The town judge trusts nobody. 2. Everybody (except for the town judge) trusts the town judge. 3. There is exactly one person that satisfies properties 1 and 2. You are given an array trust where trust[i] = [ai, bi] representing that the person labeled ai trusts the person labeled bi.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -6,23 +6,23 @@
     <meta charset="utf-8" />
     <meta name="generator" content="Hugo 0.91.2" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="author" content="John Doe" />
+    <meta name="author" content="DilemmaRabbit" />
     <meta name="description" content="" />
     <link rel="stylesheet" href="https://DilemmaRabbit.github.io/css/main.min.dc7bd8735a57ef73c20e8a83e31d56f24512c666564f61a8705f834f8731105c.css" />
 
     
     <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Hugo x GitHub Pages 架設紀錄"/>
-<meta name="twitter:description" content="前言 終於把 Hugo 跟 GitHub Pages 成功架起來了(就是你現在在看的東西🥳)，途中不知道刪了幾次 repo，也遇到了不少 Hugo 以外的問題，除了學習 Hugo 外也重新把 git 的一些相關知識重新認識了一遍，不過途中還是有遇到目前原因不明但解決的問題，會列在下面的採坑集跟延伸學習裡面，如果有解決方法不吝指教～
+<meta name="twitter:description" content="目錄  前言 先前準備 本機建立 GitHub自動部署 問題集 延伸學習  前言 終於把 Hugo 跟 GitHub Pages 成功架起來了(就是你現在在看的東西🥳)，途中不知道刪了幾次 repo，也遇到了不少 Hugo 以外的問題，除了學習 Hugo 外也重新把 git 的一些相關知識重新認識了一遍，不過途中還是有遇到目前原因不明但解決的問題，會列在下面的採坑集跟延伸學習裡面，如果有解決方法不吝指教～
 I. 先前準備 環境 系統: ubuntu 20.04
 Github Page 建立 1. 建立一個名稱為 username.github.io 的 repo 2. 從 github clone 到本機 git clone &lt;username.github.io&gt;  II. 本機建立網站 Hugo 安裝 brew 安裝 brew 安裝教學
-1. 透過 brew 安裝 Hugo brew install hugo 建立一個新的網頁 1. 目標資料夾下建立一個新的網頁 hugo new site &lt;username.github.io&gt; hugo new site &lt;username.github.io&gt; --force # 如果資料夾內有其他資料則需要強制建立 (e.g.README) Hugo 主題安裝 1."/>
+1. 透過 brew 安裝 Hugo brew install hugo 建立一個新的網頁 1. 目標資料夾下建立一個新的網頁 hugo new site &lt;username.github.io&gt; hugo new site &lt;username."/>
 
     <meta property="og:title" content="Hugo x GitHub Pages 架設紀錄" />
-<meta property="og:description" content="前言 終於把 Hugo 跟 GitHub Pages 成功架起來了(就是你現在在看的東西🥳)，途中不知道刪了幾次 repo，也遇到了不少 Hugo 以外的問題，除了學習 Hugo 外也重新把 git 的一些相關知識重新認識了一遍，不過途中還是有遇到目前原因不明但解決的問題，會列在下面的採坑集跟延伸學習裡面，如果有解決方法不吝指教～
+<meta property="og:description" content="目錄  前言 先前準備 本機建立 GitHub自動部署 問題集 延伸學習  前言 終於把 Hugo 跟 GitHub Pages 成功架起來了(就是你現在在看的東西🥳)，途中不知道刪了幾次 repo，也遇到了不少 Hugo 以外的問題，除了學習 Hugo 外也重新把 git 的一些相關知識重新認識了一遍，不過途中還是有遇到目前原因不明但解決的問題，會列在下面的採坑集跟延伸學習裡面，如果有解決方法不吝指教～
 I. 先前準備 環境 系統: ubuntu 20.04
 Github Page 建立 1. 建立一個名稱為 username.github.io 的 repo 2. 從 github clone 到本機 git clone &lt;username.github.io&gt;  II. 本機建立網站 Hugo 安裝 brew 安裝 brew 安裝教學
-1. 透過 brew 安裝 Hugo brew install hugo 建立一個新的網頁 1. 目標資料夾下建立一個新的網頁 hugo new site &lt;username.github.io&gt; hugo new site &lt;username.github.io&gt; --force # 如果資料夾內有其他資料則需要強制建立 (e.g.README) Hugo 主題安裝 1." />
+1. 透過 brew 安裝 Hugo brew install hugo 建立一個新的網頁 1. 目標資料夾下建立一個新的網頁 hugo new site &lt;username.github.io&gt; hugo new site &lt;username." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://DilemmaRabbit.github.io/posts/hugo-x-github-page-%E6%9E%B6%E8%A8%AD%E7%B4%80%E9%8C%84/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2022-01-02T15:31:23+08:00" />
@@ -33,12 +33,15 @@ Github Page 建立 1. 建立一個名稱為 username.github.io 的 repo 2. 從 g
   </head>
   <body>
     <header class="app-header">
-      <a href="https://DilemmaRabbit.github.io/"><img class="app-header-avatar" src="/avatar.jpg" alt="John Doe" /></a>
+      <a href="https://DilemmaRabbit.github.io/"><img class="app-header-avatar" src="/avatar.jpg" alt="DilemmaRabbit" /></a>
       <h1>Dilemma Rabbit</h1>
       <nav class="app-header-menu">
+          <a class="app-header-menu-item" href="/">Home</a>
+             | 
+          
           <a class="app-header-menu-item" href="/tags/">Tags</a>
       </nav>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vehicula turpis sit amet elit pretium.</p>
+      <p>Programer</p>
     </header>
     <main class="app-container">
       
@@ -58,7 +61,7 @@ Github Page 建立 1. 建立一個名稱為 username.github.io 的 repo 2. 從 g
   <title>clock</title>
   <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
 </svg>
-          2 min read
+          3 min read
         </div>
         <div>
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tag">
@@ -67,11 +70,21 @@ Github Page 建立 1. 建立一個名稱為 username.github.io 的 repo 2. 從 g
 </svg>
               <a class="tag" href="https://DilemmaRabbit.github.io/tags/hugo/">Hugo</a>
               <a class="tag" href="https://DilemmaRabbit.github.io/tags/github-pages/">GitHub-Pages</a>
+              <a class="tag" href="https://DilemmaRabbit.github.io/tags/tutorial/">Tutorial</a>
         </div>
       </div>
     </header>
     <div class="post-content">
-      <h1 id="前言">前言</h1>
+      <h1 id="目錄">目錄</h1>
+<ol>
+<li><a href="#%E5%89%8D%E8%A8%80">前言</a></li>
+<li><a href="#i-%E5%85%88%E5%89%8D%E6%BA%96%E5%82%99">先前準備</a></li>
+<li><a href="#ii-%E6%9C%AC%E6%A9%9F%E5%BB%BA%E7%AB%8B%E7%B6%B2%E7%AB%99">本機建立</a></li>
+<li><a href="#iii-%E4%B8%9F%E5%88%B0-github-%E5%81%9A%E8%87%AA%E5%8B%95%E5%8C%96%E9%83%A8%E7%BD%B2">GitHub自動部署</a></li>
+<li><a href="#%E5%95%8F%E9%A1%8C%E6%8E%A1%E5%9D%91%E9%9B%86">問題集</a></li>
+<li><a href="#%E5%BB%B6%E4%BC%B8%E5%AD%B8%E7%BF%92">延伸學習</a></li>
+</ol>
+<h1 id="前言">前言</h1>
 <p>終於把 Hugo 跟 GitHub Pages 成功架起來了(就是你現在在看的東西🥳)，途中不知道刪了幾次 repo，也遇到了不少 Hugo 以外的問題，除了學習 Hugo 外也重新把 git 的一些相關知識重新認識了一遍，不過途中還是有遇到目前原因不明但解決的問題，會列在下面的採坑集跟延伸學習裡面，如果有解決方法不吝指教～</p>
 <h1 id="i-先前準備">I. 先前準備</h1>
 <h2 id="環境">環境</h2>
@@ -95,6 +108,18 @@ hugo new site &lt;username.github.io&gt; --force # 如果資料夾內有其他�
 </code></pre><h2 id="hugo-主題安裝">Hugo 主題安裝</h2>
 <h3 id="1-從-官網httpsthemesgohugoio-中找到一個-適合-作為-blog-的主題">1. 從 <a href="https://themes.gohugo.io/">官網</a> 中找到一個 <strong>適合</strong> 作為 blog 的主題</h3>
 <p>此 blog 的主題為 <a href="https://github.com/vaga/hugo-theme-m10c">m10c</a></p>
+<p>優點</p>
+<ol>
+<li>簡單明瞭，對寫技術文章來說很方便</li>
+<li>配置簡單直觀，不用設定太多額外的東西就可以使用</li>
+</ol>
+<p>缺點</p>
+<ol>
+<li>能客製化部份偏少</li>
+<li>右邊有一大塊不明用途的區塊</li>
+<li>許多 md 語法的背景沒有顏色，需要自己額外加 scss (有人有發 issue，可以參考去改)</li>
+<li>不支援留言功能</li>
+</ol>
 <h3 id="2-透過-submodule-的方式將主題加入-repo-中的-themes">2. 透過 <strong>submodule</strong> 的方式將主題加入 repo 中的 /themes</h3>
 <pre tabindex="0"><code>git sudmodule add &lt;repo-url&gt; /themes/&lt;theme name&gt;
 </code></pre><h3 id="3-configtoml-中增加以下這行">3. <strong>config.toml</strong> 中增加以下這行</h3>
@@ -102,9 +127,9 @@ hugo new site &lt;username.github.io&gt; --force # 如果資料夾內有其他�
 </code></pre><p>🏳 這邊還可以對主題進行更細部的設定喔，請依每個 theme 的 GitHub 的說明設定</p>
 <h2 id="文章建立">文章建立</h2>
 <h3 id="1-建立一篇新的文章">1. 建立一篇新的文章</h3>
-<p>hugo 預設的文章資料夾為 <strong>/content/posts/</strong></p>
+<p>hugo 預設的文章資料夾為 <strong>/content/posts/</strong> ※你也可以把 post 改成任何想要的路徑或分類</p>
 <pre tabindex="0"><code>hugo new posts/&lt;filename&gt;.md
-</code></pre><p>打開剛剛建立的 md 可以發現以下資訊</p>
+</code></pre><p>前往 /content/posts 打開剛剛建立的 md 可以發現以下資訊</p>
 <pre tabindex="0"><code>title: # 文章標題
 date: # 文章時間戳
 draft: # 是否為草稿(true/false)
@@ -177,33 +202,42 @@ jobs:
           publish_dir: ./public
 </code></pre><p>commit 後便會自動 deploy 一次，如果正常的話會在你的 gh-pages 分支只看到原本 /public 下的 html 內容了</p>
 <h2 id="將目前的預設-branch-改成新的-branch">將目前的預設 branch 改成新的 branch</h2>
-<p>Settings -&gt; Pages，將 source 改成新的分支，就大公告成了，可以嘗試 username.github.io 觀看網頁是否正常了</p>
+<p>Settings -&gt; Pages，將 source 改成新的分支，就可以嘗試 username.github.io 觀看網頁是否正常了</p>
 <p><img src="https://i.imgur.com/K7MARDb.png" alt=""></p>
+<h2 id="最後從本機端產生一個-push觀看是否會自動進行更新及部署">🎉最後從本機端產生一個 push，觀看是否會自動進行更新及部署🎉</h2>
 <hr>
-<h2 id="問題採坑集待補">問題(<del>採坑</del>)集(待補)</h2>
+<h2 id="問題採坑集">問題(<del>採坑</del>)集</h2>
 <ol>
 <li>
 <p><strong>server / GitHub Pages 開啟後白畫面</strong></p>
 <ul>
-<li><strong>問題</strong></li>
-<li><strong>原因</strong></li>
-<li><strong>解決方法</strong></li>
+<li><strong>問題</strong>：一進入網頁看不到任何資料</li>
+<li><strong>原因</strong>：主題設定錯誤或遺失</li>
+<li><strong>解決方法</strong>：通常是 <strong>config</strong> 沒有按照指定格式或是 <strong>typo</strong>(透過使用 <strong>hugo</strong> 通常可以看到錯誤資訊(本機端))，也有可能是 <strong>submodule</strong> 造成的問題，請看下方問題3</li>
 </ul>
 </li>
 <li>
 <p><strong>GitHub Pages 開啟後無 css 渲染</strong></p>
 <ul>
-<li><strong>問題</strong></li>
-<li><strong>原因</strong></li>
-<li><strong>解決方法</strong></li>
+<li><strong>問題</strong>：看得到內容，但是主題所提供的效果消失</li>
+<li><strong>原因</strong>：透過開發人員工具可看見問題，css 只接受 https，但是預設的 <code>http://example.com</code> 使用的是 http</li>
+<li><strong>解決方法</strong>：在 <strong>config</strong> 的 <strong>baseurl</strong> 改成目前所使用的 <strong>Github Page url</strong> (記得 <strong>https</strong>)</li>
 </ul>
 </li>
 <li>
 <p><strong>submodule 消失問題</strong></p>
 <ul>
-<li><strong>問題</strong></li>
-<li><strong>原因</strong></li>
-<li><strong>解決方法</strong></li>
+<li>
+<p><strong>問題</strong>：當進入另外一個分支後，假如把 submodule 直接刪除並提交的話，會發現主分支的 submodule 會一併消失</p>
+</li>
+<li>
+<p><strong>原因</strong>：<a href="https://stackoverflow.com/questions/52345460/remove-git-submodule-from-a-specific-branch">stackoverflow</a></p>
+</li>
+<li>
+<p><strong>解決方法</strong>：把 master 的 sunmodule index 重新洗掉後直接在加入一次 submodule（※暴力解注意，雖然有用但還是建議搞懂 submodule 的運作原理）</p>
+<pre tabindex="0"><code>git rm -r --cached themes/&lt;theme directory&gt;
+git submodule add &lt;theme repo&gt; &lt;theme directory&gt;
+</code></pre></li>
 </ul>
 </li>
 <li>
@@ -223,16 +257,16 @@ jobs:
 </ul>
 </li>
 </ol>
-<h2 id="延伸學習待補">延伸學習(待補)</h2>
+<h2 id="延伸學習">延伸學習</h2>
 <ol>
 <li>
-<p>這個紀錄所用到的 git</p>
+<p>紀錄所用到的 git 技巧</p>
 </li>
 <li>
 <p>git submodule</p>
 </li>
 <li>
-<p>github ssh key(待補)</p>
+<p>github ssh key</p>
 </li>
 </ol>
 
