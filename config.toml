@@ -14,11 +14,26 @@ identifier = "home"
 name = "Home"
 url = "/"
 
-[params]
-author = "DilemmaRabbit"
-description = "Programer"
-menu_item_separator = " | "
-
 [params.style]
 lightestColor = "#f7f7f7"
 primaryColor = "#7EE8FA"
+
+[[params.social]]
+icon = "github"
+name = "GitHub"
+url = "https://github.com/DilemmaRabbit"
+
+[[params.social]]
+icon = "at-sign"
+name = "gmail"
+url = "mailto:a21663832@gmail.com"
+
+[[params.social]]
+icon = "navigation"
+name = "telegram"
+url = "https://t.me/DilemmaRabbit"
+
+[params]
+author = "DilemmaRabbit"
+description = "Programer / Student"
+menu_item_separator = " | "
