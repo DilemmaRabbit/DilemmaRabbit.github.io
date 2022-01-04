@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en-us">
   <head>
-    <title>Leetcode1010 // Dilemma Rabbit</title>
+    <title>Leetcode1009 // Dilemma Rabbit</title>
     <link rel="shortcut icon" href="/favicon.ico" />
     <meta charset="utf-8" />
     <meta name="generator" content="Hugo 0.91.2" />
@@ -12,15 +12,15 @@
 
     
     <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Leetcode1010"/>
-<meta name="twitter:description" content="問題描述 分類：🟠 medium 🟠 相關主題：Counting, Hash_table, Array  題目（英文） You are given a list of songs where the ith song has a duration of time[i] seconds. Return the number of pairs of songs for which their total duration in seconds is divisible by 60. Formally, we want the number of indices i, j such that i &lt; j with (time[i] &#43; time[j]) % 60 == 0.  測資 Example 1: Input: time = [30,20,150,100,40] Output: 3 Explanation: Three pairs have a total duration divisible by 60: (time[0] = 30, time[2] = 150): total duration 180 (time[1] = 20, time[3] = 100): total duration 120 (time[1] = 20, time[4] = 40): total duration 60 Example 2: Input: time = [60,60,60] Output: 3 Explanation: All three pairs have a total duration of 120, which is divisible by 60."/>
+<meta name="twitter:title" content="Leetcode1009"/>
+<meta name="twitter:description" content="問題描述 分類：🟢 easy 🟢 相關主題：Bit Manipulation  題目（英文） The complement of an integer is the integer you get when you flip all the 0&#39;s to 1&#39;s and all the 1&#39;s to 0&#39;s in its binary representation. For example, The integer 5 is &quot;101&quot; in binary and its complement is &quot;010&quot; which is the integer 2. Given an integer n, return its complement.  測資 Example 1: Input: n = 5 Output: 2 Explanation: 5 is &quot;101&quot; in binary, with complement &quot;010&quot; in binary, which is 2 in base-10."/>
 
-    <meta property="og:title" content="Leetcode1010" />
-<meta property="og:description" content="問題描述 分類：🟠 medium 🟠 相關主題：Counting, Hash_table, Array  題目（英文） You are given a list of songs where the ith song has a duration of time[i] seconds. Return the number of pairs of songs for which their total duration in seconds is divisible by 60. Formally, we want the number of indices i, j such that i &lt; j with (time[i] &#43; time[j]) % 60 == 0.  測資 Example 1: Input: time = [30,20,150,100,40] Output: 3 Explanation: Three pairs have a total duration divisible by 60: (time[0] = 30, time[2] = 150): total duration 180 (time[1] = 20, time[3] = 100): total duration 120 (time[1] = 20, time[4] = 40): total duration 60 Example 2: Input: time = [60,60,60] Output: 3 Explanation: All three pairs have a total duration of 120, which is divisible by 60." />
+    <meta property="og:title" content="Leetcode1009" />
+<meta property="og:description" content="問題描述 分類：🟢 easy 🟢 相關主題：Bit Manipulation  題目（英文） The complement of an integer is the integer you get when you flip all the 0&#39;s to 1&#39;s and all the 1&#39;s to 0&#39;s in its binary representation. For example, The integer 5 is &quot;101&quot; in binary and its complement is &quot;010&quot; which is the integer 2. Given an integer n, return its complement.  測資 Example 1: Input: n = 5 Output: 2 Explanation: 5 is &quot;101&quot; in binary, with complement &quot;010&quot; in binary, which is 2 in base-10." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://DilemmaRabbit.github.io/leetcode/leetcode1010/" /><meta property="article:section" content="leetcode" />
-<meta property="article:published_time" content="2022-01-03T16:26:29+08:00" />
-<meta property="article:modified_time" content="2022-01-03T16:26:29+08:00" />
+<meta property="og:url" content="https://DilemmaRabbit.github.io/leetcode/leetcode1009/" /><meta property="article:section" content="leetcode" />
+<meta property="article:published_time" content="2022-01-04T10:25:40+08:00" />
+<meta property="article:modified_time" content="2022-01-04T10:25:40+08:00" />
 
 
 
@@ -65,14 +65,14 @@
       
   <article class="post">
     <header class="post-header">
-      <h1 class ="post-title">Leetcode1010</h1>
+      <h1 class ="post-title">Leetcode1009</h1>
       <div class="post-meta">
         <div>
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
   <title>calendar</title>
   <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
 </svg>
-          Jan 3, 2022
+          Jan 4, 2022
         </div>
         <div>
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
@@ -92,81 +92,92 @@
     </header>
     <div class="post-content">
       <h2 id="問題描述">問題描述</h2>
-<h3 id="分類-medium-">分類：🟠 medium 🟠</h3>
-<h3 id="相關主題counting-hash_table-array">相關主題：Counting, Hash_table, Array</h3>
+<h3 id="分類-easy-">分類：🟢 easy 🟢</h3>
+<h3 id="相關主題bit-manipulation">相關主題：Bit Manipulation</h3>
 <hr>
 <h3 id="題目英文">題目（英文）</h3>
-<pre tabindex="0"><code>You are given a list of songs where the ith song has a duration of time[i] seconds.
+<pre tabindex="0"><code>The complement of an integer is the integer you get when you flip all the 0's to 1's and all the 1's to 0's in its binary representation.
 
-Return the number of pairs of songs for which their total duration in seconds is divisible by 60. Formally, we want the number of indices i, j such that i &lt; j with (time[i] + time[j]) % 60 == 0.
+For example, The integer 5 is &quot;101&quot; in binary and its complement is &quot;010&quot; which is the integer 2.
+
+Given an integer n, return its complement.
 </code></pre><hr>
 <h3 id="測資">測資</h3>
 <pre tabindex="0"><code>Example 1:
 
-Input: time = [30,20,150,100,40]
-Output: 3
-Explanation: Three pairs have a total duration divisible by 60:
-(time[0] = 30, time[2] = 150): total duration 180
-(time[1] = 20, time[3] = 100): total duration 120
-(time[1] = 20, time[4] = 40): total duration 60
+Input: n = 5
+Output: 2
+Explanation: 5 is &quot;101&quot; in binary, with complement &quot;010&quot; in binary, which is 2 in base-10.
 
 Example 2:
 
-Input: time = [60,60,60]
-Output: 3
-Explanation: All three pairs have a total duration of 120, which is divisible by 60.
+Input: n = 7
+Output: 0
+Explanation: 7 is &quot;111&quot; in binary, with complement &quot;000&quot; in binary, which is 0 in base-10.
+
+Example 3:
+
+Input: n = 10
+Output: 5
+Explanation: 10 is &quot;1010&quot; in binary, with complement &quot;0101&quot; in binary, which is 5 in base-10.
+
+Constraints:
+0 &lt;= n &lt; 109
 
 </code></pre><hr>
 <h3 id="題目中文">題目（中文）</h3>
-<pre tabindex="0"><code>你有一份關於所有音樂的演奏時長的清單
+<pre tabindex="0"><code>補數是由將數字的二進位中的0與1做翻轉而來
 
-返回清單中任意兩首音樂時長加起來可以被 60 秒整除的數量
+例如5的二進位是 &quot;101&quot;，它的補數就是 &quot;010&quot;，換算為十進位就是 2
+
+給定一個數字 n ，將它的補數以 10 進位表示出來
+
 </code></pre><hr>
 <h2 id="思路">思路</h2>
 <ol>
-<li>由於目標是找到組合加起來為 60 秒的組合，對於超出 60 秒的情況，只要取餘數就可以減少 hash_table 的空間使用</li>
-<li>只需要計算 0 ~ 30 秒數量(避免重複)</li>
-<li>由於 0 ~ 30 會是取自身的數量做計算，需要跟1~29秒做區隔</li>
+<li>由於需要計算位數，需要先取得 n 的位數 (5(101) -&gt; 3位數)</li>
+<li>透過指數運算，可以獲得與 n 相同位數且全是 1 的數 ( 2 ^ 3 = 8，8 - 1 = 7 (111) )</li>
+<li>直接與 n 做減法獲得補數的十位數</li>
 </ol>
 <hr>
 <h2 id="程式碼">程式碼</h2>
 <pre tabindex="0"><code>class Solution {
 public:
-    int numPairsDivisibleBy60(vector&lt;int&gt;&amp; time) {
+    int bitwiseComplement(int n) {
         
-        int i, cnt = 0;
-        map&lt;int, int&gt; table;
+        int cnt=1;
+        int tmp = n;
         
-        for(i = 0; i &lt; time.size(); i++){
-            table[time[i]%60] += 1;
+        while(tmp &gt; 1){
+            tmp /= 2;
+            cnt++;
         }
+                  
+        return pow(2,cnt)- 1 - n;
+    }
+};
+</code></pre><p>改良點的寫法(雖然感覺不出來時間跟空間使用的差別)</p>
+<pre tabindex="0"><code>class Solution {
+public:
+    int bitwiseComplement(int n) {
         
-        for(i=1;i&lt;30;i++){
-            if(table[i]!=0){
-                if(table[60-i] != 0){
-                    cnt += (table[i] * table[60-i]);
-                }
-            }
+        int cnt=1;
+        
+        while( n - pow(2,cnt) &gt;= 0){
+            cnt++;
         }
-        
-        if(table[0] &gt;= 2){
-            cnt += ((table[0]*(table[0]-1))/2);
-        }
-        
-        
-        if(table[30] &gt;= 2){
-            cnt += ((table[30]*(table[30]-1))/2);
-        }
-        
-        return cnt;
+                  
+        return pow(2,cnt)- 1 - n;
     }
 };
 </code></pre><hr>
 <h2 id="結果">結果</h2>
-<p><img src="https://i.imgur.com/BEgz4K5.png" alt=""></p>
+<p><img src="https://i.imgur.com/O5EsK80.png" alt=""></p>
 <hr>
 <h2 id="結語">結語</h2>
-<p>聽朋友說可以用加法的方式來取代原本的乘法，將每一個 1 ~ 29 秒的數量用加的方式計算，可以減少運算時間，改天再試試看～</p>
+<p>使用空間有點不甚理想，主要是多在紀錄原本的 n 的 tmp 以及 cnt 上面，目前想到的思路是用 cnt 做指數運算跟 n 做減法來判斷迴圈結束，這樣就可以少一個 tmp 了，但會不會影響運行時間還要在嘗試看看。</p>
+<p>比較值得注意的是原本我想用 log2() 來直接判斷位數，不過這麼做會有一些問題，假如出來結果是整數的話會造成判斷錯誤</p>
+<p>例如同樣比較 4,5,6,7(照理來說都要用 2^3(8)) 去做減法，但是代到 log2() 後發現結果是 2, 2.. , 2.. , 2..，如果有小數點就可以直接無條件進入成 3，但對整數而言還要在額外 ＋1，需要額外寫條件。</p>
 
     </div>
     <div class="post-footer">
