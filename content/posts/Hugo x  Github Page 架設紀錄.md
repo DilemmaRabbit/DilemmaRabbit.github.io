@@ -225,11 +225,11 @@ commit 後便會自動 deploy 一次，如果正常的話會在你的 gh-pages �
 
 ## 將目前的預設 branch 改成新的 branch
 
-Settings -> Pages，將 source 改成新的分支，就可以嘗試 username.github.io 觀看網頁是否正常了
+Settings -> Pages，將 source 改成新的分支，就可以嘗試 username.github.io 查看網頁是否正常
 
 ![](https://i.imgur.com/K7MARDb.png)
 
-## 🎉最後從本機端產生一個 push，觀看是否會自動進行更新及部署🎉
+## 🎉最後從本機端產生一個 push，查看是否會自動進行更新及部署🎉
 
 ---
 
