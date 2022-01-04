@@ -1,7 +1,7 @@
 ---
 title: "Hugo x GitHub Pages 架設紀錄"
 date: 2022-01-02T15:31:23+08:00
-draft: true
+draft: false
 Tags: ["Hugo","GitHub-Pages","Tutorial"]
 ---
 
