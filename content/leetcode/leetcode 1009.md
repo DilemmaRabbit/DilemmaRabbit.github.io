@@ -1,5 +1,5 @@
 ---
-title: "Leetcode1009"
+title: "Leetcode 1009"
 date: 2022-01-04T10:25:40+08:00
 draft: false
 Tags: ["LeetCode"]
