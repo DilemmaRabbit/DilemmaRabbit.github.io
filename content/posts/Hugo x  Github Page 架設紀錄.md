@@ -278,7 +278,7 @@ Settings -> Pages，將 source 改成新的分支，就可以嘗試 username.git
 
 2. git submodule
 
-- 簡介：當自己的專案使用其他的專案的檔案時，除了把整份資料進行 clone 或是 fork 外，也可以透過 submodule 的方式來進行其他專案的使用，並且在
+- 簡介
   
 - 新增 submodule
 
