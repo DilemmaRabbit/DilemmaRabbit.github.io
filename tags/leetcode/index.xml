@@ -6,7 +6,16 @@
     <description>Recent content in LeetCode on Dilemma Rabbit</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 04 Jan 2022 10:25:40 +0800</lastBuildDate><atom:link href="https://DilemmaRabbit.github.io/tags/leetcode/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 06 Jan 2022 15:03:20 +0800</lastBuildDate><atom:link href="https://DilemmaRabbit.github.io/tags/leetcode/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Leetcode 1094</title>
+      <link>https://DilemmaRabbit.github.io/leetcode/leetcode-1094/</link>
+      <pubDate>Thu, 06 Jan 2022 15:03:20 +0800</pubDate>
+      
+      <guid>https://DilemmaRabbit.github.io/leetcode/leetcode-1094/</guid>
+      <description>問題描述 分類：🟠 medium 🟠 相關主題：Array,Sorting,Heap(Piority Queue),Simulation,Prefix Sum 題目（英文） There is a car with capacity empty seats. The vehicle only drives east (i.e., it cannot turn around and drive west). You are given the integer capacity and an array trips where trip[i] = [numPassengersi, fromi, toi] indicates that the ith trip has numPassengersi passengers and the locations to pick them up and drop them off are fromi and toi respectively. The locations are given as the number of kilometers due east from the car&#39;s initial location.</description>
+    </item>
+    
     <item>
       <title>Leetcode 1009</title>
       <link>https://DilemmaRabbit.github.io/leetcode/leetcode-1009/</link>
