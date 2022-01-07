@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <title>Leetcode 382 // Dilemma Rabbit</title>
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.91.2" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="DilemmaRabbit" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="https://DilemmaRabbit.github.io/css/main.min.dc7bd8735a57ef73c20e8a83e31d56f24512c666564f61a8705f834f8731105c.css" />
+
+    
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Leetcode 382"/>
+<meta name="twitter:description" content="問題描述 分類： 🟠 medium 🟠 相關主題： Linked List, Math, Reservoir Sampling, Randomized 題目（英文） Given a singly linked list, return a random node&#39;s value from the linked list. Each node must have the same probability of being chosen. Implement the Solution class: Solution(ListNode head) Initializes the object with the integer array nums. int getRandom() Chooses a node randomly from the list and returns its value. All the nodes of the list should be equally likely to be choosen."/>
+
+    <meta property="og:title" content="Leetcode 382" />
+<meta property="og:description" content="問題描述 分類： 🟠 medium 🟠 相關主題： Linked List, Math, Reservoir Sampling, Randomized 題目（英文） Given a singly linked list, return a random node&#39;s value from the linked list. Each node must have the same probability of being chosen. Implement the Solution class: Solution(ListNode head) Initializes the object with the integer array nums. int getRandom() Chooses a node randomly from the list and returns its value. All the nodes of the list should be equally likely to be choosen." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://DilemmaRabbit.github.io/leetcode/leetcode-382/" /><meta property="article:section" content="leetcode" />
+<meta property="article:published_time" content="2022-01-07T20:21:17+08:00" />
+<meta property="article:modified_time" content="2022-01-07T20:21:17+08:00" />
+
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="https://DilemmaRabbit.github.io/"><img class="app-header-avatar" src="/avatar.jpg" alt="DilemmaRabbit" /></a>
+      <h1>Dilemma Rabbit</h1>
+      <nav class="app-header-menu">
+          <a class="app-header-menu-item" href="/">Home</a>
+             | 
+          
+          <a class="app-header-menu-item" href="/tags/">Tags</a>
+      </nav>
+      <p>Programer / Student</p>
+      <div class="app-header-social">
+        
+          <a href="https://github.com/DilemmaRabbit" target="_blank" rel="noreferrer noopener">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-github">
+  <title>GitHub</title>
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+</svg>
+          </a>
+        
+          <a href="mailto:a21663832@gmail.com" target="_blank" rel="noreferrer noopener">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-at-sign">
+  <title>gmail</title>
+  <circle cx="12" cy="12" r="4"></circle><path d="M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-3.92 7.94"></path>
+</svg>
+          </a>
+        
+          <a href="https://t.me/DilemmaRabbit" target="_blank" rel="noreferrer noopener">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-navigation">
+  <title>telegram</title>
+  <polygon points="3 11 22 2 13 21 11 13 3 11"></polygon>
+</svg>
+          </a>
+        
+      </div>
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">Leetcode 382</h1>
+      <div class="post-meta">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          Jan 7, 2022
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          2 min read
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tag">
+  <title>tag</title>
+  <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line>
+</svg>
+              <a class="tag" href="https://DilemmaRabbit.github.io/tags/leetcode/">LeetCode</a>
+        </div>
+      </div>
+    </header>
+    <div class="post-content">
+      <h2 id="問題描述">問題描述</h2>
+<h3 id="分類--medium-">分類： 🟠 medium 🟠</h3>
+<h3 id="相關主題-linked-list-math-reservoir-sampling-randomized">相關主題： Linked List, Math, Reservoir Sampling, Randomized</h3>
+<h3 id="題目英文">題目（英文）</h3>
+<pre tabindex="0"><code>Given a singly linked list, return a random node's value from the linked list. Each node must have the same probability of being chosen.
+
+Implement the Solution class:
+
+Solution(ListNode head) Initializes the object with the integer array nums.
+int getRandom() Chooses a node randomly from the list and returns its value. All the nodes of the list should be equally likely to be choosen.
+</code></pre><hr>
+<h3 id="測資">測資</h3>
+<p><img src="https://assets.leetcode.com/uploads/2021/03/16/getrand-linked-list.jpg" alt=""></p>
+<pre tabindex="0"><code>Input
+[&quot;Solution&quot;, &quot;getRandom&quot;, &quot;getRandom&quot;, &quot;getRandom&quot;, &quot;getRandom&quot;, &quot;getRandom&quot;]
+[[[1, 2, 3]], [], [], [], [], []]
+Output
+[null, 1, 3, 2, 2, 3]
+</code></pre><hr>
+<h3 id="題目中文">題目（中文）</h3>
+<pre tabindex="0"><code>給予一個 Linked List 結構，回傳 Linked List 隨機一個節點的質，每個節點有相同的機率被選擇到
+
+請實作解答的結構
+
+Solution(ListNode head) 初始化 Linked List
+int getRandom() 選擇一個隨機的節點並回傳其值，每個節點被選擇的機率應該要一樣
+</code></pre><hr>
+<h2 id="思路">思路</h2>
+<ol>
+<li>原先想法是從 n 個中選擇一個，在從剩下的 n-1 中選擇 1 個，直到所有都被選擇完，則重新開始</li>
+<li>然而原先的方法不夠隨機，只能確保在選擇 n 個時是完全公平的，並不代表相同的被選擇的機率</li>
+<li><a href="https://zh.wikipedia.org/wiki/%E6%B0%B4%E5%A1%98%E6%8A%BD%E6%A8%A3">Reservoir Sampling 水塘抽樣</a></li>
+</ol>
+<ul>
+<li>從目標中取 1 個當作目標回傳值</li>
+<li>對目標外值，每個皆擁有 1 / n 的機會被當成目標回傳值</li>
+<li>對每一個值都做相同的操作</li>
+<li>可確保每一個值被當成回傳值得機率為 1 / n</li>
+</ul>
+<hr>
+<h2 id="程式碼">程式碼</h2>
+<pre tabindex="0"><code>/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     ListNode *next;
+ *     ListNode() : val(0), next(nullptr) {}
+ *     ListNode(int x) : val(x), next(nullptr) {}
+ *     ListNode(int x, ListNode *next) : val(x), next(next) {}
+ * };
+ */
+class Solution {
+public:
+    
+    vector&lt;int&gt; t;
+    int cur;
+    
+    Solution(ListNode* head) {
+        ListNode *tmp = head;
+        srand(time(NULL));
+        while(tmp != NULL){
+            t.push_back(tmp-&gt;val);
+            tmp = tmp -&gt; next;
+        }
+        
+        cur = t.size();
+        
+    }
+    
+    int getRandom() {
+        
+        int val = t.front();
+        
+        for(int i=1;i&lt;cur;i++){
+            int j = rand() % (i+1);
+            if(j == 0){
+                val = t[i];
+            }
+        }
+            
+        return val;
+            
+    }
+};
+
+/**
+ * Your Solution object will be instantiated and called as such:
+ * Solution* obj = new Solution(head);
+ * int param_1 = obj-&gt;getRandom();
+ */
+</code></pre><hr>
+<h2 id="結果">結果</h2>
+<h2 id="httpsiimgurcomqbmnxhopng"><img src="https://i.imgur.com/qBmNXHO.png" alt=""></h2>
+<h2 id="結語">結語</h2>
+<p>原先的想法再取 n 的倍數的情況下才能確保是完全公平的，但是一輪的公平不代表在選擇某個數字時機率是公平的，水塘取樣則可以保證每個值在一次取樣中都有公平的機會被取到。</p>
+<p>目前還有的改善地方為可以把原先用陣列的結構改為使用串列的方式，可以節省更多空間。</p>
+
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>

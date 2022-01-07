@@ -6,7 +6,16 @@
     <description>Recent content in LeetCode on Dilemma Rabbit</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 06 Jan 2022 15:03:20 +0800</lastBuildDate><atom:link href="https://DilemmaRabbit.github.io/tags/leetcode/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 07 Jan 2022 20:21:17 +0800</lastBuildDate><atom:link href="https://DilemmaRabbit.github.io/tags/leetcode/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Leetcode 382</title>
+      <link>https://DilemmaRabbit.github.io/leetcode/leetcode-382/</link>
+      <pubDate>Fri, 07 Jan 2022 20:21:17 +0800</pubDate>
+      
+      <guid>https://DilemmaRabbit.github.io/leetcode/leetcode-382/</guid>
+      <description>問題描述 分類： 🟠 medium 🟠 相關主題： Linked List, Math, Reservoir Sampling, Randomized 題目（英文） Given a singly linked list, return a random node&#39;s value from the linked list. Each node must have the same probability of being chosen. Implement the Solution class: Solution(ListNode head) Initializes the object with the integer array nums. int getRandom() Chooses a node randomly from the list and returns its value. All the nodes of the list should be equally likely to be choosen.</description>
+    </item>
+    
     <item>
       <title>Leetcode 1094</title>
       <link>https://DilemmaRabbit.github.io/leetcode/leetcode-1094/</link>
