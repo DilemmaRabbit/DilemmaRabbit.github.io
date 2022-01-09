@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <title>Leetcode 1041 // Dilemma Rabbit</title>
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.91.2" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="DilemmaRabbit" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="https://DilemmaRabbit.github.io/css/main.min.dc7bd8735a57ef73c20e8a83e31d56f24512c666564f61a8705f834f8731105c.css" />
+
+    
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Leetcode 1041"/>
+<meta name="twitter:description" content="問題描述 分類：🟠 Medium 🟠 相關主題：Math, String, Simulation 題目（英文） On an infinite plane, a robot initially stands at (0, 0) and faces north. The robot can receive one of three instructions: &quot;G&quot;: go straight 1 unit; &quot;L&quot;: turn 90 degrees to the left; &quot;R&quot;: turn 90 degrees to the right. The robot performs the instructions given in order, and repeats them forever. Return true if and only if there exists a circle in the plane such that the robot never leaves the circle."/>
+
+    <meta property="og:title" content="Leetcode 1041" />
+<meta property="og:description" content="問題描述 分類：🟠 Medium 🟠 相關主題：Math, String, Simulation 題目（英文） On an infinite plane, a robot initially stands at (0, 0) and faces north. The robot can receive one of three instructions: &quot;G&quot;: go straight 1 unit; &quot;L&quot;: turn 90 degrees to the left; &quot;R&quot;: turn 90 degrees to the right. The robot performs the instructions given in order, and repeats them forever. Return true if and only if there exists a circle in the plane such that the robot never leaves the circle." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://DilemmaRabbit.github.io/leetcode/leetcode-1041/" /><meta property="article:section" content="leetcode" />
+<meta property="article:published_time" content="2022-01-09T13:04:57+08:00" />
+<meta property="article:modified_time" content="2022-01-09T13:04:57+08:00" />
+
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="https://DilemmaRabbit.github.io/"><img class="app-header-avatar" src="/avatar.jpg" alt="DilemmaRabbit" /></a>
+      <h1>Dilemma Rabbit</h1>
+      <nav class="app-header-menu">
+          <a class="app-header-menu-item" href="/">Home</a>
+             | 
+          
+          <a class="app-header-menu-item" href="/tags/">Tags</a>
+      </nav>
+      <p>Programer / Student</p>
+      <div class="app-header-social">
+        
+          <a href="https://github.com/DilemmaRabbit" target="_blank" rel="noreferrer noopener">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-github">
+  <title>GitHub</title>
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+</svg>
+          </a>
+        
+          <a href="mailto:a21663832@gmail.com" target="_blank" rel="noreferrer noopener">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-at-sign">
+  <title>gmail</title>
+  <circle cx="12" cy="12" r="4"></circle><path d="M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-3.92 7.94"></path>
+</svg>
+          </a>
+        
+          <a href="https://t.me/DilemmaRabbit" target="_blank" rel="noreferrer noopener">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-navigation">
+  <title>telegram</title>
+  <polygon points="3 11 22 2 13 21 11 13 3 11"></polygon>
+</svg>
+          </a>
+        
+      </div>
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">Leetcode 1041</h1>
+      <div class="post-meta">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          Jan 9, 2022
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          2 min read
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tag">
+  <title>tag</title>
+  <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line>
+</svg>
+              <a class="tag" href="https://DilemmaRabbit.github.io/tags/leetcode/">LeetCode</a>
+        </div>
+      </div>
+    </header>
+    <div class="post-content">
+      <h2 id="問題描述">問題描述</h2>
+<h3 id="分類-medium-">分類：🟠 Medium 🟠</h3>
+<h3 id="相關主題math-string-simulation">相關主題：Math, String, Simulation</h3>
+<h3 id="題目英文">題目（英文）</h3>
+<pre tabindex="0"><code>On an infinite plane, a robot initially stands at (0, 0) and faces north. The robot can receive one of three instructions:
+
+&quot;G&quot;: go straight 1 unit;
+&quot;L&quot;: turn 90 degrees to the left;
+&quot;R&quot;: turn 90 degrees to the right.
+
+The robot performs the instructions given in order, and repeats them forever.
+
+Return true if and only if there exists a circle in the plane such that the robot never leaves the circle.
+</code></pre><hr>
+<h3 id="測資">測資</h3>
+<pre tabindex="0"><code>Example 1:
+
+Input: instructions = &quot;GGLLGG&quot;
+Output: true
+Explanation: The robot moves from (0,0) to (0,2), turns 180 degrees, and then returns to (0,0).
+When repeating these instructions, the robot remains in the circle of radius 2 centered at the origin.
+
+Example 2:
+
+Input: instructions = &quot;GG&quot;
+Output: false
+Explanation: The robot moves north indefinitely.
+
+Example 3:
+
+Input: instructions = &quot;GL&quot;
+Output: true
+Explanation: The robot moves from (0, 0) -&gt; (0, 1) -&gt; (-1, 1) -&gt; (-1, 0) -&gt; (0, 0) -&gt; ...
+
+ 
+
+Constraints:
+
+1 &lt;= instructions.length &lt;= 100
+instructions[i] is 'G', 'L' or, 'R'.
+</code></pre><hr>
+<h3 id="題目中文">題目（中文）</h3>
+<pre tabindex="0"><code>在一個無限大的平面上，一個機器人在原點(0,0)的位置並且朝北的方式接受指令
+
+具有以下三種指令
+
+'D' : 機器人向目前方向前進一步
+'L' : 機器人向左轉 90 度
+'R' : 機器人向右轉 90 度
+
+機器人的行為由以上三種字元組成的字串而成，並且不斷地重複執行
+
+回傳 true 代表機器人的行為會有繞圈的行為，機器人永遠都會在固定的路徑上行動
+</code></pre><hr>
+<h2 id="思路">思路</h2>
+<ol>
+<li>
+<p>先判斷出一次指令執行完後，最終機器人的位置以及目前面對方向</p>
+</li>
+<li>
+<p>如果在 0,0 代表機器人剛好回到原點，必定有繞圈</p>
+</li>
+<li>
+<p>如果機器人的面向位置沒有改變，代表如果機器人一旦移動，必定不會繞圈(※需要比原點還晚判斷，因為有可能機器人只是純粹轉方向)</p>
+</li>
+<li>
+<p>如果機器人面向位置沒有改變，代表機器人在4次輪替後必定會回到北面，而行動也會各個方向都跑一次，代表一定有繞圈行為</p>
+</li>
+</ol>
+<hr>
+<h2 id="程式碼">程式碼</h2>
+<pre tabindex="0"><code>class Solution {
+public:
+    bool isRobotBounded(string instructions) {
+        
+        vector&lt;int&gt; position{0,0}; // 初始化位置
+        vector&lt;vector&lt;int&gt;&gt; direction{{0,1},{1,0},{0,-1},{-1,0}}; // 建立四個方位的移動值
+        int cur_direction = 0; // 初始化方位
+        
+        for(auto instruction:instructions){
+            if(instruction == 'G'){ // 前進
+                position[0] = position[0] + direction[cur_direction][0];
+                position[1] = position[1] + direction[cur_direction][1];
+            }
+            else if(instruction == 'L'){ // 改變左向
+                cur_direction = (cur_direction-1 % 4 + 4) % 4;
+            }
+            else{ // 改變右向
+                cur_direction = (cur_direction+1) % 4;
+            }
+        }
+        
+        if(position[0] == 0 &amp;&amp; position[1] == 0){
+            return true; // 判斷是否在原點
+        }
+        
+        if(!(cur_direction == 0)){
+            return true; // 判斷是否面向北方
+        }
+        
+        return false;
+    }
+};
+</code></pre><hr>
+<h2 id="結果">結果</h2>
+<h2 id="httpsiimgurcomfpi3cvspng"><img src="https://i.imgur.com/FpI3cVs.png" alt=""></h2>
+<h2 id="結語">結語</h2>
+<p>原本想要直接用 mod 的方式控制轉向的方向，但是必須考慮是從 L 或是 R 轉向而來的，會導致加總結果不一樣，最後索性直接設定固定值(因為才四個方向)，透過 cur_direction來判斷目前要使用的方向。</p>
+
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>

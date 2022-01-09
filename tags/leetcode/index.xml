@@ -6,7 +6,34 @@
     <description>Recent content in LeetCode on Dilemma Rabbit</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 08 Jan 2022 20:37:01 +0800</lastBuildDate><atom:link href="https://DilemmaRabbit.github.io/tags/leetcode/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 09 Jan 2022 13:05:08 +0800</lastBuildDate><atom:link href="https://DilemmaRabbit.github.io/tags/leetcode/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Leetcode 746</title>
+      <link>https://DilemmaRabbit.github.io/leetcode/leetcode-746/</link>
+      <pubDate>Sun, 09 Jan 2022 13:05:08 +0800</pubDate>
+      
+      <guid>https://DilemmaRabbit.github.io/leetcode/leetcode-746/</guid>
+      <description>問題描述 分類：🟢 Easy 🟢 相關主題：Array, Dynamic Programming 題目（英文） You are given an integer array cost where cost[i] is the cost of ith step on a staircase. Once you pay the cost, you can either climb one or two steps. You can either start from the step with index 0, or the step with index 1. Return the minimum cost to reach the top of the floor.  測資 Input: cost = [10,15,20] Output: 15 Explanation: You will start at index 1.</description>
+    </item>
+    
+    <item>
+      <title>Leetcode 1041</title>
+      <link>https://DilemmaRabbit.github.io/leetcode/leetcode-1041/</link>
+      <pubDate>Sun, 09 Jan 2022 13:04:57 +0800</pubDate>
+      
+      <guid>https://DilemmaRabbit.github.io/leetcode/leetcode-1041/</guid>
+      <description>問題描述 分類：🟠 Medium 🟠 相關主題：Math, String, Simulation 題目（英文） On an infinite plane, a robot initially stands at (0, 0) and faces north. The robot can receive one of three instructions: &amp;quot;G&amp;quot;: go straight 1 unit; &amp;quot;L&amp;quot;: turn 90 degrees to the left; &amp;quot;R&amp;quot;: turn 90 degrees to the right. The robot performs the instructions given in order, and repeats them forever. Return true if and only if there exists a circle in the plane such that the robot never leaves the circle.</description>
+    </item>
+    
+    <item>
+      <title>Leetcode 70</title>
+      <link>https://DilemmaRabbit.github.io/leetcode/leetcode-70/</link>
+      <pubDate>Sun, 09 Jan 2022 13:04:51 +0800</pubDate>
+      
+      <guid>https://DilemmaRabbit.github.io/leetcode/leetcode-70/</guid>
+      <description>問題描述 分類：🟢 easy 🟢 相關主題：Math, Dynamic Programming, Memoization 題目（英文） You are climbing a staircase. It takes n steps to reach the top. Each time you can either climb 1 or 2 steps. In how many distinct ways can you climb to the top?  測資 Example 1: Input: n = 2 Output: 2 Explanation: There are two ways to climb to the top. 1. 1 step + 1 step 2. 2 steps Example 2: Input: n = 3 Output: 3 Explanation: There are three ways to climb to the top.</description>
+    </item>
+    
     <item>
       <title>Leetcode 1137</title>
       <link>https://DilemmaRabbit.github.io/leetcode/leetcode-1137/</link>
