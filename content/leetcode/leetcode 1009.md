@@ -1,5 +1,5 @@
 ---
-title: "Leetcode 1009"
+title: "Leetcode 1009 Complement of Base 10 Integer"
 date: 2022-01-04T10:25:40+08:00
 draft: false
 Tags: ["LeetCode"]
@@ -7,7 +7,7 @@ Tags: ["LeetCode"]
 
 ## 問題描述
 
-### 分類：🟢 easy 🟢
+### 分類：🟢 Easy 🟢
 ### 相關主題：Bit Manipulation
 
 ---

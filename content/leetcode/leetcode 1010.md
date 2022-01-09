@@ -1,5 +1,5 @@
 ---
-title: "Leetcode 1010"
+title: "Leetcode 1010 Pairs of Songs With Total Durations Divisible by 60"
 date: 2022-01-03T16:26:29+08:00
 draft: false
 Tags: ["LeetCode"]
@@ -7,7 +7,7 @@ Tags: ["LeetCode"]
 
 ## 問題描述
 
-### 分類：🟠 medium 🟠
+### 分類：🟠 Medium 🟠
 ### 相關主題：Counting, Hash_table, Array
 
 ---

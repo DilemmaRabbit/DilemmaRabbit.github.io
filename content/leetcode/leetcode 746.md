@@ -1,5 +1,5 @@
 ---
-title: "Leetcode 746"
+title: "Leetcode 746 Min Cost Climbing Stairs"
 date: 2022-01-09T13:05:08+08:00
 draft: false
 Tags: ["LeetCode"]

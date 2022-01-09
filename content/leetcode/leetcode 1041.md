@@ -1,5 +1,5 @@
 ---
-title: "Leetcode 1041"
+title: "Leetcode 1041 Robot Bounded In Circle"
 date: 2022-01-09T13:04:57+08:00
 draft: false
 Tags: ["LeetCode"]

@@ -1,5 +1,5 @@
 ---
-title: "Leetcode 997"
+title: "Leetcode 997 Find the Town Judge"
 date: 2022-01-03T13:14:32+08:00
 draft: false
 Tags: ["LeetCode"]
@@ -7,7 +7,7 @@ Tags: ["LeetCode"]
 
 ## 問題描述
 
-### 分類：🟢 easy 🟢
+### 分類：🟢 Easy 🟢
 ### 相關主題：Graph, Hash_table, Array
 
 ### 題目（英文）

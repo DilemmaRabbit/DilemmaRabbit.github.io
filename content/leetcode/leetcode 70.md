@@ -1,5 +1,5 @@
 ---
-title: "Leetcode 70"
+title: "Leetcode 70 Climbing Stairs"
 date: 2022-01-09T13:04:51+08:00
 draft: false
 Tags: ["LeetCode"]

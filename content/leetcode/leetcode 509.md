@@ -1,5 +1,5 @@
 ---
-title: "Leetcode 509"
+title: "Leetcode 509 Fibonacci Number"
 date: 2022-01-08T20:36:06+08:00
 draft: false
 Tags: ["LeetCode"]
@@ -8,7 +8,7 @@ Tags: ["LeetCode"]
 
 ## 問題描述
 
-### 分類：🟢 easy 🟢
+### 分類：🟢 Easy 🟢
 ### 相關主題：Math, Dynamic Programming, Recursion, Memoization
 
 ### 題目（英文）

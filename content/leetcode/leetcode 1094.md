@@ -1,5 +1,5 @@
 ---
-title: "Leetcode 1094"
+title: "Leetcode 1094 Car Pooling"
 date: 2022-01-06T15:03:20+08:00
 draft: false
 Tags: ["LeetCode"]
@@ -8,7 +8,7 @@ Tags: ["LeetCode"]
 
 ## 問題描述
 
-### 分類：🟠 medium 🟠
+### 分類：🟠 Medium 🟠
 ### 相關主題：Array,Sorting,Heap(Piority Queue),Simulation,Prefix Sum
 
 ### 題目（英文）

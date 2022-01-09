@@ -1,5 +1,5 @@
 ---
-title: "Leetcode 382"
+title: "Leetcode 382 Linked List Random Node"
 date: 2022-01-07T20:21:17+08:00
 draft: false
 Tags: ["LeetCode"]

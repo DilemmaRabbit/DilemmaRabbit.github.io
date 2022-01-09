@@ -1,5 +1,5 @@
 ---
-title: "Leetcode 1137"
+title: "Leetcode 1137 N-th Tribonacci Number"
 date: 2022-01-08T20:37:01+08:00
 draft: false
 Tags: ["LeetCode"]
@@ -8,7 +8,7 @@ Tags: ["LeetCode"]
 
 ## 問題描述
 
-### 分類：🟢 easy 🟢
+### 分類：🟢 Easy 🟢
 ### 相關主題：Math, Dynamic Programming, Memoization
 
 ### 題目（英文）
