@@ -13,7 +13,9 @@
       <pubDate>Mon, 10 Jan 2022 14:04:27 +0800</pubDate>
       
       <guid>https://DilemmaRabbit.github.io/leetcode/leetcode-67-add-binary/</guid>
-      <description>問題描述 分類：🟢 Easy 🟢 相關主題：Math, String, Bit Manipulation, Simulation 題目（英文） Given two binary strings a and b, return their sum as a binary string.  測資 Example 1: Input: a = &amp;quot;11&amp;quot;, b = &amp;quot;1&amp;quot; Output: &amp;quot;100&amp;quot; Example 2: Input: a = &amp;quot;1010&amp;quot;, b = &amp;quot;1011&amp;quot; Output: &amp;quot;10101&amp;quot; Constraints: 1 &amp;lt;= a.length, b.length &amp;lt;= 104 a and b consist only of &#39;0&#39; or &#39;1&#39; characters. Each string does not contain leading zeros except for the zero itself.</description>
+      
+        <description>問題描述 分類：🟢 Easy 🟢 相關主題：Math, String, Bit Manipulation, Simulation 題目（英文） Given two binary strings a and b, return their sum as a binary string.  測資 Example 1: Input: a = &amp;quot;11&amp;quot;, b = &amp;quot;1&amp;quot; Output: &amp;quot;100&amp;quot; Example 2: Input: a = &amp;quot;1010&amp;quot;, b = &amp;quot;1011&amp;quot; Output: &amp;quot;10101&amp;quot; Constraints: 1 &amp;lt;= a.length, b.length &amp;lt;= 104 a and b consist only of &#39;0&#39; or &#39;1&#39; characters. Each string does not contain leading zeros except for the zero itself.</description>
+      
     </item>
     
     <item>
@@ -22,7 +24,9 @@
       <pubDate>Mon, 10 Jan 2022 14:04:12 +0800</pubDate>
       
       <guid>https://DilemmaRabbit.github.io/leetcode/leetcode-740-delete-and-earn/</guid>
-      <description>問題描述 分類：🟠 Medium 🟠 相關主題：Array, Hash Table, Dynamic Programming 題目（英文） You are given an integer array nums. You want to maximize the number of points you get by performing the following operation any number of times: Pick any nums[i] and delete it to earn nums[i] points. Afterwards, you must delete every element equal to nums[i] - 1 and every element equal to nums[i] + 1. Return the maximum number of points you can earn by applying the above operation some number of times.</description>
+      
+        <description>問題描述 分類：🟠 Medium 🟠 相關主題：Array, Hash Table, Dynamic Programming 題目（英文） You are given an integer array nums. You want to maximize the number of points you get by performing the following operation any number of times: Pick any nums[i] and delete it to earn nums[i] points. Afterwards, you must delete every element equal to nums[i] - 1 and every element equal to nums[i] + 1. Return the maximum number of points you can earn by applying the above operation some number of times.</description>
+      
     </item>
     
     <item>
@@ -31,7 +35,9 @@
       <pubDate>Mon, 10 Jan 2022 14:03:58 +0800</pubDate>
       
       <guid>https://DilemmaRabbit.github.io/leetcode/leetcode-213-house-robber-ii/</guid>
-      <description>問題描述 分類：🟠 Medium 🟠 相關主題：Array, Dynamic Programming 題目（英文） You are a professional robber planning to rob houses along a street. Each house has a certain amount of money stashed. All houses at this place are arranged in a circle. That means the first house is the neighbor of the last one. Meanwhile, adjacent houses have a security system connected, and it will automatically contact the police if two adjacent houses were broken into on the same night.</description>
+      
+        <description>問題描述 分類：🟠 Medium 🟠 相關主題：Array, Dynamic Programming 題目（英文） You are a professional robber planning to rob houses along a street. Each house has a certain amount of money stashed. All houses at this place are arranged in a circle. That means the first house is the neighbor of the last one. Meanwhile, adjacent houses have a security system connected, and it will automatically contact the police if two adjacent houses were broken into on the same night.</description>
+      
     </item>
     
     <item>
@@ -40,7 +46,9 @@
       <pubDate>Mon, 10 Jan 2022 14:03:44 +0800</pubDate>
       
       <guid>https://DilemmaRabbit.github.io/leetcode/leetcode-198-house-robber/</guid>
-      <description>問題描述 分類：🟠 Medium 🟠 相關主題：Array, Dynamic Programming 題目（英文） You are a professional robber planning to rob houses along a street. Each house has a certain amount of money stashed, the only constraint stopping you from robbing each of them is that adjacent houses have security systems connected and it will automatically contact the police if two adjacent houses were broken into on the same night. Given an integer array nums representing the amount of money of each house, return the maximum amount of money you can rob tonight without alerting the police.</description>
+      
+        <description>問題描述 分類：🟠 Medium 🟠 相關主題：Array, Dynamic Programming 題目（英文） You are a professional robber planning to rob houses along a street. Each house has a certain amount of money stashed, the only constraint stopping you from robbing each of them is that adjacent houses have security systems connected and it will automatically contact the police if two adjacent houses were broken into on the same night. Given an integer array nums representing the amount of money of each house, return the maximum amount of money you can rob tonight without alerting the police.</description>
+      
     </item>
     
     <item>
@@ -49,7 +57,9 @@
       <pubDate>Sun, 09 Jan 2022 13:05:08 +0800</pubDate>
       
       <guid>https://DilemmaRabbit.github.io/leetcode/leetcode-746-min-cost-climbing-stairs/</guid>
-      <description>問題描述 分類：🟢 Easy 🟢 相關主題：Array, Dynamic Programming 題目（英文） You are given an integer array cost where cost[i] is the cost of ith step on a staircase. Once you pay the cost, you can either climb one or two steps. You can either start from the step with index 0, or the step with index 1. Return the minimum cost to reach the top of the floor.  測資 Input: cost = [10,15,20] Output: 15 Explanation: You will start at index 1.</description>
+      
+        <description>問題描述 分類：🟢 Easy 🟢 相關主題：Array, Dynamic Programming 題目（英文） You are given an integer array cost where cost[i] is the cost of ith step on a staircase. Once you pay the cost, you can either climb one or two steps. You can either start from the step with index 0, or the step with index 1. Return the minimum cost to reach the top of the floor.  測資 Input: cost = [10,15,20] Output: 15 Explanation: You will start at index 1.</description>
+      
     </item>
     
     <item>
@@ -58,7 +68,9 @@
       <pubDate>Sun, 09 Jan 2022 13:04:57 +0800</pubDate>
       
       <guid>https://DilemmaRabbit.github.io/leetcode/leetcode-1041-robot-bounded-in-circle/</guid>
-      <description>問題描述 分類：🟠 Medium 🟠 相關主題：Math, String, Simulation 題目（英文） On an infinite plane, a robot initially stands at (0, 0) and faces north. The robot can receive one of three instructions: &amp;quot;G&amp;quot;: go straight 1 unit; &amp;quot;L&amp;quot;: turn 90 degrees to the left; &amp;quot;R&amp;quot;: turn 90 degrees to the right. The robot performs the instructions given in order, and repeats them forever. Return true if and only if there exists a circle in the plane such that the robot never leaves the circle.</description>
+      
+        <description>問題描述 分類：🟠 Medium 🟠 相關主題：Math, String, Simulation 題目（英文） On an infinite plane, a robot initially stands at (0, 0) and faces north. The robot can receive one of three instructions: &amp;quot;G&amp;quot;: go straight 1 unit; &amp;quot;L&amp;quot;: turn 90 degrees to the left; &amp;quot;R&amp;quot;: turn 90 degrees to the right. The robot performs the instructions given in order, and repeats them forever. Return true if and only if there exists a circle in the plane such that the robot never leaves the circle.</description>
+      
     </item>
     
     <item>
@@ -67,7 +79,9 @@
       <pubDate>Sun, 09 Jan 2022 13:04:51 +0800</pubDate>
       
       <guid>https://DilemmaRabbit.github.io/leetcode/leetcode-70-climbing-stairs/</guid>
-      <description>問題描述 分類：🟢 easy 🟢 相關主題：Math, Dynamic Programming, Memoization 題目（英文） You are climbing a staircase. It takes n steps to reach the top. Each time you can either climb 1 or 2 steps. In how many distinct ways can you climb to the top?  測資 Example 1: Input: n = 2 Output: 2 Explanation: There are two ways to climb to the top. 1. 1 step + 1 step 2. 2 steps Example 2: Input: n = 3 Output: 3 Explanation: There are three ways to climb to the top.</description>
+      
+        <description>問題描述 分類：🟢 easy 🟢 相關主題：Math, Dynamic Programming, Memoization 題目（英文） You are climbing a staircase. It takes n steps to reach the top. Each time you can either climb 1 or 2 steps. In how many distinct ways can you climb to the top?  測資 Example 1: Input: n = 2 Output: 2 Explanation: There are two ways to climb to the top. 1. 1 step + 1 step 2. 2 steps Example 2: Input: n = 3 Output: 3 Explanation: There are three ways to climb to the top.</description>
+      
     </item>
     
     <item>
@@ -76,7 +90,9 @@
       <pubDate>Sat, 08 Jan 2022 20:37:01 +0800</pubDate>
       
       <guid>https://DilemmaRabbit.github.io/leetcode/leetcode-1137-n-th-tribonacci-number/</guid>
-      <description>問題描述 分類：🟢 Easy 🟢 相關主題：Math, Dynamic Programming, Memoization 題目（英文） The Tribonacci sequence Tn is defined as follows: T0 = 0, T1 = 1, T2 = 1, and Tn+3 = Tn + Tn+1 + Tn+2 for n &amp;gt;= 0. Given n, return the value of Tn.  測資 Example 1: Input: n = 4 Output: 4 Explanation: T_3 = 0 + 1 + 1 = 2 T_4 = 1 + 1 + 2 = 4 Example 2: Input: n = 25 Output: 1389537  題目（中文） Tribonacci 可以表示為以下式子 T0 = 0, T1 = 1, T2 = 1, and Tn+3 = Tn + Tn+1 + Tn+2 for n &amp;gt;= 0.</description>
+      
+        <description>問題描述 分類：🟢 Easy 🟢 相關主題：Math, Dynamic Programming, Memoization 題目（英文） The Tribonacci sequence Tn is defined as follows: T0 = 0, T1 = 1, T2 = 1, and Tn+3 = Tn + Tn+1 + Tn+2 for n &amp;gt;= 0. Given n, return the value of Tn.  測資 Example 1: Input: n = 4 Output: 4 Explanation: T_3 = 0 + 1 + 1 = 2 T_4 = 1 + 1 + 2 = 4 Example 2: Input: n = 25 Output: 1389537  題目（中文） Tribonacci 可以表示為以下式子 T0 = 0, T1 = 1, T2 = 1, and Tn+3 = Tn + Tn+1 + Tn+2 for n &amp;gt;= 0.</description>
+      
     </item>
     
     <item>
@@ -85,7 +101,9 @@
       <pubDate>Sat, 08 Jan 2022 20:36:06 +0800</pubDate>
       
       <guid>https://DilemmaRabbit.github.io/leetcode/leetcode-509-fibonacci-number/</guid>
-      <description>問題描述 分類：🟢 Easy 🟢 相關主題：Math, Dynamic Programming, Recursion, Memoization 題目（英文） The Fibonacci numbers, commonly denoted F(n) form a sequence, called the Fibonacci sequence, such that each number is the sum of the two preceding ones, starting from 0 and 1. That is, F(0) = 0, F(1) = 1 F(n) = F(n - 1) + F(n - 2), for n &amp;gt; 1. Given n, calculate F(n).  測資 Example 1: Input: n = 2 Output: 1 Explanation: F(2) = F(1) + F(0) = 1 + 0 = 1.</description>
+      
+        <description>問題描述 分類：🟢 Easy 🟢 相關主題：Math, Dynamic Programming, Recursion, Memoization 題目（英文） The Fibonacci numbers, commonly denoted F(n) form a sequence, called the Fibonacci sequence, such that each number is the sum of the two preceding ones, starting from 0 and 1. That is, F(0) = 0, F(1) = 1 F(n) = F(n - 1) + F(n - 2), for n &amp;gt; 1. Given n, calculate F(n).  測資 Example 1: Input: n = 2 Output: 1 Explanation: F(2) = F(1) + F(0) = 1 + 0 = 1.</description>
+      
     </item>
     
     <item>
@@ -94,7 +112,9 @@
       <pubDate>Fri, 07 Jan 2022 20:21:17 +0800</pubDate>
       
       <guid>https://DilemmaRabbit.github.io/leetcode/leetcode-382-linked-list-random-node/</guid>
-      <description>問題描述 分類： 🟠 medium 🟠 相關主題： Linked List, Math, Reservoir Sampling, Randomized 題目（英文） Given a singly linked list, return a random node&#39;s value from the linked list. Each node must have the same probability of being chosen. Implement the Solution class: Solution(ListNode head) Initializes the object with the integer array nums. int getRandom() Chooses a node randomly from the list and returns its value. All the nodes of the list should be equally likely to be choosen.</description>
+      
+        <description>問題描述 分類： 🟠 medium 🟠 相關主題： Linked List, Math, Reservoir Sampling, Randomized 題目（英文） Given a singly linked list, return a random node&#39;s value from the linked list. Each node must have the same probability of being chosen. Implement the Solution class: Solution(ListNode head) Initializes the object with the integer array nums. int getRandom() Chooses a node randomly from the list and returns its value. All the nodes of the list should be equally likely to be choosen.</description>
+      
     </item>
     
     <item>
@@ -103,7 +123,9 @@
       <pubDate>Thu, 06 Jan 2022 15:03:20 +0800</pubDate>
       
       <guid>https://DilemmaRabbit.github.io/leetcode/leetcode-1094-car-pooling/</guid>
-      <description>問題描述 分類：🟠 Medium 🟠 相關主題：Array,Sorting,Heap(Piority Queue),Simulation,Prefix Sum 題目（英文） There is a car with capacity empty seats. The vehicle only drives east (i.e., it cannot turn around and drive west). You are given the integer capacity and an array trips where trip[i] = [numPassengersi, fromi, toi] indicates that the ith trip has numPassengersi passengers and the locations to pick them up and drop them off are fromi and toi respectively. The locations are given as the number of kilometers due east from the car&#39;s initial location.</description>
+      
+        <description>問題描述 分類：🟠 Medium 🟠 相關主題：Array,Sorting,Heap(Piority Queue),Simulation,Prefix Sum 題目（英文） There is a car with capacity empty seats. The vehicle only drives east (i.e., it cannot turn around and drive west). You are given the integer capacity and an array trips where trip[i] = [numPassengersi, fromi, toi] indicates that the ith trip has numPassengersi passengers and the locations to pick them up and drop them off are fromi and toi respectively. The locations are given as the number of kilometers due east from the car&#39;s initial location.</description>
+      
     </item>
     
     <item>
@@ -112,7 +134,9 @@
       <pubDate>Tue, 04 Jan 2022 10:25:40 +0800</pubDate>
       
       <guid>https://DilemmaRabbit.github.io/leetcode/leetcode-1009-complement-of-base-10-integer/</guid>
-      <description>問題描述 分類：🟢 Easy 🟢 相關主題：Bit Manipulation  題目（英文） The complement of an integer is the integer you get when you flip all the 0&#39;s to 1&#39;s and all the 1&#39;s to 0&#39;s in its binary representation. For example, The integer 5 is &amp;quot;101&amp;quot; in binary and its complement is &amp;quot;010&amp;quot; which is the integer 2. Given an integer n, return its complement.  測資 Example 1: Input: n = 5 Output: 2 Explanation: 5 is &amp;quot;101&amp;quot; in binary, with complement &amp;quot;010&amp;quot; in binary, which is 2 in base-10.</description>
+      
+        <description>問題描述 分類：🟢 Easy 🟢 相關主題：Bit Manipulation  題目（英文） The complement of an integer is the integer you get when you flip all the 0&#39;s to 1&#39;s and all the 1&#39;s to 0&#39;s in its binary representation. For example, The integer 5 is &amp;quot;101&amp;quot; in binary and its complement is &amp;quot;010&amp;quot; which is the integer 2. Given an integer n, return its complement.  測資 Example 1: Input: n = 5 Output: 2 Explanation: 5 is &amp;quot;101&amp;quot; in binary, with complement &amp;quot;010&amp;quot; in binary, which is 2 in base-10.</description>
+      
     </item>
     
     <item>
@@ -121,7 +145,9 @@
       <pubDate>Mon, 03 Jan 2022 16:26:29 +0800</pubDate>
       
       <guid>https://DilemmaRabbit.github.io/leetcode/leetcode-1010-pairs-of-songs-with-total-durations-divisible-by-60/</guid>
-      <description>問題描述 分類：🟠 Medium 🟠 相關主題：Counting, Hash_table, Array  題目（英文） You are given a list of songs where the ith song has a duration of time[i] seconds. Return the number of pairs of songs for which their total duration in seconds is divisible by 60. Formally, we want the number of indices i, j such that i &amp;lt; j with (time[i] + time[j]) % 60 == 0.  測資 Example 1: Input: time = [30,20,150,100,40] Output: 3 Explanation: Three pairs have a total duration divisible by 60: (time[0] = 30, time[2] = 150): total duration 180 (time[1] = 20, time[3] = 100): total duration 120 (time[1] = 20, time[4] = 40): total duration 60 Example 2: Input: time = [60,60,60] Output: 3 Explanation: All three pairs have a total duration of 120, which is divisible by 60.</description>
+      
+        <description>問題描述 分類：🟠 Medium 🟠 相關主題：Counting, Hash_table, Array  題目（英文） You are given a list of songs where the ith song has a duration of time[i] seconds. Return the number of pairs of songs for which their total duration in seconds is divisible by 60. Formally, we want the number of indices i, j such that i &amp;lt; j with (time[i] + time[j]) % 60 == 0.  測資 Example 1: Input: time = [30,20,150,100,40] Output: 3 Explanation: Three pairs have a total duration divisible by 60: (time[0] = 30, time[2] = 150): total duration 180 (time[1] = 20, time[3] = 100): total duration 120 (time[1] = 20, time[4] = 40): total duration 60 Example 2: Input: time = [60,60,60] Output: 3 Explanation: All three pairs have a total duration of 120, which is divisible by 60.</description>
+      
     </item>
     
     <item>
@@ -130,7 +156,9 @@
       <pubDate>Mon, 03 Jan 2022 13:14:32 +0800</pubDate>
       
       <guid>https://DilemmaRabbit.github.io/leetcode/leetcode-997-find-the-town-judge/</guid>
-      <description>問題描述 分類：🟢 Easy 🟢 相關主題：Graph, Hash_table, Array 題目（英文） In a town, there are n people labeled from 1 to n. There is a rumor that one of these people is secretly the town judge. If the town judge exists, then: 1. The town judge trusts nobody. 2. Everybody (except for the town judge) trusts the town judge. 3. There is exactly one person that satisfies properties 1 and 2. You are given an array trust where trust[i] = [ai, bi] representing that the person labeled ai trusts the person labeled bi.</description>
+      
+        <description>問題描述 分類：🟢 Easy 🟢 相關主題：Graph, Hash_table, Array 題目（英文） In a town, there are n people labeled from 1 to n. There is a rumor that one of these people is secretly the town judge. If the town judge exists, then: 1. The town judge trusts nobody. 2. Everybody (except for the town judge) trusts the town judge. 3. There is exactly one person that satisfies properties 1 and 2. You are given an array trust where trust[i] = [ai, bi] representing that the person labeled ai trusts the person labeled bi.</description>
+      
     </item>
     
   </channel>
