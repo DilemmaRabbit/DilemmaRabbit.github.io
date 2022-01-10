@@ -13,7 +13,7 @@
       <pubDate>Mon, 10 Jan 2022 14:04:27 +0800</pubDate>
       
       <guid>https://DilemmaRabbit.github.io/leetcode/leetcode-67-add-binary/</guid>
-      <description>問題描述 分類：🟢🟠🔴 相關主題： 題目（英文）   測資   題目（中文）   思路  程式碼   結果  結語 </description>
+      <description>問題描述 分類：🟢 Easy 🟢 相關主題：Math, String, Bit Manipulation, Simulation 題目（英文） Given two binary strings a and b, return their sum as a binary string.  測資 Example 1: Input: a = &amp;quot;11&amp;quot;, b = &amp;quot;1&amp;quot; Output: &amp;quot;100&amp;quot; Example 2: Input: a = &amp;quot;1010&amp;quot;, b = &amp;quot;1011&amp;quot; Output: &amp;quot;10101&amp;quot; Constraints: 1 &amp;lt;= a.length, b.length &amp;lt;= 104 a and b consist only of &#39;0&#39; or &#39;1&#39; characters. Each string does not contain leading zeros except for the zero itself.</description>
     </item>
     
     <item>
@@ -22,7 +22,7 @@
       <pubDate>Mon, 10 Jan 2022 14:04:12 +0800</pubDate>
       
       <guid>https://DilemmaRabbit.github.io/leetcode/leetcode-740-delete-and-earn/</guid>
-      <description>問題描述 分類：🟢🟠🔴 相關主題： 題目（英文）   測資   題目（中文）   思路  程式碼   結果  結語 </description>
+      <description>問題描述 分類：🟠 Medium 🟠 相關主題：Array, Hash Table, Dynamic Programming 題目（英文） You are given an integer array nums. You want to maximize the number of points you get by performing the following operation any number of times: Pick any nums[i] and delete it to earn nums[i] points. Afterwards, you must delete every element equal to nums[i] - 1 and every element equal to nums[i] + 1. Return the maximum number of points you can earn by applying the above operation some number of times.</description>
     </item>
     
     <item>
@@ -31,7 +31,7 @@
       <pubDate>Mon, 10 Jan 2022 14:03:58 +0800</pubDate>
       
       <guid>https://DilemmaRabbit.github.io/leetcode/leetcode-213-house-robber-ii/</guid>
-      <description>問題描述 分類：🟢🟠🔴 相關主題： 題目（英文）   測資   題目（中文）   思路  程式碼   結果  結語 </description>
+      <description>問題描述 分類：🟠 Medium 🟠 相關主題：Array, Dynamic Programming 題目（英文） You are a professional robber planning to rob houses along a street. Each house has a certain amount of money stashed. All houses at this place are arranged in a circle. That means the first house is the neighbor of the last one. Meanwhile, adjacent houses have a security system connected, and it will automatically contact the police if two adjacent houses were broken into on the same night.</description>
     </item>
     
     <item>
@@ -40,7 +40,7 @@
       <pubDate>Mon, 10 Jan 2022 14:03:44 +0800</pubDate>
       
       <guid>https://DilemmaRabbit.github.io/leetcode/leetcode-198-house-robber/</guid>
-      <description>問題描述 分類：🟢🟠🔴 相關主題： 題目（英文）   測資   題目（中文）   思路  程式碼   結果  結語 </description>
+      <description>問題描述 分類：🟠 Medium 🟠 相關主題：Array, Dynamic Programming 題目（英文） You are a professional robber planning to rob houses along a street. Each house has a certain amount of money stashed, the only constraint stopping you from robbing each of them is that adjacent houses have security systems connected and it will automatically contact the police if two adjacent houses were broken into on the same night. Given an integer array nums representing the amount of money of each house, return the maximum amount of money you can rob tonight without alerting the police.</description>
     </item>
     
     <item>

@@ -13,10 +13,10 @@
     
     <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Leetcode 67 Add Binary"/>
-<meta name="twitter:description" content="問題描述 分類：🟢🟠🔴 相關主題： 題目（英文）   測資   題目（中文）   思路  程式碼   結果  結語 "/>
+<meta name="twitter:description" content="問題描述 分類：🟢 Easy 🟢 相關主題：Math, String, Bit Manipulation, Simulation 題目（英文） Given two binary strings a and b, return their sum as a binary string.  測資 Example 1: Input: a = &quot;11&quot;, b = &quot;1&quot; Output: &quot;100&quot; Example 2: Input: a = &quot;1010&quot;, b = &quot;1011&quot; Output: &quot;10101&quot; Constraints: 1 &lt;= a.length, b.length &lt;= 104 a and b consist only of &#39;0&#39; or &#39;1&#39; characters. Each string does not contain leading zeros except for the zero itself."/>
 
     <meta property="og:title" content="Leetcode 67 Add Binary" />
-<meta property="og:description" content="問題描述 分類：🟢🟠🔴 相關主題： 題目（英文）   測資   題目（中文）   思路  程式碼   結果  結語 " />
+<meta property="og:description" content="問題描述 分類：🟢 Easy 🟢 相關主題：Math, String, Bit Manipulation, Simulation 題目（英文） Given two binary strings a and b, return their sum as a binary string.  測資 Example 1: Input: a = &quot;11&quot;, b = &quot;1&quot; Output: &quot;100&quot; Example 2: Input: a = &quot;1010&quot;, b = &quot;1011&quot; Output: &quot;10101&quot; Constraints: 1 &lt;= a.length, b.length &lt;= 104 a and b consist only of &#39;0&#39; or &#39;1&#39; characters. Each string does not contain leading zeros except for the zero itself." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://DilemmaRabbit.github.io/leetcode/leetcode-67-add-binary/" /><meta property="article:section" content="leetcode" />
 <meta property="article:published_time" content="2022-01-10T14:04:27+08:00" />
@@ -92,25 +92,80 @@
     </header>
     <div class="post-content">
       <h2 id="問題描述">問題描述</h2>
-<h3 id="分類">分類：🟢🟠🔴</h3>
-<h3 id="相關主題">相關主題：</h3>
+<h3 id="分類-easy-">分類：🟢 Easy 🟢</h3>
+<h3 id="相關主題math-string-bit-manipulation-simulation">相關主題：Math, String, Bit Manipulation, Simulation</h3>
 <h3 id="題目英文">題目（英文）</h3>
-<pre tabindex="0"><code>
+<pre tabindex="0"><code>Given two binary strings a and b, return their sum as a binary string.
 </code></pre><hr>
 <h3 id="測資">測資</h3>
-<pre tabindex="0"><code>
+<pre tabindex="0"><code>Example 1:
+
+Input: a = &quot;11&quot;, b = &quot;1&quot;
+Output: &quot;100&quot;
+Example 2:
+
+Input: a = &quot;1010&quot;, b = &quot;1011&quot;
+Output: &quot;10101&quot;
+ 
+
+Constraints:
+
+1 &lt;= a.length, b.length &lt;= 104
+a and b consist only of '0' or '1' characters.
+Each string does not contain leading zeros except for the zero itself.
 </code></pre><hr>
 <h3 id="題目中文">題目（中文）</h3>
-<pre tabindex="0"><code>
+<pre tabindex="0"><code>給予兩字串 a、b，回傳兩者的二進位加法字串
 </code></pre><hr>
 <h2 id="思路">思路</h2>
-<hr>
+<ol>
+<li>
+<p>先將兩數翻轉方便運算</p>
+</li>
+<li>
+<p>將字串較短的部分後面(高位)補0</p>
+</li>
+</ol>
+<p>3.比較每個位數的進位值以及餘數</p>
+<h2 id="4將最後的進位補上">4.將最後的進位補上</h2>
 <h2 id="程式碼">程式碼</h2>
-<pre tabindex="0"><code>
+<pre tabindex="0"><code>class Solution {
+public:
+    string addBinary(string a, string b) {
+        
+        string res=&quot;&quot;;
+        int carry = 0;
+        int size_a = a.size();
+        int size_b = b.size();
+        
+        reverse(a.begin(),a.end());
+        reverse(b.begin(),b.end());
+        
+        for(int i = 0; i &lt; abs(size_a-size_b); i++){
+            if(size_a &gt; size_b) b += '0';
+            else a += '0';
+        }
+        
+        for(int i = 0; i &lt; a.size(); i++){            
+            res += (carry + (a[i] - '0') + (b[i] - '0')) % 2 + '0';
+            carry = (carry + (a[i] - '0') + (b[i] - '0')) / 2;
+        }
+        
+        if(carry == 1){
+            res += '1';
+        }
+        
+        reverse(res.begin(),res.end());
+        
+        return res;
+    }
+};
 </code></pre><hr>
 <h2 id="結果">結果</h2>
-<hr>
+<h2 id="httpsiimgurcomrwsob1bpng"><img src="https://i.imgur.com/RwSoB1B.png" alt=""></h2>
 <h2 id="結語">結語</h2>
+<p>主要問題在不可將整個字串轉為整數在進行計算，必須單個位數或是直接對字串值做處理</p>
+<p>非數字使用 bit operation 需要注意(空字元 != 0)，會影響進位運算</p>
 
     </div>
     <div class="post-footer">
