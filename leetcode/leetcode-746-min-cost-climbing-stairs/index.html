@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <title>Leetcode 746 Min Cost Climbing Stairs // Dilemma Rabbit</title>
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.91.2" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="DilemmaRabbit" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="https://DilemmaRabbit.github.io/css/main.min.dc7bd8735a57ef73c20e8a83e31d56f24512c666564f61a8705f834f8731105c.css" />
+
+    
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Leetcode 746 Min Cost Climbing Stairs"/>
+<meta name="twitter:description" content="問題描述 分類：🟢 Easy 🟢 相關主題：Array, Dynamic Programming 題目（英文） You are given an integer array cost where cost[i] is the cost of ith step on a staircase. Once you pay the cost, you can either climb one or two steps. You can either start from the step with index 0, or the step with index 1. Return the minimum cost to reach the top of the floor.  測資 Input: cost = [10,15,20] Output: 15 Explanation: You will start at index 1."/>
+
+    <meta property="og:title" content="Leetcode 746 Min Cost Climbing Stairs" />
+<meta property="og:description" content="問題描述 分類：🟢 Easy 🟢 相關主題：Array, Dynamic Programming 題目（英文） You are given an integer array cost where cost[i] is the cost of ith step on a staircase. Once you pay the cost, you can either climb one or two steps. You can either start from the step with index 0, or the step with index 1. Return the minimum cost to reach the top of the floor.  測資 Input: cost = [10,15,20] Output: 15 Explanation: You will start at index 1." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://DilemmaRabbit.github.io/leetcode/leetcode-746-min-cost-climbing-stairs/" /><meta property="article:section" content="leetcode" />
+<meta property="article:published_time" content="2022-01-09T13:05:08+08:00" />
+<meta property="article:modified_time" content="2022-01-09T13:05:08+08:00" />
+
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="https://DilemmaRabbit.github.io/"><img class="app-header-avatar" src="/avatar.jpg" alt="DilemmaRabbit" /></a>
+      <h1>Dilemma Rabbit</h1>
+      <nav class="app-header-menu">
+          <a class="app-header-menu-item" href="/">Home</a>
+             | 
+          
+          <a class="app-header-menu-item" href="/tags/">Tags</a>
+      </nav>
+      <p>Programer / Student</p>
+      <div class="app-header-social">
+        
+          <a href="https://github.com/DilemmaRabbit" target="_blank" rel="noreferrer noopener">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-github">
+  <title>GitHub</title>
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+</svg>
+          </a>
+        
+          <a href="mailto:a21663832@gmail.com" target="_blank" rel="noreferrer noopener">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-at-sign">
+  <title>gmail</title>
+  <circle cx="12" cy="12" r="4"></circle><path d="M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-3.92 7.94"></path>
+</svg>
+          </a>
+        
+          <a href="https://t.me/DilemmaRabbit" target="_blank" rel="noreferrer noopener">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-navigation">
+  <title>telegram</title>
+  <polygon points="3 11 22 2 13 21 11 13 3 11"></polygon>
+</svg>
+          </a>
+        
+      </div>
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">Leetcode 746 Min Cost Climbing Stairs</h1>
+      <div class="post-meta">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          Jan 9, 2022
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          2 min read
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tag">
+  <title>tag</title>
+  <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line>
+</svg>
+              <a class="tag" href="https://DilemmaRabbit.github.io/tags/leetcode/">LeetCode</a>
+        </div>
+      </div>
+    </header>
+    <div class="post-content">
+      <h2 id="問題描述">問題描述</h2>
+<h3 id="分類-easy-">分類：🟢 Easy 🟢</h3>
+<h3 id="相關主題array-dynamic-programming">相關主題：Array, Dynamic Programming</h3>
+<h3 id="題目英文">題目（英文）</h3>
+<pre tabindex="0"><code>You are given an integer array cost where cost[i] is the cost of ith step on a staircase. Once you pay the cost, you can either climb one or two steps.
+
+You can either start from the step with index 0, or the step with index 1.
+
+Return the minimum cost to reach the top of the floor.
+</code></pre><hr>
+<h3 id="測資">測資</h3>
+<pre tabindex="0"><code>Input: cost = [10,15,20]
+Output: 15
+Explanation: You will start at index 1.
+- Pay 15 and climb two steps to reach the top.
+The total cost is 15.
+
+Input: cost = [1,100,1,1,1,100,1,1,100,1]
+Output: 6
+Explanation: You will start at index 0.
+- Pay 1 and climb two steps to reach index 2.
+- Pay 1 and climb two steps to reach index 4.
+- Pay 1 and climb two steps to reach index 6.
+- Pay 1 and climb one step to reach index 7.
+- Pay 1 and climb two steps to reach index 9.
+- Pay 1 and climb one step to reach the top.
+The total cost is 6.
+
+Constraints:
+
+2 &lt;= cost.length &lt;= 1000
+0 &lt;= cost[i] &lt;= 999
+</code></pre><hr>
+<h3 id="題目中文">題目（中文）</h3>
+<pre tabindex="0"><code>你被給予一個階梯的費用表 cost，cost[i] 代表當前所在的階梯想要移動需要支付的代價，一旦支付，可以選擇向上爬 1 階或 2 階
+
+你可以從 index 0 或 1 的位置開始
+
+回傳最低爬到頂端的成本
+</code></pre><hr>
+<h2 id="思路">思路</h2>
+<ol>
+<li>
+<p>與 leetcode 70 題的爬樓梯稍微不同，越前面的階層越需要從後面的 cost 加總而來</p>
+</li>
+<li>
+<p>對於爬到頂端，有兩種情況</p>
+<ol>
+<li>在第 n 階支付費用向上 1 階</li>
+<li>在地 n-1 階支付費用向上 2 階</li>
+</ol>
+</li>
+<li>
+<p>由此可知， n-2 階的成本就是除了自己本身的成本，在加上 n 或 n-1 階的成本（取最小）</p>
+</li>
+<li>
+<p>最後在判斷開頭的 index 0 與 1 那一個成本較小</p>
+</li>
+</ol>
+<hr>
+<h2 id="程式碼">程式碼</h2>
+<pre tabindex="0"><code>class Solution {
+public:
+    int minCostClimbingStairs(vector&lt;int&gt;&amp; cost) {
+        
+        int tmp;
+        int csize = cost.size();
+        int prev = cost[csize-1]; // n-1 的 cost
+        int pprev = cost[csize-2]; // n-2 的 cost
+        
+        for(int i=csize-3;i&gt;=0;i--){
+            tmp = pprev; // 暫存 n-1 的 cost
+            pprev = cost[i] + min(prev,pprev);
+            prev = tmp;
+        }
+        
+        // 最後會變成 prev = index 1, pprev = index 0 的情況
+
+        return min(prev,pprev);
+    }
+};
+</code></pre><hr>
+<h2 id="結果">結果</h2>
+<h2 id="httpsiimgurcoms0nom03png"><img src="https://i.imgur.com/S0noM03.png" alt=""></h2>
+<h2 id="結語">結語</h2>
+<p>算是爬樓梯的變體，從由頭開始計算 dp 改成由尾巴回推到最後的結果，提供了另外一個 dp 思考方向</p>
+
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>

@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en-us">
   <head>
-    <title>Leetcode 1009 Complement of Base 10 Integer // Dilemma Rabbit</title>
+    <title>Leetcode 509 Fibonacci Number // Dilemma Rabbit</title>
     <link rel="shortcut icon" href="/favicon.ico" />
     <meta charset="utf-8" />
     <meta name="generator" content="Hugo 0.91.2" />
@@ -12,15 +12,15 @@
 
     
     <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Leetcode 1009 Complement of Base 10 Integer"/>
-<meta name="twitter:description" content="問題描述 分類：🟢 Easy 🟢 相關主題：Bit Manipulation  題目（英文） The complement of an integer is the integer you get when you flip all the 0&#39;s to 1&#39;s and all the 1&#39;s to 0&#39;s in its binary representation. For example, The integer 5 is &quot;101&quot; in binary and its complement is &quot;010&quot; which is the integer 2. Given an integer n, return its complement.  測資 Example 1: Input: n = 5 Output: 2 Explanation: 5 is &quot;101&quot; in binary, with complement &quot;010&quot; in binary, which is 2 in base-10."/>
+<meta name="twitter:title" content="Leetcode 509 Fibonacci Number"/>
+<meta name="twitter:description" content="問題描述 分類：🟢 Easy 🟢 相關主題：Math, Dynamic Programming, Recursion, Memoization 題目（英文） The Fibonacci numbers, commonly denoted F(n) form a sequence, called the Fibonacci sequence, such that each number is the sum of the two preceding ones, starting from 0 and 1. That is, F(0) = 0, F(1) = 1 F(n) = F(n - 1) &#43; F(n - 2), for n &gt; 1. Given n, calculate F(n).  測資 Example 1: Input: n = 2 Output: 1 Explanation: F(2) = F(1) &#43; F(0) = 1 &#43; 0 = 1."/>
 
-    <meta property="og:title" content="Leetcode 1009 Complement of Base 10 Integer" />
-<meta property="og:description" content="問題描述 分類：🟢 Easy 🟢 相關主題：Bit Manipulation  題目（英文） The complement of an integer is the integer you get when you flip all the 0&#39;s to 1&#39;s and all the 1&#39;s to 0&#39;s in its binary representation. For example, The integer 5 is &quot;101&quot; in binary and its complement is &quot;010&quot; which is the integer 2. Given an integer n, return its complement.  測資 Example 1: Input: n = 5 Output: 2 Explanation: 5 is &quot;101&quot; in binary, with complement &quot;010&quot; in binary, which is 2 in base-10." />
+    <meta property="og:title" content="Leetcode 509 Fibonacci Number" />
+<meta property="og:description" content="問題描述 分類：🟢 Easy 🟢 相關主題：Math, Dynamic Programming, Recursion, Memoization 題目（英文） The Fibonacci numbers, commonly denoted F(n) form a sequence, called the Fibonacci sequence, such that each number is the sum of the two preceding ones, starting from 0 and 1. That is, F(0) = 0, F(1) = 1 F(n) = F(n - 1) &#43; F(n - 2), for n &gt; 1. Given n, calculate F(n).  測資 Example 1: Input: n = 2 Output: 1 Explanation: F(2) = F(1) &#43; F(0) = 1 &#43; 0 = 1." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://DilemmaRabbit.github.io/leetcode/leetcode-1009/" /><meta property="article:section" content="leetcode" />
-<meta property="article:published_time" content="2022-01-04T10:25:40+08:00" />
-<meta property="article:modified_time" content="2022-01-04T10:25:40+08:00" />
+<meta property="og:url" content="https://DilemmaRabbit.github.io/leetcode/leetcode-509-fibonacci-number/" /><meta property="article:section" content="leetcode" />
+<meta property="article:published_time" content="2022-01-08T20:36:06+08:00" />
+<meta property="article:modified_time" content="2022-01-08T20:36:06+08:00" />
 
 
 
@@ -65,21 +65,21 @@
       
   <article class="post">
     <header class="post-header">
-      <h1 class ="post-title">Leetcode 1009 Complement of Base 10 Integer</h1>
+      <h1 class ="post-title">Leetcode 509 Fibonacci Number</h1>
       <div class="post-meta">
         <div>
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
   <title>calendar</title>
   <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
 </svg>
-          Jan 4, 2022
+          Jan 8, 2022
         </div>
         <div>
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
   <title>clock</title>
   <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
 </svg>
-          2 min read
+          1 min read
         </div>
         <div>
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tag">
@@ -93,91 +93,67 @@
     <div class="post-content">
       <h2 id="問題描述">問題描述</h2>
 <h3 id="分類-easy-">分類：🟢 Easy 🟢</h3>
-<h3 id="相關主題bit-manipulation">相關主題：Bit Manipulation</h3>
-<hr>
+<h3 id="相關主題math-dynamic-programming-recursion-memoization">相關主題：Math, Dynamic Programming, Recursion, Memoization</h3>
 <h3 id="題目英文">題目（英文）</h3>
-<pre tabindex="0"><code>The complement of an integer is the integer you get when you flip all the 0's to 1's and all the 1's to 0's in its binary representation.
+<pre tabindex="0"><code>The Fibonacci numbers, commonly denoted F(n) form a sequence, called the Fibonacci sequence, such that each number is the sum of the two preceding ones, starting from 0 and 1. That is,
 
-For example, The integer 5 is &quot;101&quot; in binary and its complement is &quot;010&quot; which is the integer 2.
+F(0) = 0, F(1) = 1
+F(n) = F(n - 1) + F(n - 2), for n &gt; 1.
 
-Given an integer n, return its complement.
+Given n, calculate F(n).
 </code></pre><hr>
 <h3 id="測資">測資</h3>
 <pre tabindex="0"><code>Example 1:
 
-Input: n = 5
-Output: 2
-Explanation: 5 is &quot;101&quot; in binary, with complement &quot;010&quot; in binary, which is 2 in base-10.
+Input: n = 2
+Output: 1
+Explanation: F(2) = F(1) + F(0) = 1 + 0 = 1.
 
 Example 2:
 
-Input: n = 7
-Output: 0
-Explanation: 7 is &quot;111&quot; in binary, with complement &quot;000&quot; in binary, which is 0 in base-10.
+Input: n = 3
+Output: 2
+Explanation: F(3) = F(2) + F(1) = 1 + 1 = 2.
 
 Example 3:
 
-Input: n = 10
-Output: 5
-Explanation: 10 is &quot;1010&quot; in binary, with complement &quot;0101&quot; in binary, which is 5 in base-10.
-
-Constraints:
-0 &lt;= n &lt; 109
-
+Input: n = 4
+Output: 3
+Explanation: F(4) = F(3) + F(2) = 2 + 1 = 3.
 </code></pre><hr>
 <h3 id="題目中文">題目（中文）</h3>
-<pre tabindex="0"><code>補數是由將數字的二進位中的 0 與 1 做翻轉而來
+<pre tabindex="0"><code>費氏數列的值可由前兩項值加總而成
 
-例如5的二進位是 &quot;101&quot;，它的補數就是 &quot;010&quot;，換算為十進位就是 2
+F(0) = 0, F(1) = 1
+F(n) = F(n - 1) + F(n - 2), for n &gt; 1.
 
-給定一個數字 n ，將它的補數以 10 進位表示出來
-
+給予目標 n，返回其費氏數列 fn
 </code></pre><hr>
 <h2 id="思路">思路</h2>
 <ol>
-<li>由於需要計算位數，需要先取得 n 的位數 (5(101) -&gt; 3位數)</li>
-<li>透過指數運算，可以獲得與 n 相同位數且全是 1 的數 ( 2 ^ 3 = 8，8 - 1 = 7 (111) )</li>
-<li>直接與 n 做減法獲得補數的十位數</li>
+<li>使用動態規劃，紀錄每次當前費氏數列的結果，以避免使用遞迴增加運算速度</li>
 </ol>
 <hr>
 <h2 id="程式碼">程式碼</h2>
 <pre tabindex="0"><code>class Solution {
 public:
-    int bitwiseComplement(int n) {
+    int fib(int n) {
         
-        int cnt=1;
-        int tmp = n;
+        int dp[n+1];
         
-        while(tmp &gt; 1){
-            tmp /= 2;
-            cnt++;
+        for(int i=0;i&lt;n+1;i++){
+            if(i==0) dp[i] = 0;
+            else if(i==1) dp[i] = 1;
+            else dp[i] = dp[i-1] + dp[i-2];
         }
-                  
-        return pow(2,cnt)- 1 - n;
-    }
-};
-</code></pre><p>改良點的寫法(雖然感覺不出來時間跟空間使用的差別)</p>
-<pre tabindex="0"><code>class Solution {
-public:
-    int bitwiseComplement(int n) {
-        
-        int cnt=1;
-        
-        while( n - pow(2,cnt) &gt;= 0){
-            cnt++;
-        }
-                  
-        return pow(2,cnt)- 1 - n;
+        return dp[n];
     }
 };
 </code></pre><hr>
 <h2 id="結果">結果</h2>
-<p><img src="https://i.imgur.com/O5EsK80.png" alt=""></p>
-<hr>
+<h2 id="httpsiimgurcompabytbzpng"><img src="https://i.imgur.com/PAbyTbZ.png" alt=""></h2>
 <h2 id="結語">結語</h2>
-<p>使用空間有點不甚理想，主要是多在紀錄原本的 n 的 tmp 以及 cnt 上面，目前想到的思路是用 cnt 做指數運算跟 n 做減法來判斷迴圈結束，這樣就可以少一個 tmp 了，但會不會影響運行時間還要在嘗試看看。</p>
-<p>比較值得注意的是原本我想用 log2() 來直接判斷位數，不過這麼做會有一些問題，假如出來結果是整數的話會造成判斷錯誤。</p>
-<p>例如同樣比較 4,5,6,7(照理來說都要用 2^3(8)) 去做減法，但是代到 log2() 後發現結果是 2, 2.. , 2.. , 2..，如果有小數點就可以直接無條件進入成 3，但對整數而言還要在額外 ＋1，需要額外寫條件。</p>
+<p>以前的遞迴題改成 dp 方法計算</p>
 
     </div>
     <div class="post-footer">

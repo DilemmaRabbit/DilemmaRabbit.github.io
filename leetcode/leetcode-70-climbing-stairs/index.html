@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en-us">
   <head>
-    <title>Leetcode 746 Min Cost Climbing Stairs // Dilemma Rabbit</title>
+    <title>Leetcode 70 Climbing Stairs // Dilemma Rabbit</title>
     <link rel="shortcut icon" href="/favicon.ico" />
     <meta charset="utf-8" />
     <meta name="generator" content="Hugo 0.91.2" />
@@ -12,15 +12,15 @@
 
     
     <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Leetcode 746 Min Cost Climbing Stairs"/>
-<meta name="twitter:description" content="問題描述 分類：🟢 Easy 🟢 相關主題：Array, Dynamic Programming 題目（英文） You are given an integer array cost where cost[i] is the cost of ith step on a staircase. Once you pay the cost, you can either climb one or two steps. You can either start from the step with index 0, or the step with index 1. Return the minimum cost to reach the top of the floor.  測資 Input: cost = [10,15,20] Output: 15 Explanation: You will start at index 1."/>
+<meta name="twitter:title" content="Leetcode 70 Climbing Stairs"/>
+<meta name="twitter:description" content="問題描述 分類：🟢 easy 🟢 相關主題：Math, Dynamic Programming, Memoization 題目（英文） You are climbing a staircase. It takes n steps to reach the top. Each time you can either climb 1 or 2 steps. In how many distinct ways can you climb to the top?  測資 Example 1: Input: n = 2 Output: 2 Explanation: There are two ways to climb to the top. 1. 1 step &#43; 1 step 2. 2 steps Example 2: Input: n = 3 Output: 3 Explanation: There are three ways to climb to the top."/>
 
-    <meta property="og:title" content="Leetcode 746 Min Cost Climbing Stairs" />
-<meta property="og:description" content="問題描述 分類：🟢 Easy 🟢 相關主題：Array, Dynamic Programming 題目（英文） You are given an integer array cost where cost[i] is the cost of ith step on a staircase. Once you pay the cost, you can either climb one or two steps. You can either start from the step with index 0, or the step with index 1. Return the minimum cost to reach the top of the floor.  測資 Input: cost = [10,15,20] Output: 15 Explanation: You will start at index 1." />
+    <meta property="og:title" content="Leetcode 70 Climbing Stairs" />
+<meta property="og:description" content="問題描述 分類：🟢 easy 🟢 相關主題：Math, Dynamic Programming, Memoization 題目（英文） You are climbing a staircase. It takes n steps to reach the top. Each time you can either climb 1 or 2 steps. In how many distinct ways can you climb to the top?  測資 Example 1: Input: n = 2 Output: 2 Explanation: There are two ways to climb to the top. 1. 1 step &#43; 1 step 2. 2 steps Example 2: Input: n = 3 Output: 3 Explanation: There are three ways to climb to the top." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://DilemmaRabbit.github.io/leetcode/leetcode-746/" /><meta property="article:section" content="leetcode" />
-<meta property="article:published_time" content="2022-01-09T13:05:08+08:00" />
-<meta property="article:modified_time" content="2022-01-09T13:05:08+08:00" />
+<meta property="og:url" content="https://DilemmaRabbit.github.io/leetcode/leetcode-70-climbing-stairs/" /><meta property="article:section" content="leetcode" />
+<meta property="article:published_time" content="2022-01-09T13:04:51+08:00" />
+<meta property="article:modified_time" content="2022-01-09T13:04:51+08:00" />
 
 
 
@@ -65,7 +65,7 @@
       
   <article class="post">
     <header class="post-header">
-      <h1 class ="post-title">Leetcode 746 Min Cost Climbing Stairs</h1>
+      <h1 class ="post-title">Leetcode 70 Climbing Stairs</h1>
       <div class="post-meta">
         <div>
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
@@ -92,91 +92,89 @@
     </header>
     <div class="post-content">
       <h2 id="問題描述">問題描述</h2>
-<h3 id="分類-easy-">分類：🟢 Easy 🟢</h3>
-<h3 id="相關主題array-dynamic-programming">相關主題：Array, Dynamic Programming</h3>
+<h3 id="分類-easy-">分類：🟢 easy 🟢</h3>
+<h3 id="相關主題math-dynamic-programming-memoization">相關主題：Math, Dynamic Programming, Memoization</h3>
 <h3 id="題目英文">題目（英文）</h3>
-<pre tabindex="0"><code>You are given an integer array cost where cost[i] is the cost of ith step on a staircase. Once you pay the cost, you can either climb one or two steps.
+<pre tabindex="0"><code>You are climbing a staircase. It takes n steps to reach the top.
 
-You can either start from the step with index 0, or the step with index 1.
-
-Return the minimum cost to reach the top of the floor.
+Each time you can either climb 1 or 2 steps. In how many distinct ways can you climb to the top?
 </code></pre><hr>
 <h3 id="測資">測資</h3>
-<pre tabindex="0"><code>Input: cost = [10,15,20]
-Output: 15
-Explanation: You will start at index 1.
-- Pay 15 and climb two steps to reach the top.
-The total cost is 15.
+<pre tabindex="0"><code>Example 1:
 
-Input: cost = [1,100,1,1,1,100,1,1,100,1]
-Output: 6
-Explanation: You will start at index 0.
-- Pay 1 and climb two steps to reach index 2.
-- Pay 1 and climb two steps to reach index 4.
-- Pay 1 and climb two steps to reach index 6.
-- Pay 1 and climb one step to reach index 7.
-- Pay 1 and climb two steps to reach index 9.
-- Pay 1 and climb one step to reach the top.
-The total cost is 6.
+Input: n = 2
+Output: 2
+Explanation: There are two ways to climb to the top.
+1. 1 step + 1 step
+2. 2 steps
+
+Example 2:
+
+Input: n = 3
+Output: 3
+Explanation: There are three ways to climb to the top.
+1. 1 step + 1 step + 1 step
+2. 1 step + 2 steps
+3. 2 steps + 1 step
 
 Constraints:
-
-2 &lt;= cost.length &lt;= 1000
-0 &lt;= cost[i] &lt;= 999
+1 &lt;= n &lt;= 45
 </code></pre><hr>
 <h3 id="題目中文">題目（中文）</h3>
-<pre tabindex="0"><code>你被給予一個階梯的費用表 cost，cost[i] 代表當前所在的階梯想要移動需要支付的代價，一旦支付，可以選擇向上爬 1 階或 2 階
+<pre tabindex="0"><code>你正在爬一個階梯，階梯共有 n 階
 
-你可以從 index 0 或 1 的位置開始
-
-回傳最低爬到頂端的成本
+你每次可以向上爬 1 或 2 階，請問你有多少種爬到頂端的可能。
 </code></pre><hr>
 <h2 id="思路">思路</h2>
 <ol>
 <li>
-<p>與 leetcode 70 題的爬樓梯稍微不同，越前面的階層越需要從後面的 cost 加總而來</p>
-</li>
-<li>
-<p>對於爬到頂端，有兩種情況</p>
+<p>起始點位於 0 的位置</p>
 <ol>
-<li>在第 n 階支付費用向上 1 階</li>
-<li>在地 n-1 階支付費用向上 2 階</li>
+<li>ex. 0 -&gt; 1 -&gt; 2 -&gt; 3 -&gt; 4 -&gt; 5 -&gt; &hellip; -&gt; n</li>
 </ol>
 </li>
 <li>
-<p>由此可知， n-2 階的成本就是除了自己本身的成本，在加上 n 或 n-1 階的成本（取最小）</p>
+<p>對最後一階 n 來說，就只有下列兩種走法</p>
+<ol>
+<li>在 n-1 階時 +1</li>
+<li>在 n-2 階時 +2</li>
+</ol>
 </li>
 <li>
-<p>最後在判斷開頭的 index 0 與 1 那一個成本較小</p>
+<p>所以到達第 n 階的所有方法，就是 n-1 階的方法加上 n-2 階的方法加總</p>
+</li>
+<li>
+<p>回推到最後</p>
+<ol>
+<li>當 n = 1 時，只有 1 種走法</li>
+<li>當 n = 2 時，有 2 種走法</li>
+<li>由此可推出所有的 n 的可能</li>
+</ol>
 </li>
 </ol>
 <hr>
 <h2 id="程式碼">程式碼</h2>
 <pre tabindex="0"><code>class Solution {
 public:
-    int minCostClimbingStairs(vector&lt;int&gt;&amp; cost) {
+    int climbStairs(int n) {
         
-        int tmp;
-        int csize = cost.size();
-        int prev = cost[csize-1]; // n-1 的 cost
-        int pprev = cost[csize-2]; // n-2 的 cost
-        
-        for(int i=csize-3;i&gt;=0;i--){
-            tmp = pprev; // 暫存 n-1 的 cost
-            pprev = cost[i] + min(prev,pprev);
-            prev = tmp;
+        vector&lt;int&gt; dp{1,2};
+        for(int i=2;i&lt;n;i++){
+            dp.push_back(dp[i-1] + dp[i-2]); // 紀錄新的一階的可能性
         }
         
-        // 最後會變成 prev = index 1, pprev = index 0 的情況
-
-        return min(prev,pprev);
+        if(n==1){
+            return 1; // 避免 n = 1 時判斷錯誤
+        }
+        
+        return dp.back();
     }
 };
 </code></pre><hr>
 <h2 id="結果">結果</h2>
-<h2 id="httpsiimgurcoms0nom03png"><img src="https://i.imgur.com/S0noM03.png" alt=""></h2>
+<h2 id="httpsiimgurcompzfookgpng"><img src="https://i.imgur.com/pZfOOkG.png" alt=""></h2>
 <h2 id="結語">結語</h2>
-<p>算是爬樓梯的變體，從由頭開始計算 dp 改成由尾巴回推到最後的結果，提供了另外一個 dp 思考方向</p>
+<p>基本上就是費氏數列的變種，畫圖稍微從尾巴回推可能性就能想到解法了</p>
 
     </div>
     <div class="post-footer">

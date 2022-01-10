@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en-us">
   <head>
-    <title>Leetcode 70 Climbing Stairs // Dilemma Rabbit</title>
+    <title>Leetcode 1010 Pairs of Songs With Total Durations Divisible by 60 // Dilemma Rabbit</title>
     <link rel="shortcut icon" href="/favicon.ico" />
     <meta charset="utf-8" />
     <meta name="generator" content="Hugo 0.91.2" />
@@ -12,15 +12,15 @@
 
     
     <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Leetcode 70 Climbing Stairs"/>
-<meta name="twitter:description" content="問題描述 分類：🟢 easy 🟢 相關主題：Math, Dynamic Programming, Memoization 題目（英文） You are climbing a staircase. It takes n steps to reach the top. Each time you can either climb 1 or 2 steps. In how many distinct ways can you climb to the top?  測資 Example 1: Input: n = 2 Output: 2 Explanation: There are two ways to climb to the top. 1. 1 step &#43; 1 step 2. 2 steps Example 2: Input: n = 3 Output: 3 Explanation: There are three ways to climb to the top."/>
+<meta name="twitter:title" content="Leetcode 1010 Pairs of Songs With Total Durations Divisible by 60"/>
+<meta name="twitter:description" content="問題描述 分類：🟠 Medium 🟠 相關主題：Counting, Hash_table, Array  題目（英文） You are given a list of songs where the ith song has a duration of time[i] seconds. Return the number of pairs of songs for which their total duration in seconds is divisible by 60. Formally, we want the number of indices i, j such that i &lt; j with (time[i] &#43; time[j]) % 60 == 0.  測資 Example 1: Input: time = [30,20,150,100,40] Output: 3 Explanation: Three pairs have a total duration divisible by 60: (time[0] = 30, time[2] = 150): total duration 180 (time[1] = 20, time[3] = 100): total duration 120 (time[1] = 20, time[4] = 40): total duration 60 Example 2: Input: time = [60,60,60] Output: 3 Explanation: All three pairs have a total duration of 120, which is divisible by 60."/>
 
-    <meta property="og:title" content="Leetcode 70 Climbing Stairs" />
-<meta property="og:description" content="問題描述 分類：🟢 easy 🟢 相關主題：Math, Dynamic Programming, Memoization 題目（英文） You are climbing a staircase. It takes n steps to reach the top. Each time you can either climb 1 or 2 steps. In how many distinct ways can you climb to the top?  測資 Example 1: Input: n = 2 Output: 2 Explanation: There are two ways to climb to the top. 1. 1 step &#43; 1 step 2. 2 steps Example 2: Input: n = 3 Output: 3 Explanation: There are three ways to climb to the top." />
+    <meta property="og:title" content="Leetcode 1010 Pairs of Songs With Total Durations Divisible by 60" />
+<meta property="og:description" content="問題描述 分類：🟠 Medium 🟠 相關主題：Counting, Hash_table, Array  題目（英文） You are given a list of songs where the ith song has a duration of time[i] seconds. Return the number of pairs of songs for which their total duration in seconds is divisible by 60. Formally, we want the number of indices i, j such that i &lt; j with (time[i] &#43; time[j]) % 60 == 0.  測資 Example 1: Input: time = [30,20,150,100,40] Output: 3 Explanation: Three pairs have a total duration divisible by 60: (time[0] = 30, time[2] = 150): total duration 180 (time[1] = 20, time[3] = 100): total duration 120 (time[1] = 20, time[4] = 40): total duration 60 Example 2: Input: time = [60,60,60] Output: 3 Explanation: All three pairs have a total duration of 120, which is divisible by 60." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://DilemmaRabbit.github.io/leetcode/leetcode-70/" /><meta property="article:section" content="leetcode" />
-<meta property="article:published_time" content="2022-01-09T13:04:51+08:00" />
-<meta property="article:modified_time" content="2022-01-09T13:04:51+08:00" />
+<meta property="og:url" content="https://DilemmaRabbit.github.io/leetcode/leetcode-1010-pairs-of-songs-with-total-durations-divisible-by-60/" /><meta property="article:section" content="leetcode" />
+<meta property="article:published_time" content="2022-01-03T16:26:29+08:00" />
+<meta property="article:modified_time" content="2022-01-03T16:26:29+08:00" />
 
 
 
@@ -65,14 +65,14 @@
       
   <article class="post">
     <header class="post-header">
-      <h1 class ="post-title">Leetcode 70 Climbing Stairs</h1>
+      <h1 class ="post-title">Leetcode 1010 Pairs of Songs With Total Durations Divisible by 60</h1>
       <div class="post-meta">
         <div>
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
   <title>calendar</title>
   <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
 </svg>
-          Jan 9, 2022
+          Jan 3, 2022
         </div>
         <div>
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
@@ -92,89 +92,81 @@
     </header>
     <div class="post-content">
       <h2 id="問題描述">問題描述</h2>
-<h3 id="分類-easy-">分類：🟢 easy 🟢</h3>
-<h3 id="相關主題math-dynamic-programming-memoization">相關主題：Math, Dynamic Programming, Memoization</h3>
+<h3 id="分類-medium-">分類：🟠 Medium 🟠</h3>
+<h3 id="相關主題counting-hash_table-array">相關主題：Counting, Hash_table, Array</h3>
+<hr>
 <h3 id="題目英文">題目（英文）</h3>
-<pre tabindex="0"><code>You are climbing a staircase. It takes n steps to reach the top.
+<pre tabindex="0"><code>You are given a list of songs where the ith song has a duration of time[i] seconds.
 
-Each time you can either climb 1 or 2 steps. In how many distinct ways can you climb to the top?
+Return the number of pairs of songs for which their total duration in seconds is divisible by 60. Formally, we want the number of indices i, j such that i &lt; j with (time[i] + time[j]) % 60 == 0.
 </code></pre><hr>
 <h3 id="測資">測資</h3>
 <pre tabindex="0"><code>Example 1:
 
-Input: n = 2
-Output: 2
-Explanation: There are two ways to climb to the top.
-1. 1 step + 1 step
-2. 2 steps
+Input: time = [30,20,150,100,40]
+Output: 3
+Explanation: Three pairs have a total duration divisible by 60:
+(time[0] = 30, time[2] = 150): total duration 180
+(time[1] = 20, time[3] = 100): total duration 120
+(time[1] = 20, time[4] = 40): total duration 60
 
 Example 2:
 
-Input: n = 3
+Input: time = [60,60,60]
 Output: 3
-Explanation: There are three ways to climb to the top.
-1. 1 step + 1 step + 1 step
-2. 1 step + 2 steps
-3. 2 steps + 1 step
+Explanation: All three pairs have a total duration of 120, which is divisible by 60.
 
-Constraints:
-1 &lt;= n &lt;= 45
 </code></pre><hr>
 <h3 id="題目中文">題目（中文）</h3>
-<pre tabindex="0"><code>你正在爬一個階梯，階梯共有 n 階
+<pre tabindex="0"><code>你有一份關於所有音樂的演奏時長的清單
 
-你每次可以向上爬 1 或 2 階，請問你有多少種爬到頂端的可能。
+返回清單中任意兩首音樂時長加起來可以被 60 秒整除的數量
 </code></pre><hr>
 <h2 id="思路">思路</h2>
 <ol>
-<li>
-<p>起始點位於 0 的位置</p>
-<ol>
-<li>ex. 0 -&gt; 1 -&gt; 2 -&gt; 3 -&gt; 4 -&gt; 5 -&gt; &hellip; -&gt; n</li>
-</ol>
-</li>
-<li>
-<p>對最後一階 n 來說，就只有下列兩種走法</p>
-<ol>
-<li>在 n-1 階時 +1</li>
-<li>在 n-2 階時 +2</li>
-</ol>
-</li>
-<li>
-<p>所以到達第 n 階的所有方法，就是 n-1 階的方法加上 n-2 階的方法加總</p>
-</li>
-<li>
-<p>回推到最後</p>
-<ol>
-<li>當 n = 1 時，只有 1 種走法</li>
-<li>當 n = 2 時，有 2 種走法</li>
-<li>由此可推出所有的 n 的可能</li>
-</ol>
-</li>
+<li>由於目標是找到組合加起來為 60 秒的組合，對於超出 60 秒的情況，只要取餘數就可以減少 hash_table 的空間使用</li>
+<li>只需要計算 0 ~ 30 秒數量(避免重複)</li>
+<li>由於 0 ~ 30 會是取自身的數量做計算，需要跟1~29秒做區隔</li>
 </ol>
 <hr>
 <h2 id="程式碼">程式碼</h2>
 <pre tabindex="0"><code>class Solution {
 public:
-    int climbStairs(int n) {
+    int numPairsDivisibleBy60(vector&lt;int&gt;&amp; time) {
         
-        vector&lt;int&gt; dp{1,2};
-        for(int i=2;i&lt;n;i++){
-            dp.push_back(dp[i-1] + dp[i-2]); // 紀錄新的一階的可能性
+        int i, cnt = 0;
+        map&lt;int, int&gt; table;
+        
+        for(i = 0; i &lt; time.size(); i++){
+            table[time[i]%60] += 1;
         }
         
-        if(n==1){
-            return 1; // 避免 n = 1 時判斷錯誤
+        for(i=1;i&lt;30;i++){
+            if(table[i]!=0){
+                if(table[60-i] != 0){
+                    cnt += (table[i] * table[60-i]);
+                }
+            }
         }
         
-        return dp.back();
+        if(table[0] &gt;= 2){
+            cnt += ((table[0]*(table[0]-1))/2);
+        }
+        
+        
+        if(table[30] &gt;= 2){
+            cnt += ((table[30]*(table[30]-1))/2);
+        }
+        
+        return cnt;
     }
 };
 </code></pre><hr>
 <h2 id="結果">結果</h2>
-<h2 id="httpsiimgurcompzfookgpng"><img src="https://i.imgur.com/pZfOOkG.png" alt=""></h2>
+<p><img src="https://i.imgur.com/BEgz4K5.png" alt=""></p>
+<hr>
 <h2 id="結語">結語</h2>
-<p>基本上就是費氏數列的變種，畫圖稍微從尾巴回推可能性就能想到解法了</p>
+<p>聽朋友說可以用加法的方式來取代原本的乘法，將每一個 1 ~ 29 秒的數量用加的方式計算，可以減少運算時間，改天再試試看～</p>
 
     </div>
     <div class="post-footer">
