@@ -161,6 +161,15 @@
     </item>
     
     <item>
+      <title>Leetcode 152 Maximum Product Subarray</title>
+      <link>https://DilemmaRabbit.github.io/leetcode/leetcode-152-maximum-product-subarray/</link>
+      <pubDate>Mon, 03 Jan 2022 23:12:51 +0800</pubDate>
+      
+      <guid>https://DilemmaRabbit.github.io/leetcode/leetcode-152-maximum-product-subarray/</guid>
+      <description>問題描述 分類：🟠 Medium 🟠 相關主題：Array, Dynamic Programing 題目（英文） Given an integer array nums, find a contiguous non-empty subarray within the array that has the largest product, and return the product. The test cases are generated so that the answer will fit in a 32-bit integer. A subarray is a contiguous subsequence of the array.  測資 Example 1: Input: nums = [2,3,-2,4] Output: 6 Explanation: [2,3] has the largest product 6.</description>
+    </item>
+    
+    <item>
       <title>Leetcode 1010 Pairs of Songs With Total Durations Divisible by 60</title>
       <link>https://DilemmaRabbit.github.io/leetcode/leetcode-1010-pairs-of-songs-with-total-durations-divisible-by-60/</link>
       <pubDate>Mon, 03 Jan 2022 16:26:29 +0800</pubDate>
