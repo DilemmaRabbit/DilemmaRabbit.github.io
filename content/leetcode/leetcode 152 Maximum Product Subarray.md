@@ -64,7 +64,7 @@ The product of any prefix or suffix of nums is guaranteed to fit in a 32-bit int
 
 2. 以逆向用 dp 的方式來乘積出可能的最大值
 
-3. 兩者之中會決定要保留的是最左邊或最右邊的負數值
+3. 兩者之中會決定要保留的是最左邊或最右邊的負數值@
 
 ---
 

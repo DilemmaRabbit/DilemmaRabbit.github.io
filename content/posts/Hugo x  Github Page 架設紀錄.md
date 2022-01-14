@@ -285,3 +285,7 @@ Settings -> Pages，將 source 改成新的分支，就可以嘗試 username.git
 - 移除 submodule
 
 1. github ssh key
+
+- ssh-keygen
+
+- id_rsa.pub
