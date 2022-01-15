@@ -276,6 +276,10 @@ Settings -> Pages，將 source 改成新的分支，就可以嘗試 username.git
 
 1. 紀錄所用到的 git 技巧
 
+- 新增孤兒分支
+
+- github action
+
 2. git submodule
 
 - 簡介
