@@ -17,24 +17,38 @@ draft: true
 一般常見的 header 可以分成五類 ：
 
 1. General Headers
-   - Date
-   - Connection
+    - Date
+    - Connection
 ---
 
 2. Entity Headers
-
+    - Content-Type
+    - Media-Type
+    - Boundary
+    - Content-Length
+    - Content-Encoding
 ---
 
 3. Request Headers
-
+    - Host
+    - User-Agent
+    - Accept
+    - Cookie
+    - Referer
+    - Authorization
 ---
 
 4. Response Headers
+    - Server
+    - Set-Cookie
+    - www-authenticate
 
 ---
 
 5. Security Headers
-
+    - Content-Security-Policy
+    - Strict-Transport-Security
+    - Referrer-Policy
 
 ## HTTP Methods and Codes
 
