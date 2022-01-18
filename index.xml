@@ -6,7 +6,16 @@
     <description>Recent content on Dilemma Rabbit</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 12 Jan 2022 17:15:40 +0800</lastBuildDate><atom:link href="https://DilemmaRabbit.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 18 Jan 2022 22:30:06 +0800</lastBuildDate><atom:link href="https://DilemmaRabbit.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Leetcode 605 Can Place Flowers</title>
+      <link>https://DilemmaRabbit.github.io/leetcode/leetcode-605-can-place-flowers/</link>
+      <pubDate>Tue, 18 Jan 2022 22:30:06 +0800</pubDate>
+      
+      <guid>https://DilemmaRabbit.github.io/leetcode/leetcode-605-can-place-flowers/</guid>
+      <description>問題描述 分類：🟢 Easy 🟢 相關主題：Array, Greedy 題目（英文） You have a long flowerbed in which some of the plots are planted, and some are not. However, flowers cannot be planted in adjacent plots. Given an integer array flowerbed containing 0&#39;s and 1&#39;s, where 0 means empty and 1 means not empty, and an integer n, return if n new flowers can be planted in the flowerbed without violating the no-adjacent-flowers rule.  測資 Example 1: Input: flowerbed = [1,0,0,0,1], n = 1 Output: true Example 2: Input: flowerbed = [1,0,0,0,1], n = 2 Output: false Constraints: 1 &amp;lt;= flowerbed.</description>
+    </item>
+    
     <item>
       <title>Leetcode 53 Maximum Subarray</title>
       <link>https://DilemmaRabbit.github.io/leetcode/leetcode-53-maximum-subarray/</link>
