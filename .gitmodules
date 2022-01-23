@@ -1,3 +1,6 @@
 [submodule "themes/m10c"]
 	path = themes/m10c
 	url = git@github.com:DilemmaRabbit/hugo-theme-m10c.git
+[submodule "themes/CodeIT"]
+	path = themes/CodeIT
+	url = https://github.com/sunt-programator/CodeIT.git
