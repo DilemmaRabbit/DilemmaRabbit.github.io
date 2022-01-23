@@ -1,128 +1,179 @@
-<!doctype html>
-<html lang="en-us">
-  <head>
-    <title>Hugo x GitHub Pages 架設紀錄 // Dilemma Rabbit</title>
-    <link rel="shortcut icon" href="/favicon.ico" />
-    <meta charset="utf-8" />
-    <meta name="generator" content="Hugo 0.92.0" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="author" content="DilemmaRabbit" />
-    <meta name="description" content="" />
-    <link rel="stylesheet" href="https://DilemmaRabbit.github.io/css/main.min.6e68ee89d304160eda3ca83c317e4544c89a96ae94dff6884b733ba98d67ae03.css" />
-
-    
-    <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Hugo x GitHub Pages 架設紀錄"/>
-<meta name="twitter:description" content="目錄  前言 先前準備 本機建立 GitHub自動部署 問題集 延伸學習  前言 終於把 Hugo 跟 GitHub Pages 成功架起來了(就是你現在在看的東西🥳)，途中不知道刪了幾次 repo，也遇到了不少 Hugo 以外的問題，除了學習 Hugo 外也重新把 git 的一些相關知識重新認識了一遍，不過途中還是有遇到目前原因不明但解決的問題，會列在下面的採坑集跟延伸學習裡面，如果有解決方法不吝指教～
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>Hugo x GitHub Pages 架設紀錄 - Dilemma Rabbit</title><meta name="description" content=""><meta property="og:title" content="Hugo x GitHub Pages 架設紀錄" />
+<meta property="og:description" content="前言 終於把 Hugo 跟 GitHub Pages 成功架起來了(就是你現在在看的東西🥳)，途中不知道刪了幾次 repo，也遇到了不少 Hugo 以外的問題，除了學習 Hugo 外也重新把 git 的一些相關知識重新認識了一遍，不過途中還是有遇到目前原因不明但解決的問題，會列在下面的採坑集跟延伸學習裡面，如果有解決方法不吝指教～
 I. 先前準備 環境 系統: ubuntu 20.04
 Github Page 建立 1. 建立一個名稱為 username.github.io 的 repo 2. 從 github clone 到本機 git clone &lt;username.github.io&gt;  II. 本機建立網站 Hugo 安裝 brew 安裝 brew 安裝教學
-1. 透過 brew 安裝 Hugo brew install hugo 建立一個新的網頁 1. 目標資料夾下建立一個新的網頁 hugo new site &lt;username.github.io&gt; hugo new site &lt;username."/>
-
-    <meta property="og:title" content="Hugo x GitHub Pages 架設紀錄" />
-<meta property="og:description" content="目錄  前言 先前準備 本機建立 GitHub自動部署 問題集 延伸學習  前言 終於把 Hugo 跟 GitHub Pages 成功架起來了(就是你現在在看的東西🥳)，途中不知道刪了幾次 repo，也遇到了不少 Hugo 以外的問題，除了學習 Hugo 外也重新把 git 的一些相關知識重新認識了一遍，不過途中還是有遇到目前原因不明但解決的問題，會列在下面的採坑集跟延伸學習裡面，如果有解決方法不吝指教～
-I. 先前準備 環境 系統: ubuntu 20.04
-Github Page 建立 1. 建立一個名稱為 username.github.io 的 repo 2. 從 github clone 到本機 git clone &lt;username.github.io&gt;  II. 本機建立網站 Hugo 安裝 brew 安裝 brew 安裝教學
-1. 透過 brew 安裝 Hugo brew install hugo 建立一個新的網頁 1. 目標資料夾下建立一個新的網頁 hugo new site &lt;username.github.io&gt; hugo new site &lt;username." />
+1. 透過 brew 安裝 Hugo brew install hugo 建立一個新的網頁 1. 目標資料夾下建立一個新的網頁 hugo new site &lt;username.github.io&gt; hugo new site &lt;username.github.io&gt; --force # 如果資料夾內有其他資料則需要強制建立 (e.g.README) Hugo 主題安裝 1." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://DilemmaRabbit.github.io/posts/hugo-x-github-page-%E6%9E%B6%E8%A8%AD%E7%B4%80%E9%8C%84/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2022-01-02T15:31:23+08:00" />
 <meta property="article:modified_time" content="2022-01-02T15:31:23+08:00" />
 
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Hugo x GitHub Pages 架設紀錄"/>
+<meta name="twitter:description" content="前言 終於把 Hugo 跟 GitHub Pages 成功架起來了(就是你現在在看的東西🥳)，途中不知道刪了幾次 repo，也遇到了不少 Hugo 以外的問題，除了學習 Hugo 外也重新把 git 的一些相關知識重新認識了一遍，不過途中還是有遇到目前原因不明但解決的問題，會列在下面的採坑集跟延伸學習裡面，如果有解決方法不吝指教～
+I. 先前準備 環境 系統: ubuntu 20.04
+Github Page 建立 1. 建立一個名稱為 username.github.io 的 repo 2. 從 github clone 到本機 git clone &lt;username.github.io&gt;  II. 本機建立網站 Hugo 安裝 brew 安裝 brew 安裝教學
+1. 透過 brew 安裝 Hugo brew install hugo 建立一個新的網頁 1. 目標資料夾下建立一個新的網頁 hugo new site &lt;username.github.io&gt; hugo new site &lt;username.github.io&gt; --force # 如果資料夾內有其他資料則需要強制建立 (e.g.README) Hugo 主題安裝 1."/>
+<meta name="application-name" content="Dilemma Rabbit">
+<meta name="apple-mobile-web-app-title" content="Dilemma Rabbit"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://DilemmaRabbit.github.io/posts/hugo-x-github-page-%E6%9E%B6%E8%A8%AD%E7%B4%80%E9%8C%84/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Hugo x GitHub Pages 架設紀錄",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/DilemmaRabbit.github.io\/posts\/hugo-x-github-page-%E6%9E%B6%E8%A8%AD%E7%B4%80%E9%8C%84\/"
+        },"genre": "posts","keywords": "Hugo, GitHub-Pages, Tutorial","wordcount":  502 ,
+        "url": "https:\/\/DilemmaRabbit.github.io\/posts\/hugo-x-github-page-%E6%9E%B6%E8%A8%AD%E7%B4%80%E9%8C%84\/","datePublished": "2022-01-02T15:31:23+08:00","dateModified": "2022-01-02T15:31:23+08:00","publisher": {
+            "@type": "Organization",
+            "name": "dilemmarabbit"},"author": {
+                "@type": "Person",
+                "name": "dilemmarabbit"
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">('' === 'true' && window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('dark' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'dark' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
 
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Dilemma Rabbit"><span class="header-title-pre">></span><span id="id-1" class="typeit"></span></a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/tags/"> 標籤 </a><a class="menu-item" href="/categories/"> 分類 </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Dilemma Rabbit"><span class="header-title-pre">></span><span id="id-2" class="typeit"></span></a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/tags/" title="">標籤</a><a class="menu-item" href="/categories/" title="">分類</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">Hugo x GitHub Pages 架設紀錄</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>dilemmarabbit</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-01-02">2022-01-02</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;502 words&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;3 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="true">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#環境">環境</a></li>
+    <li><a href="#github-page-建立">Github Page 建立</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+  </ul>
 
-  </head>
-  <body>
-    <header class="app-header">
-      <a href="https://DilemmaRabbit.github.io/"><img class="app-header-avatar" src="/avatar.jpg" alt="DilemmaRabbit" /></a>
-      <h1>Dilemma Rabbit</h1>
-      <nav class="app-header-menu">
-          <a class="app-header-menu-item" href="/">Home</a>
-             | 
-          
-          <a class="app-header-menu-item" href="/tags/">Tags</a>
-      </nav>
-      <p>Programer / Student</p>
-      <div class="app-header-social">
-        
-          <a href="https://github.com/DilemmaRabbit" target="_blank" rel="noreferrer noopener">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-github">
-  <title>GitHub</title>
-  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-</svg>
-          </a>
-        
-          <a href="mailto:a21663832@gmail.com" target="_blank" rel="noreferrer noopener">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-at-sign">
-  <title>gmail</title>
-  <circle cx="12" cy="12" r="4"></circle><path d="M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-3.92 7.94"></path>
-</svg>
-          </a>
-        
-          <a href="https://t.me/DilemmaRabbit" target="_blank" rel="noreferrer noopener">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-navigation">
-  <title>telegram</title>
-  <polygon points="3 11 22 2 13 21 11 13 3 11"></polygon>
-</svg>
-          </a>
-        
-      </div>
-    </header>
-    <main class="app-container">
-      
-  <article class="post">
-    <header class="post-header">
-      <h1 class ="post-title">Hugo x GitHub Pages 架設紀錄</h1>
-      <div class="post-meta">
-        <div>
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
-  <title>calendar</title>
-  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
-</svg>
-          Jan 2, 2022
-        </div>
-        <div>
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
-  <title>clock</title>
-  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
-</svg>
-          3 min read
-        </div>
-        <div>
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tag">
-  <title>tag</title>
-  <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line>
-</svg>
-              <a class="tag" href="https://DilemmaRabbit.github.io/tags/hugo/">Hugo</a>
-              <a class="tag" href="https://DilemmaRabbit.github.io/tags/github-pages/">GitHub-Pages</a>
-              <a class="tag" href="https://DilemmaRabbit.github.io/tags/tutorial/">Tutorial</a>
-        </div>
-      </div>
-    </header>
-    <div class="post-content">
-      <h1 id="目錄">目錄</h1>
-<ol>
-<li><a href="#%E5%89%8D%E8%A8%80">前言</a></li>
-<li><a href="#i-%E5%85%88%E5%89%8D%E6%BA%96%E5%82%99">先前準備</a></li>
-<li><a href="#ii-%E6%9C%AC%E6%A9%9F%E5%BB%BA%E7%AB%8B%E7%B6%B2%E7%AB%99">本機建立</a></li>
-<li><a href="#iii-%E4%B8%9F%E5%88%B0-github-%E5%81%9A%E8%87%AA%E5%8B%95%E5%8C%96%E9%83%A8%E7%BD%B2">GitHub自動部署</a></li>
-<li><a href="#%E5%95%8F%E9%A1%8C%E6%8E%A1%E5%9D%91%E9%9B%86">問題集</a></li>
-<li><a href="#%E5%BB%B6%E4%BC%B8%E5%AD%B8%E7%BF%92">延伸學習</a></li>
-</ol>
-<h1 id="前言">前言</h1>
+  <ul>
+    <li><a href="#hugo-安裝">Hugo 安裝</a>
+      <ul>
+        <li><a href="#brew-安裝">brew 安裝</a></li>
+      </ul>
+    </li>
+    <li><a href="#建立一個新的網頁">建立一個新的網頁</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+    <li><a href="#hugo-主題安裝">Hugo 主題安裝</a>
+      <ul>
+        <li><a href="#1-從-官網httpsthemesgohugoio-中找到一個-適合-作為-blog-的主題">1. 從 <a href="https://themes.gohugo.io/">官網</a> 中找到一個 <strong>適合</strong> 作為 blog 的主題</a></li>
+        <li><a href="#2-透過-submodule-的方式將主題加入-repo-中的-themes">2. 透過 <strong>submodule</strong> 的方式將主題加入 repo 中的 /themes</a></li>
+        <li><a href="#3-configtoml-中增加以下這行">3. <strong>config.toml</strong> 中增加以下這行</a></li>
+      </ul>
+    </li>
+    <li><a href="#文章建立">文章建立</a>
+      <ul>
+        <li><a href="#1-建立一篇新的文章">1. 建立一篇新的文章</a></li>
+      </ul>
+    </li>
+    <li><a href="#本機-hugo-server">本機 Hugo Server</a>
+      <ul>
+        <li><a href="#1-啟動本機端的-hugo-server">1 啟動本機端的 Hugo Server</a></li>
+        <li><a href="#2-訪問-localhost1313--可看見剛剛建立的文章以及套用的主題">2. 訪問 <strong>localhost:1313</strong> ， 可看見剛剛建立的文章以及套用的主題</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#建立分支">建立分支</a>
+      <ul>
+        <li><a href="#1-建立一個孤兒分支gh-pages">1. 建立一個孤兒分支(gh-pages)</a></li>
+        <li><a href="#2-將這個目錄內的資料刪除">2. 將這個目錄內的資料刪除</a></li>
+        <li><a href="#3-提交這個新的分支">3. 提交這個新的分支</a></li>
+      </ul>
+    </li>
+    <li><a href="#建立-github-action">建立 Github action</a>
+      <ul>
+        <li><a href="#1-進入-github-的-tokenhttpsgithubcomsettingstokens-頁面建立一個新的-token">1. 進入 GitHub 的 <a href="https://github.com/settings/tokens">token</a> 頁面，建立一個新的 token</a></li>
+        <li><a href="#2-進入-repo-的-settings---srcrets-頁面用剛剛獲得的-token-產生一個新的-repository-secret">2. 進入 repo 的 Settings -&gt; Srcrets 頁面，用剛剛獲得的 token 產生一個新的 repository secret</a></li>
+        <li><a href="#3-建立新的-actions">3. 建立新的 Actions</a></li>
+      </ul>
+    </li>
+    <li><a href="#將目前的預設-branch-改成新的-branch">將目前的預設 branch 改成新的 branch</a></li>
+    <li><a href="#最後從本機端產生一個-push查看是否會自動進行更新及部署">🎉最後從本機端產生一個 push，查看是否會自動進行更新及部署🎉</a></li>
+    <li><a href="#問題踩坑集">問題(踩坑)集</a></li>
+    <li><a href="#延伸學習">延伸學習</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h1 id="前言">前言</h1>
 <p>終於把 Hugo 跟 GitHub Pages 成功架起來了(就是你現在在看的東西🥳)，途中不知道刪了幾次 repo，也遇到了不少 Hugo 以外的問題，除了學習 Hugo 外也重新把 git 的一些相關知識重新認識了一遍，不過途中還是有遇到目前原因不明但解決的問題，會列在下面的採坑集跟延伸學習裡面，如果有解決方法不吝指教～</p>
 <h1 id="i-先前準備">I. 先前準備</h1>
 <h2 id="環境">環境</h2>
 <p>系統: ubuntu 20.04</p>
 <h2 id="github-page-建立">Github Page 建立</h2>
 <h4 id="1-建立一個名稱為-usernamegithubio-的-repo">1. 建立一個名稱為 username.github.io 的 repo</h4>
-<p><img src="https://i.imgur.com/4sRZcwd.png" alt=""></p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://i.imgur.com/4sRZcwd.png"
+        data-srcset="https://i.imgur.com/4sRZcwd.png, https://i.imgur.com/4sRZcwd.png 1.5x, https://i.imgur.com/4sRZcwd.png 2x"
+        data-sizes="auto"
+        alt="https://i.imgur.com/4sRZcwd.png"
+        title="https://i.imgur.com/4sRZcwd.png" /></p>
 <h4 id="2-從-github-clone-到本機">2. 從 github <strong>clone</strong> 到本機</h4>
 <pre tabindex="0"><code>git clone &lt;username.github.io&gt;
 </code></pre><hr>
 <h1 id="ii-本機建立網站">II. 本機建立網站</h1>
 <h2 id="hugo-安裝">Hugo 安裝</h2>
 <h3 id="brew-安裝">brew 安裝</h3>
-<p><a href="https://rdpapa.tw/2020/11/30/how-to-install-homebrew-on-ubuntu-20-04-lts/">brew 安裝教學</a></p>
+<p><a href="https://rdpapa.tw/2020/11/30/how-to-install-homebrew-on-ubuntu-20-04-lts/" target="_blank" rel="noopener noreferrer">brew 安裝教學</a></p>
 <h4 id="1-透過-brew-安裝-hugo">1. 透過 brew 安裝 Hugo</h4>
 <pre tabindex="0"><code>brew install hugo 
 </code></pre><h2 id="建立一個新的網頁">建立一個新的網頁</h2>
@@ -130,8 +181,8 @@ Github Page 建立 1. 建立一個名稱為 username.github.io 的 repo 2. 從 g
 <pre tabindex="0"><code>hugo new site &lt;username.github.io&gt;
 hugo new site &lt;username.github.io&gt; --force # 如果資料夾內有其他資料則需要強制建立 (e.g.README)
 </code></pre><h2 id="hugo-主題安裝">Hugo 主題安裝</h2>
-<h3 id="1-從-官網httpsthemesgohugoio-中找到一個-適合-作為-blog-的主題">1. 從 <a href="https://themes.gohugo.io/">官網</a> 中找到一個 <strong>適合</strong> 作為 blog 的主題</h3>
-<p>此 blog 的主題為 <a href="https://github.com/vaga/hugo-theme-m10c">m10c</a></p>
+<h3 id="1-從-官網httpsthemesgohugoio-中找到一個-適合-作為-blog-的主題">1. 從 <a href="https://themes.gohugo.io/" target="_blank" rel="noopener noreferrer">官網</a> 中找到一個 <strong>適合</strong> 作為 blog 的主題</h3>
+<p>此 blog 的主題為 <a href="https://github.com/vaga/hugo-theme-m10c" target="_blank" rel="noopener noreferrer">m10c</a></p>
 <p>優點</p>
 <ol>
 <li>簡單明瞭，對寫技術文章來說很方便</li>
@@ -163,7 +214,14 @@ draft: # 是否為草稿(true/false)
 </code></pre><p>hugo : 產生靜態網頁</p>
 <p>server : 以本機伺服器啟動</p>
 <p>-D ： 允許顯示草稿</p>
-<p><img src="https://i.imgur.com/SE5i8hh.png" alt=""></p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://i.imgur.com/SE5i8hh.png"
+        data-srcset="https://i.imgur.com/SE5i8hh.png, https://i.imgur.com/SE5i8hh.png 1.5x, https://i.imgur.com/SE5i8hh.png 2x"
+        data-sizes="auto"
+        alt="https://i.imgur.com/SE5i8hh.png"
+        title="https://i.imgur.com/SE5i8hh.png" /></p>
 <h3 id="2-訪問-localhost1313--可看見剛剛建立的文章以及套用的主題">2. 訪問 <strong>localhost:1313</strong> ， 可看見剛剛建立的文章以及套用的主題</h3>
 <p>🏳 這個本機伺服器還能同步 content 內的 md 檔變化，動態顯示變更，可以用來預覽文章喔</p>
 <hr>
@@ -177,22 +235,64 @@ draft: # 是否為草稿(true/false)
 <pre tabindex="0"><code>git add .
 git commit -m &quot;&lt;message&gt;&quot;
 git push -u origin gh-pages
-</code></pre><p><img src="https://i.imgur.com/TozoSLF.png" alt=""></p>
+</code></pre><p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://i.imgur.com/TozoSLF.png"
+        data-srcset="https://i.imgur.com/TozoSLF.png, https://i.imgur.com/TozoSLF.png 1.5x, https://i.imgur.com/TozoSLF.png 2x"
+        data-sizes="auto"
+        alt="https://i.imgur.com/TozoSLF.png"
+        title="https://i.imgur.com/TozoSLF.png" /></p>
 <p>❌ 目前有發現在新的分支刪除檔案時會有把 master 分支的 submodule 一併刪除的問題，詳見問題集</p>
 <h2 id="建立-github-action">建立 Github action</h2>
-<h3 id="1-進入-github-的-tokenhttpsgithubcomsettingstokens-頁面建立一個新的-token">1. 進入 GitHub 的 <a href="https://github.com/settings/tokens">token</a> 頁面，建立一個新的 token</h3>
+<h3 id="1-進入-github-的-tokenhttpsgithubcomsettingstokens-頁面建立一個新的-token">1. 進入 GitHub 的 <a href="https://github.com/settings/tokens" target="_blank" rel="noopener noreferrer">token</a> 頁面，建立一個新的 token</h3>
 <p>範圍選擇 workflow(如下圖)</p>
-<p><img src="https://i.imgur.com/2Lqzm9g.png" alt=""></p>
-<p><img src="https://i.imgur.com/zkmUlSp.png" alt=""></p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://i.imgur.com/2Lqzm9g.png"
+        data-srcset="https://i.imgur.com/2Lqzm9g.png, https://i.imgur.com/2Lqzm9g.png 1.5x, https://i.imgur.com/2Lqzm9g.png 2x"
+        data-sizes="auto"
+        alt="https://i.imgur.com/2Lqzm9g.png"
+        title="https://i.imgur.com/2Lqzm9g.png" /></p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://i.imgur.com/zkmUlSp.png"
+        data-srcset="https://i.imgur.com/zkmUlSp.png, https://i.imgur.com/zkmUlSp.png 1.5x, https://i.imgur.com/zkmUlSp.png 2x"
+        data-sizes="auto"
+        alt="https://i.imgur.com/zkmUlSp.png"
+        title="https://i.imgur.com/zkmUlSp.png" /></p>
 <p>🏳 這個 token 只會在建立的時候顯示一次，關掉頁面之後只能更新 token 的範圍無法查看，請務必複製</p>
 <h3 id="2-進入-repo-的-settings---srcrets-頁面用剛剛獲得的-token-產生一個新的-repository-secret">2. 進入 repo 的 Settings -&gt; Srcrets 頁面，用剛剛獲得的 token 產生一個新的 repository secret</h3>
-<p><img src="https://i.imgur.com/YmfMTBr.png" alt=""></p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://i.imgur.com/YmfMTBr.png"
+        data-srcset="https://i.imgur.com/YmfMTBr.png, https://i.imgur.com/YmfMTBr.png 1.5x, https://i.imgur.com/YmfMTBr.png 2x"
+        data-sizes="auto"
+        alt="https://i.imgur.com/YmfMTBr.png"
+        title="https://i.imgur.com/YmfMTBr.png" /></p>
 <p>🏳 建立的 secret 名稱也要記住，待會建立的 actions 會使用到</p>
 <h3 id="3-建立新的-actions">3. 建立新的 Actions</h3>
 <p>New workflow -&gt; set up a workflow yourself</p>
-<p><img src="https://i.imgur.com/eO0UDb7.png" alt=""></p>
-<p><img src="https://i.imgur.com/lqdX0hD.png" alt=""></p>
-<p>官方的 <a href="https://gohugo.io/hosting-and-deployment/hosting-on-github/">example</a></p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://i.imgur.com/eO0UDb7.png"
+        data-srcset="https://i.imgur.com/eO0UDb7.png, https://i.imgur.com/eO0UDb7.png 1.5x, https://i.imgur.com/eO0UDb7.png 2x"
+        data-sizes="auto"
+        alt="https://i.imgur.com/eO0UDb7.png"
+        title="https://i.imgur.com/eO0UDb7.png" /></p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://i.imgur.com/lqdX0hD.png"
+        data-srcset="https://i.imgur.com/lqdX0hD.png, https://i.imgur.com/lqdX0hD.png 1.5x, https://i.imgur.com/lqdX0hD.png 2x"
+        data-sizes="auto"
+        alt="https://i.imgur.com/lqdX0hD.png"
+        title="https://i.imgur.com/lqdX0hD.png" /></p>
+<p>官方的 <a href="https://gohugo.io/hosting-and-deployment/hosting-on-github/" target="_blank" rel="noopener noreferrer">example</a></p>
 <pre tabindex="0"><code>name: github pages # 名稱
 on:
   push:
@@ -227,7 +327,14 @@ jobs:
 </code></pre><p>commit 後便會自動 deploy 一次，如果正常的話會在你的 gh-pages 分支只看到原本 /public 下的 html 內容了</p>
 <h2 id="將目前的預設-branch-改成新的-branch">將目前的預設 branch 改成新的 branch</h2>
 <p>Settings -&gt; Pages，將 source 改成新的分支，就可以嘗試 username.github.io 查看網頁是否正常</p>
-<p><img src="https://i.imgur.com/K7MARDb.png" alt=""></p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://i.imgur.com/K7MARDb.png"
+        data-srcset="https://i.imgur.com/K7MARDb.png, https://i.imgur.com/K7MARDb.png 1.5x, https://i.imgur.com/K7MARDb.png 2x"
+        data-sizes="auto"
+        alt="https://i.imgur.com/K7MARDb.png"
+        title="https://i.imgur.com/K7MARDb.png" /></p>
 <h2 id="最後從本機端產生一個-push查看是否會自動進行更新及部署">🎉最後從本機端產生一個 push，查看是否會自動進行更新及部署🎉</h2>
 <hr>
 <h2 id="問題踩坑集">問題(<del>踩坑</del>)集</h2>
@@ -246,7 +353,7 @@ jobs:
 <li><strong>問題</strong>：看得到內容，但是主題所提供的效果消失</li>
 <li><strong>原因</strong>：透過開發人員工具可看見問題，css 只接受 https，但是預設的 <code>http://example.com</code> 使用的是 http</li>
 <li><strong>解決方法</strong>：在 <strong>config</strong> 的 <strong>baseurl</strong> 改成目前所使用的 <strong>Github Page url</strong> (記得 <strong>https</strong>)</li>
-<li><strong>參考資料</strong>：<a href="https://discourse.gohugo.io/t/css-files-do-not-load-due-to-not-being-https/12627">Hugo</a></li>
+<li><strong>參考資料</strong>：<a href="https://discourse.gohugo.io/t/css-files-do-not-load-due-to-not-being-https/12627" target="_blank" rel="noopener noreferrer">Hugo</a></li>
 </ul>
 </li>
 <li>
@@ -256,7 +363,7 @@ jobs:
 <p><strong>問題</strong>：當進入另外一個分支後，假如把 submodule 直接刪除並提交的話，會發現主分支的 submodule 會一併消失</p>
 </li>
 <li>
-<p><strong>原因</strong>：<a href="https://stackoverflow.com/questions/52345460/remove-git-submodule-from-a-specific-branch">stackoverflow</a></p>
+<p><strong>原因</strong>：<a href="https://stackoverflow.com/questions/52345460/remove-git-submodule-from-a-specific-branch" target="_blank" rel="noopener noreferrer">stackoverflow</a></p>
 </li>
 <li>
 <p><strong>解決方法</strong>：把 master 的 sunmodule index 重新洗掉後直接在加入一次 submodule（※暴力解注意，雖然有用但還是建議搞懂 submodule 的運作原理）</p>
@@ -319,13 +426,42 @@ git submodule add &lt;theme repo&gt; &lt;theme directory&gt;
 <p>id_rsa.pub</p>
 </li>
 </ul>
-
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2022-01-02</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://DilemmaRabbit.github.io/posts/hugo-x-github-page-%E6%9E%B6%E8%A8%AD%E7%B4%80%E9%8C%84/" data-title="Hugo x GitHub Pages 架設紀錄" data-hashtags="Hugo,GitHub-Pages,Tutorial"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://DilemmaRabbit.github.io/posts/hugo-x-github-page-%E6%9E%B6%E8%A8%AD%E7%B4%80%E9%8C%84/" data-hashtag="Hugo"><i class="fab fa-facebook-square fa-fw"></i></a></span>
+            </div>
+        </div>
     </div>
-    <div class="post-footer">
-      
-    </div>
-  </article>
 
-    </main>
-  </body>
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/hugo/">Hugo</a>,&nbsp;<a href="/tags/github-pages/">GitHub-Pages</a>,&nbsp;<a href="/tags/tutorial/">Tutorial</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreferrer" title="Hugo 0.92.0">Hugo</a> | Theme - <a href="https://github.com/sunt-programator/CodeIT" target="_blank" rel="noopener noreferrer" title="CodeIT 0.2.10"><i class="fas fa-laptop-code fa-fw"></i> CodeIT</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank" rel="noopener noreferrer">dilemmarabbit</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript" src="/lib/typeit/typeit.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/mhchem.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":150},"comment":{},"data":{"id-1":"DilemmaRabbir's Blog 🐇","id-2":"DilemmaRabbir's Blog 🐇"},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"typeit":{"cursorChar":" |","cursorSpeed":1000,"data":{"id-1":["id-1"],"id-2":["id-2"]},"duration":-1,"speed":150}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
 </html>

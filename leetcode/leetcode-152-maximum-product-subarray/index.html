@@ -1,97 +1,102 @@
-<!doctype html>
-<html lang="en-us">
-  <head>
-    <title>Leetcode 152 Maximum Product Subarray // Dilemma Rabbit</title>
-    <link rel="shortcut icon" href="/favicon.ico" />
-    <meta charset="utf-8" />
-    <meta name="generator" content="Hugo 0.92.0" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="author" content="DilemmaRabbit" />
-    <meta name="description" content="" />
-    <link rel="stylesheet" href="https://DilemmaRabbit.github.io/css/main.min.6e68ee89d304160eda3ca83c317e4544c89a96ae94dff6884b733ba98d67ae03.css" />
-
-    
-    <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Leetcode 152 Maximum Product Subarray"/>
-<meta name="twitter:description" content="問題描述 分類：🟠 Medium 🟠 相關主題：Array, Dynamic Programing 題目（英文） Given an integer array nums, find a contiguous non-empty subarray within the array that has the largest product, and return the product. The test cases are generated so that the answer will fit in a 32-bit integer. A subarray is a contiguous subsequence of the array.  測資 Example 1: Input: nums = [2,3,-2,4] Output: 6 Explanation: [2,3] has the largest product 6."/>
-
-    <meta property="og:title" content="Leetcode 152 Maximum Product Subarray" />
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>Leetcode 152 Maximum Product Subarray - Dilemma Rabbit</title><meta name="description" content=""><meta property="og:title" content="Leetcode 152 Maximum Product Subarray" />
 <meta property="og:description" content="問題描述 分類：🟠 Medium 🟠 相關主題：Array, Dynamic Programing 題目（英文） Given an integer array nums, find a contiguous non-empty subarray within the array that has the largest product, and return the product. The test cases are generated so that the answer will fit in a 32-bit integer. A subarray is a contiguous subsequence of the array.  測資 Example 1: Input: nums = [2,3,-2,4] Output: 6 Explanation: [2,3] has the largest product 6." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://DilemmaRabbit.github.io/leetcode/leetcode-152-maximum-product-subarray/" /><meta property="article:section" content="leetcode" />
 <meta property="article:published_time" content="2022-01-03T23:12:51+08:00" />
 <meta property="article:modified_time" content="2022-01-03T23:12:51+08:00" />
 
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Leetcode 152 Maximum Product Subarray"/>
+<meta name="twitter:description" content="問題描述 分類：🟠 Medium 🟠 相關主題：Array, Dynamic Programing 題目（英文） Given an integer array nums, find a contiguous non-empty subarray within the array that has the largest product, and return the product. The test cases are generated so that the answer will fit in a 32-bit integer. A subarray is a contiguous subsequence of the array.  測資 Example 1: Input: nums = [2,3,-2,4] Output: 6 Explanation: [2,3] has the largest product 6."/>
+<meta name="application-name" content="Dilemma Rabbit">
+<meta name="apple-mobile-web-app-title" content="Dilemma Rabbit"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://DilemmaRabbit.github.io/leetcode/leetcode-152-maximum-product-subarray/" /><link rel="prev" href="https://DilemmaRabbit.github.io/leetcode/leetcode-1010-pairs-of-songs-with-total-durations-divisible-by-60/" /><link rel="next" href="https://DilemmaRabbit.github.io/leetcode/leetcode-1009-complement-of-base-10-integer/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Leetcode 152 Maximum Product Subarray",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/DilemmaRabbit.github.io\/leetcode\/leetcode-152-maximum-product-subarray\/"
+        },"genre": "leetcode","keywords": "LeetCode","wordcount":  210 ,
+        "url": "https:\/\/DilemmaRabbit.github.io\/leetcode\/leetcode-152-maximum-product-subarray\/","datePublished": "2022-01-03T23:12:51+08:00","dateModified": "2022-01-03T23:12:51+08:00","publisher": {
+            "@type": "Organization",
+            "name": "dilemmarabbit"},"author": {
+                "@type": "Person",
+                "name": "dilemmarabbit"
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">('' === 'true' && window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('dark' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'dark' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
 
-
-  </head>
-  <body>
-    <header class="app-header">
-      <a href="https://DilemmaRabbit.github.io/"><img class="app-header-avatar" src="/avatar.jpg" alt="DilemmaRabbit" /></a>
-      <h1>Dilemma Rabbit</h1>
-      <nav class="app-header-menu">
-          <a class="app-header-menu-item" href="/">Home</a>
-             | 
-          
-          <a class="app-header-menu-item" href="/tags/">Tags</a>
-      </nav>
-      <p>Programer / Student</p>
-      <div class="app-header-social">
-        
-          <a href="https://github.com/DilemmaRabbit" target="_blank" rel="noreferrer noopener">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-github">
-  <title>GitHub</title>
-  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-</svg>
-          </a>
-        
-          <a href="mailto:a21663832@gmail.com" target="_blank" rel="noreferrer noopener">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-at-sign">
-  <title>gmail</title>
-  <circle cx="12" cy="12" r="4"></circle><path d="M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-3.92 7.94"></path>
-</svg>
-          </a>
-        
-          <a href="https://t.me/DilemmaRabbit" target="_blank" rel="noreferrer noopener">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-navigation">
-  <title>telegram</title>
-  <polygon points="3 11 22 2 13 21 11 13 3 11"></polygon>
-</svg>
-          </a>
-        
-      </div>
-    </header>
-    <main class="app-container">
-      
-  <article class="post">
-    <header class="post-header">
-      <h1 class ="post-title">Leetcode 152 Maximum Product Subarray</h1>
-      <div class="post-meta">
-        <div>
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
-  <title>calendar</title>
-  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
-</svg>
-          Jan 3, 2022
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Dilemma Rabbit"><span class="header-title-pre">></span><span id="id-1" class="typeit"></span></a>
         </div>
-        <div>
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
-  <title>clock</title>
-  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
-</svg>
-          1 min read
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/tags/"> 標籤 </a><a class="menu-item" href="/categories/"> 分類 </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
         </div>
-        <div>
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tag">
-  <title>tag</title>
-  <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line>
-</svg>
-              <a class="tag" href="https://DilemmaRabbit.github.io/tags/leetcode/">LeetCode</a>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Dilemma Rabbit"><span class="header-title-pre">></span><span id="id-2" class="typeit"></span></a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
         </div>
-      </div>
-    </header>
-    <div class="post-content">
-      <h2 id="問題描述">問題描述</h2>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/tags/" title="">標籤</a><a class="menu-item" href="/categories/" title="">分類</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><div class="page single special"><h1 class="single-title animated pulse faster">Leetcode 152 Maximum Product Subarray</h1><div class="details toc" id="toc-static"  kept="true">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#問題描述">問題描述</a>
+      <ul>
+        <li><a href="#分類-medium-">分類：🟠 Medium 🟠</a></li>
+        <li><a href="#相關主題array-dynamic-programing">相關主題：Array, Dynamic Programing</a></li>
+        <li><a href="#題目英文">題目（英文）</a></li>
+        <li><a href="#測資">測資</a></li>
+        <li><a href="#題目中文">題目（中文）</a></li>
+      </ul>
+    </li>
+    <li><a href="#思路">思路</a></li>
+    <li><a href="#程式碼">程式碼</a></li>
+    <li><a href="#結果">結果</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h2 id="問題描述">問題描述</h2>
 <h3 id="分類-medium-">分類：🟠 Medium 🟠</h3>
 <h3 id="相關主題array-dynamic-programing">相關主題：Array, Dynamic Programing</h3>
 <h3 id="題目英文">題目（英文）</h3>
@@ -170,14 +175,25 @@ public:
 };
 </code></pre><hr>
 <h2 id="結果">結果</h2>
-<p><img src="https://i.imgur.com/d3QSgNE.png" alt=""></p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://i.imgur.com/d3QSgNE.png"
+        data-srcset="https://i.imgur.com/d3QSgNE.png, https://i.imgur.com/d3QSgNE.png 1.5x, https://i.imgur.com/d3QSgNE.png 2x"
+        data-sizes="auto"
+        alt="https://i.imgur.com/d3QSgNE.png"
+        title="https://i.imgur.com/d3QSgNE.png" /></p>
+</div></div></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreferrer" title="Hugo 0.92.0">Hugo</a> | Theme - <a href="https://github.com/sunt-programator/CodeIT" target="_blank" rel="noopener noreferrer" title="CodeIT 0.2.10"><i class="fas fa-laptop-code fa-fw"></i> CodeIT</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank" rel="noopener noreferrer">dilemmarabbit</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
 
-    </div>
-    <div class="post-footer">
-      
-    </div>
-  </article>
-
-    </main>
-  </body>
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript" src="/lib/typeit/typeit.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/mhchem.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":150},"comment":{},"data":{"id-1":"DilemmaRabbir's Blog 🐇","id-2":"DilemmaRabbir's Blog 🐇"},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"typeit":{"cursorChar":" |","cursorSpeed":1000,"data":{"id-1":["id-1"],"id-2":["id-2"]},"duration":-1,"speed":150}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
 </html>
