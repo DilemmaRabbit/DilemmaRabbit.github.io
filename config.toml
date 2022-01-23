@@ -1,39 +1,153 @@
-baseURL = 'https://DilemmaRabbit.github.io/'
-languageCode = 'en-us'
-title = 'Dilemma Rabbit'
-theme = 'm10c'
+baseURL = "https://dilemmarabbit.github.io/"
 
+defaultContentLanguage = "en"
+languageCode = "zh-tw"
 
-[menu]
-[[menu.main]]
-identifier = "tags"
-name = "Tags"
-url = "/tags/"
-[[menu.main]]
-identifier = "home"
-name = "Home"
-url = "/"
-
-[params.style]
-lightestColor = "#f7f7f7"
-primaryColor = "#7EE8FA"
-
-[[params.social]]
-icon = "github"
-name = "GitHub"
-url = "https://github.com/DilemmaRabbit"
-
-[[params.social]]
-icon = "at-sign"
-name = "gmail"
-url = "mailto:a21663832@gmail.com"
-
-[[params.social]]
-icon = "navigation"
-name = "telegram"
-url = "https://t.me/DilemmaRabbit"
+title = "DilemmaRabbit's Blog"
+theme = "LoveIt"
+defaultTheme = "dark"
+dateFormat = "2020-01-22"
 
 [params]
-author = "DilemmaRabbit"
-description = "Programer / Student"
-menu_item_separator = " | "
+  version = "0.2.X"
+  mainSection = ["leetcode"]
+
+  # Header config
+  [params.header]
+    # desktop header mode ("fixed", "normal", "auto")
+    desktopMode = "fixed"
+    # mobile header mode ("fixed", "normal", "auto")
+    mobileMode = "auto"
+    # LoveIt NEW | 0.2.0 Header title config
+    [params.header.title]
+      # URL of the LOGO
+      logo = ""
+      # title name
+      name = "DilemmaRabbit's Blog 🐇"
+      # you can add extra information before the name (HTML format is supported), such as icons
+      pre = ">"
+      # you can add extra information after the name (HTML format is supported), such as icons
+      post = ""
+      # LoveIt NEW | 0.2.5 whether to use typeit animation for title name
+      typeit = true
+
+ # Footer config
+  [params.footer]
+    enable = true
+    # LoveIt NEW | 0.2.0 Custom content (HTML format is supported)
+    custom = ''
+    # LoveIt NEW | 0.2.0 whether to show Hugo and theme info
+    hugo = true
+    # LoveIt NEW | 0.2.0 whether to show copyright info
+    copyright = true
+    # LoveIt NEW | 0.2.0 whether to show the author
+    author = true
+    # Site creation time
+    since = 2022
+    # license info (HTML format is supported)
+    license = '<a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a>'
+
+  # LoveIt NEW | 0.2.0 Section (all posts) page config
+  [params.section]
+    # special amount of posts in each section page
+    paginate = 20
+    # date format (month and day)
+    dateFormat = "01-10"
+    # amount of RSS pages
+    rss = 10
+
+  # LoveIt NEW | 0.2.0 List (category or tag) page config
+  [params.list]
+    # special amount of posts in each list page
+    paginate = 20
+    # date format (month and day)
+    dateFormat = "01-03"
+    # amount of RSS pages
+    rss = 10
+
+# Home page config
+  [params.home]
+    # LoveIt NEW | 0.2.0 amount of RSS pages
+    rss = 10
+    # Home page profile
+    [params.home.profile]
+      enable = true
+      # Gravatar Email for preferred avatar in home page
+      gravatarEmail = ""
+      # URL of avatar shown in home page
+      avatarURL = "/images/avatar.png"
+      # LoveIt CHANGED | 0.2.7 title shown in home page (HTML format is supported)
+      title = "Dilemma Rabbit(兔兔)"
+      # subtitle shown in home page
+      subtitle = "Change takes time and time is all it takes."
+      # whether to use typeit animation for subtitle
+      typeit = true
+      # whether to show social links
+      social = true
+    # Home page posts
+    [params.home.posts]
+      enable = true
+      # special amount of posts in each home posts page
+      paginate = 20
+      # LoveIt DELETED | 0.2.0 replaced with hiddenFromHomePage in params.page
+      # default behavior when you don't set "hiddenFromHomePage" in front matter
+      defaultHiddenFromHomePage = false
+  
+  # Social config about the author
+  [params.social]
+    GitHub = "DilemmaRabbit"
+    Facebook = "100001572938761"
+    Telegram = "DilemmaRabbit"
+    Email = "a21663832@gmail.com"
+    RSS = true # LoveIt NEW | 0.2.0
+
+  [params.typeit]
+        # typing speed between each step (measured in milliseconds)
+        speed = 100
+        # blinking speed of the cursor (measured in milliseconds)
+        cursorSpeed = 1000
+        # character used for the cursor (HTML format is supported)
+        cursorChar = "|"
+        # cursor duration after typing finishing (measured in milliseconds, "-1" means unlimited)
+        duration = 0
+
+[menu]
+  [[menu.main]]
+    identifier = "posts"
+    pre = "|"
+    post = "|"
+    name = "Posts"
+    url = "/posts/"
+    title = ""
+    weight = 1
+  [[menu.main]]
+    identifier = "leetcode"
+    pre = "|"
+    post = "|"
+    name = "Leetcode"
+    url = "/leetcode/"
+    title = ""
+    weight = 2
+  [[menu.main]]
+    identifier = "tags"
+    pre = "|"
+    post = "|"
+    name = "Tags"
+    url = "/tags/"
+    title = ""
+    weight = 3
+  [[menu.main]]
+    identifier = "categories"
+    pre = "|"
+    post = "|"
+    name = "Categories"
+    url = "/categories/"
+    title = ""
+    weight = 4
+
+# Markup related configuration in Hugo
+[markup]
+  # Syntax Highlighting (https://gohugo.io/content-management/syntax-highlighting)
+  [markup.highlight]
+    # false is a necessary configuration (https://github.com/dillonzq/LoveIt/issues/158)
+    noClasses = false
