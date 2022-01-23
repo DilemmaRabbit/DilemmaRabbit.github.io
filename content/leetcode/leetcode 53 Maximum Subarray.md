@@ -74,7 +74,7 @@ Constraints:
 
 ## 程式碼
 
-```
+```c++
 class Solution {
 public:
     int maxSubArray(vector<int>& nums) {
@@ -103,3 +103,4 @@ public:
 ## 結語
 
 思路是將狀況分成重新開始以及繼續，到每個新的節點便比較過去的加總是否會比重新開始高
+
