@@ -95,7 +95,7 @@ public:
 
 稍微改進了用陣列來儲存與合併負載資訊，4 思路
 
-```
+```c++
 class Solution {
 public:
     bool carPooling(vector<vector<int>>& trips, int capacity) {
