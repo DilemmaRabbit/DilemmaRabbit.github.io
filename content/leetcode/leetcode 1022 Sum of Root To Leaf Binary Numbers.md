@@ -79,7 +79,7 @@ Node.val is 0 or 1.
 
 ## 程式碼
 
-```
+```c++
 class Solution {
 public:
     

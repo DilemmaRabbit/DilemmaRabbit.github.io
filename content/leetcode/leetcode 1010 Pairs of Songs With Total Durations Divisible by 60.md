@@ -64,7 +64,7 @@ Explanation: All three pairs have a total duration of 120, which is divisible by
 
 ## 程式碼
 
-```
+```c++
 class Solution {
 public:
     int numPairsDivisibleBy60(vector<int>& time) {

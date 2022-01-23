@@ -67,7 +67,7 @@ F(n) = F(n - 1) + F(n - 2), for n > 1.
 
 ## 程式碼
 
-```
+```c++
 class Solution {
 public:
     int fib(int n) {

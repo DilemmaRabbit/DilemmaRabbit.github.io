@@ -74,7 +74,7 @@ Constraints:
 
 ## 程式碼
 
-```
+```c++
 class Solution {
 public:
     int bitwiseComplement(int n) {
@@ -93,7 +93,7 @@ public:
 ```
 
 改良點的寫法(雖然感覺不出來時間跟空間使用的差別)
-```
+```c++
 class Solution {
 public:
     int bitwiseComplement(int n) {

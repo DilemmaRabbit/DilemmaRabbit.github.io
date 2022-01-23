@@ -74,7 +74,7 @@ Constraints:
 
 ## 程式碼
 
-```
+```c++
 class Solution {
 public:
     int rob(vector<int>& nums) {

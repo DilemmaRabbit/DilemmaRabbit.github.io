@@ -65,7 +65,7 @@ There are no two adjacent flowers in flowerbed.
 
 ## 程式碼
 
-```
+```c++
 class Solution {
 public:
     bool canPlaceFlowers(vector<int>& flowerbed, int n) {

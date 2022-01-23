@@ -78,7 +78,7 @@ Constraints:
 
 ## 程式碼
 
-```
+```c++
 class Solution {
 public:
     int climbStairs(int n) {

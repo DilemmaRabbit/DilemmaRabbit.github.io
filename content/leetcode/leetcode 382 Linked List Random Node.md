@@ -63,7 +63,7 @@ int getRandom() 選擇一個隨機的節點並回傳其值，每個節點被選�
 
 ## 程式碼
 
-```
+```c++
 /**
  * Definition for singly-linked list.
  * struct ListNode {

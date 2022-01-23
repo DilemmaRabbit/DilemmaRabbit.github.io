@@ -61,7 +61,7 @@ T0 = 0, T1 = 1, T2 = 1, and Tn+3 = Tn + Tn+1 + Tn+2 for n >= 0.
 
 ## 程式碼
 
-```
+```c++
 class Solution {
 public:
     int tribonacci(int n) {

@@ -71,7 +71,7 @@ Output: [4,2,7,1,3,5]
 
 ## 程式碼
 
-```
+```c++
 class Solution {
 public:
     TreeNode* insertIntoBST(TreeNode* root, int val) {

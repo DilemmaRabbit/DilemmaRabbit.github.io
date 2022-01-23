@@ -79,7 +79,7 @@ Constraints:
 
 ## 程式碼
 
-```
+```c++
 class Solution {
 public:
     int minCostClimbingStairs(vector<int>& cost) {

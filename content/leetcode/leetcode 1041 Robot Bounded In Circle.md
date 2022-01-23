@@ -92,7 +92,7 @@ instructions[i] is 'G', 'L' or, 'R'.
 
 ## 程式碼
 
-```
+```c++
 class Solution {
 public:
     bool isRobotBounded(string instructions) {

@@ -63,7 +63,7 @@ Output: true
 
 基於剛剛1 ~ 3思路
 
-```
+```c++
 class Solution {
 public:
     bool carPooling(vector<vector<int>>& trips, int capacity) {

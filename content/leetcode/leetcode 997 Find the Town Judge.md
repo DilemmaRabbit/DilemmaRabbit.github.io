@@ -81,7 +81,7 @@ Output:
 
 ## 程式碼
 
-```
+```c++
 class Solution {
 public:
     int findJudge(int n, vector<vector<int>>& trust) {
@@ -124,7 +124,7 @@ public:
 
 ※把剛剛提到的兩個思路合併在一起了，不但免去使用了 hash_table，想法也更直觀
 
-```
+```c++
 class Solution {
 public:
     int findJudge(int n, vector<vector<int>>& trust) {

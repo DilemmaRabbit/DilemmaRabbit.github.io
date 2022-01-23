@@ -72,7 +72,7 @@ Constraints:
 
 ## 程式碼
 
-```
+```c++
 class Solution {
 public:
     bool canJump(vector<int>& nums) {

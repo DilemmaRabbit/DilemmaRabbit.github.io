@@ -63,7 +63,7 @@ Each string does not contain leading zeros except for the zero itself.
 
 ## 程式碼
 
-```
+```c++
 class Solution {
 public:
     string addBinary(string a, string b) {

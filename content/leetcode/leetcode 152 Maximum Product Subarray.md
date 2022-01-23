@@ -70,7 +70,7 @@ The product of any prefix or suffix of nums is guaranteed to fit in a 32-bit int
 
 ## 程式碼
 
-```
+```c++
 class Solution {
 public:
     int maxProduct(vector<int>& nums) {
