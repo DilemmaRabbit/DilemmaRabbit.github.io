@@ -144,36 +144,36 @@ The product of any prefix or suffix of nums is guaranteed to fit in a 32-bit int
 </ol>
 <hr>
 <h2 id="程式碼">程式碼</h2>
-<pre tabindex="0"><code>class Solution {
-public:
-    int maxProduct(vector&lt;int&gt;&amp; nums) {
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="k">class</span> <span class="nc">Solution</span> <span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+    <span class="kt">int</span> <span class="n">maxProduct</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span> <span class="n">nums</span><span class="p">)</span> <span class="p">{</span>
         
-        int max_val = INT_MIN;
-        int tmp = 1;
-        int first=0;
+        <span class="kt">int</span> <span class="n">max_val</span> <span class="o">=</span> <span class="n">INT_MIN</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">tmp</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">first</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
         
-        for(int i = 0 ; i &lt; nums.size() ; i++){
-            tmp *= nums[i];
-            max_val = max(tmp,max_val);
-            if(nums[i] == 0){
-                tmp = 1;
-            }
-        }
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span> <span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">nums</span><span class="p">.</span><span class="n">size</span><span class="p">()</span> <span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
+            <span class="n">tmp</span> <span class="o">*=</span> <span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+            <span class="n">max_val</span> <span class="o">=</span> <span class="n">max</span><span class="p">(</span><span class="n">tmp</span><span class="p">,</span><span class="n">max_val</span><span class="p">);</span>
+            <span class="k">if</span><span class="p">(</span><span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">){</span>
+                <span class="n">tmp</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
         
-        tmp = 1;
+        <span class="n">tmp</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
         
-        for(int i = nums.size()-1 ; i &gt;= 0 ; i--){
-            tmp *= nums[i];
-            max_val = max(tmp, max_val);
-            if(nums[i] == 0){
-                tmp = 1;
-            }
-        }
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="n">nums</span><span class="p">.</span><span class="n">size</span><span class="p">()</span><span class="o">-</span><span class="mi">1</span> <span class="p">;</span> <span class="n">i</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="p">;</span> <span class="n">i</span><span class="o">--</span><span class="p">){</span>
+            <span class="n">tmp</span> <span class="o">*=</span> <span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+            <span class="n">max_val</span> <span class="o">=</span> <span class="n">max</span><span class="p">(</span><span class="n">tmp</span><span class="p">,</span> <span class="n">max_val</span><span class="p">);</span>
+            <span class="k">if</span><span class="p">(</span><span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">){</span>
+                <span class="n">tmp</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
         
-        return max_val;
-    }
-};
-</code></pre><hr>
+        <span class="k">return</span> <span class="n">max_val</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">};</span>
+</code></pre></div><hr>
 <h2 id="結果">結果</h2>
 <p><img
         class="lazyload"

@@ -161,23 +161,23 @@ Constraints:
 </ol>
 <hr>
 <h2 id="程式碼">程式碼</h2>
-<pre tabindex="0"><code>class Solution {
-public:
-    int climbStairs(int n) {
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="k">class</span> <span class="nc">Solution</span> <span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+    <span class="kt">int</span> <span class="n">climbStairs</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">)</span> <span class="p">{</span>
         
-        vector&lt;int&gt; dp{1,2};
-        for(int i=2;i&lt;n;i++){
-            dp.push_back(dp[i-1] + dp[i-2]); // 紀錄新的一階的可能性
-        }
+        <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">dp</span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">};</span>
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">2</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">n</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+            <span class="n">dp</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">2</span><span class="p">]);</span> <span class="c1">// 紀錄新的一階的可能性
+</span><span class="c1"></span>        <span class="p">}</span>
         
-        if(n==1){
-            return 1; // 避免 n = 1 時判斷錯誤
-        }
+        <span class="k">if</span><span class="p">(</span><span class="n">n</span><span class="o">==</span><span class="mi">1</span><span class="p">){</span>
+            <span class="k">return</span> <span class="mi">1</span><span class="p">;</span> <span class="c1">// 避免 n = 1 時判斷錯誤
+</span><span class="c1"></span>        <span class="p">}</span>
         
-        return dp.back();
-    }
-};
-</code></pre><hr>
+        <span class="k">return</span> <span class="n">dp</span><span class="p">.</span><span class="n">back</span><span class="p">();</span>
+    <span class="p">}</span>
+<span class="p">};</span>
+</code></pre></div><hr>
 <h2 id="結果">結果</h2>
 <h2 id="httpsiimgurcompzfookgpng"><img
         class="lazyload"

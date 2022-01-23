@@ -147,36 +147,36 @@ Constraints:
 </ol>
 <hr>
 <h2 id="程式碼">程式碼</h2>
-<pre tabindex="0"><code>class Solution {
-public:
-    int bitwiseComplement(int n) {
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="k">class</span> <span class="nc">Solution</span> <span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+    <span class="kt">int</span> <span class="n">bitwiseComplement</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">)</span> <span class="p">{</span>
         
-        int cnt=1;
-        int tmp = n;
+        <span class="kt">int</span> <span class="n">cnt</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">tmp</span> <span class="o">=</span> <span class="n">n</span><span class="p">;</span>
         
-        while(tmp &gt; 1){
-            tmp /= 2;
-            cnt++;
-        }
+        <span class="k">while</span><span class="p">(</span><span class="n">tmp</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">){</span>
+            <span class="n">tmp</span> <span class="o">/=</span> <span class="mi">2</span><span class="p">;</span>
+            <span class="n">cnt</span><span class="o">++</span><span class="p">;</span>
+        <span class="p">}</span>
                   
-        return pow(2,cnt)- 1 - n;
-    }
-};
-</code></pre><p>改良點的寫法(雖然感覺不出來時間跟空間使用的差別)</p>
-<pre tabindex="0"><code>class Solution {
-public:
-    int bitwiseComplement(int n) {
+        <span class="k">return</span> <span class="nf">pow</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="n">cnt</span><span class="p">)</span><span class="o">-</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">n</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">};</span>
+</code></pre></div><p>改良點的寫法(雖然感覺不出來時間跟空間使用的差別)</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="k">class</span> <span class="nc">Solution</span> <span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+    <span class="kt">int</span> <span class="n">bitwiseComplement</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">)</span> <span class="p">{</span>
         
-        int cnt=1;
+        <span class="kt">int</span> <span class="n">cnt</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span>
         
-        while( n - pow(2,cnt) &gt;= 0){
-            cnt++;
-        }
+        <span class="k">while</span><span class="p">(</span> <span class="n">n</span> <span class="o">-</span> <span class="n">pow</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="n">cnt</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">){</span>
+            <span class="n">cnt</span><span class="o">++</span><span class="p">;</span>
+        <span class="p">}</span>
                   
-        return pow(2,cnt)- 1 - n;
-    }
-};
-</code></pre><hr>
+        <span class="k">return</span> <span class="nf">pow</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="n">cnt</span><span class="p">)</span><span class="o">-</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">n</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">};</span>
+</code></pre></div><hr>
 <h2 id="結果">結果</h2>
 <p><img
         class="lazyload"

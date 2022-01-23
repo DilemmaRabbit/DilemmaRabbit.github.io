@@ -162,44 +162,44 @@ Node.val is 0 or 1.
 </ol>
 <hr>
 <h2 id="程式碼">程式碼</h2>
-<pre tabindex="0"><code>class Solution {
-public:
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="k">class</span> <span class="nc">Solution</span> <span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
     
-    int sum = 0;
+    <span class="kt">int</span> <span class="n">sum</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
     
-    void dfs(int cur_val, TreeNode *cur){
-        if(cur -&gt; left == NULL &amp;&amp; cur -&gt; right == NULL){
-            cur_val = cur_val &lt;&lt; 1;
-            if(cur-&gt;val == 1){
-                cur_val += 1;
-            }
-            sum += cur_val;
-            return;
-        }
+    <span class="kt">void</span> <span class="nf">dfs</span><span class="p">(</span><span class="kt">int</span> <span class="n">cur_val</span><span class="p">,</span> <span class="n">TreeNode</span> <span class="o">*</span><span class="n">cur</span><span class="p">){</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">cur</span> <span class="o">-&gt;</span> <span class="n">left</span> <span class="o">==</span> <span class="nb">NULL</span> <span class="o">&amp;&amp;</span> <span class="n">cur</span> <span class="o">-&gt;</span> <span class="n">right</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">){</span>
+            <span class="n">cur_val</span> <span class="o">=</span> <span class="n">cur_val</span> <span class="o">&lt;&lt;</span> <span class="mi">1</span><span class="p">;</span>
+            <span class="k">if</span><span class="p">(</span><span class="n">cur</span><span class="o">-&gt;</span><span class="n">val</span> <span class="o">==</span> <span class="mi">1</span><span class="p">){</span>
+                <span class="n">cur_val</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">;</span>
+            <span class="p">}</span>
+            <span class="n">sum</span> <span class="o">+=</span> <span class="n">cur_val</span><span class="p">;</span>
+            <span class="k">return</span><span class="p">;</span>
+        <span class="p">}</span>
         
-        cur_val = cur_val &lt;&lt; 1;
-        if(cur-&gt;val == 1){
-            cur_val += 1;
-        }
+        <span class="n">cur_val</span> <span class="o">=</span> <span class="n">cur_val</span> <span class="o">&lt;&lt;</span> <span class="mi">1</span><span class="p">;</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">cur</span><span class="o">-&gt;</span><span class="n">val</span> <span class="o">==</span> <span class="mi">1</span><span class="p">){</span>
+            <span class="n">cur_val</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">;</span>
+        <span class="p">}</span>
         
-        if(cur-&gt;left){
-            dfs(cur_val,cur-&gt;left);
-        }
-        if(cur-&gt;right){
-            dfs(cur_val,cur-&gt;right);
-        }
-    }
+        <span class="k">if</span><span class="p">(</span><span class="n">cur</span><span class="o">-&gt;</span><span class="n">left</span><span class="p">){</span>
+            <span class="n">dfs</span><span class="p">(</span><span class="n">cur_val</span><span class="p">,</span><span class="n">cur</span><span class="o">-&gt;</span><span class="n">left</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">cur</span><span class="o">-&gt;</span><span class="n">right</span><span class="p">){</span>
+            <span class="n">dfs</span><span class="p">(</span><span class="n">cur_val</span><span class="p">,</span><span class="n">cur</span><span class="o">-&gt;</span><span class="n">right</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
     
-    int sumRootToLeaf(TreeNode* root) {
+    <span class="kt">int</span> <span class="nf">sumRootToLeaf</span><span class="p">(</span><span class="n">TreeNode</span><span class="o">*</span> <span class="n">root</span><span class="p">)</span> <span class="p">{</span>
         
-        if(root){
-            dfs(0,root);
-        }
+        <span class="k">if</span><span class="p">(</span><span class="n">root</span><span class="p">){</span>
+            <span class="n">dfs</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">root</span><span class="p">);</span>
+        <span class="p">}</span>
         
-        return sum;
-    }
-};
-</code></pre><hr>
+        <span class="k">return</span> <span class="n">sum</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">};</span>
+</code></pre></div><hr>
 <h2 id="結果">結果</h2>
 <p><img
         class="lazyload"

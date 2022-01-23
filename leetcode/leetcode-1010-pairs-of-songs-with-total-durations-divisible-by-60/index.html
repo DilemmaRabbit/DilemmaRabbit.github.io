@@ -136,38 +136,38 @@ Explanation: All three pairs have a total duration of 120, which is divisible by
 </ol>
 <hr>
 <h2 id="程式碼">程式碼</h2>
-<pre tabindex="0"><code>class Solution {
-public:
-    int numPairsDivisibleBy60(vector&lt;int&gt;&amp; time) {
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="k">class</span> <span class="nc">Solution</span> <span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+    <span class="kt">int</span> <span class="n">numPairsDivisibleBy60</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span> <span class="n">time</span><span class="p">)</span> <span class="p">{</span>
         
-        int i, cnt = 0;
-        map&lt;int, int&gt; table;
+        <span class="kt">int</span> <span class="n">i</span><span class="p">,</span> <span class="n">cnt</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="n">map</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span> <span class="kt">int</span><span class="o">&gt;</span> <span class="n">table</span><span class="p">;</span>
         
-        for(i = 0; i &lt; time.size(); i++){
-            table[time[i]%60] += 1;
-        }
+        <span class="k">for</span><span class="p">(</span><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">time</span><span class="p">.</span><span class="n">size</span><span class="p">();</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
+            <span class="n">table</span><span class="p">[</span><span class="n">time</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">%</span><span class="mi">60</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">;</span>
+        <span class="p">}</span>
         
-        for(i=1;i&lt;30;i++){
-            if(table[i]!=0){
-                if(table[60-i] != 0){
-                    cnt += (table[i] * table[60-i]);
-                }
-            }
-        }
+        <span class="k">for</span><span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="mi">30</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+            <span class="k">if</span><span class="p">(</span><span class="n">table</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">!=</span><span class="mi">0</span><span class="p">){</span>
+                <span class="k">if</span><span class="p">(</span><span class="n">table</span><span class="p">[</span><span class="mi">60</span><span class="o">-</span><span class="n">i</span><span class="p">]</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">){</span>
+                    <span class="n">cnt</span> <span class="o">+=</span> <span class="p">(</span><span class="n">table</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">*</span> <span class="n">table</span><span class="p">[</span><span class="mi">60</span><span class="o">-</span><span class="n">i</span><span class="p">]);</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
         
-        if(table[0] &gt;= 2){
-            cnt += ((table[0]*(table[0]-1))/2);
-        }
+        <span class="k">if</span><span class="p">(</span><span class="n">table</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">2</span><span class="p">){</span>
+            <span class="n">cnt</span> <span class="o">+=</span> <span class="p">((</span><span class="n">table</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="p">(</span><span class="n">table</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">-</span><span class="mi">1</span><span class="p">))</span><span class="o">/</span><span class="mi">2</span><span class="p">);</span>
+        <span class="p">}</span>
         
         
-        if(table[30] &gt;= 2){
-            cnt += ((table[30]*(table[30]-1))/2);
-        }
+        <span class="k">if</span><span class="p">(</span><span class="n">table</span><span class="p">[</span><span class="mi">30</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">2</span><span class="p">){</span>
+            <span class="n">cnt</span> <span class="o">+=</span> <span class="p">((</span><span class="n">table</span><span class="p">[</span><span class="mi">30</span><span class="p">]</span><span class="o">*</span><span class="p">(</span><span class="n">table</span><span class="p">[</span><span class="mi">30</span><span class="p">]</span><span class="o">-</span><span class="mi">1</span><span class="p">))</span><span class="o">/</span><span class="mi">2</span><span class="p">);</span>
+        <span class="p">}</span>
         
-        return cnt;
-    }
-};
-</code></pre><hr>
+        <span class="k">return</span> <span class="n">cnt</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">};</span>
+</code></pre></div><hr>
 <h2 id="結果">結果</h2>
 <p><img
         class="lazyload"

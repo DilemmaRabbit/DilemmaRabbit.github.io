@@ -136,38 +136,38 @@ Each string does not contain leading zeros except for the zero itself.
 <p>3.比較每個位數的進位值以及餘數</p>
 <h2 id="4將最後的進位補上">4.將最後的進位補上</h2>
 <h2 id="程式碼">程式碼</h2>
-<pre tabindex="0"><code>class Solution {
-public:
-    string addBinary(string a, string b) {
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="k">class</span> <span class="nc">Solution</span> <span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+    <span class="n">string</span> <span class="n">addBinary</span><span class="p">(</span><span class="n">string</span> <span class="n">a</span><span class="p">,</span> <span class="n">string</span> <span class="n">b</span><span class="p">)</span> <span class="p">{</span>
         
-        string res=&quot;&quot;;
-        int carry = 0;
-        int size_a = a.size();
-        int size_b = b.size();
+        <span class="n">string</span> <span class="n">res</span><span class="o">=</span><span class="s">&#34;&#34;</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">carry</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">size_a</span> <span class="o">=</span> <span class="n">a</span><span class="p">.</span><span class="n">size</span><span class="p">();</span>
+        <span class="kt">int</span> <span class="n">size_b</span> <span class="o">=</span> <span class="n">b</span><span class="p">.</span><span class="n">size</span><span class="p">();</span>
         
-        reverse(a.begin(),a.end());
-        reverse(b.begin(),b.end());
+        <span class="n">reverse</span><span class="p">(</span><span class="n">a</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="n">a</span><span class="p">.</span><span class="n">end</span><span class="p">());</span>
+        <span class="n">reverse</span><span class="p">(</span><span class="n">b</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="n">b</span><span class="p">.</span><span class="n">end</span><span class="p">());</span>
         
-        for(int i = 0; i &lt; abs(size_a-size_b); i++){
-            if(size_a &gt; size_b) b += '0';
-            else a += '0';
-        }
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">abs</span><span class="p">(</span><span class="n">size_a</span><span class="o">-</span><span class="n">size_b</span><span class="p">);</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
+            <span class="k">if</span><span class="p">(</span><span class="n">size_a</span> <span class="o">&gt;</span> <span class="n">size_b</span><span class="p">)</span> <span class="n">b</span> <span class="o">+=</span> <span class="sc">&#39;0&#39;</span><span class="p">;</span>
+            <span class="k">else</span> <span class="n">a</span> <span class="o">+=</span> <span class="sc">&#39;0&#39;</span><span class="p">;</span>
+        <span class="p">}</span>
         
-        for(int i = 0; i &lt; a.size(); i++){            
-            res += (carry + (a[i] - '0') + (b[i] - '0')) % 2 + '0';
-            carry = (carry + (a[i] - '0') + (b[i] - '0')) / 2;
-        }
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">a</span><span class="p">.</span><span class="n">size</span><span class="p">();</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>            
+            <span class="n">res</span> <span class="o">+=</span> <span class="p">(</span><span class="n">carry</span> <span class="o">+</span> <span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">-</span> <span class="sc">&#39;0&#39;</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="n">b</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">-</span> <span class="sc">&#39;0&#39;</span><span class="p">))</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">+</span> <span class="sc">&#39;0&#39;</span><span class="p">;</span>
+            <span class="n">carry</span> <span class="o">=</span> <span class="p">(</span><span class="n">carry</span> <span class="o">+</span> <span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">-</span> <span class="sc">&#39;0&#39;</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="n">b</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">-</span> <span class="sc">&#39;0&#39;</span><span class="p">))</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span>
+        <span class="p">}</span>
         
-        if(carry == 1){
-            res += '1';
-        }
+        <span class="k">if</span><span class="p">(</span><span class="n">carry</span> <span class="o">==</span> <span class="mi">1</span><span class="p">){</span>
+            <span class="n">res</span> <span class="o">+=</span> <span class="sc">&#39;1&#39;</span><span class="p">;</span>
+        <span class="p">}</span>
         
-        reverse(res.begin(),res.end());
+        <span class="n">reverse</span><span class="p">(</span><span class="n">res</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="n">res</span><span class="p">.</span><span class="n">end</span><span class="p">());</span>
         
-        return res;
-    }
-};
-</code></pre><hr>
+        <span class="k">return</span> <span class="n">res</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">};</span>
+</code></pre></div><hr>
 <h2 id="結果">結果</h2>
 <p><img
         class="lazyload"

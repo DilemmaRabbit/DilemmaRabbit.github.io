@@ -142,35 +142,35 @@ There are no two adjacent flowers in flowerbed.
 </ol>
 <hr>
 <h2 id="程式碼">程式碼</h2>
-<pre tabindex="0"><code>class Solution {
-public:
-    bool canPlaceFlowers(vector&lt;int&gt;&amp; flowerbed, int n) {
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="k">class</span> <span class="nc">Solution</span> <span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+    <span class="kt">bool</span> <span class="n">canPlaceFlowers</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span> <span class="n">flowerbed</span><span class="p">,</span> <span class="kt">int</span> <span class="n">n</span><span class="p">)</span> <span class="p">{</span>
         
-        int cnt = 0;
+        <span class="kt">int</span> <span class="n">cnt</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
         
-        flowerbed.insert(flowerbed.begin(),0);
-        flowerbed.push_back(0);
+        <span class="n">flowerbed</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="n">flowerbed</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="mi">0</span><span class="p">);</span>
+        <span class="n">flowerbed</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
         
-        for(int i=1;i&lt;flowerbed.size()-1;i++){
-            if(flowerbed[i] == 0){
-                cout &lt;&lt; i;
-                if(flowerbed[i-1]==0 &amp;&amp; flowerbed[i+1]==0){
-                    cnt++;
-                    i += 1;
-                }
-            }
-        }
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">flowerbed</span><span class="p">.</span><span class="n">size</span><span class="p">()</span><span class="o">-</span><span class="mi">1</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+            <span class="k">if</span><span class="p">(</span><span class="n">flowerbed</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">){</span>
+                <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">i</span><span class="p">;</span>
+                <span class="k">if</span><span class="p">(</span><span class="n">flowerbed</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">==</span><span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="n">flowerbed</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">==</span><span class="mi">0</span><span class="p">){</span>
+                    <span class="n">cnt</span><span class="o">++</span><span class="p">;</span>
+                    <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">;</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
         
-        cout &lt;&lt; cnt;
+        <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">cnt</span><span class="p">;</span>
         
-        if(cnt &lt; n){
-            return false;
-        }
+        <span class="k">if</span><span class="p">(</span><span class="n">cnt</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">){</span>
+            <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
+        <span class="p">}</span>
         
-        return true;
-    }
-};
-</code></pre><hr>
+        <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">};</span>
+</code></pre></div><hr>
 <h2 id="結果">結果</h2>
 <p><img
         class="lazyload"

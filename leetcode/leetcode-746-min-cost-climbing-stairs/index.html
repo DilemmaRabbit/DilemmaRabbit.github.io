@@ -159,27 +159,27 @@ Constraints:
 </ol>
 <hr>
 <h2 id="程式碼">程式碼</h2>
-<pre tabindex="0"><code>class Solution {
-public:
-    int minCostClimbingStairs(vector&lt;int&gt;&amp; cost) {
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="k">class</span> <span class="nc">Solution</span> <span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+    <span class="kt">int</span> <span class="n">minCostClimbingStairs</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span> <span class="n">cost</span><span class="p">)</span> <span class="p">{</span>
         
-        int tmp;
-        int csize = cost.size();
-        int prev = cost[csize-1]; // n-1 的 cost
-        int pprev = cost[csize-2]; // n-2 的 cost
+        <span class="kt">int</span> <span class="n">tmp</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">csize</span> <span class="o">=</span> <span class="n">cost</span><span class="p">.</span><span class="n">size</span><span class="p">();</span>
+        <span class="kt">int</span> <span class="n">prev</span> <span class="o">=</span> <span class="n">cost</span><span class="p">[</span><span class="n">csize</span><span class="o">-</span><span class="mi">1</span><span class="p">];</span> <span class="c1">// n-1 的 cost
+</span><span class="c1"></span>        <span class="kt">int</span> <span class="n">pprev</span> <span class="o">=</span> <span class="n">cost</span><span class="p">[</span><span class="n">csize</span><span class="o">-</span><span class="mi">2</span><span class="p">];</span> <span class="c1">// n-2 的 cost
+</span><span class="c1"></span>        
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="n">csize</span><span class="o">-</span><span class="mi">3</span><span class="p">;</span><span class="n">i</span><span class="o">&gt;=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">--</span><span class="p">){</span>
+            <span class="n">tmp</span> <span class="o">=</span> <span class="n">pprev</span><span class="p">;</span> <span class="c1">// 暫存 n-1 的 cost
+</span><span class="c1"></span>            <span class="n">pprev</span> <span class="o">=</span> <span class="n">cost</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="n">min</span><span class="p">(</span><span class="n">prev</span><span class="p">,</span><span class="n">pprev</span><span class="p">);</span>
+            <span class="n">prev</span> <span class="o">=</span> <span class="n">tmp</span><span class="p">;</span>
+        <span class="p">}</span>
         
-        for(int i=csize-3;i&gt;=0;i--){
-            tmp = pprev; // 暫存 n-1 的 cost
-            pprev = cost[i] + min(prev,pprev);
-            prev = tmp;
-        }
-        
-        // 最後會變成 prev = index 1, pprev = index 0 的情況
-
-        return min(prev,pprev);
-    }
-};
-</code></pre><hr>
+        <span class="c1">// 最後會變成 prev = index 1, pprev = index 0 的情況
+</span><span class="c1"></span>
+        <span class="k">return</span> <span class="nf">min</span><span class="p">(</span><span class="n">prev</span><span class="p">,</span><span class="n">pprev</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">};</span>
+</code></pre></div><hr>
 <h2 id="結果">結果</h2>
 <h2 id="httpsiimgurcoms0nom03png"><img
         class="lazyload"

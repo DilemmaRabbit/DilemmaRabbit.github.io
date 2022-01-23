@@ -146,56 +146,56 @@ int getRandom() 選擇一個隨機的節點並回傳其值，每個節點被選�
 </ul>
 <hr>
 <h2 id="程式碼">程式碼</h2>
-<pre tabindex="0"><code>/**
- * Definition for singly-linked list.
- * struct ListNode {
- *     int val;
- *     ListNode *next;
- *     ListNode() : val(0), next(nullptr) {}
- *     ListNode(int x) : val(x), next(nullptr) {}
- *     ListNode(int x, ListNode *next) : val(x), next(next) {}
- * };
- */
-class Solution {
-public:
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="cm">/**
+</span><span class="cm"> * Definition for singly-linked list.
+</span><span class="cm"> * struct ListNode {
+</span><span class="cm"> *     int val;
+</span><span class="cm"> *     ListNode *next;
+</span><span class="cm"> *     ListNode() : val(0), next(nullptr) {}
+</span><span class="cm"> *     ListNode(int x) : val(x), next(nullptr) {}
+</span><span class="cm"> *     ListNode(int x, ListNode *next) : val(x), next(next) {}
+</span><span class="cm"> * };
+</span><span class="cm"> */</span>
+<span class="k">class</span> <span class="nc">Solution</span> <span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
     
-    vector&lt;int&gt; t;
-    int cur;
+    <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">t</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">cur</span><span class="p">;</span>
     
-    Solution(ListNode* head) {
-        ListNode *tmp = head;
-        srand(time(NULL));
-        while(tmp != NULL){
-            t.push_back(tmp-&gt;val);
-            tmp = tmp -&gt; next;
-        }
+    <span class="n">Solution</span><span class="p">(</span><span class="n">ListNode</span><span class="o">*</span> <span class="n">head</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">ListNode</span> <span class="o">*</span><span class="n">tmp</span> <span class="o">=</span> <span class="n">head</span><span class="p">;</span>
+        <span class="n">srand</span><span class="p">(</span><span class="n">time</span><span class="p">(</span><span class="nb">NULL</span><span class="p">));</span>
+        <span class="k">while</span><span class="p">(</span><span class="n">tmp</span> <span class="o">!=</span> <span class="nb">NULL</span><span class="p">){</span>
+            <span class="n">t</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">tmp</span><span class="o">-&gt;</span><span class="n">val</span><span class="p">);</span>
+            <span class="n">tmp</span> <span class="o">=</span> <span class="n">tmp</span> <span class="o">-&gt;</span> <span class="n">next</span><span class="p">;</span>
+        <span class="p">}</span>
         
-        cur = t.size();
+        <span class="n">cur</span> <span class="o">=</span> <span class="n">t</span><span class="p">.</span><span class="n">size</span><span class="p">();</span>
         
-    }
+    <span class="p">}</span>
     
-    int getRandom() {
+    <span class="kt">int</span> <span class="nf">getRandom</span><span class="p">()</span> <span class="p">{</span>
         
-        int val = t.front();
+        <span class="kt">int</span> <span class="n">val</span> <span class="o">=</span> <span class="n">t</span><span class="p">.</span><span class="n">front</span><span class="p">();</span>
         
-        for(int i=1;i&lt;cur;i++){
-            int j = rand() % (i+1);
-            if(j == 0){
-                val = t[i];
-            }
-        }
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">cur</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+            <span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="n">rand</span><span class="p">()</span> <span class="o">%</span> <span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">);</span>
+            <span class="k">if</span><span class="p">(</span><span class="n">j</span> <span class="o">==</span> <span class="mi">0</span><span class="p">){</span>
+                <span class="n">val</span> <span class="o">=</span> <span class="n">t</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
             
-        return val;
+        <span class="k">return</span> <span class="n">val</span><span class="p">;</span>
             
-    }
-};
+    <span class="p">}</span>
+<span class="p">};</span>
 
-/**
- * Your Solution object will be instantiated and called as such:
- * Solution* obj = new Solution(head);
- * int param_1 = obj-&gt;getRandom();
- */
-</code></pre><hr>
+<span class="cm">/**
+</span><span class="cm"> * Your Solution object will be instantiated and called as such:
+</span><span class="cm"> * Solution* obj = new Solution(head);
+</span><span class="cm"> * int param_1 = obj-&gt;getRandom();
+</span><span class="cm"> */</span>
+</code></pre></div><hr>
 <h2 id="結果">結果</h2>
 <h2 id="httpsiimgurcomqbmnxhopng"><img
         class="lazyload"

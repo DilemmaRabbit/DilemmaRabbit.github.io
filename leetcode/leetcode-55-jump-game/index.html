@@ -151,32 +151,32 @@ Constraints:
 </ol>
 <hr>
 <h2 id="程式碼">程式碼</h2>
-<pre tabindex="0"><code>class Solution {
-public:
-    bool canJump(vector&lt;int&gt;&amp; nums) {
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="k">class</span> <span class="nc">Solution</span> <span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+    <span class="kt">bool</span> <span class="n">canJump</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span> <span class="n">nums</span><span class="p">)</span> <span class="p">{</span>
         
-        int max_index = 0;
+        <span class="kt">int</span> <span class="n">max_index</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
         
-        if(nums.size() == 1){
-            return true;
-        }
+        <span class="k">if</span><span class="p">(</span><span class="n">nums</span><span class="p">.</span><span class="n">size</span><span class="p">()</span> <span class="o">==</span> <span class="mi">1</span><span class="p">){</span>
+            <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+        <span class="p">}</span>
         
-        for(int i = 0; i &lt; nums.size(); i++){
-            max_index = max(max_index, i + nums[i]);
-            if(max_index == nums.size()-1){
-                return true;
-            }
-            if(nums[i] == 0){
-                if(max_index &lt;= i){
-                    return false;
-                }
-            }
-        }
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">nums</span><span class="p">.</span><span class="n">size</span><span class="p">();</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
+            <span class="n">max_index</span> <span class="o">=</span> <span class="n">max</span><span class="p">(</span><span class="n">max_index</span><span class="p">,</span> <span class="n">i</span> <span class="o">+</span> <span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+            <span class="k">if</span><span class="p">(</span><span class="n">max_index</span> <span class="o">==</span> <span class="n">nums</span><span class="p">.</span><span class="n">size</span><span class="p">()</span><span class="o">-</span><span class="mi">1</span><span class="p">){</span>
+                <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+            <span class="p">}</span>
+            <span class="k">if</span><span class="p">(</span><span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">){</span>
+                <span class="k">if</span><span class="p">(</span><span class="n">max_index</span> <span class="o">&lt;=</span> <span class="n">i</span><span class="p">){</span>
+                    <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
         
-        return true;
-    }
-};
-</code></pre><hr>
+        <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">};</span>
+</code></pre></div><hr>
 <h2 id="結果">結果</h2>
 <p><img
         class="lazyload"

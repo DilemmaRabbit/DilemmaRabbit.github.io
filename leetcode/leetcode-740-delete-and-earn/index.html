@@ -155,51 +155,51 @@ Constraints:
 </ol>
 <hr>
 <h2 id="程式碼">程式碼</h2>
-<pre tabindex="0"><code>class Solution {
-public:
-    int deleteAndEarn(vector&lt;int&gt;&amp; nums) {
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="k">class</span> <span class="nc">Solution</span> <span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+    <span class="kt">int</span> <span class="n">deleteAndEarn</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span> <span class="n">nums</span><span class="p">)</span> <span class="p">{</span>
         
-        int tmp, take, notake;
-        int res;
-        int max_num = 0;
-        map&lt;int, int&gt; table;
+        <span class="kt">int</span> <span class="n">tmp</span><span class="p">,</span> <span class="n">take</span><span class="p">,</span> <span class="n">notake</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">res</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">max_num</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="n">map</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span> <span class="kt">int</span><span class="o">&gt;</span> <span class="n">table</span><span class="p">;</span>
         
-        if(nums.size()==1){
-            return nums[0];
-        }
+        <span class="k">if</span><span class="p">(</span><span class="n">nums</span><span class="p">.</span><span class="n">size</span><span class="p">()</span><span class="o">==</span><span class="mi">1</span><span class="p">){</span>
+            <span class="k">return</span> <span class="n">nums</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+        <span class="p">}</span>
         
-        for(int i=0;i&lt;nums.size();i++){
-            if(table[nums[i]] == 0){
-                table[nums[i]] = nums[i];
-            } 
-            else{
-                table[nums[i]] += nums[i];
-            }
-            if(nums[i] &gt; max_num){
-                max_num = nums[i];
-            }
-        }
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">nums</span><span class="p">.</span><span class="n">size</span><span class="p">();</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+            <span class="k">if</span><span class="p">(</span><span class="n">table</span><span class="p">[</span><span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">){</span>
+                <span class="n">table</span><span class="p">[</span><span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span> <span class="o">=</span> <span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+            <span class="p">}</span> 
+            <span class="k">else</span><span class="p">{</span>
+                <span class="n">table</span><span class="p">[</span><span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span> <span class="o">+=</span> <span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+            <span class="p">}</span>
+            <span class="k">if</span><span class="p">(</span><span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">max_num</span><span class="p">){</span>
+                <span class="n">max_num</span> <span class="o">=</span> <span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
         
-        for(int i=1;i&lt;max_num+1;i++){
-            if(i == 1){
-                notake = 0;
-                take = table[i];
-            }
-            else{
-                tmp = notake;
-                notake = max(take, notake);
-                take = tmp + table[i];   
-            }
-            if(res &lt; max(take, notake)){
-                res = max(take, notake);
-            }
-        }
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">max_num</span><span class="o">+</span><span class="mi">1</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+            <span class="k">if</span><span class="p">(</span><span class="n">i</span> <span class="o">==</span> <span class="mi">1</span><span class="p">){</span>
+                <span class="n">notake</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+                <span class="n">take</span> <span class="o">=</span> <span class="n">table</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+            <span class="p">}</span>
+            <span class="k">else</span><span class="p">{</span>
+                <span class="n">tmp</span> <span class="o">=</span> <span class="n">notake</span><span class="p">;</span>
+                <span class="n">notake</span> <span class="o">=</span> <span class="n">max</span><span class="p">(</span><span class="n">take</span><span class="p">,</span> <span class="n">notake</span><span class="p">);</span>
+                <span class="n">take</span> <span class="o">=</span> <span class="n">tmp</span> <span class="o">+</span> <span class="n">table</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>   
+            <span class="p">}</span>
+            <span class="k">if</span><span class="p">(</span><span class="n">res</span> <span class="o">&lt;</span> <span class="n">max</span><span class="p">(</span><span class="n">take</span><span class="p">,</span> <span class="n">notake</span><span class="p">)){</span>
+                <span class="n">res</span> <span class="o">=</span> <span class="n">max</span><span class="p">(</span><span class="n">take</span><span class="p">,</span> <span class="n">notake</span><span class="p">);</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
         
-        cout &lt;&lt; res;
-        return res;
-    }
-};
-</code></pre><hr>
+        <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">res</span><span class="p">;</span>
+        <span class="k">return</span> <span class="n">res</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">};</span>
+</code></pre></div><hr>
 <h2 id="結果">結果</h2>
 <h2 id="httpsiimgurcomrwsob1bpng"><img
         class="lazyload"

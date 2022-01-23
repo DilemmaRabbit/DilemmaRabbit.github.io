@@ -156,33 +156,33 @@ Output:
 </ol>
 <hr>
 <h2 id="程式碼">程式碼</h2>
-<pre tabindex="0"><code>class Solution {
-public:
-    int findJudge(int n, vector&lt;vector&lt;int&gt;&gt;&amp; trust) {
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="k">class</span> <span class="nc">Solution</span> <span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+    <span class="kt">int</span> <span class="n">findJudge</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">,</span> <span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&gt;&amp;</span> <span class="n">trust</span><span class="p">)</span> <span class="p">{</span>
         
-        int i, possible=-1;
-        map&lt;int, int&gt; table;
+        <span class="kt">int</span> <span class="n">i</span><span class="p">,</span> <span class="n">possible</span><span class="o">=-</span><span class="mi">1</span><span class="p">;</span>
+        <span class="n">map</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span> <span class="kt">int</span><span class="o">&gt;</span> <span class="n">table</span><span class="p">;</span>
         
-        for(i=0; i&lt;trust.size(); i++){
-            table[trust[i][1]] += 1;
-        }
+        <span class="k">for</span><span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">trust</span><span class="p">.</span><span class="n">size</span><span class="p">();</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
+            <span class="n">table</span><span class="p">[</span><span class="n">trust</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">]]</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">;</span>
+        <span class="p">}</span>
         
-        for(i = 1; i &lt;= n; i++){
-            if(table[i] == n-1){
-                possible = i;
-            }
-        }
+        <span class="k">for</span><span class="p">(</span><span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
+            <span class="k">if</span><span class="p">(</span><span class="n">table</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">){</span>
+                <span class="n">possible</span> <span class="o">=</span> <span class="n">i</span><span class="p">;</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
         
-        for(i = 0; i&lt;trust.size();i++){
-            if(trust[i][0] == possible){
-                return -1;
-            }
-        }
+        <span class="k">for</span><span class="p">(</span><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">trust</span><span class="p">.</span><span class="n">size</span><span class="p">();</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+            <span class="k">if</span><span class="p">(</span><span class="n">trust</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="n">possible</span><span class="p">){</span>
+                <span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
         
-        return possible;
-    }
-};
-</code></pre><hr>
+        <span class="k">return</span> <span class="n">possible</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">};</span>
+</code></pre></div><hr>
 <h2 id="結果">結果</h2>
 <p><img
         class="lazyload"
@@ -196,28 +196,28 @@ public:
 <h2 id="評論區做法">評論區做法</h2>
 <p>透過一個 vector 紀錄 judge 的可能，被當成 ai 就 -1, 當成 bi 就 +1，最後判斷 vector 中最大的值來確定是否有 judge</p>
 <p>※把剛剛提到的兩個思路合併在一起了，不但免去使用了 hash_table，想法也更直觀</p>
-<pre tabindex="0"><code>class Solution {
-public:
-    int findJudge(int n, vector&lt;vector&lt;int&gt;&gt;&amp; trust) {
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="k">class</span> <span class="nc">Solution</span> <span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+    <span class="kt">int</span> <span class="n">findJudge</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">,</span> <span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&gt;&amp;</span> <span class="n">trust</span><span class="p">)</span> <span class="p">{</span>
         
-        int i;
-        vector&lt;int&gt; v(n);
+        <span class="kt">int</span> <span class="n">i</span><span class="p">;</span>
+        <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">v</span><span class="p">(</span><span class="n">n</span><span class="p">);</span>
         
-        for(i=0;i&lt;trust.size();i++){
-            v[trust[i][0]-1] -= 1;
-            v[trust[i][1]-1] += 1;
-        }
+        <span class="k">for</span><span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">trust</span><span class="p">.</span><span class="n">size</span><span class="p">();</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+            <span class="n">v</span><span class="p">[</span><span class="n">trust</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">-=</span> <span class="mi">1</span><span class="p">;</span>
+            <span class="n">v</span><span class="p">[</span><span class="n">trust</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">;</span>
+        <span class="p">}</span>
         
-        for(i=0;i&lt;v.size();i++){
-            if(v[i] == n-1){
-                return i+1;
-            }
-        }
+        <span class="k">for</span><span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">v</span><span class="p">.</span><span class="n">size</span><span class="p">();</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+            <span class="k">if</span><span class="p">(</span><span class="n">v</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">){</span>
+                <span class="k">return</span> <span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">;</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
             
-        return -1;
-    }
-};
-</code></pre><p>!z<a href="https://i.imgur.com/H94MZYW.png" target="_blank" rel="noopener noreferrer"></a></p>
+        <span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">};</span>
+</code></pre></div><p>!z<a href="https://i.imgur.com/H94MZYW.png" target="_blank" rel="noopener noreferrer"></a></p>
 <hr>
 <h2 id="結語">結語</h2>
 <p>第一篇值得紀念(<del>?</del>)的刷題文，雖然只是easy(<del>然後效率跟記憶體使用率還不怎麼高</del>)

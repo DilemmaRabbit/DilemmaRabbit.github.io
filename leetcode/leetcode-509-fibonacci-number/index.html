@@ -142,21 +142,21 @@ F(n) = F(n - 1) + F(n - 2), for n &gt; 1.
 </ol>
 <hr>
 <h2 id="程式碼">程式碼</h2>
-<pre tabindex="0"><code>class Solution {
-public:
-    int fib(int n) {
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="k">class</span> <span class="nc">Solution</span> <span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+    <span class="kt">int</span> <span class="n">fib</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">)</span> <span class="p">{</span>
         
-        int dp[n+1];
+        <span class="kt">int</span> <span class="n">dp</span><span class="p">[</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">];</span>
         
-        for(int i=0;i&lt;n+1;i++){
-            if(i==0) dp[i] = 0;
-            else if(i==1) dp[i] = 1;
-            else dp[i] = dp[i-1] + dp[i-2];
-        }
-        return dp[n];
-    }
-};
-</code></pre><hr>
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+            <span class="k">if</span><span class="p">(</span><span class="n">i</span><span class="o">==</span><span class="mi">0</span><span class="p">)</span> <span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+            <span class="k">else</span> <span class="nf">if</span><span class="p">(</span><span class="n">i</span><span class="o">==</span><span class="mi">1</span><span class="p">)</span> <span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+            <span class="k">else</span> <span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">2</span><span class="p">];</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="n">dp</span><span class="p">[</span><span class="n">n</span><span class="p">];</span>
+    <span class="p">}</span>
+<span class="p">};</span>
+</code></pre></div><hr>
 <h2 id="結果">結果</h2>
 <h2 id="httpsiimgurcompabytbzpng"><img
         class="lazyload"

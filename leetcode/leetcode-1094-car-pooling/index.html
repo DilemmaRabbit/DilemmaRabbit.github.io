@@ -136,34 +136,34 @@ Output: true
 <hr>
 <h2 id="程式碼">程式碼</h2>
 <p>基於剛剛1 ~ 3思路</p>
-<pre tabindex="0"><code>class Solution {
-public:
-    bool carPooling(vector&lt;vector&lt;int&gt;&gt;&amp; trips, int capacity) {
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="k">class</span> <span class="nc">Solution</span> <span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+    <span class="kt">bool</span> <span class="n">carPooling</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&gt;&amp;</span> <span class="n">trips</span><span class="p">,</span> <span class="kt">int</span> <span class="n">capacity</span><span class="p">)</span> <span class="p">{</span>
         
-        int i;
-        int current=0;
-        int max=INT_MIN; # 最後一站
-        map&lt;int, int[2]&gt; table; # 紀錄每一站的上下車人數資訊
+        <span class="kt">int</span> <span class="n">i</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">current</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">max</span><span class="o">=</span><span class="n">INT_MIN</span><span class="p">;</span> <span class="err">#</span> <span class="err">最後一站</span>
+        <span class="n">map</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span> <span class="kt">int</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">&gt;</span> <span class="n">table</span><span class="p">;</span> <span class="err">#</span> <span class="err">紀錄每一站的上下車人數資訊</span>
         
-        for(i = 0; i &lt; trips.size(); i++){
-            table[trips[i][1]][0] += trips[i][0];
-            table[trips[i][2]][1] += trips[i][0];
-            if(trips[i][2] &gt; max){
-                max = trips[i][2]; # 取得最後一站的資料做遍歷用
-            }
-        }
+        <span class="k">for</span><span class="p">(</span><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">trips</span><span class="p">.</span><span class="n">size</span><span class="p">();</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
+            <span class="n">table</span><span class="p">[</span><span class="n">trips</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">]][</span><span class="mi">0</span><span class="p">]</span> <span class="o">+=</span> <span class="n">trips</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">];</span>
+            <span class="n">table</span><span class="p">[</span><span class="n">trips</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">2</span><span class="p">]][</span><span class="mi">1</span><span class="p">]</span> <span class="o">+=</span> <span class="n">trips</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">];</span>
+            <span class="k">if</span><span class="p">(</span><span class="n">trips</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">max</span><span class="p">){</span>
+                <span class="n">max</span> <span class="o">=</span> <span class="n">trips</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">2</span><span class="p">];</span> <span class="err">#</span> <span class="err">取得最後一站的資料做遍歷用</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
         
-        for(i = 0; i &lt;= max; i++){
-            current += table[i][0]; # 上車
-            current -= table[i][1]; # 下車
-            if(current &gt; capacity){ 
-                return false; # 檢查是否超重
-            }
-        }      
-        return true;
-    }
-};
-</code></pre><p>稍微改進了用陣列來儲存與合併負載資訊，4 思路</p>
+        <span class="k">for</span><span class="p">(</span><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">max</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
+            <span class="n">current</span> <span class="o">+=</span> <span class="n">table</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">];</span> <span class="err">#</span> <span class="err">上車</span>
+            <span class="n">current</span> <span class="o">-=</span> <span class="n">table</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">];</span> <span class="err">#</span> <span class="err">下車</span>
+            <span class="k">if</span><span class="p">(</span><span class="n">current</span> <span class="o">&gt;</span> <span class="n">capacity</span><span class="p">){</span> 
+                <span class="k">return</span> <span class="nb">false</span><span class="p">;</span> <span class="err">#</span> <span class="err">檢查是否超重</span>
+            <span class="p">}</span>
+        <span class="p">}</span>      
+        <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">};</span>
+</code></pre></div><p>稍微改進了用陣列來儲存與合併負載資訊，4 思路</p>
 <pre tabindex="0"><code>class Solution {
 public:
     bool carPooling(vector&lt;vector&lt;int&gt;&gt;&amp; trips, int capacity) {
