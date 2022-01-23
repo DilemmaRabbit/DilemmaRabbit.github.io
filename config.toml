@@ -88,7 +88,7 @@ theme = "CodeIT"
       # whether to show social links
       social = true
       # disclaimer (HTML format is supported)
-      disclaimer = "c++c++c++"
+      disclaimer = ""
     # Home page posts
     [params.home.posts]
       enable = true
@@ -123,7 +123,7 @@ theme = "CodeIT"
       enable = true
       # whether to make the table of the contents in the sidebar automatically collapsed
       auto = true
-      keepStatic = true
+
 
     # KaTeX mathematical formulas
     [params.page.math]
