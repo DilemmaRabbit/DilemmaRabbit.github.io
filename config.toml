@@ -114,7 +114,7 @@ theme = "CodeIT"
     # whether to enable twemoji
     twemoji = false
     # whether to enable lightgallery
-    lightgallery = false
+    lightgallery = true
     # whether to enable the ruby extended syntax
 
     # Table of the contents config
