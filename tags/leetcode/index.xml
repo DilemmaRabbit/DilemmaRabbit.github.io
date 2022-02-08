@@ -4,55 +4,14 @@
         <link>https://DilemmaRabbit.github.io/tags/leetcode/</link>
         <description>LeetCode - Tag - Dilemma Rabbit</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>a21663832@gmail.com (dilemmarabbit)</managingEditor>
-            <webMaster>a21663832@gmail.com (dilemmarabbit)</webMaster><lastBuildDate>Tue, 18 Jan 2022 22:30:06 &#43;0800</lastBuildDate><atom:link href="https://DilemmaRabbit.github.io/tags/leetcode/" rel="self" type="application/rss+xml" /><item>
-    <title>Leetcode 605 Can Place Flowers</title>
-    <link>https://DilemmaRabbit.github.io/leetcode/leetcode-605-can-place-flowers/</link>
-    <pubDate>Tue, 18 Jan 2022 22:30:06 &#43;0800</pubDate><author>a21663832@gmail.com</author><dc:creator>dilemmarabbit</dc:creator><guid>https://DilemmaRabbit.github.io/leetcode/leetcode-605-can-place-flowers/</guid>
-    <description><![CDATA[問題描述 分類：🟢 Easy 🟢 相關主題：Array, Greedy 題目（英文） You have a long flowerbed in which some of the plots are planted, and some are not. However, flowers cannot be planted in adjacent plots. Given an integer array flowerbed containing 0's and 1's, where 0 means empty and 1 means not empty, and an integer n, return if n new flowers can be planted in the flowerbed without violating the no-adjacent-flowers rule.  測資 Example 1: Input: flowerbed = [1,0,0,0,1], n = 1 Output: true Example 2: Input: flowerbed = [1,0,0,0,1], n = 2 Output: false Constraints: 1 &lt;= flowerbed.]]></description>
-</item><item>
-    <title>Leetcode 53 Maximum Subarray</title>
-    <link>https://DilemmaRabbit.github.io/leetcode/leetcode-53-maximum-subarray/</link>
-    <pubDate>Wed, 12 Jan 2022 17:15:40 &#43;0800</pubDate><author>a21663832@gmail.com</author><dc:creator>dilemmarabbit</dc:creator><guid>https://DilemmaRabbit.github.io/leetcode/leetcode-53-maximum-subarray/</guid>
-    <description><![CDATA[問題描述 分類：🟢 Easy 🟢 相關主題：Array, Divide and Conquer, Dynamic Programming 題目（英文） Given an integer array nums, find the contiguous subarray (containing at least one number) which has the largest sum and return its sum. A subarray is a contiguous part of an array.  測資 Example 1: Input: nums = [-2,1,-3,4,-1,2,1,-5,4] Output: 6 Explanation: [4,-1,2,1] has the largest sum = 6. Example 2: Input: nums = [1] Output: 1 Example 3: Input: nums = [5,4,-1,7,8] Output: 23 Constraints: 1 &lt;= nums.]]></description>
-</item><item>
-    <title>Leetcode 701 Insert Into a Binary Search Tree</title>
-    <link>https://DilemmaRabbit.github.io/leetcode/leetcode-701-insert-into-a-binary-search-tree/</link>
-    <pubDate>Wed, 12 Jan 2022 17:15:17 &#43;0800</pubDate><author>a21663832@gmail.com</author><dc:creator>dilemmarabbit</dc:creator><guid>https://DilemmaRabbit.github.io/leetcode/leetcode-701-insert-into-a-binary-search-tree/</guid>
-    <description><![CDATA[問題描述 分類：🟠 Medium 🟠 相關主題： 題目（英文） You are given the root node of a binary search tree (BST) and a value to insert into the tree. Return the root node of the BST after the insertion. It is guaranteed that the new value does not exist in the original BST. Notice that there may exist multiple valid ways for the insertion, as long as the tree remains a BST after insertion.]]></description>
-</item><item>
-    <title>Leetcode 1022 Sum of Root to Leaf Binary Numbers</title>
-    <link>https://DilemmaRabbit.github.io/leetcode/leetcode-1022-sum-of-root-to-leaf-binary-numbers/</link>
-    <pubDate>Tue, 11 Jan 2022 13:35:54 &#43;0800</pubDate><author>a21663832@gmail.com</author><dc:creator>dilemmarabbit</dc:creator><guid>https://DilemmaRabbit.github.io/leetcode/leetcode-1022-sum-of-root-to-leaf-binary-numbers/</guid>
-    <description><![CDATA[問題描述 分類：🟢 Easy 🟢 相關主題：Tree, Depth-First Search, Binary Tree 題目（英文） You are given the root of a binary tree where each node has a value 0 or 1. Each root-to-leaf path represents a binary number starting with the most significant bit. For example, if the path is 0 -&gt; 1 -&gt; 1 -&gt; 0 -&gt; 1, then this could represent 01101 in binary, which is 13. For all leaves in the tree, consider the numbers represented by the path from the root to that leaf.]]></description>
-</item><item>
-    <title>Leetcode 55 Jump Game</title>
-    <link>https://DilemmaRabbit.github.io/leetcode/leetcode-55-jump-game/</link>
-    <pubDate>Tue, 11 Jan 2022 13:35:05 &#43;0800</pubDate><author>a21663832@gmail.com</author><dc:creator>dilemmarabbit</dc:creator><guid>https://DilemmaRabbit.github.io/leetcode/leetcode-55-jump-game/</guid>
-    <description><![CDATA[問題描述 分類：🟠 Medium 🟠 相關主題：Array, Dynamic Programin, Greedy 題目（英文） You are given an integer array nums. You are initially positioned at the array's first index, and each element in the array represents your maximum jump length at that position. Return true if you can reach the last index, or false otherwise.  測資 Example 1: Input: nums = [2,3,1,1,4] Output: true Explanation: Jump 1 step from index 0 to 1, then 3 steps to the last index.]]></description>
-</item><item>
-    <title>Leetcode 45 Jump Game II</title>
-    <link>https://DilemmaRabbit.github.io/leetcode/leetcode-45-jump-game-ii/</link>
-    <pubDate>Tue, 11 Jan 2022 13:34:33 &#43;0800</pubDate><author>a21663832@gmail.com</author><dc:creator>dilemmarabbit</dc:creator><guid>https://DilemmaRabbit.github.io/leetcode/leetcode-45-jump-game-ii/</guid>
-    <description><![CDATA[問題描述 分類：🟠 Medium 🟠 相關主題：Array, Dynamic Programin, Greedy 題目（英文） Given an array of non-negative integers nums, you are initially positioned at the first index of the array. Each element in the array represents your maximum jump length at that position. Your goal is to reach the last index in the minimum number of jumps. You can assume that you can always reach the last index.  測資 Example 1: Input: nums = [2,3,1,1,4] Output: 2 Explanation: The minimum number of jumps to reach the last index is 2.]]></description>
-</item><item>
-    <title>Leetcode 67 Add Binary</title>
-    <link>https://DilemmaRabbit.github.io/leetcode/leetcode-67-add-binary/</link>
-    <pubDate>Mon, 10 Jan 2022 14:04:27 &#43;0800</pubDate><author>a21663832@gmail.com</author><dc:creator>dilemmarabbit</dc:creator><guid>https://DilemmaRabbit.github.io/leetcode/leetcode-67-add-binary/</guid>
-    <description><![CDATA[問題描述 分類：🟢 Easy 🟢 相關主題：Math, String, Bit Manipulation, Simulation 題目（英文） Given two binary strings a and b, return their sum as a binary string.  測資 Example 1: Input: a = &quot;11&quot;, b = &quot;1&quot; Output: &quot;100&quot; Example 2: Input: a = &quot;1010&quot;, b = &quot;1011&quot; Output: &quot;10101&quot; Constraints: 1 &lt;= a.length, b.length &lt;= 104 a and b consist only of '0' or '1' characters. Each string does not contain leading zeros except for the zero itself.]]></description>
-</item><item>
-    <title>Leetcode 740 Delete and Earn</title>
-    <link>https://DilemmaRabbit.github.io/leetcode/leetcode-740-delete-and-earn/</link>
-    <pubDate>Mon, 10 Jan 2022 14:04:12 &#43;0800</pubDate><author>a21663832@gmail.com</author><dc:creator>dilemmarabbit</dc:creator><guid>https://DilemmaRabbit.github.io/leetcode/leetcode-740-delete-and-earn/</guid>
-    <description><![CDATA[問題描述 分類：🟠 Medium 🟠 相關主題：Array, Hash Table, Dynamic Programming 題目（英文） You are given an integer array nums. You want to maximize the number of points you get by performing the following operation any number of times: Pick any nums[i] and delete it to earn nums[i] points. Afterwards, you must delete every element equal to nums[i] - 1 and every element equal to nums[i] + 1. Return the maximum number of points you can earn by applying the above operation some number of times.]]></description>
-</item><item>
-    <title>Leetcode 213 House Robber II</title>
-    <link>https://DilemmaRabbit.github.io/leetcode/leetcode-213-house-robber-ii/</link>
-    <pubDate>Mon, 10 Jan 2022 14:03:58 &#43;0800</pubDate><author>a21663832@gmail.com</author><dc:creator>dilemmarabbit</dc:creator><guid>https://DilemmaRabbit.github.io/leetcode/leetcode-213-house-robber-ii/</guid>
-    <description><![CDATA[問題描述 分類：🟠 Medium 🟠 相關主題：Array, Dynamic Programming 題目（英文） You are a professional robber planning to rob houses along a street. Each house has a certain amount of money stashed. All houses at this place are arranged in a circle. That means the first house is the neighbor of the last one. Meanwhile, adjacent houses have a security system connected, and it will automatically contact the police if two adjacent houses were broken into on the same night.]]></description>
-</item><item>
-    <title>Leetcode 198 House Robber</title>
-    <link>https://DilemmaRabbit.github.io/leetcode/leetcode-198-house-robber/</link>
-    <pubDate>Mon, 10 Jan 2022 14:03:44 &#43;0800</pubDate><author>a21663832@gmail.com</author><dc:creator>dilemmarabbit</dc:creator><guid>https://DilemmaRabbit.github.io/leetcode/leetcode-198-house-robber/</guid>
-    <description><![CDATA[問題描述 分類：🟠 Medium 🟠 相關主題：Array, Dynamic Programming 題目（英文） You are a professional robber planning to rob houses along a street. Each house has a certain amount of money stashed, the only constraint stopping you from robbing each of them is that adjacent houses have security systems connected and it will automatically contact the police if two adjacent houses were broken into on the same night. Given an integer array nums representing the amount of money of each house, return the maximum amount of money you can rob tonight without alerting the police.]]></description>
+            <webMaster>a21663832@gmail.com (dilemmarabbit)</webMaster><lastBuildDate>Tue, 08 Feb 2022 16:04:48 &#43;0800</lastBuildDate><atom:link href="https://DilemmaRabbit.github.io/tags/leetcode/" rel="self" type="application/rss+xml" /><item>
+    <title>258 Add Digits</title>
+    <link>https://DilemmaRabbit.github.io/leetcode/no.258-add-digits/</link>
+    <pubDate>Tue, 08 Feb 2022 16:04:48 &#43;0800</pubDate><author>a21663832@gmail.com</author><dc:creator>dilemmarabbit</dc:creator><guid>https://DilemmaRabbit.github.io/leetcode/no.258-add-digits/</guid>
+    <description><![CDATA[難度：🟢 Easy 🟢
+ 問題描述 將一個正整數的所有位數做加總，直到只剩下個位數，並返回該值。
+測資 -1 &lt; num &lt; 2^32 。
+ 思路 只計算當次的個位數，如果大於 10 代表只保留個位數並 +1，算至最後 num 為 0 。
+ 程式碼 class Solution { public: int addDigits(int num) { int cur = 0; // initial answer  while(num != 0){ cur += num%10; // add tail number  if(cur &gt;= 10){ // if cur &gt; 0, remain tail and + 1  cur = cur % 10 + 1; } num /= 10; } return cur; } }; ]]></description>
 </item></channel>
 </rss>

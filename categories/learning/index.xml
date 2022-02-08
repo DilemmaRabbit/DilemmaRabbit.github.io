@@ -1,12 +1,19 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
     <channel>
-        <title>Dilemma Rabbit</title>
-        <link>https://DilemmaRabbit.github.io/</link>
-        <description>Dilemma Rabbit</description>
+        <title>Learning - Category - Dilemma Rabbit</title>
+        <link>https://DilemmaRabbit.github.io/categories/learning/</link>
+        <description>Learning - Category - Dilemma Rabbit</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>a21663832@gmail.com (dilemmarabbit)</managingEditor>
-            <webMaster>a21663832@gmail.com (dilemmarabbit)</webMaster><lastBuildDate>Tue, 08 Feb 2022 16:04:48 &#43;0800</lastBuildDate>
-            <atom:link href="https://DilemmaRabbit.github.io/index.xml" rel="self" type="application/rss+xml" />
-        <item>
+            <webMaster>a21663832@gmail.com (dilemmarabbit)</webMaster><lastBuildDate>Tue, 08 Feb 2022 16:04:48 &#43;0800</lastBuildDate><atom:link href="https://DilemmaRabbit.github.io/categories/learning/" rel="self" type="application/rss+xml" /><item>
+    <title>258 Add Digits</title>
+    <link>https://DilemmaRabbit.github.io/leetcode/no.258-add-digits/</link>
+    <pubDate>Tue, 08 Feb 2022 16:04:48 &#43;0800</pubDate><author>a21663832@gmail.com</author><dc:creator>dilemmarabbit</dc:creator><guid>https://DilemmaRabbit.github.io/leetcode/no.258-add-digits/</guid>
+    <description><![CDATA[難度：🟢 Easy 🟢
+ 問題描述 將一個正整數的所有位數做加總，直到只剩下個位數，並返回該值。
+測資 -1 &lt; num &lt; 2^32 。
+ 思路 只計算當次的個位數，如果大於 10 代表只保留個位數並 +1，算至最後 num 為 0 。
+ 程式碼 class Solution { public: int addDigits(int num) { int cur = 0; // initial answer  while(num != 0){ cur += num%10; // add tail number  if(cur &gt;= 10){ // if cur &gt; 0, remain tail and + 1  cur = cur % 10 + 1; } num /= 10; } return cur; } }; ]]></description>
+</item><item>
     <title>Hugo x GitHub Pages 架設紀錄</title>
     <link>https://DilemmaRabbit.github.io/posts/hugo-x-github-page-%E6%9E%B6%E8%A8%AD%E7%B4%80%E9%8C%84/</link>
     <pubDate>Sun, 02 Jan 2022 15:31:23 &#43;0800</pubDate><author>a21663832@gmail.com</author><dc:creator>dilemmarabbit</dc:creator><guid>https://DilemmaRabbit.github.io/posts/hugo-x-github-page-%E6%9E%B6%E8%A8%AD%E7%B4%80%E9%8C%84/</guid>

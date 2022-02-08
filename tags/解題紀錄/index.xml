@@ -1,10 +1,10 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
     <channel>
-        <title>All leetcode - Dilemma Rabbit</title>
-        <link>https://DilemmaRabbit.github.io/leetcode/</link>
-        <description>All leetcode | Dilemma Rabbit</description>
+        <title>解題紀錄 - Tag - Dilemma Rabbit</title>
+        <link>https://DilemmaRabbit.github.io/tags/%E8%A7%A3%E9%A1%8C%E7%B4%80%E9%8C%84/</link>
+        <description>解題紀錄 - Tag - Dilemma Rabbit</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>a21663832@gmail.com (dilemmarabbit)</managingEditor>
-            <webMaster>a21663832@gmail.com (dilemmarabbit)</webMaster><lastBuildDate>Tue, 08 Feb 2022 16:04:48 &#43;0800</lastBuildDate><atom:link href="https://DilemmaRabbit.github.io/leetcode/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>a21663832@gmail.com (dilemmarabbit)</webMaster><lastBuildDate>Tue, 08 Feb 2022 16:04:48 &#43;0800</lastBuildDate><atom:link href="https://DilemmaRabbit.github.io/tags/%E8%A7%A3%E9%A1%8C%E7%B4%80%E9%8C%84/" rel="self" type="application/rss+xml" /><item>
     <title>258 Add Digits</title>
     <link>https://DilemmaRabbit.github.io/leetcode/no.258-add-digits/</link>
     <pubDate>Tue, 08 Feb 2022 16:04:48 &#43;0800</pubDate><author>a21663832@gmail.com</author><dc:creator>dilemmarabbit</dc:creator><guid>https://DilemmaRabbit.github.io/leetcode/no.258-add-digits/</guid>
