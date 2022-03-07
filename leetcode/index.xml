@@ -4,7 +4,16 @@
         <link>https://DilemmaRabbit.github.io/leetcode/</link>
         <description>All leetcode | Dilemma Rabbit</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>a21663832@gmail.com (dilemmarabbit)</managingEditor>
-            <webMaster>a21663832@gmail.com (dilemmarabbit)</webMaster><lastBuildDate>Tue, 08 Feb 2022 16:04:48 &#43;0800</lastBuildDate><atom:link href="https://DilemmaRabbit.github.io/leetcode/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>a21663832@gmail.com (dilemmarabbit)</webMaster><lastBuildDate>Mon, 07 Mar 2022 21:13:08 &#43;0800</lastBuildDate><atom:link href="https://DilemmaRabbit.github.io/leetcode/" rel="self" type="application/rss+xml" /><item>
+    <title>21. Merge Two Sorted Lists</title>
+    <link>https://DilemmaRabbit.github.io/leetcode/21.-merge-two-sorted-lists/</link>
+    <pubDate>Mon, 07 Mar 2022 21:13:08 &#43;0800</pubDate><author>a21663832@gmail.com</author><dc:creator>dilemmarabbit</dc:creator><guid>https://DilemmaRabbit.github.io/leetcode/21.-merge-two-sorted-lists/</guid>
+    <description><![CDATA[難度：🟢 Easy 🟢
+ 問題描述 給定兩條已排序的 linked list，合併為一條排序的 linked list
+測資
+ 每條 node 數量 &lt; 50 -100 &lt;= Node.val &lt;= 100   思路 產生一個新的list head，用兩個 pointer 紀錄目前 list1 與 list2 位置，並比較大小決定下一個節點，直到其中一條結束，再由另一條補上
+ 程式碼 class Solution { public: ListNode* mergeTwoLists(ListNode* list1, ListNode* list2) { ListNode *list=NULL; ListNode *head=NULL; ListNode *tmp=NULL; if(list1==NULL){ return list2; } if(list2==NULL){ return list1; } while(list1!=NULL &amp;&amp; list2!=NULL){ if(list1 -&gt; val &gt;= list2 -&gt; val){ tmp = list2; list2 = list2 -&gt; next; tmp-&gt;next = NULL; } else{ tmp = list1; list1 = list1 -&gt; next; tmp-&gt;next = NULL; } if(head==NULL){ head = tmp; list = tmp; } else{ list -&gt; next = tmp; list = list -&gt; next; } if(list1 == NULL || list2 == NULL){ break; } } if(list1){ list-&gt;next=list1; } if(list2){ list-&gt;next=list2; } return head; } };  ]]></description>
+</item><item>
     <title>258 Add Digits</title>
     <link>https://DilemmaRabbit.github.io/leetcode/no.258-add-digits/</link>
     <pubDate>Tue, 08 Feb 2022 16:04:48 &#43;0800</pubDate><author>a21663832@gmail.com</author><dc:creator>dilemmarabbit</dc:creator><guid>https://DilemmaRabbit.github.io/leetcode/no.258-add-digits/</guid>

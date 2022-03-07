@@ -198,7 +198,7 @@ hugo new site &lt;username.github.io&gt; --force # 如果資料夾內有其他�
 <h3 id="2-透過-submodule-的方式將主題加入-repo-中的-themes">2. 透過 <strong>submodule</strong> 的方式將主題加入 repo 中的 /themes</h3>
 <pre tabindex="0"><code>git sudmodule add &lt;repo-url&gt; /themes/&lt;theme name&gt;
 </code></pre><h3 id="3-configtoml-中增加以下這行">3. <strong>config.toml</strong> 中增加以下這行</h3>
-<pre tabindex="0"><code>theme = &quot;&lt;theme name&gt;&quot;
+<pre tabindex="0"><code>theme = &#34;&lt;theme name&gt;&#34;
 </code></pre><p>🏳 這邊還可以對主題進行更細部的設定喔，請依每個 theme 的 GitHub 的說明設定</p>
 <h2 id="文章建立">文章建立</h2>
 <h3 id="1-建立一篇新的文章">1. 建立一篇新的文章</h3>
@@ -233,7 +233,7 @@ draft: # 是否為草稿(true/false)
 <pre tabindex="0"><code>git rm -rf .
 </code></pre><h3 id="3-提交這個新的分支">3. 提交這個新的分支</h3>
 <pre tabindex="0"><code>git add .
-git commit -m &quot;&lt;message&gt;&quot;
+git commit -m &#34;&lt;message&gt;&#34;
 git push -u origin gh-pages
 </code></pre><p><img
         class="lazyload"
@@ -312,7 +312,7 @@ jobs:
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
-          hugo-version: 'latest'
+          hugo-version: &#39;latest&#39;
           extended: # 如果 Hugo 是 extend 版本(使用 hugo -v 查看)，務必改為 true，否則註解掉就可以了
 
       - name: Build
@@ -320,7 +320,7 @@ jobs:
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
-        if: github.ref == 'refs/heads/main' # 改成自己的 main branch 名稱
+        if: github.ref == &#39;refs/heads/main&#39; # 改成自己的 main branch 名稱
         with:
           github_token: ${{ secrets.&lt;剛剛取的 secret 名稱&gt; }}
           publish_dir: ./public
@@ -453,7 +453,7 @@ git submodule add &lt;theme repo&gt; &lt;theme directory&gt;
 </div>
 </article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreferrer" title="Hugo 0.92.1">Hugo</a> | Theme - <a href="https://github.com/sunt-programator/CodeIT" target="_blank" rel="noopener noreferrer" title="CodeIT 0.2.10"><i class="fas fa-laptop-code fa-fw"></i> CodeIT</a>
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreferrer" title="Hugo 0.93.2">Hugo</a> | Theme - <a href="https://github.com/sunt-programator/CodeIT" target="_blank" rel="noopener noreferrer" title="CodeIT 0.2.10"><i class="fas fa-laptop-code fa-fw"></i> CodeIT</a>
                 </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank" rel="noopener noreferrer">dilemmarabbit</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
         </div>
     </footer></div>
