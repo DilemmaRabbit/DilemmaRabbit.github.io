@@ -4,7 +4,16 @@
         <link>https://DilemmaRabbit.github.io/leetcode/</link>
         <description>All leetcode | Dilemma Rabbit</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>a21663832@gmail.com (dilemmarabbit)</managingEditor>
-            <webMaster>a21663832@gmail.com (dilemmarabbit)</webMaster><lastBuildDate>Mon, 07 Mar 2022 21:13:08 &#43;0800</lastBuildDate><atom:link href="https://DilemmaRabbit.github.io/leetcode/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>a21663832@gmail.com (dilemmarabbit)</webMaster><lastBuildDate>Tue, 08 Mar 2022 10:23:50 &#43;0800</lastBuildDate><atom:link href="https://DilemmaRabbit.github.io/leetcode/" rel="self" type="application/rss+xml" /><item>
+    <title>141. Linked List Cycle</title>
+    <link>https://DilemmaRabbit.github.io/leetcode/141.-linked-list-cycle/</link>
+    <pubDate>Tue, 08 Mar 2022 10:23:50 &#43;0800</pubDate><author>a21663832@gmail.com</author><dc:creator>dilemmarabbit</dc:creator><guid>https://DilemmaRabbit.github.io/leetcode/141.-linked-list-cycle/</guid>
+    <description><![CDATA[難度：🟢 Easy 🟢
+ 問題描述 給予一條可能產生迴圈的 linked list，返回 true or false 表示有無迴圈。
+測資：-105 &lt;= Node.val &lt;= 105
+ 思路 遍歷節點，並將節點改為範圍外的數字，假設碰到範圍外的數字則代表進入迴圈。
+ 程式碼 /** * Definition for singly-linked list. * struct ListNode { * int val; * ListNode *next; * ListNode(int x) : val(x), next(NULL) {} * }; */ class Solution { public: bool hasCycle(ListNode *head) { ListNode *tmp = head; while(tmp != NULL){ if(tmp-&gt;val != 100001) tmp-&gt;val = 100001; else return true; tmp = tmp-&gt;next; } return false; } }; ]]></description>
+</item><item>
     <title>21. Merge Two Sorted Lists</title>
     <link>https://DilemmaRabbit.github.io/leetcode/21.-merge-two-sorted-lists/</link>
     <pubDate>Mon, 07 Mar 2022 21:13:08 &#43;0800</pubDate><author>a21663832@gmail.com</author><dc:creator>dilemmarabbit</dc:creator><guid>https://DilemmaRabbit.github.io/leetcode/21.-merge-two-sorted-lists/</guid>
@@ -14,9 +23,9 @@
  每條 node 數量 &lt; 50 -100 &lt;= Node.val &lt;= 100   思路 產生一個新的list head，用兩個 pointer 紀錄目前 list1 與 list2 位置，並比較大小決定下一個節點，直到其中一條結束，再由另一條補上
  程式碼 class Solution { public: ListNode* mergeTwoLists(ListNode* list1, ListNode* list2) { ListNode *list=NULL; ListNode *head=NULL; ListNode *tmp=NULL; if(list1==NULL){ return list2; } if(list2==NULL){ return list1; } while(list1!=NULL &amp;&amp; list2!=NULL){ if(list1 -&gt; val &gt;= list2 -&gt; val){ tmp = list2; list2 = list2 -&gt; next; tmp-&gt;next = NULL; } else{ tmp = list1; list1 = list1 -&gt; next; tmp-&gt;next = NULL; } if(head==NULL){ head = tmp; list = tmp; } else{ list -&gt; next = tmp; list = list -&gt; next; } if(list1 == NULL || list2 == NULL){ break; } } if(list1){ list-&gt;next=list1; } if(list2){ list-&gt;next=list2; } return head; } };  ]]></description>
 </item><item>
-    <title>258 Add Digits</title>
-    <link>https://DilemmaRabbit.github.io/leetcode/no.258-add-digits/</link>
-    <pubDate>Tue, 08 Feb 2022 16:04:48 &#43;0800</pubDate><author>a21663832@gmail.com</author><dc:creator>dilemmarabbit</dc:creator><guid>https://DilemmaRabbit.github.io/leetcode/no.258-add-digits/</guid>
+    <title>258. Add Digits</title>
+    <link>https://DilemmaRabbit.github.io/leetcode/258.-add-digits/</link>
+    <pubDate>Tue, 08 Feb 2022 16:04:48 &#43;0800</pubDate><author>a21663832@gmail.com</author><dc:creator>dilemmarabbit</dc:creator><guid>https://DilemmaRabbit.github.io/leetcode/258.-add-digits/</guid>
     <description><![CDATA[難度：🟢 Easy 🟢
  問題描述 將一個正整數的所有位數做加總，直到只剩下個位數，並返回該值。
 測資 -1 &lt; num &lt; 2^32 。

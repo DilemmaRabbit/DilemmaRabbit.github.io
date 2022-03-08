@@ -5,9 +5,9 @@
         <description>解題紀錄 - Tag - Dilemma Rabbit</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>a21663832@gmail.com (dilemmarabbit)</managingEditor>
             <webMaster>a21663832@gmail.com (dilemmarabbit)</webMaster><lastBuildDate>Tue, 08 Feb 2022 16:04:48 &#43;0800</lastBuildDate><atom:link href="https://DilemmaRabbit.github.io/tags/%E8%A7%A3%E9%A1%8C%E7%B4%80%E9%8C%84/" rel="self" type="application/rss+xml" /><item>
-    <title>258 Add Digits</title>
-    <link>https://DilemmaRabbit.github.io/leetcode/no.258-add-digits/</link>
-    <pubDate>Tue, 08 Feb 2022 16:04:48 &#43;0800</pubDate><author>a21663832@gmail.com</author><dc:creator>dilemmarabbit</dc:creator><guid>https://DilemmaRabbit.github.io/leetcode/no.258-add-digits/</guid>
+    <title>258. Add Digits</title>
+    <link>https://DilemmaRabbit.github.io/leetcode/258.-add-digits/</link>
+    <pubDate>Tue, 08 Feb 2022 16:04:48 &#43;0800</pubDate><author>a21663832@gmail.com</author><dc:creator>dilemmarabbit</dc:creator><guid>https://DilemmaRabbit.github.io/leetcode/258.-add-digits/</guid>
     <description><![CDATA[難度：🟢 Easy 🟢
  問題描述 將一個正整數的所有位數做加總，直到只剩下個位數，並返回該值。
 測資 -1 &lt; num &lt; 2^32 。
