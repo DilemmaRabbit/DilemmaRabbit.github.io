@@ -4,7 +4,16 @@
         <link>https://DilemmaRabbit.github.io/leetcode/</link>
         <description>All leetcode | Dilemma Rabbit</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>a21663832@gmail.com (dilemmarabbit)</managingEditor>
-            <webMaster>a21663832@gmail.com (dilemmarabbit)</webMaster><lastBuildDate>Tue, 08 Mar 2022 10:23:50 &#43;0800</lastBuildDate><atom:link href="https://DilemmaRabbit.github.io/leetcode/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>a21663832@gmail.com (dilemmarabbit)</webMaster><lastBuildDate>Wed, 09 Mar 2022 11:05:07 &#43;0800</lastBuildDate><atom:link href="https://DilemmaRabbit.github.io/leetcode/" rel="self" type="application/rss+xml" /><item>
+    <title>82. Remove Duplicates From Sorted List II</title>
+    <link>https://DilemmaRabbit.github.io/leetcode/82.-remove-duplicates-from-sorted-list-ii/</link>
+    <pubDate>Wed, 09 Mar 2022 11:05:07 &#43;0800</pubDate><author>a21663832@gmail.com</author><dc:creator>dilemmarabbit</dc:creator><guid>https://DilemmaRabbit.github.io/leetcode/82.-remove-duplicates-from-sorted-list-ii/</guid>
+    <description><![CDATA[難度：🟠 Normal 🟠
+ 問題描述 給予一條已排列的 linked list，刪除所有不唯一的節點，返回一條排序後的 linked list
+ 思路 個人思路
+ 先將重複的 node 刪除，並將重複的值紀錄在 hash map 中 根據 hash map 元素刪除表中的元素(不包含頭) 根據 hash map 元素刪除頭的重複元素  解答思路
+ 產生一個哨兵(sentinel)節點接上 head，就不用在考慮單獨處理 head 的情況 用一個 prev 節點當作新的定位點(不重複的元素/第一個重複的元素) 用 head 去遍歷重複的狀況，視情況用 prev 去指到新的不重複 回傳 sentinel 節點的 next   程式碼 # 個人思路 class Solution { public: ListNode* deleteDuplicates(ListNode* head) { if(head == NULL || head-&gt;next == NULL) return head; ListNode *slow,*fast; slow = head; fast = head -&gt; next; map&lt;int, bool&gt; table; while(fast !]]></description>
+</item><item>
     <title>141. Linked List Cycle</title>
     <link>https://DilemmaRabbit.github.io/leetcode/141.-linked-list-cycle/</link>
     <pubDate>Tue, 08 Mar 2022 10:23:50 &#43;0800</pubDate><author>a21663832@gmail.com</author><dc:creator>dilemmarabbit</dc:creator><guid>https://DilemmaRabbit.github.io/leetcode/141.-linked-list-cycle/</guid>
