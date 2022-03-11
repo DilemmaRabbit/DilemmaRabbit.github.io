@@ -28,7 +28,7 @@
             },"name": "Dilemma Rabbit"
     }
     </script></head>
-    <body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">('' === 'true' && window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('dark' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'dark' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+    <body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">('' === 'true' && window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : '' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
 
         <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
     <div class="header-wrapper">
@@ -73,6 +73,24 @@
         alt="一隻會打扣的兔兔!"
         title="一隻會打扣的兔兔!" /></a></div><h1 class="home-title">DilemmaRabbit</h1><h2 class="home-subtitle"><div id="id-3" class="typeit"></div></h2><div class="links"><a href="https://github.com/dilemmarabbit" title="GitHub" target="_blank" rel="noopener noreferrer me"><i class="fab fa-github fa-fw"></i></a><a href="https://facebook.com/100001572938761" title="facebook" target="_blank" rel="noopener noreferrer me"><i class="fab fa-facebook fa-fw"></i></a><a href="https://t.me/dilemmarabbit" title="Telegram" target="_blank" rel="noopener noreferrer me"><i class="fab fa-telegram-plane fa-fw"></i></a><a href="mailto:a21663832@gmail.com" title="Email" rel=" me"><i class="far fa-envelope fa-fw"></i></a></div></div>
 <article class="single summary" itemscope itemtype="http://schema.org/Article"><div class="featured-image-preview">
+            <a href="/leetcode/61.-rotate-list/"><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/leetcode/61.-rotate-list/leetcode.png"
+        data-srcset="/leetcode/61.-rotate-list/leetcode.png, /leetcode/61.-rotate-list/leetcode.png 1.5x, /leetcode/61.-rotate-list/leetcode.png 2x"
+        data-sizes="auto"
+        alt="/leetcode/61.-rotate-list/leetcode.png"
+        title="/leetcode/61.-rotate-list/leetcode.png" /></a>
+        </div><h1 class="single-title" itemprop="name headline">
+        <a href="/leetcode/61.-rotate-list/">61. Rotate List</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>dilemmarabbit</a></span>&nbsp;<span class="post-publish">published on <time datetime="2022-03-11">2022-03-11</time></span>&nbsp;<span class="post-category">included in <a href="/categories/learning/"><i class="far fa-folder fa-fw"></i>Learning</a></span></div><div class="content">難度：🟠 Normal 🟠
+ 問題描述 給予一條 linked list 以及 k，代表這個 linked list 向右位移 k 個單位(最末尾會變成新的 head)，回傳最後的 linked list
+ 思路 個人思路(雙指標)
+ 讓快慢指標先距離 k 個單位(需要用一個 cnt 預先計算好最小的距離，否則會 TLE) 快慢指標同時移動直到快指標移動到尾部 將快指標的尾部接上原本的頭，慢指標 next 當作新的頭，並將慢指標當作尾部(指向空指標)   解答思路(單指標)
+ 一樣先紀錄 cnt 數量，並讓指標移動到 k 個單位的位置 將指標的尾部直接接上頭，形成一條循環 linked list 移動到目標位置 cnt - (k % cnt)，並設定新的頭以及尾   程式碼 // 個人方法 class Solution { public: ListNode* rotateRight(ListNode* head, int k) { if(!head) return head; int cnt = 0; ListNode *fast, *slow; fast = head; slow = head; while(slow){ slow = slow-&gt;next; cnt++; // 紀錄總共的節點數量  } slow = head; // 慢指標回復到原本位置  for(int i = 0; i &lt; k % cnt; i++){ if(fast -&gt; next) fast = fast-&gt;next; // 快指標前進到目標位置  } while(fast -&gt; next !</div><div class="post-footer">
+        <a href="/leetcode/61.-rotate-list/">Read More</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/leetcode/">LeetCode</a></div></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><div class="featured-image-preview">
             <a href="/leetcode/2.-add-two-numbers/"><img
         class="lazyload"
         src="/svg/loading.min.svg"
@@ -160,15 +178,15 @@
  程式碼 class Solution { public: int addDigits(int num) { int cur = 0; // initial answer  while(num != 0){ cur += num%10; // add tail number  if(cur &gt;= 10){ // if cur &gt; 0, remain tail and + 1  cur = cur % 10 + 1; } num /= 10; } return cur; } }; </div><div class="post-footer">
         <a href="/leetcode/258.-add-digits/">Read More</a><div class="post-tags">
                 <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/leetcode/">LeetCode</a>,&nbsp;<a href="/tags/%E8%A7%A3%E9%A1%8C%E7%B4%80%E9%8C%84/">解題紀錄</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/posts/hugo-x-github-page-%E6%9E%B6%E8%A8%AD%E7%B4%80%E9%8C%84/">Hugo x GitHub Pages 架設紀錄</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>dilemmarabbit</a></span>&nbsp;<span class="post-publish">published on <time datetime="2022-01-02">2022-01-02</time></span>&nbsp;<span class="post-category">included in <a href="/categories/learning/"><i class="far fa-folder fa-fw"></i>Learning</a></span></div><div class="content">前言 終於把 Hugo 跟 GitHub Pages 成功架起來了(就是你現在在看的東西🥳)，途中不知道刪了幾次 repo，也遇到了不少 Hugo 以外的問題，除了學習 Hugo 外也重新把 git 的一些相關知識重新認識了一遍，不過途中還是有遇到目前原因不明但解決的問題，會列在下面的採坑集跟延伸學習裡面，如果有解決方法不吝指教～
-I. 先前準備 環境 系統: ubuntu 20.04
-Github Page 建立 1. 建立一個名稱為 username.github.io 的 repo 2. 從 github clone 到本機 git clone &lt;username.github.io&gt;  II. 本機建立網站 Hugo 安裝 brew 安裝 brew 安裝教學
-1. 透過 brew 安裝 Hugo brew install hugo 建立一個新的網頁 1. 目標資料夾下建立一個新的網頁 hugo new site &lt;username.github.io&gt; hugo new site &lt;username.github.io&gt; --force # 如果資料夾內有其他資料則需要強制建立 (e.g.README) Hugo 主題安裝 1.</div><div class="post-footer">
-        <a href="/posts/hugo-x-github-page-%E6%9E%B6%E8%A8%AD%E7%B4%80%E9%8C%84/">Read More</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/hugo/">Hugo</a>,&nbsp;<a href="/tags/github-pages/">GitHub-Pages</a>,&nbsp;<a href="/tags/tutorial/">Tutorial</a></div></div>
-</article></div></div>
+</article><ul class="pagination"><li class="page-item active">
+                    <span class="page-link">
+                        <a href="/">1</a>
+                    </span>
+                </li><li class="page-item ">
+                    <span class="page-link">
+                        <a href="/page/2/">2</a>
+                    </span>
+                </li></ul></div></div>
             </main><footer class="footer">
         <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreferrer" title="Hugo 0.94.0">Hugo</a> | Theme - <a href="https://github.com/sunt-programator/CodeIT" target="_blank" rel="noopener noreferrer" title="CodeIT 0.2.10"><i class="fas fa-laptop-code fa-fw"></i> CodeIT</a>
                 </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank" rel="noopener noreferrer">dilemmarabbit</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>

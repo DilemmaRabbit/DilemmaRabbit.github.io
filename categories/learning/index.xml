@@ -4,7 +4,16 @@
         <link>https://DilemmaRabbit.github.io/categories/learning/</link>
         <description>Learning - Category - Dilemma Rabbit</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>a21663832@gmail.com (dilemmarabbit)</managingEditor>
-            <webMaster>a21663832@gmail.com (dilemmarabbit)</webMaster><lastBuildDate>Fri, 11 Mar 2022 13:23:24 &#43;0800</lastBuildDate><atom:link href="https://DilemmaRabbit.github.io/categories/learning/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>a21663832@gmail.com (dilemmarabbit)</webMaster><lastBuildDate>Fri, 11 Mar 2022 13:31:35 &#43;0800</lastBuildDate><atom:link href="https://DilemmaRabbit.github.io/categories/learning/" rel="self" type="application/rss+xml" /><item>
+    <title>61. Rotate List</title>
+    <link>https://DilemmaRabbit.github.io/leetcode/61.-rotate-list/</link>
+    <pubDate>Fri, 11 Mar 2022 13:31:35 &#43;0800</pubDate><author>a21663832@gmail.com</author><dc:creator>dilemmarabbit</dc:creator><guid>https://DilemmaRabbit.github.io/leetcode/61.-rotate-list/</guid>
+    <description><![CDATA[難度：🟠 Normal 🟠
+ 問題描述 給予一條 linked list 以及 k，代表這個 linked list 向右位移 k 個單位(最末尾會變成新的 head)，回傳最後的 linked list
+ 思路 個人思路(雙指標)
+ 讓快慢指標先距離 k 個單位(需要用一個 cnt 預先計算好最小的距離，否則會 TLE) 快慢指標同時移動直到快指標移動到尾部 將快指標的尾部接上原本的頭，慢指標 next 當作新的頭，並將慢指標當作尾部(指向空指標)   解答思路(單指標)
+ 一樣先紀錄 cnt 數量，並讓指標移動到 k 個單位的位置 將指標的尾部直接接上頭，形成一條循環 linked list 移動到目標位置 cnt - (k % cnt)，並設定新的頭以及尾   程式碼 // 個人方法 class Solution { public: ListNode* rotateRight(ListNode* head, int k) { if(!head) return head; int cnt = 0; ListNode *fast, *slow; fast = head; slow = head; while(slow){ slow = slow-&gt;next; cnt++; // 紀錄總共的節點數量  } slow = head; // 慢指標回復到原本位置  for(int i = 0; i &lt; k % cnt; i++){ if(fast -&gt; next) fast = fast-&gt;next; // 快指標前進到目標位置  } while(fast -&gt; next !]]></description>
+</item><item>
     <title>2. Add Two Numbers</title>
     <link>https://DilemmaRabbit.github.io/leetcode/2.-add-two-numbers/</link>
     <pubDate>Fri, 11 Mar 2022 13:23:24 &#43;0800</pubDate><author>a21663832@gmail.com</author><dc:creator>dilemmarabbit</dc:creator><guid>https://DilemmaRabbit.github.io/leetcode/2.-add-two-numbers/</guid>
