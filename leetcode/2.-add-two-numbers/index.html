@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>2. Add Two Numbers - Dilemma Rabbit</title><meta name="description" content=""><meta property="og:title" content="2. Add Two Numbers" />
+<meta property="og:description" content="難度：🟠 Normal 🟠
+ 問題描述 給予兩條 linked list，代表從個位數開始的兩組數字，回傳一條代表這兩組數字加總的 linked list
+ 思路  利用自創的一個 Node 當作哨兵節點 計算每個回合當下的加總以及進位 兩條 linked list 同時遍歷，當 next 等於空指標時代表某一條到底，下次開始把加總的值設為 0 當兩個指標都是空指標值代表加總完畢並退出 最後考慮最後一次的進位   程式碼 class Solution { public: ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) { int carry = 0; int sum = 0; int val1,val2; ListNode *tmp; ListNode *head = new ListNode(10); // 哨兵節點  tmp = head; // 當兩條 linked list 都結束時退出  while(l1 || l2){ if(l1 == NULL) val1 = 0; // 確定 linked list 是否結束  else val1 = l1 -&gt; val; if(l2 == NULL) val2 = 0; // 確定 linked list 是否結束  else val2 = l2 -&gt; val; sum = val1 &#43; val2 &#43; carry; // 計算當前加總  carry = sum / 10; // 計算進位  tmp -&gt; next = new ListNode(sum % 10); // 產生新節點  tmp = tmp -&gt; next; if(l1) l1 = l1 -&gt; next; // 避免進入空指標  if(l2) l2 = l2 -&gt; next; // 避免進入空指標  } if(carry == 1) tmp -&gt; next = new ListNode(1); // 最後的進位  return head-&gt;next; } }; " />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://DilemmaRabbit.github.io/leetcode/2.-add-two-numbers/" /><meta property="og:image" content="https://DilemmaRabbit.github.io/leetcode/2.-add-two-numbers/leetcode.png"/><meta property="article:section" content="leetcode" />
+<meta property="article:published_time" content="2022-03-11T13:23:24+08:00" />
+<meta property="article:modified_time" content="2022-03-11T13:23:24+08:00" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://DilemmaRabbit.github.io/leetcode/2.-add-two-numbers/leetcode.png"/>
+<meta name="twitter:title" content="2. Add Two Numbers"/>
+<meta name="twitter:description" content="難度：🟠 Normal 🟠
+ 問題描述 給予兩條 linked list，代表從個位數開始的兩組數字，回傳一條代表這兩組數字加總的 linked list
+ 思路  利用自創的一個 Node 當作哨兵節點 計算每個回合當下的加總以及進位 兩條 linked list 同時遍歷，當 next 等於空指標時代表某一條到底，下次開始把加總的值設為 0 當兩個指標都是空指標值代表加總完畢並退出 最後考慮最後一次的進位   程式碼 class Solution { public: ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) { int carry = 0; int sum = 0; int val1,val2; ListNode *tmp; ListNode *head = new ListNode(10); // 哨兵節點  tmp = head; // 當兩條 linked list 都結束時退出  while(l1 || l2){ if(l1 == NULL) val1 = 0; // 確定 linked list 是否結束  else val1 = l1 -&gt; val; if(l2 == NULL) val2 = 0; // 確定 linked list 是否結束  else val2 = l2 -&gt; val; sum = val1 &#43; val2 &#43; carry; // 計算當前加總  carry = sum / 10; // 計算進位  tmp -&gt; next = new ListNode(sum % 10); // 產生新節點  tmp = tmp -&gt; next; if(l1) l1 = l1 -&gt; next; // 避免進入空指標  if(l2) l2 = l2 -&gt; next; // 避免進入空指標  } if(carry == 1) tmp -&gt; next = new ListNode(1); // 最後的進位  return head-&gt;next; } }; "/>
+<meta name="application-name" content="Dilemma Rabbit">
+<meta name="apple-mobile-web-app-title" content="Dilemma Rabbit"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://DilemmaRabbit.github.io/leetcode/2.-add-two-numbers/" /><link rel="prev" href="https://DilemmaRabbit.github.io/leetcode/82.-remove-duplicates-from-sorted-list-ii/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "2. Add Two Numbers",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/DilemmaRabbit.github.io\/leetcode\/2.-add-two-numbers\/"
+        },"image": [{
+                            "@type": "ImageObject",
+                            "url": "https:\/\/DilemmaRabbit.github.io\/leetcode\/2.-add-two-numbers\/leetcode.png",
+                            "width":  724 ,
+                            "height":  226 
+                        }],"genre": "leetcode","keywords": "LeetCode","wordcount":  161 ,
+        "url": "https:\/\/DilemmaRabbit.github.io\/leetcode\/2.-add-two-numbers\/","datePublished": "2022-03-11T13:23:24+08:00","dateModified": "2022-03-11T13:23:24+08:00","publisher": {
+            "@type": "Organization",
+            "name": "dilemmarabbit"},"author": {
+                "@type": "Person",
+                "name": "dilemmarabbit"
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">('' === 'true' && window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('dark' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'dark' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Dilemma Rabbit"><span class="header-title-pre">></span><span id="id-1" class="typeit"></span></a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/tags/"> 標籤 </a><a class="menu-item" href="/categories/"> 分類 </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Dilemma Rabbit"><span class="header-title-pre">></span><span id="id-2" class="typeit"></span></a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/tags/" title="">標籤</a><a class="menu-item" href="/categories/" title="">分類</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">2. Add Two Numbers</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>dilemmarabbit</a></span>&nbsp;<span class="post-category">included in <a href="/categories/learning/"><i class="far fa-folder fa-fw"></i>Learning</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-03-11">2022-03-11</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;161 words&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;One minute&nbsp;</div>
+        </div><div class="featured-image"><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/leetcode/2.-add-two-numbers/leetcode.png"
+        data-srcset="/leetcode/2.-add-two-numbers/leetcode.png, /leetcode/2.-add-two-numbers/leetcode.png 1.5x, /leetcode/2.-add-two-numbers/leetcode.png 2x"
+        data-sizes="auto"
+        alt="/leetcode/2.-add-two-numbers/leetcode.png"
+        title="/leetcode/2.-add-two-numbers/leetcode.png" /></div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#問題描述">問題描述</a></li>
+    <li><a href="#思路">思路</a></li>
+    <li><a href="#程式碼">程式碼</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>難度：🟠 Normal 🟠</p>
+<hr>
+<h2 id="問題描述">問題描述</h2>
+<p>給予兩條 linked list，代表從個位數開始的兩組數字，回傳一條代表這兩組數字加總的 linked list</p>
+<hr>
+<h2 id="思路">思路</h2>
+<ul>
+<li>利用自創的一個 Node 當作哨兵節點</li>
+<li>計算每個回合當下的加總以及進位</li>
+<li>兩條 linked list 同時遍歷，當 next 等於空指標時代表某一條到底，下次開始把加總的值設為 0</li>
+<li>當兩個指標都是空指標值代表加總完畢並退出</li>
+<li>最後考慮最後一次的進位</li>
+</ul>
+<hr>
+<h2 id="程式碼">程式碼</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Solution</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl"><span class="k">public</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">ListNode</span><span class="o">*</span> <span class="n">addTwoNumbers</span><span class="p">(</span><span class="n">ListNode</span><span class="o">*</span> <span class="n">l1</span><span class="p">,</span> <span class="n">ListNode</span><span class="o">*</span> <span class="n">l2</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">        <span class="kt">int</span> <span class="n">carry</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">int</span> <span class="n">sum</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">int</span> <span class="n">val1</span><span class="p">,</span><span class="n">val2</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">ListNode</span> <span class="o">*</span><span class="n">tmp</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">ListNode</span> <span class="o">*</span><span class="n">head</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ListNode</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span> <span class="c1">// 哨兵節點
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="n">tmp</span> <span class="o">=</span> <span class="n">head</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">        <span class="c1">// 當兩條 linked list 都結束時退出
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="k">while</span><span class="p">(</span><span class="n">l1</span> <span class="o">||</span> <span class="n">l2</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">            
+</span></span><span class="line"><span class="cl">            <span class="k">if</span><span class="p">(</span><span class="n">l1</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">)</span> <span class="n">val1</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="c1">// 確定 linked list 是否結束
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="k">else</span> <span class="n">val1</span> <span class="o">=</span> <span class="n">l1</span> <span class="o">-&gt;</span> <span class="n">val</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            
+</span></span><span class="line"><span class="cl">            <span class="k">if</span><span class="p">(</span><span class="n">l2</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">)</span> <span class="n">val2</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="c1">// 確定 linked list 是否結束
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="k">else</span> <span class="n">val2</span> <span class="o">=</span> <span class="n">l2</span> <span class="o">-&gt;</span> <span class="n">val</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            
+</span></span><span class="line"><span class="cl">            <span class="n">sum</span> <span class="o">=</span> <span class="n">val1</span> <span class="o">+</span> <span class="n">val2</span> <span class="o">+</span> <span class="n">carry</span><span class="p">;</span> <span class="c1">// 計算當前加總
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="n">carry</span> <span class="o">=</span> <span class="n">sum</span> <span class="o">/</span> <span class="mi">10</span><span class="p">;</span> <span class="c1">// 計算進位
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="n">tmp</span> <span class="o">-&gt;</span> <span class="n">next</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ListNode</span><span class="p">(</span><span class="n">sum</span> <span class="o">%</span> <span class="mi">10</span><span class="p">);</span> <span class="c1">// 產生新節點
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="n">tmp</span> <span class="o">=</span> <span class="n">tmp</span> <span class="o">-&gt;</span> <span class="n">next</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            
+</span></span><span class="line"><span class="cl">            <span class="k">if</span><span class="p">(</span><span class="n">l1</span><span class="p">)</span> <span class="n">l1</span> <span class="o">=</span> <span class="n">l1</span> <span class="o">-&gt;</span> <span class="n">next</span><span class="p">;</span> <span class="c1">// 避免進入空指標
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="k">if</span><span class="p">(</span><span class="n">l2</span><span class="p">)</span> <span class="n">l2</span> <span class="o">=</span> <span class="n">l2</span> <span class="o">-&gt;</span> <span class="n">next</span><span class="p">;</span> <span class="c1">// 避免進入空指標
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">        <span class="k">if</span><span class="p">(</span><span class="n">carry</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="n">tmp</span> <span class="o">-&gt;</span> <span class="n">next</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ListNode</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span> <span class="c1">// 最後的進位
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">head</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span></code></pre></div></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2022-03-11</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://DilemmaRabbit.github.io/leetcode/2.-add-two-numbers/" data-title="2. Add Two Numbers" data-hashtags="LeetCode"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://DilemmaRabbit.github.io/leetcode/2.-add-two-numbers/" data-hashtag="LeetCode"><i class="fab fa-facebook-square fa-fw"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/leetcode/">LeetCode</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/leetcode/82.-remove-duplicates-from-sorted-list-ii/" class="prev" rel="prev" title="82. Remove Duplicates From Sorted List II"><i class="fas fa-angle-left fa-fw"></i>82. Remove Duplicates From Sorted List II</a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreferrer" title="Hugo 0.94.0">Hugo</a> | Theme - <a href="https://github.com/sunt-programator/CodeIT" target="_blank" rel="noopener noreferrer" title="CodeIT 0.2.10"><i class="fas fa-laptop-code fa-fw"></i> CodeIT</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank" rel="noopener noreferrer">dilemmarabbit</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/lightgallery/lightgallery.min.css"><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-thumbnail.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-zoom.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript" src="/lib/typeit/typeit.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/mhchem.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":150},"comment":{},"data":{"id-1":"DilemmaRabbir's Blog 🐇","id-2":"DilemmaRabbir's Blog 🐇"},"lightGallery":{"actualSize":false,"exThumbImage":"data-thumbnail","hideBarsDelay":2000,"selector":".lightgallery","speed":400,"thumbContHeight":80,"thumbWidth":80,"thumbnail":true},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"typeit":{"cursorChar":" |","cursorSpeed":1000,"data":{"id-1":["id-1"],"id-2":["id-2"]},"duration":-1,"speed":150}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>
