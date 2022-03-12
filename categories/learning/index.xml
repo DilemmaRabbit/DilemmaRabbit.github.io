@@ -4,7 +4,16 @@
         <link>https://DilemmaRabbit.github.io/categories/learning/</link>
         <description>Learning - Category - Dilemma Rabbit</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>a21663832@gmail.com (dilemmarabbit)</managingEditor>
-            <webMaster>a21663832@gmail.com (dilemmarabbit)</webMaster><lastBuildDate>Fri, 11 Mar 2022 13:31:35 &#43;0800</lastBuildDate><atom:link href="https://DilemmaRabbit.github.io/categories/learning/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>a21663832@gmail.com (dilemmarabbit)</webMaster><lastBuildDate>Sat, 12 Mar 2022 14:44:13 &#43;0800</lastBuildDate><atom:link href="https://DilemmaRabbit.github.io/categories/learning/" rel="self" type="application/rss+xml" /><item>
+    <title>138. Copy List With Random Pointer</title>
+    <link>https://DilemmaRabbit.github.io/leetcode/138.-copy-list-with-random-pointer/</link>
+    <pubDate>Sat, 12 Mar 2022 14:44:13 &#43;0800</pubDate><author>a21663832@gmail.com</author><dc:creator>dilemmarabbit</dc:creator><guid>https://DilemmaRabbit.github.io/leetcode/138.-copy-list-with-random-pointer/</guid>
+    <description><![CDATA[難度：🟠 Normal 🟠
+ 問題描述 給予一條 linked list，除了 next 指標之外還有一條連接到其他節點的 random 指標
+複製出一條 linked list 擁有相同的結構
+ 思路 個人思路
+ 由於對一條串列來說，random 是指向串列中其中一個節點，用 hash table 模仿這個行為 當產生一個新節點時，對照原本原串列的位址產生一個 hash table 的對照，並先將 next 部份完成 最後遍歷每個原串列節點的 random，將對應過去的新串列的位置給新的 random 值   程式碼 class Solution { public: Node* copyRandomList(Node* head) { map&lt;Node*,Node*&gt; table; // 建立 hash map  Node* newList = new Node(0); // 哨兵節點  Node* cur = newList; // 紀錄新串列的節點位置  Node* tmp = head; // 紀錄舊串列的節點位置  while(tmp){ cur -&gt; next = new Node(tmp-&gt;val); // 根據舊串列的值產生新節點  cur = cur -&gt; next; table[tmp] = cur; // 紀錄當前新舊串列的對照狀況  tmp = tmp -&gt; next; } tmp = head; // 回到原點  cur = newList-&gt;next; // 回到原點  while(tmp){ cur -&gt; random = table[tmp -&gt; random]; // 將新串列的 random 以舊串列的對照給予  tmp = tmp -&gt; next; cur = cur -&gt; next; } return newList-&gt;next; } }; ]]></description>
+</item><item>
     <title>61. Rotate List</title>
     <link>https://DilemmaRabbit.github.io/leetcode/61.-rotate-list/</link>
     <pubDate>Fri, 11 Mar 2022 13:31:35 &#43;0800</pubDate><author>a21663832@gmail.com</author><dc:creator>dilemmarabbit</dc:creator><guid>https://DilemmaRabbit.github.io/leetcode/61.-rotate-list/</guid>
