@@ -4,7 +4,15 @@
         <link>https://DilemmaRabbit.github.io/leetcode/</link>
         <description>All leetcode | Dilemma Rabbit</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>a21663832@gmail.com (dilemmarabbit)</managingEditor>
-            <webMaster>a21663832@gmail.com (dilemmarabbit)</webMaster><lastBuildDate>Sat, 12 Mar 2022 14:44:13 &#43;0800</lastBuildDate><atom:link href="https://DilemmaRabbit.github.io/leetcode/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>a21663832@gmail.com (dilemmarabbit)</webMaster><lastBuildDate>Sun, 13 Mar 2022 12:04:42 &#43;0800</lastBuildDate><atom:link href="https://DilemmaRabbit.github.io/leetcode/" rel="self" type="application/rss+xml" /><item>
+    <title>20. Valid Parentheses</title>
+    <link>https://DilemmaRabbit.github.io/leetcode/20.-valid-parentheses/</link>
+    <pubDate>Sun, 13 Mar 2022 12:04:42 &#43;0800</pubDate><author>a21663832@gmail.com</author><dc:creator>dilemmarabbit</dc:creator><guid>https://DilemmaRabbit.github.io/leetcode/20.-valid-parentheses/</guid>
+    <description><![CDATA[難度：🟢 Easy 🟢
+ 問題描述 給予一個只包含了大中小括號的字串，使用以下規則來確定此字串是否合法
+ 每種括號都必須閉合(左右對稱) 括號必須以正確的順序進行閉合  &ldquo;{ } ( ) []&rdquo; &ldquo;( [ { } ] )&rdquo;     思路 個人思路
+ 由於必須進行閉合，因此可以確保一定是存在相對的括號 由於需要進行指定順序閉合，當遇到右括號時，代表上一個一定是對應的左括號，否則不合法 用 stack 儲存遇到所有的左括號，遇到右括號則比對目前的 stack top 是否正確 假如正確則 pop 成對的括號 最後 stack 必定為空   程式碼 class Solution { public: bool isValid(string s) { stack&lt;char&gt; st; for(auto chr : s){ if(chr == &#39;}&#39; || chr == &#39;]&#39; || chr == &#39;)&#39;){ // 如果為右括號  if(st.]]></description>
+</item><item>
     <title>138. Copy List With Random Pointer</title>
     <link>https://DilemmaRabbit.github.io/leetcode/138.-copy-list-with-random-pointer/</link>
     <pubDate>Sat, 12 Mar 2022 14:44:13 &#43;0800</pubDate><author>a21663832@gmail.com</author><dc:creator>dilemmarabbit</dc:creator><guid>https://DilemmaRabbit.github.io/leetcode/138.-copy-list-with-random-pointer/</guid>
