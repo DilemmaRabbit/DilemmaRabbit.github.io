@@ -4,74 +4,81 @@
         <link>https://DilemmaRabbit.github.io/tags/leetcode/</link>
         <description>LeetCode - Tag - Dilemma Rabbit</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>a21663832@gmail.com (dilemmarabbit)</managingEditor>
-            <webMaster>a21663832@gmail.com (dilemmarabbit)</webMaster><lastBuildDate>Sun, 13 Mar 2022 12:04:42 &#43;0800</lastBuildDate><atom:link href="https://DilemmaRabbit.github.io/tags/leetcode/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>a21663832@gmail.com (dilemmarabbit)</webMaster><lastBuildDate>Tue, 20 Sep 2022 12:02:49 &#43;0800</lastBuildDate><atom:link href="https://DilemmaRabbit.github.io/tags/leetcode/" rel="self" type="application/rss+xml" /><item>
+    <title>718. Maximum Length of Repeated Subarray</title>
+    <link>https://DilemmaRabbit.github.io/leetcode/718.-maximum-length-of-repeated-subarray/</link>
+    <pubDate>Tue, 20 Sep 2022 12:02:49 &#43;0800</pubDate><author>a21663832@gmail.com</author><dc:creator>dilemmarabbit</dc:creator><guid>https://DilemmaRabbit.github.io/leetcode/718.-maximum-length-of-repeated-subarray/</guid>
+    <description><![CDATA[難度：🟠 Normal 🟠 問題描述 給與兩個 array，返回最長公共子陣列的最大值
+思路 每次比對到相同的元素，便去尋找上一個比對的結果並 + 1 //正序 dp[i][j] = dp[i-1][j-1] + 1 //倒序 dp[i][j] = dp[i-1][j-1] + 1 需要注意處理邊界的狀況 每次更新後比較最大值 BigO:O(n*m)
+程式碼 class Solution { public: int findLength(vector&lt;int&gt;&amp; nums1, vector&lt;int&gt;&amp; nums2) { int res = INT_MIN; int dp[nums1.size()][nums2.size()]; memset(dp, 0, sizeof(dp)); // 倒序 dp // for(int i = nums1.size()-1; i &gt; -1; i--){ // for(int j = nums2.size()-1; j &gt; -1; j--){ // if(nums1[i] == nums2[j]){ // if(i == nums1.]]></description>
+</item><item>
     <title>20. Valid Parentheses</title>
     <link>https://DilemmaRabbit.github.io/leetcode/20.-valid-parentheses/</link>
     <pubDate>Sun, 13 Mar 2022 12:04:42 &#43;0800</pubDate><author>a21663832@gmail.com</author><dc:creator>dilemmarabbit</dc:creator><guid>https://DilemmaRabbit.github.io/leetcode/20.-valid-parentheses/</guid>
     <description><![CDATA[難度：🟢 Easy 🟢
- 問題描述 給予一個只包含了大中小括號的字串，使用以下規則來確定此字串是否合法
- 每種括號都必須閉合(左右對稱) 括號必須以正確的順序進行閉合  &ldquo;{ } ( ) []&rdquo; &ldquo;( [ { } ] )&rdquo;     思路 個人思路
- 由於必須進行閉合，因此可以確保一定是存在相對的括號 由於需要進行指定順序閉合，當遇到右括號時，代表上一個一定是對應的左括號，否則不合法 用 stack 儲存遇到所有的左括號，遇到右括號則比對目前的 stack top 是否正確 假如正確則 pop 成對的括號 最後 stack 必定為空   程式碼 class Solution { public: bool isValid(string s) { stack&lt;char&gt; st; for(auto chr : s){ if(chr == &#39;}&#39; || chr == &#39;]&#39; || chr == &#39;)&#39;){ // 如果為右括號  if(st.]]></description>
+問題描述 給予一個只包含了大中小括號的字串，使用以下規則來確定此字串是否合法
+每種括號都必須閉合(左右對稱) 括號必須以正確的順序進行閉合 &ldquo;{ } ( ) []&rdquo; &ldquo;( [ { } ] )&rdquo; 思路 個人思路
+由於必須進行閉合，因此可以確保一定是存在相對的括號 由於需要進行指定順序閉合，當遇到右括號時，代表上一個一定是對應的左括號，否則不合法 用 stack 儲存遇到所有的左括號，遇到右括號則比對目前的 stack top 是否正確 假如正確則 pop 成對的括號 最後 stack 必定為空 程式碼 class Solution { public: bool isValid(string s) { stack&lt;char&gt; st; for(auto chr : s){ if(chr == &#39;}&#39; || chr == &#39;]&#39; || chr == &#39;)&#39;){ // 如果為右括號 if(st.empty()){ // 確保是否為空 return false; } else{ if(chr-1 == st.]]></description>
 </item><item>
     <title>138. Copy List With Random Pointer</title>
     <link>https://DilemmaRabbit.github.io/leetcode/138.-copy-list-with-random-pointer/</link>
     <pubDate>Sat, 12 Mar 2022 14:44:13 &#43;0800</pubDate><author>a21663832@gmail.com</author><dc:creator>dilemmarabbit</dc:creator><guid>https://DilemmaRabbit.github.io/leetcode/138.-copy-list-with-random-pointer/</guid>
     <description><![CDATA[難度：🟠 Normal 🟠
- 問題描述 給予一條 linked list，除了 next 指標之外還有一條連接到其他節點的 random 指標
+問題描述 給予一條 linked list，除了 next 指標之外還有一條連接到其他節點的 random 指標
 複製出一條 linked list 擁有相同的結構
- 思路 個人思路
- 由於對一條串列來說，random 是指向串列中其中一個節點，用 hash table 模仿這個行為 當產生一個新節點時，對照原本原串列的位址產生一個 hash table 的對照，並先將 next 部份完成 最後遍歷每個原串列節點的 random，將對應過去的新串列的位置給新的 random 值   程式碼 class Solution { public: Node* copyRandomList(Node* head) { map&lt;Node*,Node*&gt; table; // 建立 hash map  Node* newList = new Node(0); // 哨兵節點  Node* cur = newList; // 紀錄新串列的節點位置  Node* tmp = head; // 紀錄舊串列的節點位置  while(tmp){ cur -&gt; next = new Node(tmp-&gt;val); // 根據舊串列的值產生新節點  cur = cur -&gt; next; table[tmp] = cur; // 紀錄當前新舊串列的對照狀況  tmp = tmp -&gt; next; } tmp = head; // 回到原點  cur = newList-&gt;next; // 回到原點  while(tmp){ cur -&gt; random = table[tmp -&gt; random]; // 將新串列的 random 以舊串列的對照給予  tmp = tmp -&gt; next; cur = cur -&gt; next; } return newList-&gt;next; } }; ]]></description>
+思路 個人思路
+由於對一條串列來說，random 是指向串列中其中一個節點，用 hash table 模仿這個行為 當產生一個新節點時，對照原本原串列的位址產生一個 hash table 的對照，並先將 next 部份完成 最後遍歷每個原串列節點的 random，將對應過去的新串列的位置給新的 random 值 程式碼 class Solution { public: Node* copyRandomList(Node* head) { map&lt;Node*,Node*&gt; table; // 建立 hash map Node* newList = new Node(0); // 哨兵節點 Node* cur = newList; // 紀錄新串列的節點位置 Node* tmp = head; // 紀錄舊串列的節點位置 while(tmp){ cur -&gt; next = new Node(tmp-&gt;val); // 根據舊串列的值產生新節點 cur = cur -&gt; next; table[tmp] = cur; // 紀錄當前新舊串列的對照狀況 tmp = tmp -&gt; next; } tmp = head; // 回到原點 cur = newList-&gt;next; // 回到原點 while(tmp){ cur -&gt; random = table[tmp -&gt; random]; // 將新串列的 random 以舊串列的對照給予 tmp = tmp -&gt; next; cur = cur -&gt; next; } return newList-&gt;next; } }; ]]></description>
 </item><item>
     <title>61. Rotate List</title>
     <link>https://DilemmaRabbit.github.io/leetcode/61.-rotate-list/</link>
     <pubDate>Fri, 11 Mar 2022 13:31:35 &#43;0800</pubDate><author>a21663832@gmail.com</author><dc:creator>dilemmarabbit</dc:creator><guid>https://DilemmaRabbit.github.io/leetcode/61.-rotate-list/</guid>
     <description><![CDATA[難度：🟠 Normal 🟠
- 問題描述 給予一條 linked list 以及 k，代表這個 linked list 向右位移 k 個單位(最末尾會變成新的 head)，回傳最後的 linked list
- 思路 個人思路(雙指標)
- 讓快慢指標先距離 k 個單位(需要用一個 cnt 預先計算好最小的距離，否則會 TLE) 快慢指標同時移動直到快指標移動到尾部 將快指標的尾部接上原本的頭，慢指標 next 當作新的頭，並將慢指標當作尾部(指向空指標)   解答思路(單指標)
- 一樣先紀錄 cnt 數量，並讓指標移動到 k 個單位的位置 將指標的尾部直接接上頭，形成一條循環 linked list 移動到目標位置 cnt - (k % cnt)，並設定新的頭以及尾   程式碼 // 個人方法 class Solution { public: ListNode* rotateRight(ListNode* head, int k) { if(!head) return head; int cnt = 0; ListNode *fast, *slow; fast = head; slow = head; while(slow){ slow = slow-&gt;next; cnt++; // 紀錄總共的節點數量  } slow = head; // 慢指標回復到原本位置  for(int i = 0; i &lt; k % cnt; i++){ if(fast -&gt; next) fast = fast-&gt;next; // 快指標前進到目標位置  } while(fast -&gt; next !]]></description>
+問題描述 給予一條 linked list 以及 k，代表這個 linked list 向右位移 k 個單位(最末尾會變成新的 head)，回傳最後的 linked list
+思路 個人思路(雙指標)
+讓快慢指標先距離 k 個單位(需要用一個 cnt 預先計算好最小的距離，否則會 TLE) 快慢指標同時移動直到快指標移動到尾部 將快指標的尾部接上原本的頭，慢指標 next 當作新的頭，並將慢指標當作尾部(指向空指標) 解答思路(單指標)
+一樣先紀錄 cnt 數量，並讓指標移動到 k 個單位的位置 將指標的尾部直接接上頭，形成一條循環 linked list 移動到目標位置 cnt - (k % cnt)，並設定新的頭以及尾 程式碼 // 個人方法 class Solution { public: ListNode* rotateRight(ListNode* head, int k) { if(!head) return head; int cnt = 0; ListNode *fast, *slow; fast = head; slow = head; while(slow){ slow = slow-&gt;next; cnt++; // 紀錄總共的節點數量 } slow = head; // 慢指標回復到原本位置 for(int i = 0; i &lt; k % cnt; i++){ if(fast -&gt; next) fast = fast-&gt;next; // 快指標前進到目標位置 } while(fast -&gt; next !]]></description>
 </item><item>
     <title>2. Add Two Numbers</title>
     <link>https://DilemmaRabbit.github.io/leetcode/2.-add-two-numbers/</link>
     <pubDate>Fri, 11 Mar 2022 13:23:24 &#43;0800</pubDate><author>a21663832@gmail.com</author><dc:creator>dilemmarabbit</dc:creator><guid>https://DilemmaRabbit.github.io/leetcode/2.-add-two-numbers/</guid>
     <description><![CDATA[難度：🟠 Normal 🟠
- 問題描述 給予兩條 linked list，代表從個位數開始的兩組數字，回傳一條代表這兩組數字加總的 linked list
- 思路  利用自創的一個 Node 當作哨兵節點 計算每個回合當下的加總以及進位 兩條 linked list 同時遍歷，當 next 等於空指標時代表某一條到底，下次開始把加總的值設為 0 當兩個指標都是空指標值代表加總完畢並退出 最後考慮最後一次的進位   程式碼 class Solution { public: ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) { int carry = 0; int sum = 0; int val1,val2; ListNode *tmp; ListNode *head = new ListNode(10); // 哨兵節點  tmp = head; // 當兩條 linked list 都結束時退出  while(l1 || l2){ if(l1 == NULL) val1 = 0; // 確定 linked list 是否結束  else val1 = l1 -&gt; val; if(l2 == NULL) val2 = 0; // 確定 linked list 是否結束  else val2 = l2 -&gt; val; sum = val1 + val2 + carry; // 計算當前加總  carry = sum / 10; // 計算進位  tmp -&gt; next = new ListNode(sum % 10); // 產生新節點  tmp = tmp -&gt; next; if(l1) l1 = l1 -&gt; next; // 避免進入空指標  if(l2) l2 = l2 -&gt; next; // 避免進入空指標  } if(carry == 1) tmp -&gt; next = new ListNode(1); // 最後的進位  return head-&gt;next; } }; ]]></description>
+問題描述 給予兩條 linked list，代表從個位數開始的兩組數字，回傳一條代表這兩組數字加總的 linked list
+思路 利用自創的一個 Node 當作哨兵節點 計算每個回合當下的加總以及進位 兩條 linked list 同時遍歷，當 next 等於空指標時代表某一條到底，下次開始把加總的值設為 0 當兩個指標都是空指標值代表加總完畢並退出 最後考慮最後一次的進位 程式碼 class Solution { public: ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) { int carry = 0; int sum = 0; int val1,val2; ListNode *tmp; ListNode *head = new ListNode(10); // 哨兵節點 tmp = head; // 當兩條 linked list 都結束時退出 while(l1 || l2){ if(l1 == NULL) val1 = 0; // 確定 linked list 是否結束 else val1 = l1 -&gt; val; if(l2 == NULL) val2 = 0; // 確定 linked list 是否結束 else val2 = l2 -&gt; val; sum = val1 + val2 + carry; // 計算當前加總 carry = sum / 10; // 計算進位 tmp -&gt; next = new ListNode(sum % 10); // 產生新節點 tmp = tmp -&gt; next; if(l1) l1 = l1 -&gt; next; // 避免進入空指標 if(l2) l2 = l2 -&gt; next; // 避免進入空指標 } if(carry == 1) tmp -&gt; next = new ListNode(1); // 最後的進位 return head-&gt;next; } }; ]]></description>
 </item><item>
     <title>82. Remove Duplicates From Sorted List II</title>
     <link>https://DilemmaRabbit.github.io/leetcode/82.-remove-duplicates-from-sorted-list-ii/</link>
     <pubDate>Wed, 09 Mar 2022 11:05:07 &#43;0800</pubDate><author>a21663832@gmail.com</author><dc:creator>dilemmarabbit</dc:creator><guid>https://DilemmaRabbit.github.io/leetcode/82.-remove-duplicates-from-sorted-list-ii/</guid>
     <description><![CDATA[難度：🟠 Normal 🟠
- 問題描述 給予一條已排列的 linked list，刪除所有不唯一的節點，返回一條排序後的 linked list
- 思路 個人思路
- 先將重複的 node 刪除，並將重複的值紀錄在 hash map 中 根據 hash map 元素刪除表中的元素(不包含頭) 根據 hash map 元素刪除頭的重複元素  解答思路
- 產生一個哨兵(sentinel)節點接上 head，就不用在考慮單獨處理 head 的情況 用一個 prev 節點當作新的定位點(不重複的元素/第一個重複的元素) 用 head 去遍歷重複的狀況，視情況用 prev 去指到新的不重複 回傳 sentinel 節點的 next   程式碼 # 個人思路 class Solution { public: ListNode* deleteDuplicates(ListNode* head) { if(head == NULL || head-&gt;next == NULL) return head; ListNode *slow,*fast; slow = head; fast = head -&gt; next; map&lt;int, bool&gt; table; while(fast !]]></description>
+問題描述 給予一條已排列的 linked list，刪除所有不唯一的節點，返回一條排序後的 linked list
+思路 個人思路
+先將重複的 node 刪除，並將重複的值紀錄在 hash map 中 根據 hash map 元素刪除表中的元素(不包含頭) 根據 hash map 元素刪除頭的重複元素 解答思路
+產生一個哨兵(sentinel)節點接上 head，就不用在考慮單獨處理 head 的情況 用一個 prev 節點當作新的定位點(不重複的元素/第一個重複的元素) 用 head 去遍歷重複的狀況，視情況用 prev 去指到新的不重複 回傳 sentinel 節點的 next 程式碼 # 個人思路 class Solution { public: ListNode* deleteDuplicates(ListNode* head) { if(head == NULL || head-&gt;next == NULL) return head; ListNode *slow,*fast; slow = head; fast = head -&gt; next; map&lt;int, bool&gt; table; while(fast !]]></description>
 </item><item>
     <title>141. Linked List Cycle</title>
     <link>https://DilemmaRabbit.github.io/leetcode/141.-linked-list-cycle/</link>
     <pubDate>Tue, 08 Mar 2022 10:23:50 &#43;0800</pubDate><author>a21663832@gmail.com</author><dc:creator>dilemmarabbit</dc:creator><guid>https://DilemmaRabbit.github.io/leetcode/141.-linked-list-cycle/</guid>
     <description><![CDATA[難度：🟢 Easy 🟢
- 問題描述 給予一條可能產生迴圈的 linked list，返回 true or false 表示有無迴圈。
+問題描述 給予一條可能產生迴圈的 linked list，返回 true or false 表示有無迴圈。
 測資：-105 &lt;= Node.val &lt;= 105
- 思路 遍歷節點，並將節點改為範圍外的數字，假設碰到範圍外的數字則代表進入迴圈。
- 程式碼 /** * Definition for singly-linked list. * struct ListNode { * int val; * ListNode *next; * ListNode(int x) : val(x), next(NULL) {} * }; */ class Solution { public: bool hasCycle(ListNode *head) { ListNode *tmp = head; while(tmp != NULL){ if(tmp-&gt;val != 100001) tmp-&gt;val = 100001; else return true; tmp = tmp-&gt;next; } return false; } }; ]]></description>
+思路 遍歷節點，並將節點改為範圍外的數字，假設碰到範圍外的數字則代表進入迴圈。
+程式碼 /** * Definition for singly-linked list. * struct ListNode { * int val; * ListNode *next; * ListNode(int x) : val(x), next(NULL) {} * }; */ class Solution { public: bool hasCycle(ListNode *head) { ListNode *tmp = head; while(tmp != NULL){ if(tmp-&gt;val != 100001) tmp-&gt;val = 100001; else return true; tmp = tmp-&gt;next; } return false; } }; ]]></description>
 </item><item>
     <title>21. Merge Two Sorted Lists</title>
     <link>https://DilemmaRabbit.github.io/leetcode/21.-merge-two-sorted-lists/</link>
     <pubDate>Mon, 07 Mar 2022 21:13:08 &#43;0800</pubDate><author>a21663832@gmail.com</author><dc:creator>dilemmarabbit</dc:creator><guid>https://DilemmaRabbit.github.io/leetcode/21.-merge-two-sorted-lists/</guid>
     <description><![CDATA[難度：🟢 Easy 🟢
- 問題描述 給定兩條已排序的 linked list，合併為一條排序的 linked list
+問題描述 給定兩條已排序的 linked list，合併為一條排序的 linked list
 測資
- 每條 node 數量 &lt; 50 -100 &lt;= Node.val &lt;= 100   思路 產生一個新的list head，用兩個 pointer 紀錄目前 list1 與 list2 位置，並比較大小決定下一個節點，直到其中一條結束，再由另一條補上
- 程式碼 class Solution { public: ListNode* mergeTwoLists(ListNode* list1, ListNode* list2) { ListNode *list=NULL; ListNode *head=NULL; ListNode *tmp=NULL; if(list1==NULL){ return list2; } if(list2==NULL){ return list1; } while(list1!=NULL &amp;&amp; list2!=NULL){ if(list1 -&gt; val &gt;= list2 -&gt; val){ tmp = list2; list2 = list2 -&gt; next; tmp-&gt;next = NULL; } else{ tmp = list1; list1 = list1 -&gt; next; tmp-&gt;next = NULL; } if(head==NULL){ head = tmp; list = tmp; } else{ list -&gt; next = tmp; list = list -&gt; next; } if(list1 == NULL || list2 == NULL){ break; } } if(list1){ list-&gt;next=list1; } if(list2){ list-&gt;next=list2; } return head; } };  ]]></description>
+每條 node 數量 &lt; 50 -100 &lt;= Node.val &lt;= 100 思路 產生一個新的list head，用兩個 pointer 紀錄目前 list1 與 list2 位置，並比較大小決定下一個節點，直到其中一條結束，再由另一條補上
+程式碼 class Solution { public: ListNode* mergeTwoLists(ListNode* list1, ListNode* list2) { ListNode *list=NULL; ListNode *head=NULL; ListNode *tmp=NULL; if(list1==NULL){ return list2; } if(list2==NULL){ return list1; } while(list1!=NULL &amp;&amp; list2!=NULL){ if(list1 -&gt; val &gt;= list2 -&gt; val){ tmp = list2; list2 = list2 -&gt; next; tmp-&gt;next = NULL; } else{ tmp = list1; list1 = list1 -&gt; next; tmp-&gt;next = NULL; } if(head==NULL){ head = tmp; list = tmp; } else{ list -&gt; next = tmp; list = list -&gt; next; } if(list1 == NULL || list2 == NULL){ break; } } if(list1){ list-&gt;next=list1; } if(list2){ list-&gt;next=list2; } return head; } }; ]]></description>
 </item><item>
     <title>258. Add Digits</title>
     <link>https://DilemmaRabbit.github.io/leetcode/258.-add-digits/</link>
     <pubDate>Tue, 08 Feb 2022 16:04:48 &#43;0800</pubDate><author>a21663832@gmail.com</author><dc:creator>dilemmarabbit</dc:creator><guid>https://DilemmaRabbit.github.io/leetcode/258.-add-digits/</guid>
     <description><![CDATA[難度：🟢 Easy 🟢
- 問題描述 將一個正整數的所有位數做加總，直到只剩下個位數，並返回該值。
+問題描述 將一個正整數的所有位數做加總，直到只剩下個位數，並返回該值。
 測資 -1 &lt; num &lt; 2^32 。
- 思路 只計算當次的個位數，如果大於 10 代表只保留個位數並 +1，算至最後 num 為 0 。
- 程式碼 class Solution { public: int addDigits(int num) { int cur = 0; // initial answer  while(num != 0){ cur += num%10; // add tail number  if(cur &gt;= 10){ // if cur &gt; 0, remain tail and + 1  cur = cur % 10 + 1; } num /= 10; } return cur; } }; ]]></description>
+思路 只計算當次的個位數，如果大於 10 代表只保留個位數並 +1，算至最後 num 為 0 。
+程式碼 class Solution { public: int addDigits(int num) { int cur = 0; // initial answer while(num != 0){ cur += num%10; // add tail number if(cur &gt;= 10){ // if cur &gt; 0, remain tail and + 1 cur = cur % 10 + 1; } num /= 10; } return cur; } }; ]]></description>
 </item></channel>
 </rss>

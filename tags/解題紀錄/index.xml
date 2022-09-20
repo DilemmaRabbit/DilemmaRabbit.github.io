@@ -9,9 +9,9 @@
     <link>https://DilemmaRabbit.github.io/leetcode/258.-add-digits/</link>
     <pubDate>Tue, 08 Feb 2022 16:04:48 &#43;0800</pubDate><author>a21663832@gmail.com</author><dc:creator>dilemmarabbit</dc:creator><guid>https://DilemmaRabbit.github.io/leetcode/258.-add-digits/</guid>
     <description><![CDATA[難度：🟢 Easy 🟢
- 問題描述 將一個正整數的所有位數做加總，直到只剩下個位數，並返回該值。
+問題描述 將一個正整數的所有位數做加總，直到只剩下個位數，並返回該值。
 測資 -1 &lt; num &lt; 2^32 。
- 思路 只計算當次的個位數，如果大於 10 代表只保留個位數並 +1，算至最後 num 為 0 。
- 程式碼 class Solution { public: int addDigits(int num) { int cur = 0; // initial answer  while(num != 0){ cur += num%10; // add tail number  if(cur &gt;= 10){ // if cur &gt; 0, remain tail and + 1  cur = cur % 10 + 1; } num /= 10; } return cur; } }; ]]></description>
+思路 只計算當次的個位數，如果大於 10 代表只保留個位數並 +1，算至最後 num 為 0 。
+程式碼 class Solution { public: int addDigits(int num) { int cur = 0; // initial answer while(num != 0){ cur += num%10; // add tail number if(cur &gt;= 10){ // if cur &gt; 0, remain tail and + 1 cur = cur % 10 + 1; } num /= 10; } return cur; } }; ]]></description>
 </item></channel>
 </rss>

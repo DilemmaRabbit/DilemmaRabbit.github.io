@@ -7,10 +7,10 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
         <title>61. Rotate List - Dilemma Rabbit</title><meta name="description" content=""><meta property="og:title" content="61. Rotate List" />
 <meta property="og:description" content="難度：🟠 Normal 🟠
- 問題描述 給予一條 linked list 以及 k，代表這個 linked list 向右位移 k 個單位(最末尾會變成新的 head)，回傳最後的 linked list
- 思路 個人思路(雙指標)
- 讓快慢指標先距離 k 個單位(需要用一個 cnt 預先計算好最小的距離，否則會 TLE) 快慢指標同時移動直到快指標移動到尾部 將快指標的尾部接上原本的頭，慢指標 next 當作新的頭，並將慢指標當作尾部(指向空指標)   解答思路(單指標)
- 一樣先紀錄 cnt 數量，並讓指標移動到 k 個單位的位置 將指標的尾部直接接上頭，形成一條循環 linked list 移動到目標位置 cnt - (k % cnt)，並設定新的頭以及尾   程式碼 // 個人方法 class Solution { public: ListNode* rotateRight(ListNode* head, int k) { if(!head) return head; int cnt = 0; ListNode *fast, *slow; fast = head; slow = head; while(slow){ slow = slow-&gt;next; cnt&#43;&#43;; // 紀錄總共的節點數量  } slow = head; // 慢指標回復到原本位置  for(int i = 0; i &lt; k % cnt; i&#43;&#43;){ if(fast -&gt; next) fast = fast-&gt;next; // 快指標前進到目標位置  } while(fast -&gt; next !" />
+問題描述 給予一條 linked list 以及 k，代表這個 linked list 向右位移 k 個單位(最末尾會變成新的 head)，回傳最後的 linked list
+思路 個人思路(雙指標)
+讓快慢指標先距離 k 個單位(需要用一個 cnt 預先計算好最小的距離，否則會 TLE) 快慢指標同時移動直到快指標移動到尾部 將快指標的尾部接上原本的頭，慢指標 next 當作新的頭，並將慢指標當作尾部(指向空指標) 解答思路(單指標)
+一樣先紀錄 cnt 數量，並讓指標移動到 k 個單位的位置 將指標的尾部直接接上頭，形成一條循環 linked list 移動到目標位置 cnt - (k % cnt)，並設定新的頭以及尾 程式碼 // 個人方法 class Solution { public: ListNode* rotateRight(ListNode* head, int k) { if(!head) return head; int cnt = 0; ListNode *fast, *slow; fast = head; slow = head; while(slow){ slow = slow-&gt;next; cnt&#43;&#43;; // 紀錄總共的節點數量 } slow = head; // 慢指標回復到原本位置 for(int i = 0; i &lt; k % cnt; i&#43;&#43;){ if(fast -&gt; next) fast = fast-&gt;next; // 快指標前進到目標位置 } while(fast -&gt; next !" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://DilemmaRabbit.github.io/leetcode/61.-rotate-list/" /><meta property="og:image" content="https://DilemmaRabbit.github.io/leetcode/61.-rotate-list/leetcode.png"/><meta property="article:section" content="leetcode" />
 <meta property="article:published_time" content="2022-03-11T13:31:35+08:00" />
@@ -20,10 +20,10 @@
 <meta name="twitter:image" content="https://DilemmaRabbit.github.io/leetcode/61.-rotate-list/leetcode.png"/>
 <meta name="twitter:title" content="61. Rotate List"/>
 <meta name="twitter:description" content="難度：🟠 Normal 🟠
- 問題描述 給予一條 linked list 以及 k，代表這個 linked list 向右位移 k 個單位(最末尾會變成新的 head)，回傳最後的 linked list
- 思路 個人思路(雙指標)
- 讓快慢指標先距離 k 個單位(需要用一個 cnt 預先計算好最小的距離，否則會 TLE) 快慢指標同時移動直到快指標移動到尾部 將快指標的尾部接上原本的頭，慢指標 next 當作新的頭，並將慢指標當作尾部(指向空指標)   解答思路(單指標)
- 一樣先紀錄 cnt 數量，並讓指標移動到 k 個單位的位置 將指標的尾部直接接上頭，形成一條循環 linked list 移動到目標位置 cnt - (k % cnt)，並設定新的頭以及尾   程式碼 // 個人方法 class Solution { public: ListNode* rotateRight(ListNode* head, int k) { if(!head) return head; int cnt = 0; ListNode *fast, *slow; fast = head; slow = head; while(slow){ slow = slow-&gt;next; cnt&#43;&#43;; // 紀錄總共的節點數量  } slow = head; // 慢指標回復到原本位置  for(int i = 0; i &lt; k % cnt; i&#43;&#43;){ if(fast -&gt; next) fast = fast-&gt;next; // 快指標前進到目標位置  } while(fast -&gt; next !"/>
+問題描述 給予一條 linked list 以及 k，代表這個 linked list 向右位移 k 個單位(最末尾會變成新的 head)，回傳最後的 linked list
+思路 個人思路(雙指標)
+讓快慢指標先距離 k 個單位(需要用一個 cnt 預先計算好最小的距離，否則會 TLE) 快慢指標同時移動直到快指標移動到尾部 將快指標的尾部接上原本的頭，慢指標 next 當作新的頭，並將慢指標當作尾部(指向空指標) 解答思路(單指標)
+一樣先紀錄 cnt 數量，並讓指標移動到 k 個單位的位置 將指標的尾部直接接上頭，形成一條循環 linked list 移動到目標位置 cnt - (k % cnt)，並設定新的頭以及尾 程式碼 // 個人方法 class Solution { public: ListNode* rotateRight(ListNode* head, int k) { if(!head) return head; int cnt = 0; ListNode *fast, *slow; fast = head; slow = head; while(slow){ slow = slow-&gt;next; cnt&#43;&#43;; // 紀錄總共的節點數量 } slow = head; // 慢指標回復到原本位置 for(int i = 0; i &lt; k % cnt; i&#43;&#43;){ if(fast -&gt; next) fast = fast-&gt;next; // 快指標前進到目標位置 } while(fast -&gt; next !"/>
 <meta name="application-name" content="Dilemma Rabbit">
 <meta name="apple-mobile-web-app-title" content="Dilemma Rabbit"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -230,7 +230,7 @@
 </div>
 </article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreferrer" title="Hugo 0.94.2">Hugo</a> | Theme - <a href="https://github.com/sunt-programator/CodeIT" target="_blank" rel="noopener noreferrer" title="CodeIT 0.2.10"><i class="fas fa-laptop-code fa-fw"></i> CodeIT</a>
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreferrer" title="Hugo 0.103.1">Hugo</a> | Theme - <a href="https://github.com/sunt-programator/CodeIT" target="_blank" rel="noopener noreferrer" title="CodeIT 0.2.10"><i class="fas fa-laptop-code fa-fw"></i> CodeIT</a>
                 </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank" rel="noopener noreferrer">dilemmarabbit</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
         </div>
     </footer></div>
