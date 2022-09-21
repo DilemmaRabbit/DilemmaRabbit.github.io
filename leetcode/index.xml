@@ -4,7 +4,15 @@
         <link>https://DilemmaRabbit.github.io/leetcode/</link>
         <description>All leetcode | Dilemma Rabbit</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>a21663832@gmail.com (dilemmarabbit)</managingEditor>
-            <webMaster>a21663832@gmail.com (dilemmarabbit)</webMaster><lastBuildDate>Tue, 20 Sep 2022 12:02:49 &#43;0800</lastBuildDate><atom:link href="https://DilemmaRabbit.github.io/leetcode/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>a21663832@gmail.com (dilemmarabbit)</webMaster><lastBuildDate>Wed, 21 Sep 2022 11:43:56 &#43;0800</lastBuildDate><atom:link href="https://DilemmaRabbit.github.io/leetcode/" rel="self" type="application/rss+xml" /><item>
+    <title>985. Sum of Even Numbers After Queries</title>
+    <link>https://DilemmaRabbit.github.io/leetcode/985.-sum-of-even-numbers-after-queries/</link>
+    <pubDate>Wed, 21 Sep 2022 11:43:56 &#43;0800</pubDate><author>a21663832@gmail.com</author><dc:creator>dilemmarabbit</dc:creator><guid>https://DilemmaRabbit.github.io/leetcode/985.-sum-of-even-numbers-after-queries/</guid>
+    <description><![CDATA[難度：🟠 Normal 🟠
+問題描述 給予兩個陣列 nums / queries，queries[i][0]代表增加的數值，queries[i][1]代表需要增加的 nums index，每次計算完後，只紀錄 nums 中的偶數總和，回傳一個與 nums 大小相同的結果陣列
+思路 需要重複計算的部分為每次修改完 nums 後，重新進行總和的部分，因此可以先將總和計算出來，依據當前回合的結果，判斷需要加或減的部分，直接對總和進行運算，最後再更新新的結果到 nums 上，省去每次遍歷的過程
+程式碼 class Solution { public: vector&lt;int&gt; sumEvenAfterQueries(vector&lt;int&gt;&amp; nums, vector&lt;vector&lt;int&gt;&gt;&amp; queries) { vector&lt;int&gt; res; int tmp = 0; for(int i = 0; i &lt; nums.size(); i++){ if(nums[i] % 2 == 0) tmp += nums[i]; } for(int i = 0; i &lt; queries.size(); i++){ if((nums[queries[i][1]] + queries[i][0]) % 2 == 0){ // 如果加總後是偶數 if(nums[queries[i][1]] % 2 == 0){ tmp += queries[i][0]; // 偶數的情況下，因為結果已經具有了原數值，只需要加上增減的部分 } else{ tmp += nums[queries[i][1]] + queries[i][0]; // 奇數的情況下便加上總和 } } else{ // 如果加總後是奇數 if(nums[queries[i][1]] % 2 == 0){ tmp -= nums[queries[i][1]]; // 原本是偶數的狀況下，要減掉自身 } // 奇數變奇數，不會更新結果，只需要更新 nums } nums[queries[i][1]] = nums[queries[i][1]] + queries[i][0]; // 更新 nums res.]]></description>
+</item><item>
     <title>718. Maximum Length of Repeated Subarray</title>
     <link>https://DilemmaRabbit.github.io/leetcode/718.-maximum-length-of-repeated-subarray/</link>
     <pubDate>Tue, 20 Sep 2022 12:02:49 &#43;0800</pubDate><author>a21663832@gmail.com</author><dc:creator>dilemmarabbit</dc:creator><guid>https://DilemmaRabbit.github.io/leetcode/718.-maximum-length-of-repeated-subarray/</guid>
