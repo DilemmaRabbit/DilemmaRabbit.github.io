@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-	<meta name="generator" content="Hugo 0.103.1" />
+	<meta name="generator" content="Hugo 0.104.0" />
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
@@ -73,6 +73,22 @@
         alt="一隻會打扣的兔兔!"
         title="一隻會打扣的兔兔!" /></a></div><h1 class="home-title">DilemmaRabbit</h1><h2 class="home-subtitle"><div id="id-3" class="typeit"></div></h2><div class="links"><a href="https://github.com/dilemmarabbit" title="GitHub" target="_blank" rel="noopener noreferrer me"><i class="fab fa-github fa-fw"></i></a><a href="https://facebook.com/100001572938761" title="facebook" target="_blank" rel="noopener noreferrer me"><i class="fab fa-facebook fa-fw"></i></a><a href="https://t.me/dilemmarabbit" title="Telegram" target="_blank" rel="noopener noreferrer me"><i class="fab fa-telegram-plane fa-fw"></i></a><a href="mailto:a21663832@gmail.com" title="Email" rel=" me"><i class="far fa-envelope fa-fw"></i></a></div></div>
 <article class="single summary" itemscope itemtype="http://schema.org/Article"><div class="featured-image-preview">
+            <a href="/leetcode/622.-design-circular-queue/"><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/leetcode/622.-design-circular-queue/leetcode.png"
+        data-srcset="/leetcode/622.-design-circular-queue/leetcode.png, /leetcode/622.-design-circular-queue/leetcode.png 1.5x, /leetcode/622.-design-circular-queue/leetcode.png 2x"
+        data-sizes="auto"
+        alt="/leetcode/622.-design-circular-queue/leetcode.png"
+        title="/leetcode/622.-design-circular-queue/leetcode.png" /></a>
+        </div><h1 class="single-title" itemprop="name headline">
+        <a href="/leetcode/622.-design-circular-queue/">622. Design Circular Queue</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>dilemmarabbit</a></span>&nbsp;<span class="post-publish">published on <time datetime="2022-09-25">2022-09-25</time></span>&nbsp;<span class="post-category">included in <a href="/categories/learning/"><i class="far fa-folder fa-fw"></i>Learning</a></span></div><div class="content">難度：🟠 Normal 🟠
+問題描述 完成一個循環佇列(FIFO)的結構，須包含以下功能
+MyCircularQueue(k)：產生一條長度為 k 的駐列 int fornt()：回傳目前 head 的值，如果不存在，回傳 -1 int rear()：回傳目前 tail 的值，如果不存在，回傳 -1 boolean enQueue(int value)：新增新值到 queue 的尾端，如果操作失敗(佇列滿了)，回傳 false boolean deQueue()：移除目前 head 的值，如果操作失敗(佇列為空)，回傳 false boolean isEmpty()：回傳目前 queue 是否為空的狀況 boolean isFull()：回傳目前 queue 是否為滿的狀況 思路 用兩個 pointer (front/rear) 來追蹤目前的頭與尾 移除不用真的移除 queue 內原本資料，修改新的 front 就好 移除需要考慮移除到空的處理 full/empty 用 front 與 rear 來判斷 程式碼 class MyCircularQueue { public: vector&lt;int&gt; queue; int end; int front; int rear; // 檢查遍歷用 // void check(string s){ // cout &lt;&lt; s &lt;&lt; endl; // for(int i = 0; i &lt; queue.</div><div class="post-footer">
+        <a href="/leetcode/622.-design-circular-queue/">Read More</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/leetcode/">LeetCode</a></div></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><div class="featured-image-preview">
             <a href="/leetcode/985.-sum-of-even-numbers-after-queries/"><img
         class="lazyload"
         src="/svg/loading.min.svg"
@@ -158,22 +174,6 @@
 一樣先紀錄 cnt 數量，並讓指標移動到 k 個單位的位置 將指標的尾部直接接上頭，形成一條循環 linked list 移動到目標位置 cnt - (k % cnt)，並設定新的頭以及尾 程式碼 // 個人方法 class Solution { public: ListNode* rotateRight(ListNode* head, int k) { if(!head) return head; int cnt = 0; ListNode *fast, *slow; fast = head; slow = head; while(slow){ slow = slow-&gt;next; cnt++; // 紀錄總共的節點數量 } slow = head; // 慢指標回復到原本位置 for(int i = 0; i &lt; k % cnt; i++){ if(fast -&gt; next) fast = fast-&gt;next; // 快指標前進到目標位置 } while(fast -&gt; next !</div><div class="post-footer">
         <a href="/leetcode/61.-rotate-list/">Read More</a><div class="post-tags">
                 <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/leetcode/">LeetCode</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><div class="featured-image-preview">
-            <a href="/leetcode/2.-add-two-numbers/"><img
-        class="lazyload"
-        src="/svg/loading.min.svg"
-        data-src="/leetcode/2.-add-two-numbers/leetcode.png"
-        data-srcset="/leetcode/2.-add-two-numbers/leetcode.png, /leetcode/2.-add-two-numbers/leetcode.png 1.5x, /leetcode/2.-add-two-numbers/leetcode.png 2x"
-        data-sizes="auto"
-        alt="/leetcode/2.-add-two-numbers/leetcode.png"
-        title="/leetcode/2.-add-two-numbers/leetcode.png" /></a>
-        </div><h1 class="single-title" itemprop="name headline">
-        <a href="/leetcode/2.-add-two-numbers/">2. Add Two Numbers</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>dilemmarabbit</a></span>&nbsp;<span class="post-publish">published on <time datetime="2022-03-11">2022-03-11</time></span>&nbsp;<span class="post-category">included in <a href="/categories/learning/"><i class="far fa-folder fa-fw"></i>Learning</a></span></div><div class="content">難度：🟠 Normal 🟠
-問題描述 給予兩條 linked list，代表從個位數開始的兩組數字，回傳一條代表這兩組數字加總的 linked list
-思路 利用自創的一個 Node 當作哨兵節點 計算每個回合當下的加總以及進位 兩條 linked list 同時遍歷，當 next 等於空指標時代表某一條到底，下次開始把加總的值設為 0 當兩個指標都是空指標值代表加總完畢並退出 最後考慮最後一次的進位 程式碼 class Solution { public: ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) { int carry = 0; int sum = 0; int val1,val2; ListNode *tmp; ListNode *head = new ListNode(10); // 哨兵節點 tmp = head; // 當兩條 linked list 都結束時退出 while(l1 || l2){ if(l1 == NULL) val1 = 0; // 確定 linked list 是否結束 else val1 = l1 -&gt; val; if(l2 == NULL) val2 = 0; // 確定 linked list 是否結束 else val2 = l2 -&gt; val; sum = val1 + val2 + carry; // 計算當前加總 carry = sum / 10; // 計算進位 tmp -&gt; next = new ListNode(sum % 10); // 產生新節點 tmp = tmp -&gt; next; if(l1) l1 = l1 -&gt; next; // 避免進入空指標 if(l2) l2 = l2 -&gt; next; // 避免進入空指標 } if(carry == 1) tmp -&gt; next = new ListNode(1); // 最後的進位 return head-&gt;next; } }; </div><div class="post-footer">
-        <a href="/leetcode/2.-add-two-numbers/">Read More</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/leetcode/">LeetCode</a></div></div>
 </article><ul class="pagination"><li class="page-item active">
                     <span class="page-link">
                         <a href="/">1</a>
@@ -184,7 +184,7 @@
                     </span>
                 </li></ul></div></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreferrer" title="Hugo 0.103.1">Hugo</a> | Theme - <a href="https://github.com/sunt-programator/CodeIT" target="_blank" rel="noopener noreferrer" title="CodeIT 0.2.10"><i class="fas fa-laptop-code fa-fw"></i> CodeIT</a>
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreferrer" title="Hugo 0.104.0">Hugo</a> | Theme - <a href="https://github.com/sunt-programator/CodeIT" target="_blank" rel="noopener noreferrer" title="CodeIT 0.2.10"><i class="fas fa-laptop-code fa-fw"></i> CodeIT</a>
                 </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank" rel="noopener noreferrer">dilemmarabbit</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
         </div>
     </footer></div>

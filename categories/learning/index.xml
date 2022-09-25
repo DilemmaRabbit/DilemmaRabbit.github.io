@@ -4,7 +4,14 @@
         <link>https://DilemmaRabbit.github.io/categories/learning/</link>
         <description>Learning - Category - Dilemma Rabbit</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>a21663832@gmail.com (dilemmarabbit)</managingEditor>
-            <webMaster>a21663832@gmail.com (dilemmarabbit)</webMaster><lastBuildDate>Wed, 21 Sep 2022 11:43:56 &#43;0800</lastBuildDate><atom:link href="https://DilemmaRabbit.github.io/categories/learning/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>a21663832@gmail.com (dilemmarabbit)</webMaster><lastBuildDate>Sun, 25 Sep 2022 16:37:19 &#43;0800</lastBuildDate><atom:link href="https://DilemmaRabbit.github.io/categories/learning/" rel="self" type="application/rss+xml" /><item>
+    <title>622. Design Circular Queue</title>
+    <link>https://DilemmaRabbit.github.io/leetcode/622.-design-circular-queue/</link>
+    <pubDate>Sun, 25 Sep 2022 16:37:19 &#43;0800</pubDate><author>a21663832@gmail.com</author><dc:creator>dilemmarabbit</dc:creator><guid>https://DilemmaRabbit.github.io/leetcode/622.-design-circular-queue/</guid>
+    <description><![CDATA[難度：🟠 Normal 🟠
+問題描述 完成一個循環佇列(FIFO)的結構，須包含以下功能
+MyCircularQueue(k)：產生一條長度為 k 的駐列 int fornt()：回傳目前 head 的值，如果不存在，回傳 -1 int rear()：回傳目前 tail 的值，如果不存在，回傳 -1 boolean enQueue(int value)：新增新值到 queue 的尾端，如果操作失敗(佇列滿了)，回傳 false boolean deQueue()：移除目前 head 的值，如果操作失敗(佇列為空)，回傳 false boolean isEmpty()：回傳目前 queue 是否為空的狀況 boolean isFull()：回傳目前 queue 是否為滿的狀況 思路 用兩個 pointer (front/rear) 來追蹤目前的頭與尾 移除不用真的移除 queue 內原本資料，修改新的 front 就好 移除需要考慮移除到空的處理 full/empty 用 front 與 rear 來判斷 程式碼 class MyCircularQueue { public: vector&lt;int&gt; queue; int end; int front; int rear; // 檢查遍歷用 // void check(string s){ // cout &lt;&lt; s &lt;&lt; endl; // for(int i = 0; i &lt; queue.]]></description>
+</item><item>
     <title>985. Sum of Even Numbers After Queries</title>
     <link>https://DilemmaRabbit.github.io/leetcode/985.-sum-of-even-numbers-after-queries/</link>
     <pubDate>Wed, 21 Sep 2022 11:43:56 &#43;0800</pubDate><author>a21663832@gmail.com</author><dc:creator>dilemmarabbit</dc:creator><guid>https://DilemmaRabbit.github.io/leetcode/985.-sum-of-even-numbers-after-queries/</guid>
@@ -79,14 +86,5 @@
 測資
 每條 node 數量 &lt; 50 -100 &lt;= Node.val &lt;= 100 思路 產生一個新的list head，用兩個 pointer 紀錄目前 list1 與 list2 位置，並比較大小決定下一個節點，直到其中一條結束，再由另一條補上
 程式碼 class Solution { public: ListNode* mergeTwoLists(ListNode* list1, ListNode* list2) { ListNode *list=NULL; ListNode *head=NULL; ListNode *tmp=NULL; if(list1==NULL){ return list2; } if(list2==NULL){ return list1; } while(list1!=NULL &amp;&amp; list2!=NULL){ if(list1 -&gt; val &gt;= list2 -&gt; val){ tmp = list2; list2 = list2 -&gt; next; tmp-&gt;next = NULL; } else{ tmp = list1; list1 = list1 -&gt; next; tmp-&gt;next = NULL; } if(head==NULL){ head = tmp; list = tmp; } else{ list -&gt; next = tmp; list = list -&gt; next; } if(list1 == NULL || list2 == NULL){ break; } } if(list1){ list-&gt;next=list1; } if(list2){ list-&gt;next=list2; } return head; } }; ]]></description>
-</item><item>
-    <title>258. Add Digits</title>
-    <link>https://DilemmaRabbit.github.io/leetcode/258.-add-digits/</link>
-    <pubDate>Tue, 08 Feb 2022 16:04:48 &#43;0800</pubDate><author>a21663832@gmail.com</author><dc:creator>dilemmarabbit</dc:creator><guid>https://DilemmaRabbit.github.io/leetcode/258.-add-digits/</guid>
-    <description><![CDATA[難度：🟢 Easy 🟢
-問題描述 將一個正整數的所有位數做加總，直到只剩下個位數，並返回該值。
-測資 -1 &lt; num &lt; 2^32 。
-思路 只計算當次的個位數，如果大於 10 代表只保留個位數並 +1，算至最後 num 為 0 。
-程式碼 class Solution { public: int addDigits(int num) { int cur = 0; // initial answer while(num != 0){ cur += num%10; // add tail number if(cur &gt;= 10){ // if cur &gt; 0, remain tail and + 1 cur = cur % 10 + 1; } num /= 10; } return cur; } }; ]]></description>
 </item></channel>
 </rss>
