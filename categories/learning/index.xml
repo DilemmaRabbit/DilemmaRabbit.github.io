@@ -4,7 +4,18 @@
         <link>https://DilemmaRabbit.github.io/categories/learning/</link>
         <description>Learning - Category - Dilemma Rabbit</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>a21663832@gmail.com (dilemmarabbit)</managingEditor>
-            <webMaster>a21663832@gmail.com (dilemmarabbit)</webMaster><lastBuildDate>Mon, 26 Sep 2022 17:06:04 &#43;0800</lastBuildDate><atom:link href="https://DilemmaRabbit.github.io/categories/learning/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>a21663832@gmail.com (dilemmarabbit)</webMaster><lastBuildDate>Tue, 27 Sep 2022 14:42:21 &#43;0800</lastBuildDate><atom:link href="https://DilemmaRabbit.github.io/categories/learning/" rel="self" type="application/rss+xml" /><item>
+    <title>838. Push Dominoes</title>
+    <link>https://DilemmaRabbit.github.io/leetcode/838.-push-dominoes/</link>
+    <pubDate>Tue, 27 Sep 2022 14:42:21 &#43;0800</pubDate><author>a21663832@gmail.com</author><dc:creator>dilemmarabbit</dc:creator><guid>https://DilemmaRabbit.github.io/leetcode/838.-push-dominoes/</guid>
+    <description><![CDATA[難度：🟠 Normal 🟠
+問題描述 給予一個字串 dominoes，代表骨牌的方向，&ldquo;R&rdquo; , &ldquo;L&rdquo; 分別代表往左/右推，&quot;.&quot; 則代表不被推動的骨牌，求依據字串推倒後的骨牌呈現狀況
+思路 當 &ldquo;左&rdquo; 、 &ldquo;右&rdquo; 各有 &ldquo;右&rdquo; 、 &ldquo;左&rdquo; 推的骨牌時，靠近右推/左推的骨牌會變成右/左，如果剛好位於正中間，則會處於平衡狀態 記錄這個骨牌被左推/右推的比例，決定靠向哪一邊 two vector
+兩個長度為骨牌長度的陣列，分別代表左推/右推的狀況 從左至右遍歷(右推狀況)第一個陣列 &ldquo;R&rdquo;，將 tmp 設為最大值(100000)，代表開始遞減比重 &ldquo;L&rdquo;，將 tmp 歸零，代表從頭開始 &ldquo;.&quot;，如果左邊不是 &ldquo;R&rdquo;(tmp = 0) 的狀況，直接為 0 ，否則加上比重並 tmp&ndash; 從右至左遍歷(左推狀況)第二個陣列 &ldquo;R&rdquo;，將 tmp 歸零，代表從頭開始 &ldquo;L&rdquo;，將 tmp 設為最小值(-100000)，代表開始遞增比重 &ldquo;.&quot;，如果左邊不是 &ldquo;R&rdquo;(tmp = 0) 的狀況，直接為 0 ，否則加上比重並 tmp++ 相加兩個陣列，如果為零代表平衡、負數代表左推、正數代表右推 two pointer
+與上述作法用兩個不同方面的 pointer 改善，減少一個陣列以及 for 循環 是否能在一個方向的遍歷完成?
+是否不需要額外的陣列完成?
+程式碼 class Solution { public: // two pointer string pushDominoes(string dominoes) { vector&lt;int&gt; map(dominoes.]]></description>
+</item><item>
     <title>990. Satisfiability of Equality Equations</title>
     <link>https://DilemmaRabbit.github.io/leetcode/990.-satisfiability-of-equality-equations/</link>
     <pubDate>Mon, 26 Sep 2022 17:06:04 &#43;0800</pubDate><author>a21663832@gmail.com</author><dc:creator>dilemmarabbit</dc:creator><guid>https://DilemmaRabbit.github.io/leetcode/990.-satisfiability-of-equality-equations/</guid>
@@ -75,14 +86,5 @@ MyCircularQueue(k)：產生一條長度為 k 的駐列 int fornt()：回傳目�
 思路 個人思路
 先將重複的 node 刪除，並將重複的值紀錄在 hash map 中 根據 hash map 元素刪除表中的元素(不包含頭) 根據 hash map 元素刪除頭的重複元素 解答思路
 產生一個哨兵(sentinel)節點接上 head，就不用在考慮單獨處理 head 的情況 用一個 prev 節點當作新的定位點(不重複的元素/第一個重複的元素) 用 head 去遍歷重複的狀況，視情況用 prev 去指到新的不重複 回傳 sentinel 節點的 next 程式碼 # 個人思路 class Solution { public: ListNode* deleteDuplicates(ListNode* head) { if(head == NULL || head-&gt;next == NULL) return head; ListNode *slow,*fast; slow = head; fast = head -&gt; next; map&lt;int, bool&gt; table; while(fast !]]></description>
-</item><item>
-    <title>141. Linked List Cycle</title>
-    <link>https://DilemmaRabbit.github.io/leetcode/141.-linked-list-cycle/</link>
-    <pubDate>Tue, 08 Mar 2022 10:23:50 &#43;0800</pubDate><author>a21663832@gmail.com</author><dc:creator>dilemmarabbit</dc:creator><guid>https://DilemmaRabbit.github.io/leetcode/141.-linked-list-cycle/</guid>
-    <description><![CDATA[難度：🟢 Easy 🟢
-問題描述 給予一條可能產生迴圈的 linked list，返回 true or false 表示有無迴圈。
-測資：-105 &lt;= Node.val &lt;= 105
-思路 遍歷節點，並將節點改為範圍外的數字，假設碰到範圍外的數字則代表進入迴圈。
-程式碼 /** * Definition for singly-linked list. * struct ListNode { * int val; * ListNode *next; * ListNode(int x) : val(x), next(NULL) {} * }; */ class Solution { public: bool hasCycle(ListNode *head) { ListNode *tmp = head; while(tmp != NULL){ if(tmp-&gt;val != 100001) tmp-&gt;val = 100001; else return true; tmp = tmp-&gt;next; } return false; } }; ]]></description>
 </item></channel>
 </rss>

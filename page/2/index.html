@@ -73,6 +73,24 @@
         alt="一隻會打扣的兔兔!"
         title="一隻會打扣的兔兔!" /></a></div><h1 class="home-title">DilemmaRabbit</h1><h2 class="home-subtitle"><div id="id-3" class="typeit"></div></h2><div class="links"><a href="https://github.com/dilemmarabbit" title="GitHub" target="_blank" rel="noopener noreferrer me"><i class="fab fa-github fa-fw"></i></a><a href="https://facebook.com/100001572938761" title="facebook" target="_blank" rel="noopener noreferrer me"><i class="fab fa-facebook fa-fw"></i></a><a href="https://t.me/dilemmarabbit" title="Telegram" target="_blank" rel="noopener noreferrer me"><i class="fab fa-telegram-plane fa-fw"></i></a><a href="mailto:a21663832@gmail.com" title="Email" rel=" me"><i class="far fa-envelope fa-fw"></i></a></div></div>
 <article class="single summary" itemscope itemtype="http://schema.org/Article"><div class="featured-image-preview">
+            <a href="/leetcode/138.-copy-list-with-random-pointer/"><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/leetcode/138.-copy-list-with-random-pointer/leetcode.png"
+        data-srcset="/leetcode/138.-copy-list-with-random-pointer/leetcode.png, /leetcode/138.-copy-list-with-random-pointer/leetcode.png 1.5x, /leetcode/138.-copy-list-with-random-pointer/leetcode.png 2x"
+        data-sizes="auto"
+        alt="/leetcode/138.-copy-list-with-random-pointer/leetcode.png"
+        title="/leetcode/138.-copy-list-with-random-pointer/leetcode.png" /></a>
+        </div><h1 class="single-title" itemprop="name headline">
+        <a href="/leetcode/138.-copy-list-with-random-pointer/">138. Copy List With Random Pointer</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>dilemmarabbit</a></span>&nbsp;<span class="post-publish">published on <time datetime="2022-03-12">2022-03-12</time></span>&nbsp;<span class="post-category">included in <a href="/categories/learning/"><i class="far fa-folder fa-fw"></i>Learning</a></span></div><div class="content">難度：🟠 Normal 🟠
+問題描述 給予一條 linked list，除了 next 指標之外還有一條連接到其他節點的 random 指標
+複製出一條 linked list 擁有相同的結構
+思路 個人思路
+由於對一條串列來說，random 是指向串列中其中一個節點，用 hash table 模仿這個行為 當產生一個新節點時，對照原本原串列的位址產生一個 hash table 的對照，並先將 next 部份完成 最後遍歷每個原串列節點的 random，將對應過去的新串列的位置給新的 random 值 程式碼 class Solution { public: Node* copyRandomList(Node* head) { map&lt;Node*,Node*&gt; table; // 建立 hash map Node* newList = new Node(0); // 哨兵節點 Node* cur = newList; // 紀錄新串列的節點位置 Node* tmp = head; // 紀錄舊串列的節點位置 while(tmp){ cur -&gt; next = new Node(tmp-&gt;val); // 根據舊串列的值產生新節點 cur = cur -&gt; next; table[tmp] = cur; // 紀錄當前新舊串列的對照狀況 tmp = tmp -&gt; next; } tmp = head; // 回到原點 cur = newList-&gt;next; // 回到原點 while(tmp){ cur -&gt; random = table[tmp -&gt; random]; // 將新串列的 random 以舊串列的對照給予 tmp = tmp -&gt; next; cur = cur -&gt; next; } return newList-&gt;next; } }; </div><div class="post-footer">
+        <a href="/leetcode/138.-copy-list-with-random-pointer/">Read More</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/leetcode/">LeetCode</a></div></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><div class="featured-image-preview">
             <a href="/leetcode/61.-rotate-list/"><img
         class="lazyload"
         src="/svg/loading.min.svg"
@@ -160,24 +178,6 @@
 程式碼 class Solution { public: ListNode* mergeTwoLists(ListNode* list1, ListNode* list2) { ListNode *list=NULL; ListNode *head=NULL; ListNode *tmp=NULL; if(list1==NULL){ return list2; } if(list2==NULL){ return list1; } while(list1!=NULL &amp;&amp; list2!=NULL){ if(list1 -&gt; val &gt;= list2 -&gt; val){ tmp = list2; list2 = list2 -&gt; next; tmp-&gt;next = NULL; } else{ tmp = list1; list1 = list1 -&gt; next; tmp-&gt;next = NULL; } if(head==NULL){ head = tmp; list = tmp; } else{ list -&gt; next = tmp; list = list -&gt; next; } if(list1 == NULL || list2 == NULL){ break; } } if(list1){ list-&gt;next=list1; } if(list2){ list-&gt;next=list2; } return head; } }; </div><div class="post-footer">
         <a href="/leetcode/21.-merge-two-sorted-lists/">Read More</a><div class="post-tags">
                 <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/leetcode/">LeetCode</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><div class="featured-image-preview">
-            <a href="/leetcode/258.-add-digits/"><img
-        class="lazyload"
-        src="/svg/loading.min.svg"
-        data-src="/leetcode/258.-add-digits/leetcode.png"
-        data-srcset="/leetcode/258.-add-digits/leetcode.png, /leetcode/258.-add-digits/leetcode.png 1.5x, /leetcode/258.-add-digits/leetcode.png 2x"
-        data-sizes="auto"
-        alt="/leetcode/258.-add-digits/leetcode.png"
-        title="/leetcode/258.-add-digits/leetcode.png" /></a>
-        </div><h1 class="single-title" itemprop="name headline">
-        <a href="/leetcode/258.-add-digits/">258. Add Digits</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>dilemmarabbit</a></span>&nbsp;<span class="post-publish">published on <time datetime="2022-02-08">2022-02-08</time></span>&nbsp;<span class="post-category">included in <a href="/categories/learning/"><i class="far fa-folder fa-fw"></i>Learning</a></span></div><div class="content">難度：🟢 Easy 🟢
-問題描述 將一個正整數的所有位數做加總，直到只剩下個位數，並返回該值。
-測資 -1 &lt; num &lt; 2^32 。
-思路 只計算當次的個位數，如果大於 10 代表只保留個位數並 +1，算至最後 num 為 0 。
-程式碼 class Solution { public: int addDigits(int num) { int cur = 0; // initial answer while(num != 0){ cur += num%10; // add tail number if(cur &gt;= 10){ // if cur &gt; 0, remain tail and + 1 cur = cur % 10 + 1; } num /= 10; } return cur; } }; </div><div class="post-footer">
-        <a href="/leetcode/258.-add-digits/">Read More</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/leetcode/">LeetCode</a>,&nbsp;<a href="/tags/%E8%A7%A3%E9%A1%8C%E7%B4%80%E9%8C%84/">解題紀錄</a></div></div>
 </article><ul class="pagination"><li class="page-item ">
                     <span class="page-link">
                         <a href="/">1</a>

@@ -73,6 +73,26 @@
         alt="一隻會打扣的兔兔!"
         title="一隻會打扣的兔兔!" /></a></div><h1 class="home-title">DilemmaRabbit</h1><h2 class="home-subtitle"><div id="id-3" class="typeit"></div></h2><div class="links"><a href="https://github.com/dilemmarabbit" title="GitHub" target="_blank" rel="noopener noreferrer me"><i class="fab fa-github fa-fw"></i></a><a href="https://facebook.com/100001572938761" title="facebook" target="_blank" rel="noopener noreferrer me"><i class="fab fa-facebook fa-fw"></i></a><a href="https://t.me/dilemmarabbit" title="Telegram" target="_blank" rel="noopener noreferrer me"><i class="fab fa-telegram-plane fa-fw"></i></a><a href="mailto:a21663832@gmail.com" title="Email" rel=" me"><i class="far fa-envelope fa-fw"></i></a></div></div>
 <article class="single summary" itemscope itemtype="http://schema.org/Article"><div class="featured-image-preview">
+            <a href="/leetcode/838.-push-dominoes/"><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/leetcode/838.-push-dominoes/leetcode.png"
+        data-srcset="/leetcode/838.-push-dominoes/leetcode.png, /leetcode/838.-push-dominoes/leetcode.png 1.5x, /leetcode/838.-push-dominoes/leetcode.png 2x"
+        data-sizes="auto"
+        alt="/leetcode/838.-push-dominoes/leetcode.png"
+        title="/leetcode/838.-push-dominoes/leetcode.png" /></a>
+        </div><h1 class="single-title" itemprop="name headline">
+        <a href="/leetcode/838.-push-dominoes/">838. Push Dominoes</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>dilemmarabbit</a></span>&nbsp;<span class="post-publish">published on <time datetime="2022-09-27">2022-09-27</time></span>&nbsp;<span class="post-category">included in <a href="/categories/learning/"><i class="far fa-folder fa-fw"></i>Learning</a></span></div><div class="content">難度：🟠 Normal 🟠
+問題描述 給予一個字串 dominoes，代表骨牌的方向，&ldquo;R&rdquo; , &ldquo;L&rdquo; 分別代表往左/右推，&quot;.&quot; 則代表不被推動的骨牌，求依據字串推倒後的骨牌呈現狀況
+思路 當 &ldquo;左&rdquo; 、 &ldquo;右&rdquo; 各有 &ldquo;右&rdquo; 、 &ldquo;左&rdquo; 推的骨牌時，靠近右推/左推的骨牌會變成右/左，如果剛好位於正中間，則會處於平衡狀態 記錄這個骨牌被左推/右推的比例，決定靠向哪一邊 two vector
+兩個長度為骨牌長度的陣列，分別代表左推/右推的狀況 從左至右遍歷(右推狀況)第一個陣列 &ldquo;R&rdquo;，將 tmp 設為最大值(100000)，代表開始遞減比重 &ldquo;L&rdquo;，將 tmp 歸零，代表從頭開始 &ldquo;.&quot;，如果左邊不是 &ldquo;R&rdquo;(tmp = 0) 的狀況，直接為 0 ，否則加上比重並 tmp&ndash; 從右至左遍歷(左推狀況)第二個陣列 &ldquo;R&rdquo;，將 tmp 歸零，代表從頭開始 &ldquo;L&rdquo;，將 tmp 設為最小值(-100000)，代表開始遞增比重 &ldquo;.&quot;，如果左邊不是 &ldquo;R&rdquo;(tmp = 0) 的狀況，直接為 0 ，否則加上比重並 tmp++ 相加兩個陣列，如果為零代表平衡、負數代表左推、正數代表右推 two pointer
+與上述作法用兩個不同方面的 pointer 改善，減少一個陣列以及 for 循環 是否能在一個方向的遍歷完成?
+是否不需要額外的陣列完成?
+程式碼 class Solution { public: // two pointer string pushDominoes(string dominoes) { vector&lt;int&gt; map(dominoes.</div><div class="post-footer">
+        <a href="/leetcode/838.-push-dominoes/">Read More</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/leetcode/">LeetCode</a></div></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><div class="featured-image-preview">
             <a href="/leetcode/990.-satisfiability-of-equality-equations/"><img
         class="lazyload"
         src="/svg/loading.min.svg"
@@ -153,24 +173,6 @@ MyCircularQueue(k)：產生一條長度為 k 的駐列 int fornt()：回傳目�
 每種括號都必須閉合(左右對稱) 括號必須以正確的順序進行閉合 &ldquo;{ } ( ) []&rdquo; &ldquo;( [ { } ] )&rdquo; 思路 個人思路
 由於必須進行閉合，因此可以確保一定是存在相對的括號 由於需要進行指定順序閉合，當遇到右括號時，代表上一個一定是對應的左括號，否則不合法 用 stack 儲存遇到所有的左括號，遇到右括號則比對目前的 stack top 是否正確 假如正確則 pop 成對的括號 最後 stack 必定為空 程式碼 class Solution { public: bool isValid(string s) { stack&lt;char&gt; st; for(auto chr : s){ if(chr == &#39;}&#39; || chr == &#39;]&#39; || chr == &#39;)&#39;){ // 如果為右括號 if(st.empty()){ // 確保是否為空 return false; } else{ if(chr-1 == st.</div><div class="post-footer">
         <a href="/leetcode/20.-valid-parentheses/">Read More</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/leetcode/">LeetCode</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><div class="featured-image-preview">
-            <a href="/leetcode/138.-copy-list-with-random-pointer/"><img
-        class="lazyload"
-        src="/svg/loading.min.svg"
-        data-src="/leetcode/138.-copy-list-with-random-pointer/leetcode.png"
-        data-srcset="/leetcode/138.-copy-list-with-random-pointer/leetcode.png, /leetcode/138.-copy-list-with-random-pointer/leetcode.png 1.5x, /leetcode/138.-copy-list-with-random-pointer/leetcode.png 2x"
-        data-sizes="auto"
-        alt="/leetcode/138.-copy-list-with-random-pointer/leetcode.png"
-        title="/leetcode/138.-copy-list-with-random-pointer/leetcode.png" /></a>
-        </div><h1 class="single-title" itemprop="name headline">
-        <a href="/leetcode/138.-copy-list-with-random-pointer/">138. Copy List With Random Pointer</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>dilemmarabbit</a></span>&nbsp;<span class="post-publish">published on <time datetime="2022-03-12">2022-03-12</time></span>&nbsp;<span class="post-category">included in <a href="/categories/learning/"><i class="far fa-folder fa-fw"></i>Learning</a></span></div><div class="content">難度：🟠 Normal 🟠
-問題描述 給予一條 linked list，除了 next 指標之外還有一條連接到其他節點的 random 指標
-複製出一條 linked list 擁有相同的結構
-思路 個人思路
-由於對一條串列來說，random 是指向串列中其中一個節點，用 hash table 模仿這個行為 當產生一個新節點時，對照原本原串列的位址產生一個 hash table 的對照，並先將 next 部份完成 最後遍歷每個原串列節點的 random，將對應過去的新串列的位置給新的 random 值 程式碼 class Solution { public: Node* copyRandomList(Node* head) { map&lt;Node*,Node*&gt; table; // 建立 hash map Node* newList = new Node(0); // 哨兵節點 Node* cur = newList; // 紀錄新串列的節點位置 Node* tmp = head; // 紀錄舊串列的節點位置 while(tmp){ cur -&gt; next = new Node(tmp-&gt;val); // 根據舊串列的值產生新節點 cur = cur -&gt; next; table[tmp] = cur; // 紀錄當前新舊串列的對照狀況 tmp = tmp -&gt; next; } tmp = head; // 回到原點 cur = newList-&gt;next; // 回到原點 while(tmp){ cur -&gt; random = table[tmp -&gt; random]; // 將新串列的 random 以舊串列的對照給予 tmp = tmp -&gt; next; cur = cur -&gt; next; } return newList-&gt;next; } }; </div><div class="post-footer">
-        <a href="/leetcode/138.-copy-list-with-random-pointer/">Read More</a><div class="post-tags">
                 <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/leetcode/">LeetCode</a></div></div>
 </article><ul class="pagination"><li class="page-item active">
                     <span class="page-link">
