@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-	<meta name="generator" content="Hugo 0.104.0" />
+	<meta name="generator" content="Hugo 0.104.1" />
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
@@ -73,6 +73,22 @@
         alt="一隻會打扣的兔兔!"
         title="一隻會打扣的兔兔!" /></a></div><h1 class="home-title">DilemmaRabbit</h1><h2 class="home-subtitle"><div id="id-3" class="typeit"></div></h2><div class="links"><a href="https://github.com/dilemmarabbit" title="GitHub" target="_blank" rel="noopener noreferrer me"><i class="fab fa-github fa-fw"></i></a><a href="https://facebook.com/100001572938761" title="facebook" target="_blank" rel="noopener noreferrer me"><i class="fab fa-facebook fa-fw"></i></a><a href="https://t.me/dilemmarabbit" title="Telegram" target="_blank" rel="noopener noreferrer me"><i class="fab fa-telegram-plane fa-fw"></i></a><a href="mailto:a21663832@gmail.com" title="Email" rel=" me"><i class="far fa-envelope fa-fw"></i></a></div></div>
 <article class="single summary" itemscope itemtype="http://schema.org/Article"><div class="featured-image-preview">
+            <a href="/leetcode/990.-satisfiability-of-equality-equations/"><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/leetcode/990.-satisfiability-of-equality-equations/leetcode.png"
+        data-srcset="/leetcode/990.-satisfiability-of-equality-equations/leetcode.png, /leetcode/990.-satisfiability-of-equality-equations/leetcode.png 1.5x, /leetcode/990.-satisfiability-of-equality-equations/leetcode.png 2x"
+        data-sizes="auto"
+        alt="/leetcode/990.-satisfiability-of-equality-equations/leetcode.png"
+        title="/leetcode/990.-satisfiability-of-equality-equations/leetcode.png" /></a>
+        </div><h1 class="single-title" itemprop="name headline">
+        <a href="/leetcode/990.-satisfiability-of-equality-equations/">990. Satisfiability of Equality Equations</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>dilemmarabbit</a></span>&nbsp;<span class="post-publish">published on <time datetime="2022-09-26">2022-09-26</time></span>&nbsp;<span class="post-category">included in <a href="/categories/learning/"><i class="far fa-folder fa-fw"></i>Learning</a></span></div><div class="content">難度：🟠 Normal 🟠
+問題描述 給予一個包含兩種狀況的判斷式，&ldquo;a==b&rdquo;、&ldquo;a!=b&rdquo;，判斷所有的判斷式是否合理，回傳 true/false
+思路 Union find 把每個字母進行編號(分別代表不同的群組) 當 &ldquo;==&quot;，把右邊字母的群組改成左邊字母的群組 假如右邊字母的群組不是原本的群組(被歸類過)，則在找到源頭為止，把所有的源頭都改成左邊字母的群組 完成分群後，掃過每一個 &ldquo;!=&quot;，當兩邊字母在同群組時，判斷為失敗 程式碼 class Solution { public: std::vector&lt;int&gt; group; int find_leader(int cur){ if(group[cur] == cur) return cur; else{ group[cur] = find_leader(group[cur]); return group[cur]; } } void merge(int prev, int after){ int g1 = find_leader(prev-97); int g2 = find_leader(after-97); if(g1 != g2){ group[g2] = g1; } } bool equationsPossible(vector&lt;string&gt;&amp; equations) { for(int i = 0; i &lt; 26; i++) group.</div><div class="post-footer">
+        <a href="/leetcode/990.-satisfiability-of-equality-equations/">Read More</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/leetcode/">LeetCode</a></div></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><div class="featured-image-preview">
             <a href="/leetcode/622.-design-circular-queue/"><img
         class="lazyload"
         src="/svg/loading.min.svg"
@@ -156,24 +172,6 @@ MyCircularQueue(k)：產生一條長度為 k 的駐列 int fornt()：回傳目�
 由於對一條串列來說，random 是指向串列中其中一個節點，用 hash table 模仿這個行為 當產生一個新節點時，對照原本原串列的位址產生一個 hash table 的對照，並先將 next 部份完成 最後遍歷每個原串列節點的 random，將對應過去的新串列的位置給新的 random 值 程式碼 class Solution { public: Node* copyRandomList(Node* head) { map&lt;Node*,Node*&gt; table; // 建立 hash map Node* newList = new Node(0); // 哨兵節點 Node* cur = newList; // 紀錄新串列的節點位置 Node* tmp = head; // 紀錄舊串列的節點位置 while(tmp){ cur -&gt; next = new Node(tmp-&gt;val); // 根據舊串列的值產生新節點 cur = cur -&gt; next; table[tmp] = cur; // 紀錄當前新舊串列的對照狀況 tmp = tmp -&gt; next; } tmp = head; // 回到原點 cur = newList-&gt;next; // 回到原點 while(tmp){ cur -&gt; random = table[tmp -&gt; random]; // 將新串列的 random 以舊串列的對照給予 tmp = tmp -&gt; next; cur = cur -&gt; next; } return newList-&gt;next; } }; </div><div class="post-footer">
         <a href="/leetcode/138.-copy-list-with-random-pointer/">Read More</a><div class="post-tags">
                 <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/leetcode/">LeetCode</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><div class="featured-image-preview">
-            <a href="/leetcode/61.-rotate-list/"><img
-        class="lazyload"
-        src="/svg/loading.min.svg"
-        data-src="/leetcode/61.-rotate-list/leetcode.png"
-        data-srcset="/leetcode/61.-rotate-list/leetcode.png, /leetcode/61.-rotate-list/leetcode.png 1.5x, /leetcode/61.-rotate-list/leetcode.png 2x"
-        data-sizes="auto"
-        alt="/leetcode/61.-rotate-list/leetcode.png"
-        title="/leetcode/61.-rotate-list/leetcode.png" /></a>
-        </div><h1 class="single-title" itemprop="name headline">
-        <a href="/leetcode/61.-rotate-list/">61. Rotate List</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>dilemmarabbit</a></span>&nbsp;<span class="post-publish">published on <time datetime="2022-03-11">2022-03-11</time></span>&nbsp;<span class="post-category">included in <a href="/categories/learning/"><i class="far fa-folder fa-fw"></i>Learning</a></span></div><div class="content">難度：🟠 Normal 🟠
-問題描述 給予一條 linked list 以及 k，代表這個 linked list 向右位移 k 個單位(最末尾會變成新的 head)，回傳最後的 linked list
-思路 個人思路(雙指標)
-讓快慢指標先距離 k 個單位(需要用一個 cnt 預先計算好最小的距離，否則會 TLE) 快慢指標同時移動直到快指標移動到尾部 將快指標的尾部接上原本的頭，慢指標 next 當作新的頭，並將慢指標當作尾部(指向空指標) 解答思路(單指標)
-一樣先紀錄 cnt 數量，並讓指標移動到 k 個單位的位置 將指標的尾部直接接上頭，形成一條循環 linked list 移動到目標位置 cnt - (k % cnt)，並設定新的頭以及尾 程式碼 // 個人方法 class Solution { public: ListNode* rotateRight(ListNode* head, int k) { if(!head) return head; int cnt = 0; ListNode *fast, *slow; fast = head; slow = head; while(slow){ slow = slow-&gt;next; cnt++; // 紀錄總共的節點數量 } slow = head; // 慢指標回復到原本位置 for(int i = 0; i &lt; k % cnt; i++){ if(fast -&gt; next) fast = fast-&gt;next; // 快指標前進到目標位置 } while(fast -&gt; next !</div><div class="post-footer">
-        <a href="/leetcode/61.-rotate-list/">Read More</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/leetcode/">LeetCode</a></div></div>
 </article><ul class="pagination"><li class="page-item active">
                     <span class="page-link">
                         <a href="/">1</a>
@@ -182,9 +180,13 @@ MyCircularQueue(k)：產生一條長度為 k 的駐列 int fornt()：回傳目�
                     <span class="page-link">
                         <a href="/page/2/">2</a>
                     </span>
+                </li><li class="page-item ">
+                    <span class="page-link">
+                        <a href="/page/3/">3</a>
+                    </span>
                 </li></ul></div></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreferrer" title="Hugo 0.104.0">Hugo</a> | Theme - <a href="https://github.com/sunt-programator/CodeIT" target="_blank" rel="noopener noreferrer" title="CodeIT 0.2.10"><i class="fas fa-laptop-code fa-fw"></i> CodeIT</a>
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreferrer" title="Hugo 0.104.1">Hugo</a> | Theme - <a href="https://github.com/sunt-programator/CodeIT" target="_blank" rel="noopener noreferrer" title="CodeIT 0.2.10"><i class="fas fa-laptop-code fa-fw"></i> CodeIT</a>
                 </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank" rel="noopener noreferrer">dilemmarabbit</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
         </div>
     </footer></div>

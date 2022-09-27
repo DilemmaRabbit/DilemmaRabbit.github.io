@@ -4,7 +4,14 @@
         <link>https://DilemmaRabbit.github.io/tags/leetcode/</link>
         <description>LeetCode - Tag - Dilemma Rabbit</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>a21663832@gmail.com (dilemmarabbit)</managingEditor>
-            <webMaster>a21663832@gmail.com (dilemmarabbit)</webMaster><lastBuildDate>Sun, 25 Sep 2022 16:37:19 &#43;0800</lastBuildDate><atom:link href="https://DilemmaRabbit.github.io/tags/leetcode/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>a21663832@gmail.com (dilemmarabbit)</webMaster><lastBuildDate>Mon, 26 Sep 2022 17:06:04 &#43;0800</lastBuildDate><atom:link href="https://DilemmaRabbit.github.io/tags/leetcode/" rel="self" type="application/rss+xml" /><item>
+    <title>990. Satisfiability of Equality Equations</title>
+    <link>https://DilemmaRabbit.github.io/leetcode/990.-satisfiability-of-equality-equations/</link>
+    <pubDate>Mon, 26 Sep 2022 17:06:04 &#43;0800</pubDate><author>a21663832@gmail.com</author><dc:creator>dilemmarabbit</dc:creator><guid>https://DilemmaRabbit.github.io/leetcode/990.-satisfiability-of-equality-equations/</guid>
+    <description><![CDATA[難度：🟠 Normal 🟠
+問題描述 給予一個包含兩種狀況的判斷式，&ldquo;a==b&rdquo;、&ldquo;a!=b&rdquo;，判斷所有的判斷式是否合理，回傳 true/false
+思路 Union find 把每個字母進行編號(分別代表不同的群組) 當 &ldquo;==&quot;，把右邊字母的群組改成左邊字母的群組 假如右邊字母的群組不是原本的群組(被歸類過)，則在找到源頭為止，把所有的源頭都改成左邊字母的群組 完成分群後，掃過每一個 &ldquo;!=&quot;，當兩邊字母在同群組時，判斷為失敗 程式碼 class Solution { public: std::vector&lt;int&gt; group; int find_leader(int cur){ if(group[cur] == cur) return cur; else{ group[cur] = find_leader(group[cur]); return group[cur]; } } void merge(int prev, int after){ int g1 = find_leader(prev-97); int g2 = find_leader(after-97); if(g1 != g2){ group[g2] = g1; } } bool equationsPossible(vector&lt;string&gt;&amp; equations) { for(int i = 0; i &lt; 26; i++) group.]]></description>
+</item><item>
     <title>622. Design Circular Queue</title>
     <link>https://DilemmaRabbit.github.io/leetcode/622.-design-circular-queue/</link>
     <pubDate>Sun, 25 Sep 2022 16:37:19 &#43;0800</pubDate><author>a21663832@gmail.com</author><dc:creator>dilemmarabbit</dc:creator><guid>https://DilemmaRabbit.github.io/leetcode/622.-design-circular-queue/</guid>
@@ -77,14 +84,5 @@ MyCircularQueue(k)：產生一條長度為 k 的駐列 int fornt()：回傳目�
 測資：-105 &lt;= Node.val &lt;= 105
 思路 遍歷節點，並將節點改為範圍外的數字，假設碰到範圍外的數字則代表進入迴圈。
 程式碼 /** * Definition for singly-linked list. * struct ListNode { * int val; * ListNode *next; * ListNode(int x) : val(x), next(NULL) {} * }; */ class Solution { public: bool hasCycle(ListNode *head) { ListNode *tmp = head; while(tmp != NULL){ if(tmp-&gt;val != 100001) tmp-&gt;val = 100001; else return true; tmp = tmp-&gt;next; } return false; } }; ]]></description>
-</item><item>
-    <title>21. Merge Two Sorted Lists</title>
-    <link>https://DilemmaRabbit.github.io/leetcode/21.-merge-two-sorted-lists/</link>
-    <pubDate>Mon, 07 Mar 2022 21:13:08 &#43;0800</pubDate><author>a21663832@gmail.com</author><dc:creator>dilemmarabbit</dc:creator><guid>https://DilemmaRabbit.github.io/leetcode/21.-merge-two-sorted-lists/</guid>
-    <description><![CDATA[難度：🟢 Easy 🟢
-問題描述 給定兩條已排序的 linked list，合併為一條排序的 linked list
-測資
-每條 node 數量 &lt; 50 -100 &lt;= Node.val &lt;= 100 思路 產生一個新的list head，用兩個 pointer 紀錄目前 list1 與 list2 位置，並比較大小決定下一個節點，直到其中一條結束，再由另一條補上
-程式碼 class Solution { public: ListNode* mergeTwoLists(ListNode* list1, ListNode* list2) { ListNode *list=NULL; ListNode *head=NULL; ListNode *tmp=NULL; if(list1==NULL){ return list2; } if(list2==NULL){ return list1; } while(list1!=NULL &amp;&amp; list2!=NULL){ if(list1 -&gt; val &gt;= list2 -&gt; val){ tmp = list2; list2 = list2 -&gt; next; tmp-&gt;next = NULL; } else{ tmp = list1; list1 = list1 -&gt; next; tmp-&gt;next = NULL; } if(head==NULL){ head = tmp; list = tmp; } else{ list -&gt; next = tmp; list = list -&gt; next; } if(list1 == NULL || list2 == NULL){ break; } } if(list1){ list-&gt;next=list1; } if(list2){ list-&gt;next=list2; } return head; } }; ]]></description>
 </item></channel>
 </rss>
