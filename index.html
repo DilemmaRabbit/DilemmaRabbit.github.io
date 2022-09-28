@@ -73,6 +73,24 @@
         alt="一隻會打扣的兔兔!"
         title="一隻會打扣的兔兔!" /></a></div><h1 class="home-title">DilemmaRabbit</h1><h2 class="home-subtitle"><div id="id-3" class="typeit"></div></h2><div class="links"><a href="https://github.com/dilemmarabbit" title="GitHub" target="_blank" rel="noopener noreferrer me"><i class="fab fa-github fa-fw"></i></a><a href="https://facebook.com/100001572938761" title="facebook" target="_blank" rel="noopener noreferrer me"><i class="fab fa-facebook fa-fw"></i></a><a href="https://t.me/dilemmarabbit" title="Telegram" target="_blank" rel="noopener noreferrer me"><i class="fab fa-telegram-plane fa-fw"></i></a><a href="mailto:a21663832@gmail.com" title="Email" rel=" me"><i class="far fa-envelope fa-fw"></i></a></div></div>
 <article class="single summary" itemscope itemtype="http://schema.org/Article"><div class="featured-image-preview">
+            <a href="/leetcode/19.-remove-nth-node-from-end-of-list/"><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/leetcode/19.-remove-nth-node-from-end-of-list/leetcode.png"
+        data-srcset="/leetcode/19.-remove-nth-node-from-end-of-list/leetcode.png, /leetcode/19.-remove-nth-node-from-end-of-list/leetcode.png 1.5x, /leetcode/19.-remove-nth-node-from-end-of-list/leetcode.png 2x"
+        data-sizes="auto"
+        alt="/leetcode/19.-remove-nth-node-from-end-of-list/leetcode.png"
+        title="/leetcode/19.-remove-nth-node-from-end-of-list/leetcode.png" /></a>
+        </div><h1 class="single-title" itemprop="name headline">
+        <a href="/leetcode/19.-remove-nth-node-from-end-of-list/">19. Remove Nth Node From End of List</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>dilemmarabbit</a></span>&nbsp;<span class="post-publish">published on <time datetime="2022-09-28">2022-09-28</time></span>&nbsp;<span class="post-category">included in <a href="/categories/learning/"><i class="far fa-folder fa-fw"></i>Learning</a></span></div><div class="content">難度：🟠 Normal 🟠
+問題描述 給予一條串列與整數 n，回傳減去倒數第 n 個節點的串列
+思路 two pointer
+利用兩個快慢指標，之間的距離代表了倒數 n 個的狀況，快指標到達節點末端時，慢指標到了目標節點 重新利用一次快指標，讓快指標到達目標節點的前一個節點 重新串接串列 如何不讓快指標重新遍歷一次？
+預先設定一個只向 head 的哨兵節點，與快慢指標同時移動 會多花時間與空間產生新節點 程式碼 /** * Definition for singly-linked list. * struct ListNode { * int val; * ListNode *next; * ListNode() : val(0), next(nullptr) {} * ListNode(int x) : val(x), next(nullptr) {} * ListNode(int x, ListNode *next) : val(x), next(next) {} * }; */ class Solution { public: ListNode* removeNthFromEnd(ListNode* head, int n) { ListNode* guard = new ListNode(0, head); ListNode* target = head; ListNode* tmp = head; while(--n) tmp = tmp -&gt; next; while(tmp -&gt; next !</div><div class="post-footer">
+        <a href="/leetcode/19.-remove-nth-node-from-end-of-list/">Read More</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/leetcode/">LeetCode</a></div></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><div class="featured-image-preview">
             <a href="/leetcode/838.-push-dominoes/"><img
         class="lazyload"
         src="/svg/loading.min.svg"
@@ -156,23 +174,6 @@ MyCircularQueue(k)：產生一條長度為 k 的駐列 int fornt()：回傳目�
 思路 每次比對到相同的元素，便去尋找上一個比對的結果並 + 1 //正序 dp[i][j] = dp[i-1][j-1] + 1 //倒序 dp[i][j] = dp[i-1][j-1] + 1 需要注意處理邊界的狀況 每次更新後比較最大值 BigO:O(n*m)
 程式碼 class Solution { public: int findLength(vector&lt;int&gt;&amp; nums1, vector&lt;int&gt;&amp; nums2) { int res = INT_MIN; int dp[nums1.size()][nums2.size()]; memset(dp, 0, sizeof(dp)); // 倒序 dp // for(int i = nums1.size()-1; i &gt; -1; i--){ // for(int j = nums2.size()-1; j &gt; -1; j--){ // if(nums1[i] == nums2[j]){ // if(i == nums1.</div><div class="post-footer">
         <a href="/leetcode/718.-maximum-length-of-repeated-subarray/">Read More</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/leetcode/">LeetCode</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><div class="featured-image-preview">
-            <a href="/leetcode/20.-valid-parentheses/"><img
-        class="lazyload"
-        src="/svg/loading.min.svg"
-        data-src="/leetcode/20.-valid-parentheses/leetcode.png"
-        data-srcset="/leetcode/20.-valid-parentheses/leetcode.png, /leetcode/20.-valid-parentheses/leetcode.png 1.5x, /leetcode/20.-valid-parentheses/leetcode.png 2x"
-        data-sizes="auto"
-        alt="/leetcode/20.-valid-parentheses/leetcode.png"
-        title="/leetcode/20.-valid-parentheses/leetcode.png" /></a>
-        </div><h1 class="single-title" itemprop="name headline">
-        <a href="/leetcode/20.-valid-parentheses/">20. Valid Parentheses</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>dilemmarabbit</a></span>&nbsp;<span class="post-publish">published on <time datetime="2022-03-13">2022-03-13</time></span>&nbsp;<span class="post-category">included in <a href="/categories/learning/"><i class="far fa-folder fa-fw"></i>Learning</a></span></div><div class="content">難度：🟢 Easy 🟢
-問題描述 給予一個只包含了大中小括號的字串，使用以下規則來確定此字串是否合法
-每種括號都必須閉合(左右對稱) 括號必須以正確的順序進行閉合 &ldquo;{ } ( ) []&rdquo; &ldquo;( [ { } ] )&rdquo; 思路 個人思路
-由於必須進行閉合，因此可以確保一定是存在相對的括號 由於需要進行指定順序閉合，當遇到右括號時，代表上一個一定是對應的左括號，否則不合法 用 stack 儲存遇到所有的左括號，遇到右括號則比對目前的 stack top 是否正確 假如正確則 pop 成對的括號 最後 stack 必定為空 程式碼 class Solution { public: bool isValid(string s) { stack&lt;char&gt; st; for(auto chr : s){ if(chr == &#39;}&#39; || chr == &#39;]&#39; || chr == &#39;)&#39;){ // 如果為右括號 if(st.empty()){ // 確保是否為空 return false; } else{ if(chr-1 == st.</div><div class="post-footer">
-        <a href="/leetcode/20.-valid-parentheses/">Read More</a><div class="post-tags">
                 <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/leetcode/">LeetCode</a></div></div>
 </article><ul class="pagination"><li class="page-item active">
                     <span class="page-link">
