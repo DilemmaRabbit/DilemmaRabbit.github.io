@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-	<meta name="generator" content="Hugo 0.104.1" />
+	<meta name="generator" content="Hugo 0.104.2" />
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
@@ -73,6 +73,24 @@
         alt="一隻會打扣的兔兔!"
         title="一隻會打扣的兔兔!" /></a></div><h1 class="home-title">DilemmaRabbit</h1><h2 class="home-subtitle"><div id="id-3" class="typeit"></div></h2><div class="links"><a href="https://github.com/dilemmarabbit" title="GitHub" target="_blank" rel="noopener noreferrer me"><i class="fab fa-github fa-fw"></i></a><a href="https://facebook.com/100001572938761" title="facebook" target="_blank" rel="noopener noreferrer me"><i class="fab fa-facebook fa-fw"></i></a><a href="https://t.me/dilemmarabbit" title="Telegram" target="_blank" rel="noopener noreferrer me"><i class="fab fa-telegram-plane fa-fw"></i></a><a href="mailto:a21663832@gmail.com" title="Email" rel=" me"><i class="far fa-envelope fa-fw"></i></a></div></div>
 <article class="single summary" itemscope itemtype="http://schema.org/Article"><div class="featured-image-preview">
+            <a href="/leetcode/141.-linked-list-cycle/"><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/leetcode/141.-linked-list-cycle/leetcode.png"
+        data-srcset="/leetcode/141.-linked-list-cycle/leetcode.png, /leetcode/141.-linked-list-cycle/leetcode.png 1.5x, /leetcode/141.-linked-list-cycle/leetcode.png 2x"
+        data-sizes="auto"
+        alt="/leetcode/141.-linked-list-cycle/leetcode.png"
+        title="/leetcode/141.-linked-list-cycle/leetcode.png" /></a>
+        </div><h1 class="single-title" itemprop="name headline">
+        <a href="/leetcode/141.-linked-list-cycle/">141. Linked List Cycle</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>dilemmarabbit</a></span>&nbsp;<span class="post-publish">published on <time datetime="2022-03-08">2022-03-08</time></span>&nbsp;<span class="post-category">included in <a href="/categories/learning/"><i class="far fa-folder fa-fw"></i>Learning</a></span></div><div class="content">難度：🟢 Easy 🟢
+問題描述 給予一條可能產生迴圈的 linked list，返回 true or false 表示有無迴圈。
+測資：-105 &lt;= Node.val &lt;= 105
+思路 遍歷節點，並將節點改為範圍外的數字，假設碰到範圍外的數字則代表進入迴圈。
+程式碼 /** * Definition for singly-linked list. * struct ListNode { * int val; * ListNode *next; * ListNode(int x) : val(x), next(NULL) {} * }; */ class Solution { public: bool hasCycle(ListNode *head) { ListNode *tmp = head; while(tmp != NULL){ if(tmp-&gt;val != 100001) tmp-&gt;val = 100001; else return true; tmp = tmp-&gt;next; } return false; } }; </div><div class="post-footer">
+        <a href="/leetcode/141.-linked-list-cycle/">Read More</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/leetcode/">LeetCode</a></div></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><div class="featured-image-preview">
             <a href="/leetcode/21.-merge-two-sorted-lists/"><img
         class="lazyload"
         src="/svg/loading.min.svg"
@@ -130,7 +148,7 @@ Github Page 建立 1. 建立一個名稱為 username.github.io 的 repo 2. 從 g
                     </span>
                 </li></ul></div></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreferrer" title="Hugo 0.104.1">Hugo</a> | Theme - <a href="https://github.com/sunt-programator/CodeIT" target="_blank" rel="noopener noreferrer" title="CodeIT 0.2.10"><i class="fas fa-laptop-code fa-fw"></i> CodeIT</a>
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreferrer" title="Hugo 0.104.2">Hugo</a> | Theme - <a href="https://github.com/sunt-programator/CodeIT" target="_blank" rel="noopener noreferrer" title="CodeIT 0.2.10"><i class="fas fa-laptop-code fa-fw"></i> CodeIT</a>
                 </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank" rel="noopener noreferrer">dilemmarabbit</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
         </div>
     </footer></div>

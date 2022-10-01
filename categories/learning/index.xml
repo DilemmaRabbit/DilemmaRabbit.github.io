@@ -4,7 +4,16 @@
         <link>https://DilemmaRabbit.github.io/categories/learning/</link>
         <description>Learning - Category - Dilemma Rabbit</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>a21663832@gmail.com (dilemmarabbit)</managingEditor>
-            <webMaster>a21663832@gmail.com (dilemmarabbit)</webMaster><lastBuildDate>Wed, 28 Sep 2022 12:06:26 &#43;0800</lastBuildDate><atom:link href="https://DilemmaRabbit.github.io/categories/learning/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>a21663832@gmail.com (dilemmarabbit)</webMaster><lastBuildDate>Sat, 01 Oct 2022 14:46:09 &#43;0800</lastBuildDate><atom:link href="https://DilemmaRabbit.github.io/categories/learning/" rel="self" type="application/rss+xml" /><item>
+    <title>91. Decode Ways</title>
+    <link>https://DilemmaRabbit.github.io/leetcode/91.-decode-ways/</link>
+    <pubDate>Sat, 01 Oct 2022 14:46:09 &#43;0800</pubDate><author>a21663832@gmail.com</author><dc:creator>dilemmarabbit</dc:creator><guid>https://DilemmaRabbit.github.io/leetcode/91.-decode-ways/</guid>
+    <description><![CDATA[難度：🟠 Normal 🟠
+問題描述 給予一個包含數字的字串，字串內的字元可以轉換為對應的英文字母(A=1、B=2&hellip;&hellip;Z=26)，一個數字字串可能可以轉為多種不同的結果，返回所有可能的結果數量。 如果無法完全處理整個字串，則回傳 0，代表沒有可能的結果。
+思路 DFS(Time Limit Exceed)
+設定一個 index，表示此 index 前(包含)的字元已經過檢查，可形成結果 每次檢查 s[index+1] , s[index+1:index+2] 的字串結果，如果通過檢查，將 index +1 / +2 的結果進入下一次 DFS 如果到達了字串的末尾，代表成功產生結果 盲點：111可分為 1 11 / 11 1 / 1 1 1 三種結果，但是需要計算 3 次，無法重複使用已知的結果 DP
+建立一個 vector，代表第 N 個字串前的結果數量 -&gt; dp[size()+1] // dp[0] 不紀錄結果資訊 當加入了一個新的字元，有兩種可能結果 字元本身可以成為新的結果 字元可以與前一個字元產生新的結果 然而需要考慮不符合的情況(沒有產生結果) 算法類似費式數列 字元本身可以成為新的結果 -&gt; dp[i] += dp[i-1]; 字元可以與前一個字元產生新的結果 -&gt; dp[i] += dp[i-2] 最後回傳 dp[size()] dp[0] 必須是 1 由於第一個字元會參考到 dp[i-1]，如果判斷式成立的話會是一種結果(也可以直接附值 0) 由於第二個字元會參考到 dp[i-2] 的結果，如果判斷式成立的話會是一種結果 程式碼 class Solution { public: // dfs(TLE) // int res = 0; // string str; // void dfs(int index){ // if(index == str.]]></description>
+</item><item>
     <title>19. Remove Nth Node From End of List</title>
     <link>https://DilemmaRabbit.github.io/leetcode/19.-remove-nth-node-from-end-of-list/</link>
     <pubDate>Wed, 28 Sep 2022 12:06:26 &#43;0800</pubDate><author>a21663832@gmail.com</author><dc:creator>dilemmarabbit</dc:creator><guid>https://DilemmaRabbit.github.io/leetcode/19.-remove-nth-node-from-end-of-list/</guid>
@@ -79,12 +88,5 @@ MyCircularQueue(k)：產生一條長度為 k 的駐列 int fornt()：回傳目�
 思路 個人思路(雙指標)
 讓快慢指標先距離 k 個單位(需要用一個 cnt 預先計算好最小的距離，否則會 TLE) 快慢指標同時移動直到快指標移動到尾部 將快指標的尾部接上原本的頭，慢指標 next 當作新的頭，並將慢指標當作尾部(指向空指標) 解答思路(單指標)
 一樣先紀錄 cnt 數量，並讓指標移動到 k 個單位的位置 將指標的尾部直接接上頭，形成一條循環 linked list 移動到目標位置 cnt - (k % cnt)，並設定新的頭以及尾 程式碼 // 個人方法 class Solution { public: ListNode* rotateRight(ListNode* head, int k) { if(!head) return head; int cnt = 0; ListNode *fast, *slow; fast = head; slow = head; while(slow){ slow = slow-&gt;next; cnt++; // 紀錄總共的節點數量 } slow = head; // 慢指標回復到原本位置 for(int i = 0; i &lt; k % cnt; i++){ if(fast -&gt; next) fast = fast-&gt;next; // 快指標前進到目標位置 } while(fast -&gt; next !]]></description>
-</item><item>
-    <title>2. Add Two Numbers</title>
-    <link>https://DilemmaRabbit.github.io/leetcode/2.-add-two-numbers/</link>
-    <pubDate>Fri, 11 Mar 2022 13:23:24 &#43;0800</pubDate><author>a21663832@gmail.com</author><dc:creator>dilemmarabbit</dc:creator><guid>https://DilemmaRabbit.github.io/leetcode/2.-add-two-numbers/</guid>
-    <description><![CDATA[難度：🟠 Normal 🟠
-問題描述 給予兩條 linked list，代表從個位數開始的兩組數字，回傳一條代表這兩組數字加總的 linked list
-思路 利用自創的一個 Node 當作哨兵節點 計算每個回合當下的加總以及進位 兩條 linked list 同時遍歷，當 next 等於空指標時代表某一條到底，下次開始把加總的值設為 0 當兩個指標都是空指標值代表加總完畢並退出 最後考慮最後一次的進位 程式碼 class Solution { public: ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) { int carry = 0; int sum = 0; int val1,val2; ListNode *tmp; ListNode *head = new ListNode(10); // 哨兵節點 tmp = head; // 當兩條 linked list 都結束時退出 while(l1 || l2){ if(l1 == NULL) val1 = 0; // 確定 linked list 是否結束 else val1 = l1 -&gt; val; if(l2 == NULL) val2 = 0; // 確定 linked list 是否結束 else val2 = l2 -&gt; val; sum = val1 + val2 + carry; // 計算當前加總 carry = sum / 10; // 計算進位 tmp -&gt; next = new ListNode(sum % 10); // 產生新節點 tmp = tmp -&gt; next; if(l1) l1 = l1 -&gt; next; // 避免進入空指標 if(l2) l2 = l2 -&gt; next; // 避免進入空指標 } if(carry == 1) tmp -&gt; next = new ListNode(1); // 最後的進位 return head-&gt;next; } }; ]]></description>
 </item></channel>
 </rss>

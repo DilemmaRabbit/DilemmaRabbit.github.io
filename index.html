@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-	<meta name="generator" content="Hugo 0.104.1" />
+	<meta name="generator" content="Hugo 0.104.2" />
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
@@ -73,6 +73,24 @@
         alt="一隻會打扣的兔兔!"
         title="一隻會打扣的兔兔!" /></a></div><h1 class="home-title">DilemmaRabbit</h1><h2 class="home-subtitle"><div id="id-3" class="typeit"></div></h2><div class="links"><a href="https://github.com/dilemmarabbit" title="GitHub" target="_blank" rel="noopener noreferrer me"><i class="fab fa-github fa-fw"></i></a><a href="https://facebook.com/100001572938761" title="facebook" target="_blank" rel="noopener noreferrer me"><i class="fab fa-facebook fa-fw"></i></a><a href="https://t.me/dilemmarabbit" title="Telegram" target="_blank" rel="noopener noreferrer me"><i class="fab fa-telegram-plane fa-fw"></i></a><a href="mailto:a21663832@gmail.com" title="Email" rel=" me"><i class="far fa-envelope fa-fw"></i></a></div></div>
 <article class="single summary" itemscope itemtype="http://schema.org/Article"><div class="featured-image-preview">
+            <a href="/leetcode/91.-decode-ways/"><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/leetcode/91.-decode-ways/leetcode.png"
+        data-srcset="/leetcode/91.-decode-ways/leetcode.png, /leetcode/91.-decode-ways/leetcode.png 1.5x, /leetcode/91.-decode-ways/leetcode.png 2x"
+        data-sizes="auto"
+        alt="/leetcode/91.-decode-ways/leetcode.png"
+        title="/leetcode/91.-decode-ways/leetcode.png" /></a>
+        </div><h1 class="single-title" itemprop="name headline">
+        <a href="/leetcode/91.-decode-ways/">91. Decode Ways</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>dilemmarabbit</a></span>&nbsp;<span class="post-publish">published on <time datetime="2022-10-01">2022-10-01</time></span>&nbsp;<span class="post-category">included in <a href="/categories/learning/"><i class="far fa-folder fa-fw"></i>Learning</a></span></div><div class="content">難度：🟠 Normal 🟠
+問題描述 給予一個包含數字的字串，字串內的字元可以轉換為對應的英文字母(A=1、B=2&hellip;&hellip;Z=26)，一個數字字串可能可以轉為多種不同的結果，返回所有可能的結果數量。 如果無法完全處理整個字串，則回傳 0，代表沒有可能的結果。
+思路 DFS(Time Limit Exceed)
+設定一個 index，表示此 index 前(包含)的字元已經過檢查，可形成結果 每次檢查 s[index+1] , s[index+1:index+2] 的字串結果，如果通過檢查，將 index +1 / +2 的結果進入下一次 DFS 如果到達了字串的末尾，代表成功產生結果 盲點：111可分為 1 11 / 11 1 / 1 1 1 三種結果，但是需要計算 3 次，無法重複使用已知的結果 DP
+建立一個 vector，代表第 N 個字串前的結果數量 -&gt; dp[size()+1] // dp[0] 不紀錄結果資訊 當加入了一個新的字元，有兩種可能結果 字元本身可以成為新的結果 字元可以與前一個字元產生新的結果 然而需要考慮不符合的情況(沒有產生結果) 算法類似費式數列 字元本身可以成為新的結果 -&gt; dp[i] += dp[i-1]; 字元可以與前一個字元產生新的結果 -&gt; dp[i] += dp[i-2] 最後回傳 dp[size()] dp[0] 必須是 1 由於第一個字元會參考到 dp[i-1]，如果判斷式成立的話會是一種結果(也可以直接附值 0) 由於第二個字元會參考到 dp[i-2] 的結果，如果判斷式成立的話會是一種結果 程式碼 class Solution { public: // dfs(TLE) // int res = 0; // string str; // void dfs(int index){ // if(index == str.</div><div class="post-footer">
+        <a href="/leetcode/91.-decode-ways/">Read More</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/leetcode/">LeetCode</a></div></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><div class="featured-image-preview">
             <a href="/leetcode/19.-remove-nth-node-from-end-of-list/"><img
         class="lazyload"
         src="/svg/loading.min.svg"
@@ -159,22 +177,6 @@ MyCircularQueue(k)：產生一條長度為 k 的駐列 int fornt()：回傳目�
 程式碼 class Solution { public: vector&lt;int&gt; sumEvenAfterQueries(vector&lt;int&gt;&amp; nums, vector&lt;vector&lt;int&gt;&gt;&amp; queries) { vector&lt;int&gt; res; int tmp = 0; for(int i = 0; i &lt; nums.size(); i++){ if(nums[i] % 2 == 0) tmp += nums[i]; } for(int i = 0; i &lt; queries.size(); i++){ if((nums[queries[i][1]] + queries[i][0]) % 2 == 0){ // 如果加總後是偶數 if(nums[queries[i][1]] % 2 == 0){ tmp += queries[i][0]; // 偶數的情況下，因為結果已經具有了原數值，只需要加上增減的部分 } else{ tmp += nums[queries[i][1]] + queries[i][0]; // 奇數的情況下便加上總和 } } else{ // 如果加總後是奇數 if(nums[queries[i][1]] % 2 == 0){ tmp -= nums[queries[i][1]]; // 原本是偶數的狀況下，要減掉自身 } // 奇數變奇數，不會更新結果，只需要更新 nums } nums[queries[i][1]] = nums[queries[i][1]] + queries[i][0]; // 更新 nums res.</div><div class="post-footer">
         <a href="/leetcode/985.-sum-of-even-numbers-after-queries/">Read More</a><div class="post-tags">
                 <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/leetcode/">LeetCode</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><div class="featured-image-preview">
-            <a href="/leetcode/718.-maximum-length-of-repeated-subarray/"><img
-        class="lazyload"
-        src="/svg/loading.min.svg"
-        data-src="/leetcode/718.-maximum-length-of-repeated-subarray/leetcode.png"
-        data-srcset="/leetcode/718.-maximum-length-of-repeated-subarray/leetcode.png, /leetcode/718.-maximum-length-of-repeated-subarray/leetcode.png 1.5x, /leetcode/718.-maximum-length-of-repeated-subarray/leetcode.png 2x"
-        data-sizes="auto"
-        alt="/leetcode/718.-maximum-length-of-repeated-subarray/leetcode.png"
-        title="/leetcode/718.-maximum-length-of-repeated-subarray/leetcode.png" /></a>
-        </div><h1 class="single-title" itemprop="name headline">
-        <a href="/leetcode/718.-maximum-length-of-repeated-subarray/">718. Maximum Length of Repeated Subarray</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>dilemmarabbit</a></span>&nbsp;<span class="post-publish">published on <time datetime="2022-09-20">2022-09-20</time></span>&nbsp;<span class="post-category">included in <a href="/categories/learning/"><i class="far fa-folder fa-fw"></i>Learning</a></span></div><div class="content">難度：🟠 Normal 🟠 問題描述 給與兩個 array，返回最長公共子陣列的最大值
-思路 每次比對到相同的元素，便去尋找上一個比對的結果並 + 1 //正序 dp[i][j] = dp[i-1][j-1] + 1 //倒序 dp[i][j] = dp[i-1][j-1] + 1 需要注意處理邊界的狀況 每次更新後比較最大值 BigO:O(n*m)
-程式碼 class Solution { public: int findLength(vector&lt;int&gt;&amp; nums1, vector&lt;int&gt;&amp; nums2) { int res = INT_MIN; int dp[nums1.size()][nums2.size()]; memset(dp, 0, sizeof(dp)); // 倒序 dp // for(int i = nums1.size()-1; i &gt; -1; i--){ // for(int j = nums2.size()-1; j &gt; -1; j--){ // if(nums1[i] == nums2[j]){ // if(i == nums1.</div><div class="post-footer">
-        <a href="/leetcode/718.-maximum-length-of-repeated-subarray/">Read More</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/leetcode/">LeetCode</a></div></div>
 </article><ul class="pagination"><li class="page-item active">
                     <span class="page-link">
                         <a href="/">1</a>
@@ -189,7 +191,7 @@ MyCircularQueue(k)：產生一條長度為 k 的駐列 int fornt()：回傳目�
                     </span>
                 </li></ul></div></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreferrer" title="Hugo 0.104.1">Hugo</a> | Theme - <a href="https://github.com/sunt-programator/CodeIT" target="_blank" rel="noopener noreferrer" title="CodeIT 0.2.10"><i class="fas fa-laptop-code fa-fw"></i> CodeIT</a>
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreferrer" title="Hugo 0.104.2">Hugo</a> | Theme - <a href="https://github.com/sunt-programator/CodeIT" target="_blank" rel="noopener noreferrer" title="CodeIT 0.2.10"><i class="fas fa-laptop-code fa-fw"></i> CodeIT</a>
                 </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank" rel="noopener noreferrer">dilemmarabbit</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
         </div>
     </footer></div>
