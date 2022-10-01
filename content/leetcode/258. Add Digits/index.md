@@ -3,7 +3,7 @@ title: "258. Add Digits"
 date: 2022-02-08T16:04:48+08:00
 draft: false
 categories: ["Learning"]
-Tags: ["LeetCode","解題紀錄"]
+Tags: ["LeetCode"]
 
 resources:
   - name: "featured-image"
