@@ -2,13 +2,14 @@
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
+            <loc>https://DilemmaRabbit.github.io/leetcode/1578.-minimum-time-to-make-rope-colorful/</loc><lastmod>2022-10-03T09:45:24&#43;08:00</lastmod></url><url>
+            <loc>https://DilemmaRabbit.github.io/categories/</loc><lastmod>2022-10-03T09:45:24&#43;08:00</lastmod></url><url>
+            <loc>https://DilemmaRabbit.github.io/</loc><lastmod>2022-10-03T09:45:24&#43;08:00</lastmod></url><url>
+            <loc>https://DilemmaRabbit.github.io/categories/learning/</loc><lastmod>2022-10-03T09:45:24&#43;08:00</lastmod></url><url>
+            <loc>https://DilemmaRabbit.github.io/tags/leetcode/</loc><lastmod>2022-10-03T09:45:24&#43;08:00</lastmod></url><url>
+            <loc>https://DilemmaRabbit.github.io/leetcode/</loc><lastmod>2022-10-03T09:45:24&#43;08:00</lastmod></url><url>
+            <loc>https://DilemmaRabbit.github.io/tags/</loc><lastmod>2022-10-03T09:45:24&#43;08:00</lastmod></url><url>
             <loc>https://DilemmaRabbit.github.io/leetcode/1155.-number-of-dice-rolls-with-target-sum/</loc><lastmod>2022-10-02T12:59:55&#43;08:00</lastmod></url><url>
-            <loc>https://DilemmaRabbit.github.io/categories/</loc><lastmod>2022-10-02T12:59:55&#43;08:00</lastmod></url><url>
-            <loc>https://DilemmaRabbit.github.io/</loc><lastmod>2022-10-02T12:59:55&#43;08:00</lastmod></url><url>
-            <loc>https://DilemmaRabbit.github.io/categories/learning/</loc><lastmod>2022-10-02T12:59:55&#43;08:00</lastmod></url><url>
-            <loc>https://DilemmaRabbit.github.io/tags/leetcode/</loc><lastmod>2022-10-02T12:59:55&#43;08:00</lastmod></url><url>
-            <loc>https://DilemmaRabbit.github.io/leetcode/</loc><lastmod>2022-10-02T12:59:55&#43;08:00</lastmod></url><url>
-            <loc>https://DilemmaRabbit.github.io/tags/</loc><lastmod>2022-10-02T12:59:55&#43;08:00</lastmod></url><url>
             <loc>https://DilemmaRabbit.github.io/leetcode/91.-decode-ways/</loc><lastmod>2022-10-01T14:46:09&#43;08:00</lastmod></url><url>
             <loc>https://DilemmaRabbit.github.io/leetcode/19.-remove-nth-node-from-end-of-list/</loc><lastmod>2022-09-28T12:06:26&#43;08:00</lastmod></url><url>
             <loc>https://DilemmaRabbit.github.io/leetcode/838.-push-dominoes/</loc><lastmod>2022-09-27T14:42:21&#43;08:00</lastmod></url><url>

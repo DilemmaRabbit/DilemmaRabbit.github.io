@@ -4,7 +4,13 @@
         <link>https://DilemmaRabbit.github.io/tags/leetcode/</link>
         <description>LeetCode - Tag - Dilemma Rabbit</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>a21663832@gmail.com (dilemmarabbit)</managingEditor>
-            <webMaster>a21663832@gmail.com (dilemmarabbit)</webMaster><lastBuildDate>Sun, 02 Oct 2022 12:59:55 &#43;0800</lastBuildDate><atom:link href="https://DilemmaRabbit.github.io/tags/leetcode/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>a21663832@gmail.com (dilemmarabbit)</webMaster><lastBuildDate>Mon, 03 Oct 2022 09:45:24 &#43;0800</lastBuildDate><atom:link href="https://DilemmaRabbit.github.io/tags/leetcode/" rel="self" type="application/rss+xml" /><item>
+    <title>1578. Minimum Time to Make Rope Colorful</title>
+    <link>https://DilemmaRabbit.github.io/leetcode/1578.-minimum-time-to-make-rope-colorful/</link>
+    <pubDate>Mon, 03 Oct 2022 09:45:24 &#43;0800</pubDate><author>a21663832@gmail.com</author><dc:creator>dilemmarabbit</dc:creator><guid>https://DilemmaRabbit.github.io/leetcode/1578.-minimum-time-to-make-rope-colorful/</guid>
+    <description><![CDATA[難度：🟠 Normal 🟠
+問題描述 給予一串氣球，透過移除部分氣球，達到不連續重複的排列 給予一個字串 colors，重複的字母代表同一個顏色 給予一個 vector neededTime，代表對應 clolrs 的字元所需要的時間 讓 colors 形成一個沒有連續重複字元的字串，並且計算最小所需要花費的時間 思路 字串中尋找重複的字元並移除 遍歷字串 新的字元：記錄目前的 index 及字元 重複的字元：與 index 的時間進行比較，並加總時間，並且根據大小將 index 做更新 程式碼 class Solution { public: int minCost(string colors, vector&lt;int&gt;&amp; neededTime) { int res = 0; // char cur_dup = &#39;\0&#39;; // int cur_min; // int size = colors.size(); for(int i = 0; i &lt; colors.size()-1 ;i++){ if(colors[i] == colors[i+1]){ res += neededTime[i] &gt; neededTime[i+1] ?]]></description>
+</item><item>
     <title>1155. Number of Dice Rolls With Target Sum</title>
     <link>https://DilemmaRabbit.github.io/leetcode/1155.-number-of-dice-rolls-with-target-sum/</link>
     <pubDate>Sun, 02 Oct 2022 12:59:55 &#43;0800</pubDate><author>a21663832@gmail.com</author><dc:creator>dilemmarabbit</dc:creator><guid>https://DilemmaRabbit.github.io/leetcode/1155.-number-of-dice-rolls-with-target-sum/</guid>
@@ -76,14 +82,5 @@ MyCircularQueue(k)：產生一條長度為 k 的駐列 int fornt()：回傳目�
 問題描述 給予一個只包含了大中小括號的字串，使用以下規則來確定此字串是否合法
 每種括號都必須閉合(左右對稱) 括號必須以正確的順序進行閉合 &ldquo;{ } ( ) []&rdquo; &ldquo;( [ { } ] )&rdquo; 思路 個人思路
 由於必須進行閉合，因此可以確保一定是存在相對的括號 由於需要進行指定順序閉合，當遇到右括號時，代表上一個一定是對應的左括號，否則不合法 用 stack 儲存遇到所有的左括號，遇到右括號則比對目前的 stack top 是否正確 假如正確則 pop 成對的括號 最後 stack 必定為空 程式碼 class Solution { public: bool isValid(string s) { stack&lt;char&gt; st; for(auto chr : s){ if(chr == &#39;}&#39; || chr == &#39;]&#39; || chr == &#39;)&#39;){ // 如果為右括號 if(st.empty()){ // 確保是否為空 return false; } else{ if(chr-1 == st.]]></description>
-</item><item>
-    <title>138. Copy List With Random Pointer</title>
-    <link>https://DilemmaRabbit.github.io/leetcode/138.-copy-list-with-random-pointer/</link>
-    <pubDate>Sat, 12 Mar 2022 14:44:13 &#43;0800</pubDate><author>a21663832@gmail.com</author><dc:creator>dilemmarabbit</dc:creator><guid>https://DilemmaRabbit.github.io/leetcode/138.-copy-list-with-random-pointer/</guid>
-    <description><![CDATA[難度：🟠 Normal 🟠
-問題描述 給予一條 linked list，除了 next 指標之外還有一條連接到其他節點的 random 指標
-複製出一條 linked list 擁有相同的結構
-思路 個人思路
-由於對一條串列來說，random 是指向串列中其中一個節點，用 hash table 模仿這個行為 當產生一個新節點時，對照原本原串列的位址產生一個 hash table 的對照，並先將 next 部份完成 最後遍歷每個原串列節點的 random，將對應過去的新串列的位置給新的 random 值 程式碼 class Solution { public: Node* copyRandomList(Node* head) { map&lt;Node*,Node*&gt; table; // 建立 hash map Node* newList = new Node(0); // 哨兵節點 Node* cur = newList; // 紀錄新串列的節點位置 Node* tmp = head; // 紀錄舊串列的節點位置 while(tmp){ cur -&gt; next = new Node(tmp-&gt;val); // 根據舊串列的值產生新節點 cur = cur -&gt; next; table[tmp] = cur; // 紀錄當前新舊串列的對照狀況 tmp = tmp -&gt; next; } tmp = head; // 回到原點 cur = newList-&gt;next; // 回到原點 while(tmp){ cur -&gt; random = table[tmp -&gt; random]; // 將新串列的 random 以舊串列的對照給予 tmp = tmp -&gt; next; cur = cur -&gt; next; } return newList-&gt;next; } }; ]]></description>
 </item></channel>
 </rss>
