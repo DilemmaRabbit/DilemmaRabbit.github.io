@@ -12,12 +12,11 @@
 先將重複的 node 刪除，並將重複的值紀錄在 hash map 中 根據 hash map 元素刪除表中的元素(不包含頭) 根據 hash map 元素刪除頭的重複元素 解答思路
 產生一個哨兵(sentinel)節點接上 head，就不用在考慮單獨處理 head 的情況 用一個 prev 節點當作新的定位點(不重複的元素/第一個重複的元素) 用 head 去遍歷重複的狀況，視情況用 prev 去指到新的不重複 回傳 sentinel 節點的 next 程式碼 # 個人思路 class Solution { public: ListNode* deleteDuplicates(ListNode* head) { if(head == NULL || head-&gt;next == NULL) return head; ListNode *slow,*fast; slow = head; fast = head -&gt; next; map&lt;int, bool&gt; table; while(fast !" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://DilemmaRabbit.github.io/leetcode/82.-remove-duplicates-from-sorted-list-ii/" /><meta property="og:image" content="https://DilemmaRabbit.github.io/leetcode/82.-remove-duplicates-from-sorted-list-ii/leetcode.png"/><meta property="article:section" content="leetcode" />
+<meta property="og:url" content="https://DilemmaRabbit.github.io/leetcode/82.-remove-duplicates-from-sorted-list-ii/" /><meta property="article:section" content="leetcode" />
 <meta property="article:published_time" content="2022-03-09T11:05:07+08:00" />
 <meta property="article:modified_time" content="2022-03-09T11:05:07+08:00" />
 
-<meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="https://DilemmaRabbit.github.io/leetcode/82.-remove-duplicates-from-sorted-list-ii/leetcode.png"/>
+<meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="82. Remove Duplicates From Sorted List II"/>
 <meta name="twitter:description" content="難度：🟠 Normal 🟠
 問題描述 給予一條已排列的 linked list，刪除所有不唯一的節點，返回一條排序後的 linked list
@@ -36,12 +35,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/DilemmaRabbit.github.io\/leetcode\/82.-remove-duplicates-from-sorted-list-ii\/"
-        },"image": [{
-                            "@type": "ImageObject",
-                            "url": "https:\/\/DilemmaRabbit.github.io\/leetcode\/82.-remove-duplicates-from-sorted-list-ii\/leetcode.png",
-                            "width":  724 ,
-                            "height":  226 
-                        }],"genre": "leetcode","keywords": "LeetCode","wordcount":  263 ,
+        },"genre": "leetcode","keywords": "LeetCode","wordcount":  263 ,
         "url": "https:\/\/DilemmaRabbit.github.io\/leetcode\/82.-remove-duplicates-from-sorted-list-ii\/","datePublished": "2022-03-09T11:05:07+08:00","dateModified": "2022-03-09T11:05:07+08:00","publisher": {
             "@type": "Organization",
             "name": "dilemmarabbit"},"author": {
@@ -93,14 +87,7 @@
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>dilemmarabbit</a></span>&nbsp;<span class="post-category">included in <a href="/categories/learning/"><i class="far fa-folder fa-fw"></i>Learning</a></span></div>
             <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-03-09">2022-03-09</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;263 words&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;2 minutes&nbsp;</div>
-        </div><div class="featured-image"><img
-        class="lazyload"
-        src="/svg/loading.min.svg"
-        data-src="/leetcode/82.-remove-duplicates-from-sorted-list-ii/leetcode.png"
-        data-srcset="/leetcode/82.-remove-duplicates-from-sorted-list-ii/leetcode.png, /leetcode/82.-remove-duplicates-from-sorted-list-ii/leetcode.png 1.5x, /leetcode/82.-remove-duplicates-from-sorted-list-ii/leetcode.png 2x"
-        data-sizes="auto"
-        alt="/leetcode/82.-remove-duplicates-from-sorted-list-ii/leetcode.png"
-        title="/leetcode/82.-remove-duplicates-from-sorted-list-ii/leetcode.png" /></div><div class="details toc" id="toc-static"  kept="">
+        </div><div class="details toc" id="toc-static"  kept="">
                 <div class="details-summary toc-title">
                     <span>Contents</span>
                     <span><i class="details-icon fas fa-angle-right"></i></span>
@@ -235,7 +222,7 @@
 </div>
 </article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreferrer" title="Hugo 0.104.2">Hugo</a> | Theme - <a href="https://github.com/sunt-programator/CodeIT" target="_blank" rel="noopener noreferrer" title="CodeIT 0.2.10"><i class="fas fa-laptop-code fa-fw"></i> CodeIT</a>
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreferrer" title="Hugo 0.104.3">Hugo</a> | Theme - <a href="https://github.com/sunt-programator/CodeIT" target="_blank" rel="noopener noreferrer" title="CodeIT 0.2.10"><i class="fas fa-laptop-code fa-fw"></i> CodeIT</a>
                 </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank" rel="noopener noreferrer">dilemmarabbit</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
         </div>
     </footer></div>

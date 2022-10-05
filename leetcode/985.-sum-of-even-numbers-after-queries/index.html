@@ -11,12 +11,11 @@
 思路 需要重複計算的部分為每次修改完 nums 後，重新進行總和的部分，因此可以先將總和計算出來，依據當前回合的結果，判斷需要加或減的部分，直接對總和進行運算，最後再更新新的結果到 nums 上，省去每次遍歷的過程
 程式碼 class Solution { public: vector&lt;int&gt; sumEvenAfterQueries(vector&lt;int&gt;&amp; nums, vector&lt;vector&lt;int&gt;&gt;&amp; queries) { vector&lt;int&gt; res; int tmp = 0; for(int i = 0; i &lt; nums.size(); i&#43;&#43;){ if(nums[i] % 2 == 0) tmp &#43;= nums[i]; } for(int i = 0; i &lt; queries.size(); i&#43;&#43;){ if((nums[queries[i][1]] &#43; queries[i][0]) % 2 == 0){ // 如果加總後是偶數 if(nums[queries[i][1]] % 2 == 0){ tmp &#43;= queries[i][0]; // 偶數的情況下，因為結果已經具有了原數值，只需要加上增減的部分 } else{ tmp &#43;= nums[queries[i][1]] &#43; queries[i][0]; // 奇數的情況下便加上總和 } } else{ // 如果加總後是奇數 if(nums[queries[i][1]] % 2 == 0){ tmp -= nums[queries[i][1]]; // 原本是偶數的狀況下，要減掉自身 } // 奇數變奇數，不會更新結果，只需要更新 nums } nums[queries[i][1]] = nums[queries[i][1]] &#43; queries[i][0]; // 更新 nums res." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://DilemmaRabbit.github.io/leetcode/985.-sum-of-even-numbers-after-queries/" /><meta property="og:image" content="https://DilemmaRabbit.github.io/leetcode/985.-sum-of-even-numbers-after-queries/leetcode.png"/><meta property="article:section" content="leetcode" />
+<meta property="og:url" content="https://DilemmaRabbit.github.io/leetcode/985.-sum-of-even-numbers-after-queries/" /><meta property="article:section" content="leetcode" />
 <meta property="article:published_time" content="2022-09-21T11:43:56+08:00" />
 <meta property="article:modified_time" content="2022-09-21T11:43:56+08:00" />
 
-<meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="https://DilemmaRabbit.github.io/leetcode/985.-sum-of-even-numbers-after-queries/leetcode.png"/>
+<meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="985. Sum of Even Numbers After Queries"/>
 <meta name="twitter:description" content="難度：🟠 Normal 🟠
 問題描述 給予兩個陣列 nums / queries，queries[i][0]代表增加的數值，queries[i][1]代表需要增加的 nums index，每次計算完後，只紀錄 nums 中的偶數總和，回傳一個與 nums 大小相同的結果陣列
@@ -34,12 +33,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/DilemmaRabbit.github.io\/leetcode\/985.-sum-of-even-numbers-after-queries\/"
-        },"image": [{
-                            "@type": "ImageObject",
-                            "url": "https:\/\/DilemmaRabbit.github.io\/leetcode\/985.-sum-of-even-numbers-after-queries\/leetcode.png",
-                            "width":  724 ,
-                            "height":  226 
-                        }],"genre": "leetcode","keywords": "LeetCode","wordcount":  219 ,
+        },"genre": "leetcode","keywords": "LeetCode","wordcount":  219 ,
         "url": "https:\/\/DilemmaRabbit.github.io\/leetcode\/985.-sum-of-even-numbers-after-queries\/","datePublished": "2022-09-21T11:43:56+08:00","dateModified": "2022-09-21T11:43:56+08:00","publisher": {
             "@type": "Organization",
             "name": "dilemmarabbit"},"author": {
@@ -91,14 +85,7 @@
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>dilemmarabbit</a></span>&nbsp;<span class="post-category">included in <a href="/categories/learning/"><i class="far fa-folder fa-fw"></i>Learning</a></span></div>
             <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-09-21">2022-09-21</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;219 words&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;2 minutes&nbsp;</div>
-        </div><div class="featured-image"><img
-        class="lazyload"
-        src="/svg/loading.min.svg"
-        data-src="/leetcode/985.-sum-of-even-numbers-after-queries/leetcode.png"
-        data-srcset="/leetcode/985.-sum-of-even-numbers-after-queries/leetcode.png, /leetcode/985.-sum-of-even-numbers-after-queries/leetcode.png 1.5x, /leetcode/985.-sum-of-even-numbers-after-queries/leetcode.png 2x"
-        data-sizes="auto"
-        alt="/leetcode/985.-sum-of-even-numbers-after-queries/leetcode.png"
-        title="/leetcode/985.-sum-of-even-numbers-after-queries/leetcode.png" /></div><div class="details toc" id="toc-static"  kept="">
+        </div><div class="details toc" id="toc-static"  kept="">
                 <div class="details-summary toc-title">
                     <span>Contents</span>
                     <span><i class="details-icon fas fa-angle-right"></i></span>
@@ -212,7 +199,7 @@
 </div>
 </article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreferrer" title="Hugo 0.104.2">Hugo</a> | Theme - <a href="https://github.com/sunt-programator/CodeIT" target="_blank" rel="noopener noreferrer" title="CodeIT 0.2.10"><i class="fas fa-laptop-code fa-fw"></i> CodeIT</a>
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreferrer" title="Hugo 0.104.3">Hugo</a> | Theme - <a href="https://github.com/sunt-programator/CodeIT" target="_blank" rel="noopener noreferrer" title="CodeIT 0.2.10"><i class="fas fa-laptop-code fa-fw"></i> CodeIT</a>
                 </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank" rel="noopener noreferrer">dilemmarabbit</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
         </div>
     </footer></div>

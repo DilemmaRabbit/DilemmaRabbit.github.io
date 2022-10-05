@@ -10,12 +10,11 @@
 問題描述 完成一個循環佇列(FIFO)的結構，須包含以下功能
 MyCircularQueue(k)：產生一條長度為 k 的駐列 int fornt()：回傳目前 head 的值，如果不存在，回傳 -1 int rear()：回傳目前 tail 的值，如果不存在，回傳 -1 boolean enQueue(int value)：新增新值到 queue 的尾端，如果操作失敗(佇列滿了)，回傳 false boolean deQueue()：移除目前 head 的值，如果操作失敗(佇列為空)，回傳 false boolean isEmpty()：回傳目前 queue 是否為空的狀況 boolean isFull()：回傳目前 queue 是否為滿的狀況 思路 用兩個 pointer (front/rear) 來追蹤目前的頭與尾 移除不用真的移除 queue 內原本資料，修改新的 front 就好 移除需要考慮移除到空的處理 full/empty 用 front 與 rear 來判斷 程式碼 class MyCircularQueue { public: vector&lt;int&gt; queue; int end; int front; int rear; // 檢查遍歷用 // void check(string s){ // cout &lt;&lt; s &lt;&lt; endl; // for(int i = 0; i &lt; queue." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://DilemmaRabbit.github.io/leetcode/622.-design-circular-queue/" /><meta property="og:image" content="https://DilemmaRabbit.github.io/leetcode/622.-design-circular-queue/leetcode.png"/><meta property="article:section" content="leetcode" />
+<meta property="og:url" content="https://DilemmaRabbit.github.io/leetcode/622.-design-circular-queue/" /><meta property="article:section" content="leetcode" />
 <meta property="article:published_time" content="2022-09-25T16:37:19+08:00" />
 <meta property="article:modified_time" content="2022-09-25T16:37:19+08:00" />
 
-<meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="https://DilemmaRabbit.github.io/leetcode/622.-design-circular-queue/leetcode.png"/>
+<meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="622. Design Circular Queue"/>
 <meta name="twitter:description" content="難度：🟠 Normal 🟠
 問題描述 完成一個循環佇列(FIFO)的結構，須包含以下功能
@@ -32,12 +31,7 @@ MyCircularQueue(k)：產生一條長度為 k 的駐列 int fornt()：回傳目�
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/DilemmaRabbit.github.io\/leetcode\/622.-design-circular-queue\/"
-        },"image": [{
-                            "@type": "ImageObject",
-                            "url": "https:\/\/DilemmaRabbit.github.io\/leetcode\/622.-design-circular-queue\/leetcode.png",
-                            "width":  724 ,
-                            "height":  226 
-                        }],"genre": "leetcode","keywords": "LeetCode","wordcount":  375 ,
+        },"genre": "leetcode","keywords": "LeetCode","wordcount":  375 ,
         "url": "https:\/\/DilemmaRabbit.github.io\/leetcode\/622.-design-circular-queue\/","datePublished": "2022-09-25T16:37:19+08:00","dateModified": "2022-09-25T16:37:19+08:00","publisher": {
             "@type": "Organization",
             "name": "dilemmarabbit"},"author": {
@@ -89,14 +83,7 @@ MyCircularQueue(k)：產生一條長度為 k 的駐列 int fornt()：回傳目�
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>dilemmarabbit</a></span>&nbsp;<span class="post-category">included in <a href="/categories/learning/"><i class="far fa-folder fa-fw"></i>Learning</a></span></div>
             <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-09-25">2022-09-25</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;375 words&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;2 minutes&nbsp;</div>
-        </div><div class="featured-image"><img
-        class="lazyload"
-        src="/svg/loading.min.svg"
-        data-src="/leetcode/622.-design-circular-queue/leetcode.png"
-        data-srcset="/leetcode/622.-design-circular-queue/leetcode.png, /leetcode/622.-design-circular-queue/leetcode.png 1.5x, /leetcode/622.-design-circular-queue/leetcode.png 2x"
-        data-sizes="auto"
-        alt="/leetcode/622.-design-circular-queue/leetcode.png"
-        title="/leetcode/622.-design-circular-queue/leetcode.png" /></div><div class="details toc" id="toc-static"  kept="">
+        </div><div class="details toc" id="toc-static"  kept="">
                 <div class="details-summary toc-title">
                     <span>Contents</span>
                     <span><i class="details-icon fas fa-angle-right"></i></span>
@@ -267,7 +254,7 @@ MyCircularQueue(k)：產生一條長度為 k 的駐列 int fornt()：回傳目�
 </div>
 </article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreferrer" title="Hugo 0.104.2">Hugo</a> | Theme - <a href="https://github.com/sunt-programator/CodeIT" target="_blank" rel="noopener noreferrer" title="CodeIT 0.2.10"><i class="fas fa-laptop-code fa-fw"></i> CodeIT</a>
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreferrer" title="Hugo 0.104.3">Hugo</a> | Theme - <a href="https://github.com/sunt-programator/CodeIT" target="_blank" rel="noopener noreferrer" title="CodeIT 0.2.10"><i class="fas fa-laptop-code fa-fw"></i> CodeIT</a>
                 </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank" rel="noopener noreferrer">dilemmarabbit</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
         </div>
     </footer></div>

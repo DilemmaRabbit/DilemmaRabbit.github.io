@@ -4,7 +4,14 @@
         <link>https://DilemmaRabbit.github.io/leetcode/</link>
         <description>All leetcode | Dilemma Rabbit</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>a21663832@gmail.com (dilemmarabbit)</managingEditor>
-            <webMaster>a21663832@gmail.com (dilemmarabbit)</webMaster><lastBuildDate>Mon, 03 Oct 2022 09:45:24 &#43;0800</lastBuildDate><atom:link href="https://DilemmaRabbit.github.io/leetcode/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>a21663832@gmail.com (dilemmarabbit)</webMaster><lastBuildDate>Wed, 05 Oct 2022 10:35:07 &#43;0800</lastBuildDate><atom:link href="https://DilemmaRabbit.github.io/leetcode/" rel="self" type="application/rss+xml" /><item>
+    <title>623. Add One Row to Tree</title>
+    <link>https://DilemmaRabbit.github.io/leetcode/623.-add-one-row-to-tree/</link>
+    <pubDate>Wed, 05 Oct 2022 10:35:07 &#43;0800</pubDate><author>a21663832@gmail.com</author><dc:creator>dilemmarabbit</dc:creator><guid>https://DilemmaRabbit.github.io/leetcode/623.-add-one-row-to-tree/</guid>
+    <description><![CDATA[難度：🟠 Normal 🟠
+問題描述 給予一個 binary tree 的 root, 插入值 val, 深度 depth，代表要在第 depth 層插入 val 值 如果 depth 為 1，則將 root 插入新節點的左子樹 如果 depth 不為 1，則在 depth - 1 的左右節點插入新值 原本的左右子樹則根據原本的方向成為新節點的左右子樹 思路 DFS 遍歷所有節點，直到 depth - 1 時，並新增 node BFS 將所有 depth - 1 的節點儲存於節點中，並進行逐個新增 node 程式碼 DFS code
+class Solution { public: int val; int target_depth; void dfs(TreeNode* cur, int depth){ if(depth == target_depth - 1){ // reach the parent node TreeNode* tmp; // create left node tmp = cur -&gt; left; cur -&gt; left = new TreeNode(val); cur -&gt; left -&gt; left = tmp; // create right node tmp = cur -&gt; right; cur -&gt; right = new TreeNode(val); cur -&gt; right -&gt; right = tmp; } else{ if(cur -&gt; left) dfs(cur -&gt; left, depth + 1); // enter next depth if(cur -&gt; right) dfs(cur -&gt; right, depth + 1); // enter next depth } } TreeNode* addOneRow(TreeNode* root, int val, int depth) { this -&gt; val = val; this -&gt; target_depth = depth; if(depth !]]></description>
+</item><item>
     <title>1578. Minimum Time to Make Rope Colorful</title>
     <link>https://DilemmaRabbit.github.io/leetcode/1578.-minimum-time-to-make-rope-colorful/</link>
     <pubDate>Mon, 03 Oct 2022 09:45:24 &#43;0800</pubDate><author>a21663832@gmail.com</author><dc:creator>dilemmarabbit</dc:creator><guid>https://DilemmaRabbit.github.io/leetcode/1578.-minimum-time-to-make-rope-colorful/</guid>
@@ -74,13 +81,5 @@ MyCircularQueue(k)：產生一條長度為 k 的駐列 int fornt()：回傳目�
     <description><![CDATA[難度：🟠 Normal 🟠 問題描述 給與兩個 array，返回最長公共子陣列的最大值
 思路 每次比對到相同的元素，便去尋找上一個比對的結果並 + 1 //正序 dp[i][j] = dp[i-1][j-1] + 1 //倒序 dp[i][j] = dp[i-1][j-1] + 1 需要注意處理邊界的狀況 每次更新後比較最大值 BigO:O(n*m)
 程式碼 class Solution { public: int findLength(vector&lt;int&gt;&amp; nums1, vector&lt;int&gt;&amp; nums2) { int res = INT_MIN; int dp[nums1.size()][nums2.size()]; memset(dp, 0, sizeof(dp)); // 倒序 dp // for(int i = nums1.size()-1; i &gt; -1; i--){ // for(int j = nums2.size()-1; j &gt; -1; j--){ // if(nums1[i] == nums2[j]){ // if(i == nums1.]]></description>
-</item><item>
-    <title>20. Valid Parentheses</title>
-    <link>https://DilemmaRabbit.github.io/leetcode/20.-valid-parentheses/</link>
-    <pubDate>Sun, 13 Mar 2022 12:04:42 &#43;0800</pubDate><author>a21663832@gmail.com</author><dc:creator>dilemmarabbit</dc:creator><guid>https://DilemmaRabbit.github.io/leetcode/20.-valid-parentheses/</guid>
-    <description><![CDATA[難度：🟢 Easy 🟢
-問題描述 給予一個只包含了大中小括號的字串，使用以下規則來確定此字串是否合法
-每種括號都必須閉合(左右對稱) 括號必須以正確的順序進行閉合 &ldquo;{ } ( ) []&rdquo; &ldquo;( [ { } ] )&rdquo; 思路 個人思路
-由於必須進行閉合，因此可以確保一定是存在相對的括號 由於需要進行指定順序閉合，當遇到右括號時，代表上一個一定是對應的左括號，否則不合法 用 stack 儲存遇到所有的左括號，遇到右括號則比對目前的 stack top 是否正確 假如正確則 pop 成對的括號 最後 stack 必定為空 程式碼 class Solution { public: bool isValid(string s) { stack&lt;char&gt; st; for(auto chr : s){ if(chr == &#39;}&#39; || chr == &#39;]&#39; || chr == &#39;)&#39;){ // 如果為右括號 if(st.empty()){ // 確保是否為空 return false; } else{ if(chr-1 == st.]]></description>
 </item></channel>
 </rss>

@@ -5,38 +5,34 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-        <title>258. Add Digits - Dilemma Rabbit</title><meta name="description" content=""><meta property="og:title" content="258. Add Digits" />
-<meta property="og:description" content="難度：🟢 Easy 🟢
-問題描述 將一個正整數的所有位數做加總，直到只剩下個位數，並返回該值。
-測資 -1 &lt; num &lt; 2^32 。
-思路 只計算當次的個位數，如果大於 10 代表只保留個位數並 &#43;1，算至最後 num 為 0 。
-程式碼 class Solution { public: int addDigits(int num) { int cur = 0; // initial answer while(num != 0){ cur &#43;= num%10; // add tail number if(cur &gt;= 10){ // if cur &gt; 0, remain tail and &#43; 1 cur = cur % 10 &#43; 1; } num /= 10; } return cur; } }; " />
+        <title>HTTPS 101 - Dilemma Rabbit</title><meta name="description" content=""><meta property="og:title" content="HTTPS 101" />
+<meta property="og:description" content="前言 一直以來對 HTTPS 並沒有到很熟悉，只知道是透過加密的方式來保證傳輸的安全性，然後途中有用到 SSL / TLS 之類的方式，沒有一個很系統性的概念，因此寫了這篇文章來記錄一下這幾天
+HTTPS 傳統 HTTP 在傳送資料時，內容不會進行加密 因此有潛在的 MITM 攻擊 HTTPS 本身便是透過非對稱式加密的方式來達到安全的效果 私鑰(private key)：只有創造公鑰的人才會知道，用來解密用密鑰 公鑰(public key)：任何人都有可能知道，用來加密用的密鑰 因此 HTTPS 達到防止被竊聽原理為 傳送給對方 request 時，用對方的 public key 進行加密 接收到對方 request 時，用自己的 private key 進行解密 所以理應來說，雙方都會互相拿到彼此的 public key，才能進行相互的通訊
+這邊就會有一些問題 如何獲得？ 這個過程如何確保不會被竊聽？ 如何確保拿到的是正確的 public key？ TLS(Transport Layer Security) TLS 前身為 SSL(Secure Sockets Layer)，經過 IETF 的標準化後，目前發展到 1.3版本 HTTPS 與 HTTP 相同，都是透過 TCP(layer 4) 來進行包裝的，但區別為 HTTPS 使用了 TLS(layer 4) 來對內部的資料進行加密與解密 被 TLS 加密的封包，只會看到 Request URL " />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://DilemmaRabbit.github.io/leetcode/258.-add-digits/" /><meta property="article:section" content="leetcode" />
-<meta property="article:published_time" content="2022-02-08T16:04:48+08:00" />
-<meta property="article:modified_time" content="2022-02-08T16:04:48+08:00" />
+<meta property="og:url" content="https://DilemmaRabbit.github.io/learning/https-101/" /><meta property="article:section" content="learning" />
+<meta property="article:published_time" content="2022-10-03T16:51:54+08:00" />
+<meta property="article:modified_time" content="2022-10-03T16:51:54+08:00" />
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="258. Add Digits"/>
-<meta name="twitter:description" content="難度：🟢 Easy 🟢
-問題描述 將一個正整數的所有位數做加總，直到只剩下個位數，並返回該值。
-測資 -1 &lt; num &lt; 2^32 。
-思路 只計算當次的個位數，如果大於 10 代表只保留個位數並 &#43;1，算至最後 num 為 0 。
-程式碼 class Solution { public: int addDigits(int num) { int cur = 0; // initial answer while(num != 0){ cur &#43;= num%10; // add tail number if(cur &gt;= 10){ // if cur &gt; 0, remain tail and &#43; 1 cur = cur % 10 &#43; 1; } num /= 10; } return cur; } }; "/>
+<meta name="twitter:title" content="HTTPS 101"/>
+<meta name="twitter:description" content="前言 一直以來對 HTTPS 並沒有到很熟悉，只知道是透過加密的方式來保證傳輸的安全性，然後途中有用到 SSL / TLS 之類的方式，沒有一個很系統性的概念，因此寫了這篇文章來記錄一下這幾天
+HTTPS 傳統 HTTP 在傳送資料時，內容不會進行加密 因此有潛在的 MITM 攻擊 HTTPS 本身便是透過非對稱式加密的方式來達到安全的效果 私鑰(private key)：只有創造公鑰的人才會知道，用來解密用密鑰 公鑰(public key)：任何人都有可能知道，用來加密用的密鑰 因此 HTTPS 達到防止被竊聽原理為 傳送給對方 request 時，用對方的 public key 進行加密 接收到對方 request 時，用自己的 private key 進行解密 所以理應來說，雙方都會互相拿到彼此的 public key，才能進行相互的通訊
+這邊就會有一些問題 如何獲得？ 這個過程如何確保不會被竊聽？ 如何確保拿到的是正確的 public key？ TLS(Transport Layer Security) TLS 前身為 SSL(Secure Sockets Layer)，經過 IETF 的標準化後，目前發展到 1.3版本 HTTPS 與 HTTP 相同，都是透過 TCP(layer 4) 來進行包裝的，但區別為 HTTPS 使用了 TLS(layer 4) 來對內部的資料進行加密與解密 被 TLS 加密的封包，只會看到 Request URL "/>
 <meta name="application-name" content="Dilemma Rabbit">
 <meta name="apple-mobile-web-app-title" content="Dilemma Rabbit"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://DilemmaRabbit.github.io/leetcode/258.-add-digits/" /><link rel="next" href="https://DilemmaRabbit.github.io/leetcode/21.-merge-two-sorted-lists/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://DilemmaRabbit.github.io/learning/https-101/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
-        "headline": "258. Add Digits",
+        "headline": "HTTPS 101",
         "inLanguage": "en",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "https:\/\/DilemmaRabbit.github.io\/leetcode\/258.-add-digits\/"
-        },"genre": "leetcode","keywords": "LeetCode","wordcount":  76 ,
-        "url": "https:\/\/DilemmaRabbit.github.io\/leetcode\/258.-add-digits\/","datePublished": "2022-02-08T16:04:48+08:00","dateModified": "2022-02-08T16:04:48+08:00","publisher": {
+            "@id": "https:\/\/DilemmaRabbit.github.io\/learning\/https-101\/"
+        },"genre": "learning","wordcount":  73 ,
+        "url": "https:\/\/DilemmaRabbit.github.io\/learning\/https-101\/","datePublished": "2022-10-03T16:51:54+08:00","dateModified": "2022-10-03T16:51:54+08:00","publisher": {
             "@type": "Organization",
             "name": "dilemmarabbit"},"author": {
                 "@type": "Person",
@@ -83,9 +79,9 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">Contents</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">258. Add Digits</h1><div class="post-meta">
-            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>dilemmarabbit</a></span>&nbsp;<span class="post-category">included in <a href="/categories/learning/"><i class="far fa-folder fa-fw"></i>Learning</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-02-08">2022-02-08</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;76 words&nbsp;
+        </div><article class="page single"><h1 class="single-title animated flipInX">HTTPS 101</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>dilemmarabbit</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-10-03">2022-10-03</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;73 words&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;One minute&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
                 <div class="details-summary toc-title">
@@ -94,60 +90,77 @@
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
-    <li><a href="#問題描述">問題描述</a></li>
-    <li><a href="#思路">思路</a></li>
-    <li><a href="#程式碼">程式碼</a></li>
+    <li><a href="#前言">前言</a></li>
+    <li><a href="#https">HTTPS</a></li>
+    <li><a href="#tlstransport-layer-security">TLS(Transport Layer Security)</a></li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><p>難度：🟢 Easy 🟢</p>
-<hr>
-<h2 id="問題描述">問題描述</h2>
-<p>將一個正整數的所有位數做加總，直到只剩下個位數，並返回該值。</p>
-<p>測資 <strong>-1 &lt; num &lt; 2^32</strong> 。</p>
-<hr>
-<h2 id="思路">思路</h2>
-<p>只計算當次的個位數，如果大於 10 代表只保留個位數並 +1，算至最後 num 為 0 。</p>
-<hr>
-<h2 id="程式碼">程式碼</h2>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Solution</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl"><span class="k">public</span><span class="o">:</span>
-</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">addDigits</span><span class="p">(</span><span class="kt">int</span> <span class="n">num</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="kt">int</span> <span class="n">cur</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="c1">// initial answer
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="k">while</span><span class="p">(</span><span class="n">num</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">){</span>
-</span></span><span class="line"><span class="cl">            <span class="n">cur</span> <span class="o">+=</span> <span class="n">num</span><span class="o">%</span><span class="mi">10</span><span class="p">;</span> <span class="c1">// add tail number
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="k">if</span><span class="p">(</span><span class="n">cur</span> <span class="o">&gt;=</span> <span class="mi">10</span><span class="p">){</span> <span class="c1">// if cur &gt; 0, remain tail and + 1
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>                <span class="n">cur</span> <span class="o">=</span> <span class="n">cur</span> <span class="o">%</span> <span class="mi">10</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">            <span class="p">}</span>
-</span></span><span class="line"><span class="cl">            <span class="n">num</span> <span class="o">/=</span> <span class="mi">10</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">        <span class="p">}</span>
-</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">cur</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">}</span>
-</span></span><span class="line"><span class="cl"><span class="p">};</span>
-</span></span></code></pre></div></div><div class="post-footer" id="post-footer">
+            </div><div class="content" id="content"><h2 id="前言">前言</h2>
+<blockquote>
+<p>一直以來對 HTTPS 並沒有到很熟悉，只知道是透過加密的方式來保證傳輸的安全性，然後途中有用到 SSL / TLS 之類的方式，沒有一個很系統性的概念，因此寫了這篇文章來記錄一下這幾天</p>
+</blockquote>
+<h2 id="https">HTTPS</h2>
+<ul>
+<li>傳統 HTTP 在傳送資料時，內容不會進行加密
+<ul>
+<li>因此有潛在的 MITM 攻擊</li>
+</ul>
+</li>
+<li>HTTPS 本身便是透過非對稱式加密的方式來達到安全的效果
+<ul>
+<li><strong>私鑰(private key)</strong>：只有創造公鑰的人才會知道，用來解密用密鑰</li>
+<li><strong>公鑰(public key)</strong>：任何人都有可能知道，用來加密用的密鑰</li>
+</ul>
+</li>
+<li>因此 HTTPS 達到防止被竊聽原理為
+<ul>
+<li>傳送給對方 request 時，用對方的 <strong>public key</strong> 進行加密</li>
+<li>接收到對方 request 時，用自己的 <strong>private key</strong> 進行解密</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>所以理應來說，雙方都會互相拿到彼此的 <strong>public key</strong>，才能進行相互的通訊</p>
+</blockquote>
+<ul>
+<li>這邊就會有一些問題
+<ul>
+<li><strong>如何獲得？</strong></li>
+<li><strong>這個過程如何確保不會被竊聽？</strong></li>
+<li><strong>如何確保拿到的是正確的 public key？</strong></li>
+</ul>
+</li>
+</ul>
+<h2 id="tlstransport-layer-security">TLS(Transport Layer Security)</h2>
+<ul>
+<li>TLS 前身為 SSL(Secure Sockets Layer)，經過 IETF 的標準化後，目前發展到 1.3版本</li>
+<li>HTTPS 與 HTTP 相同，都是透過 <strong>TCP(layer 4)</strong> 來進行包裝的，但區別為 HTTPS 使用了 <strong>TLS(layer 4)</strong> 來對內部的資料進行加密與解密</li>
+<li>被 TLS 加密的封包，只會看到 Request URL</li>
+</ul>
+</div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>Updated on 2022-02-08</span>
+                <span>Updated on 2022-10-03</span>
             </div>
             <div class="post-info-license"></div>
         </div>
         <div class="post-info-line">
             <div class="post-info-md"></div>
             <div class="post-info-share">
-                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://DilemmaRabbit.github.io/leetcode/258.-add-digits/" data-title="258. Add Digits" data-hashtags="LeetCode"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://DilemmaRabbit.github.io/leetcode/258.-add-digits/" data-hashtag="LeetCode"><i class="fab fa-facebook-square fa-fw"></i></a></span>
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://DilemmaRabbit.github.io/learning/https-101/" data-title="HTTPS 101"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://DilemmaRabbit.github.io/learning/https-101/"><i class="fab fa-facebook-square fa-fw"></i></a></span>
             </div>
         </div>
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/leetcode/">LeetCode</a></section>
+        <section class="post-tags"></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
         </section>
     </div>
 
-    <div class="post-nav">
-            <a href="/leetcode/21.-merge-two-sorted-lists/" class="next" rel="next" title="21. Merge Two Sorted Lists">21. Merge Two Sorted Lists<i class="fas fa-angle-right fa-fw"></i></a></div>
+    <div class="post-nav"></div>
 </div>
 </article></div>
             </main><footer class="footer">

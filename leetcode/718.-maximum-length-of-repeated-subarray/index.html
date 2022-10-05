@@ -10,12 +10,11 @@
 思路 每次比對到相同的元素，便去尋找上一個比對的結果並 &#43; 1 //正序 dp[i][j] = dp[i-1][j-1] &#43; 1 //倒序 dp[i][j] = dp[i-1][j-1] &#43; 1 需要注意處理邊界的狀況 每次更新後比較最大值 BigO:O(n*m)
 程式碼 class Solution { public: int findLength(vector&lt;int&gt;&amp; nums1, vector&lt;int&gt;&amp; nums2) { int res = INT_MIN; int dp[nums1.size()][nums2.size()]; memset(dp, 0, sizeof(dp)); // 倒序 dp // for(int i = nums1.size()-1; i &gt; -1; i--){ // for(int j = nums2.size()-1; j &gt; -1; j--){ // if(nums1[i] == nums2[j]){ // if(i == nums1." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://DilemmaRabbit.github.io/leetcode/718.-maximum-length-of-repeated-subarray/" /><meta property="og:image" content="https://DilemmaRabbit.github.io/leetcode/718.-maximum-length-of-repeated-subarray/leetcode.png"/><meta property="article:section" content="leetcode" />
+<meta property="og:url" content="https://DilemmaRabbit.github.io/leetcode/718.-maximum-length-of-repeated-subarray/" /><meta property="article:section" content="leetcode" />
 <meta property="article:published_time" content="2022-09-20T12:02:49+08:00" />
 <meta property="article:modified_time" content="2022-09-20T12:02:49+08:00" />
 
-<meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="https://DilemmaRabbit.github.io/leetcode/718.-maximum-length-of-repeated-subarray/leetcode.png"/>
+<meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="718. Maximum Length of Repeated Subarray"/>
 <meta name="twitter:description" content="難度：🟠 Normal 🟠 問題描述 給與兩個 array，返回最長公共子陣列的最大值
 思路 每次比對到相同的元素，便去尋找上一個比對的結果並 &#43; 1 //正序 dp[i][j] = dp[i-1][j-1] &#43; 1 //倒序 dp[i][j] = dp[i-1][j-1] &#43; 1 需要注意處理邊界的狀況 每次更新後比較最大值 BigO:O(n*m)
@@ -32,12 +31,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/DilemmaRabbit.github.io\/leetcode\/718.-maximum-length-of-repeated-subarray\/"
-        },"image": [{
-                            "@type": "ImageObject",
-                            "url": "https:\/\/DilemmaRabbit.github.io\/leetcode\/718.-maximum-length-of-repeated-subarray\/leetcode.png",
-                            "width":  724 ,
-                            "height":  226 
-                        }],"genre": "leetcode","keywords": "LeetCode","wordcount":  148 ,
+        },"genre": "leetcode","keywords": "LeetCode","wordcount":  148 ,
         "url": "https:\/\/DilemmaRabbit.github.io\/leetcode\/718.-maximum-length-of-repeated-subarray\/","datePublished": "2022-09-20T12:02:49+08:00","dateModified": "2022-09-20T12:02:49+08:00","publisher": {
             "@type": "Organization",
             "name": "dilemmarabbit"},"author": {
@@ -89,14 +83,7 @@
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>dilemmarabbit</a></span>&nbsp;<span class="post-category">included in <a href="/categories/learning/"><i class="far fa-folder fa-fw"></i>Learning</a></span></div>
             <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-09-20">2022-09-20</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;148 words&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;One minute&nbsp;</div>
-        </div><div class="featured-image"><img
-        class="lazyload"
-        src="/svg/loading.min.svg"
-        data-src="/leetcode/718.-maximum-length-of-repeated-subarray/leetcode.png"
-        data-srcset="/leetcode/718.-maximum-length-of-repeated-subarray/leetcode.png, /leetcode/718.-maximum-length-of-repeated-subarray/leetcode.png 1.5x, /leetcode/718.-maximum-length-of-repeated-subarray/leetcode.png 2x"
-        data-sizes="auto"
-        alt="/leetcode/718.-maximum-length-of-repeated-subarray/leetcode.png"
-        title="/leetcode/718.-maximum-length-of-repeated-subarray/leetcode.png" /></div><div class="details toc" id="toc-static"  kept="">
+        </div><div class="details toc" id="toc-static"  kept="">
                 <div class="details-summary toc-title">
                     <span>Contents</span>
                     <span><i class="details-icon fas fa-angle-right"></i></span>
@@ -189,7 +176,7 @@
 </div>
 </article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreferrer" title="Hugo 0.104.2">Hugo</a> | Theme - <a href="https://github.com/sunt-programator/CodeIT" target="_blank" rel="noopener noreferrer" title="CodeIT 0.2.10"><i class="fas fa-laptop-code fa-fw"></i> CodeIT</a>
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreferrer" title="Hugo 0.104.3">Hugo</a> | Theme - <a href="https://github.com/sunt-programator/CodeIT" target="_blank" rel="noopener noreferrer" title="CodeIT 0.2.10"><i class="fas fa-laptop-code fa-fw"></i> CodeIT</a>
                 </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank" rel="noopener noreferrer">dilemmarabbit</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
         </div>
     </footer></div>

@@ -10,12 +10,11 @@
 問題描述 給予一個包含兩種狀況的判斷式，&ldquo;a==b&rdquo;、&ldquo;a!=b&rdquo;，判斷所有的判斷式是否合理，回傳 true/false
 思路 Union find 把每個字母進行編號(分別代表不同的群組) 當 &ldquo;==&quot;，把右邊字母的群組改成左邊字母的群組 假如右邊字母的群組不是原本的群組(被歸類過)，則在找到源頭為止，把所有的源頭都改成左邊字母的群組 完成分群後，掃過每一個 &ldquo;!=&quot;，當兩邊字母在同群組時，判斷為失敗 程式碼 class Solution { public: std::vector&lt;int&gt; group; int find_leader(int cur){ if(group[cur] == cur) return cur; else{ group[cur] = find_leader(group[cur]); return group[cur]; } } void merge(int prev, int after){ int g1 = find_leader(prev-97); int g2 = find_leader(after-97); if(g1 != g2){ group[g2] = g1; } } bool equationsPossible(vector&lt;string&gt;&amp; equations) { for(int i = 0; i &lt; 26; i&#43;&#43;) group." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://DilemmaRabbit.github.io/leetcode/990.-satisfiability-of-equality-equations/" /><meta property="og:image" content="https://DilemmaRabbit.github.io/leetcode/990.-satisfiability-of-equality-equations/leetcode.png"/><meta property="article:section" content="leetcode" />
+<meta property="og:url" content="https://DilemmaRabbit.github.io/leetcode/990.-satisfiability-of-equality-equations/" /><meta property="article:section" content="leetcode" />
 <meta property="article:published_time" content="2022-09-26T17:06:04+08:00" />
 <meta property="article:modified_time" content="2022-09-26T17:06:04+08:00" />
 
-<meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="https://DilemmaRabbit.github.io/leetcode/990.-satisfiability-of-equality-equations/leetcode.png"/>
+<meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="990. Satisfiability of Equality Equations"/>
 <meta name="twitter:description" content="難度：🟠 Normal 🟠
 問題描述 給予一個包含兩種狀況的判斷式，&ldquo;a==b&rdquo;、&ldquo;a!=b&rdquo;，判斷所有的判斷式是否合理，回傳 true/false
@@ -32,12 +31,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/DilemmaRabbit.github.io\/leetcode\/990.-satisfiability-of-equality-equations\/"
-        },"image": [{
-                            "@type": "ImageObject",
-                            "url": "https:\/\/DilemmaRabbit.github.io\/leetcode\/990.-satisfiability-of-equality-equations\/leetcode.png",
-                            "width":  724 ,
-                            "height":  226 
-                        }],"genre": "leetcode","keywords": "LeetCode","wordcount":  99 ,
+        },"genre": "leetcode","keywords": "LeetCode","wordcount":  99 ,
         "url": "https:\/\/DilemmaRabbit.github.io\/leetcode\/990.-satisfiability-of-equality-equations\/","datePublished": "2022-09-26T17:06:04+08:00","dateModified": "2022-09-26T17:06:04+08:00","publisher": {
             "@type": "Organization",
             "name": "dilemmarabbit"},"author": {
@@ -89,14 +83,7 @@
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>dilemmarabbit</a></span>&nbsp;<span class="post-category">included in <a href="/categories/learning/"><i class="far fa-folder fa-fw"></i>Learning</a></span></div>
             <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-09-26">2022-09-26</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;99 words&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;One minute&nbsp;</div>
-        </div><div class="featured-image"><img
-        class="lazyload"
-        src="/svg/loading.min.svg"
-        data-src="/leetcode/990.-satisfiability-of-equality-equations/leetcode.png"
-        data-srcset="/leetcode/990.-satisfiability-of-equality-equations/leetcode.png, /leetcode/990.-satisfiability-of-equality-equations/leetcode.png 1.5x, /leetcode/990.-satisfiability-of-equality-equations/leetcode.png 2x"
-        data-sizes="auto"
-        alt="/leetcode/990.-satisfiability-of-equality-equations/leetcode.png"
-        title="/leetcode/990.-satisfiability-of-equality-equations/leetcode.png" /></div><div class="details toc" id="toc-static"  kept="">
+        </div><div class="details toc" id="toc-static"  kept="">
                 <div class="details-summary toc-title">
                     <span>Contents</span>
                     <span><i class="details-icon fas fa-angle-right"></i></span>
@@ -192,7 +179,7 @@
 </div>
 </article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreferrer" title="Hugo 0.104.2">Hugo</a> | Theme - <a href="https://github.com/sunt-programator/CodeIT" target="_blank" rel="noopener noreferrer" title="CodeIT 0.2.10"><i class="fas fa-laptop-code fa-fw"></i> CodeIT</a>
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreferrer" title="Hugo 0.104.3">Hugo</a> | Theme - <a href="https://github.com/sunt-programator/CodeIT" target="_blank" rel="noopener noreferrer" title="CodeIT 0.2.10"><i class="fas fa-laptop-code fa-fw"></i> CodeIT</a>
                 </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank" rel="noopener noreferrer">dilemmarabbit</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
         </div>
     </footer></div>
