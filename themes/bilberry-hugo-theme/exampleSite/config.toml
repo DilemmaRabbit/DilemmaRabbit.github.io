@@ -1,23 +1,23 @@
-title = "Dilemma Rabbit's Blog 🐇"
-baseURL = "https://DilemmaRabbit.github.io/"
+title = "My cool new Blog"
+baseURL = "https://example.com/"
 
 # Option 1 (recommended): adding the theme as a Hugo module
-#theme = "github.com/Lednerb/bilberry-hugo-theme/v3"
+theme = "github.com/Lednerb/bilberry-hugo-theme/v3"
 
 # Option 2: cloning/copying the theme files
-theme = "bilberry-hugo-theme"
+# theme = "bilberry-hugo-theme"
 
 # Generate the robots.txt file for SEO
 enableRobotsTXT = true
 
 # Change to one of your content languages defined at the end.
-DefaultContentLanguage = "zh-tw"
+DefaultContentLanguage = "en"
 
 # Enable / Disable Google Analytics statistics for your site
-googleAnalytics = "Enable"
+googleAnalytics = ""
 
 # Enable / Disable comments on the articles via Disqus.
-disqusShortname = "Disable"
+disqusShortname = ""
 
 [params]
   # Custom CSS / JS modules that will be imported by the template.
@@ -28,9 +28,9 @@ disqusShortname = "Disable"
   js_modules = []
 
   # Description and meta data for the search engines
-  author = "DilemmaRabbit"
-  description = "DilemmaRabbit's hugo blog"
-  keywords = "blog,leetcode,security,"
+  author = "Lednerb"
+  description = "Bilberry Premium Theme for Hugo."
+  keywords = "blog,personal,responsive,search,font awesome,pages,posts,multilingual,highlight.js,syntax highlighting,premium,shortcuts"
 
   # How many articles should be displayed at once?
   paginate = 7
@@ -39,7 +39,7 @@ disqusShortname = "Disable"
   enable_mathjax    = false
 
   # Enable / Disable algolia search
-  algolia_search    = false
+  algolia_search    = true
   algolia_appId     = "45CEN6X6AT"
   algolia_apiKey    = "16030625f1a4d0dd3b8aefd794fd4cf1"
   algolia_indexName = "bilberry-hugo-theme"
@@ -80,16 +80,16 @@ disqusShortname = "Disable"
 
   # Header configuration
     # your subtitle if you want to use any
-    subtitle = "Change takes time and time is all it takes!"
+    subtitle = "Hello World! This is the most epic subtitle ever."
 
     # if you want to use libravatar or gravatar for the header image
-    avatarEmail = "a21663832@gmail.com"
+    avatarEmail = "code@lednerb.de"
 
     # set an path to the image file you want to use | overwrites avatar by email
     customImage = ""
 
     # define the icon you want to use for the overlay for the customImage or avatar.
-    overlayIcon = "fa-star"
+    overlayIcon = "fa-home"
 
     # always display the top navigation (with pages and search) on non-mobile screens
     permanentTopNav = false
@@ -148,28 +148,28 @@ disqusShortname = "Disable"
     # all icons https://fontawesome.com/icons?d=gallery&m=free
     # brand icons https://fontawesome.com/icons?d=gallery&s=brands&m=free
     socialMediaLinks = [
-      { link = "https://t.me/dilemmarabbit", icon = "fab fa-telegram" },
-      { link = "https://github.com/DilemmaRabbit", icon = "fab fa-github" },
-      { link = "mailto:a21663832@gmail.com", icon = "fa fa-envelope"},
+      { link = "https://twitter.com/TheRealLednerb", icon = "fab fa-twitter" },
+      { link = "https://github.com/Lednerb", icon = "fab fa-github" },
     ]
 
     # credits line configuration
-    copyrightBy = "by DilemmaRabbit"
+    copyrightBy = "by Lednerb"
     copyrightUseCurrentYear = true  # set to true to always display the current year in the copyright
     copyrightYearOverride = "2017"
-    copyrightUrl = "https://github.com/DilemmaRabbit"
-    # creditsText = "Bilberry Hugo Theme"
-    # creditsUrl = "https://github.com/Lednerb/bilberry-hugo-theme"
+    copyrightUrl = "https://github.com/Lednerb"
+    creditsText = "Bilberry Hugo Theme"
+    creditsUrl = "https://github.com/Lednerb/bilberry-hugo-theme"
 
 
 # customize your available languages for your multi-lingual site
 # or delete one of the [Languages.xx] blocks to use the theme with only one supported language
 [Languages]
-  [Languages.zh-tw]
+  [Languages.en]
     weight = 1
-  # 英文介面(代辦)
-  # [Languages.en]
-  #   weight = 2
+  [Languages.de]
+    weight = 2
+    title = "Mein cooler neuer Blog"
+    subtitle = "Hallo Welt! Dies ist der epischste Untertitel aller Zeiten."
 
 # don't change anything below
 [taxonomies]

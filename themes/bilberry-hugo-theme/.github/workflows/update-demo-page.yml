@@ -1,0 +1,60 @@
+name: Update GitHub Pages
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: 'latest'
+          # extended: true
+
+      - name: Run tests
+        run: ./testing/testing-example-site/test-theme.sh
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: test
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: 'latest'
+          # extended: true
+
+      - name: Create new demo site
+        run: hugo new site /tmp/demo-site
+
+      - name: Copy exampleSite content to new site
+        run: cp -r ./exampleSite/* /tmp/demo-site
+
+      - name: Adjust the baseURL for gh-pages
+        run: sed -i "s/baseURL = .*$/baseURL = \"https:\/\/lednerb.github.io\/bilberry-hugo-theme\/\"/" /tmp/demo-site/config.toml
+
+      - name: Init Hugo module
+        working-directory: /tmp/demo-site
+        run: hugo mod init github.com/Lednerb/bilberry-hugo-theme/exampleSite
+
+      - name: Build
+        working-directory: /tmp/demo-site
+        run: hugo && > public/.nojekyll
+
+      - name: Deploy to GitHub Pages
+        if: success()
+        uses: crazy-max/ghaction-github-pages@v3
+        with:
+          target_branch: gh-pages
+          build_dir: ../../../../../../../../tmp/demo-site/public
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
