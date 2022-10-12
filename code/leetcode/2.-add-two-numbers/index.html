@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+
+
+  
+<html itemscope itemtype="https://schema.org/WebPage" class="no-js" lang="zh-tw">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="siteBaseUrl" content="https://DilemmaRabbit.github.io/">
+    <meta name="author" content="DilemmaRabbit">
+    <meta name="description" content="DilemmaRabbit&#39;s hugo blog">
+    <meta name="keywords" content="blog,leetcode,security,">
+    <meta name="generator" content="Hugo 0.104.3" />
+    <title>
+        
+           
+               2. Add Two Numbers &vert; Dilemma Rabbit&#39;s Blog 🐇
+           
+        
+    </title>
+    <meta itemprop="name" content="2. Add Two Numbers">
+    <meta itemprop="description" content="2. Add Two Numbers - DilemmaRabbit&#39;s hugo blog">
+    <meta property="og:title" content="2. Add Two Numbers">
+    <meta property="og:description" content="2. Add Two Numbers - DilemmaRabbit&#39;s hugo blog">
+    <meta property="og:image" content="https://www.gravatar.com/avatar/d41d8cd98f00b204e9800998ecf8427e?size=200">
+    <meta property="og:url" content="https://DilemmaRabbit.github.io/code/leetcode/2.-add-two-numbers/">
+    <meta property="og:site_name" content="Dilemma Rabbit&#39;s Blog 🐇">
+    <meta property="og:type" content="article">
+
+    
+
+
+    <script src="/modernizr-simple.js"></script>
+
+    
+    <link href="/code/leetcode/2.-add-two-numbers/" rel="alternate" type="application/rss+xml" title="Dilemma Rabbit&#39;s Blog 🐇" />
+    <link href="/code/leetcode/2.-add-two-numbers/" rel="feed" type="application/rss+xml" title="Dilemma Rabbit&#39;s Blog 🐇" />
+    
+
+    
+    <link rel="canonical" href="https://DilemmaRabbit.github.io/code/leetcode/2.-add-two-numbers/">
+    
+
+    <link rel="stylesheet" href="https://DilemmaRabbit.github.io/theme.css">
+
+    
+
+    
+        
+    
+</head>
+
+<body class="bilberry-hugo-theme">
+
+    
+    <nav>
+
+    <div class="container">
+        <ul class="topnav">
+            
+        </ul>
+
+        
+    </div>
+</nav>
+
+
+    
+    <header>
+
+    <div class="container">
+        <div class="logo">
+            <a href="/" class="logo">
+                
+                    
+                    
+                        
+                    
+                    <img src="https://seccdn.libravatar.org/avatar/9799a01795b5e8baf313df6bf57bda76?d=mm&size=200" alt="">
+                
+
+                <span class="overlay"><i class="fa fa-star"></i></span>
+            </a>
+        </div>
+        <div class="titles">
+            <h3 class="title">
+                <a href="/">
+                    Dilemma Rabbit&#39;s Blog 🐇
+                </a>
+            </h3>
+
+            
+                <span class="subtitle">Change takes time and time is all it takes!</span>
+            
+        </div>
+
+        
+
+        
+            <div class="toggler">
+        
+                <i class="fa fa-bars" aria-hidden="true"></i>
+            </div>
+    </div>
+</header>
+
+
+    <div class="main container">
+        
+    <div class="article-wrapper u-cf single">
+        
+            <a class="bubble" href="https://DilemmaRabbit.github.io/code/leetcode/2.-add-two-numbers/">
+    <i class="fas fa-fw fa-code"></i>
+</a>
+
+<article class="default article">
+    
+
+    <div class="content">
+    <h1 class="article-title">
+        <a href="https://DilemmaRabbit.github.io/code/leetcode/2.-add-two-numbers/">
+            2. Add Two Numbers
+        </a>
+    </h1>
+
+    <div class="meta">
+        
+            
+                <span class="date moment">2022-03-11</span>
+            
+        
+
+        
+
+        
+            <span class="categories">
+                
+                    
+                    
+                        <a href="https://DilemmaRabbit.github.io/categories/leetcode/">Leetcode</a>
+                    
+                
+            </span>
+        
+
+        
+    </div>
+
+    
+        
+
+        <p><strong>難度：🟠 Normal 🟠</strong></p>
+<p><strong>關鍵字：Linked List, Sentinel Node</strong></p>
+<hr>
+<h2 id="問題描述">問題描述</h2>
+<p>給予兩條 linked list，代表從個位數開始的兩組數字，回傳一條代表這兩組數字加總的 linked list</p>
+<hr>
+<h2 id="思路">思路</h2>
+<ul>
+<li>利用自創的一個 Node 當作哨兵節點</li>
+<li>計算每個回合當下的加總以及進位</li>
+<li>兩條 linked list 同時遍歷，當 next 等於空指標時代表某一條到底，下次開始把加總的值設為 0</li>
+<li>當兩個指標都是空指標值代表加總完畢並退出</li>
+<li>最後考慮最後一次的進位</li>
+</ul>
+<hr>
+<h2 id="程式碼">程式碼</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c++" data-lang="c++"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> {
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>    ListNode<span style="color:#f92672">*</span> addTwoNumbers(ListNode<span style="color:#f92672">*</span> l1, ListNode<span style="color:#f92672">*</span> l2) {
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> carry <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> sum <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> val1,val2;
+</span></span><span style="display:flex;"><span>        ListNode <span style="color:#f92672">*</span>tmp;
+</span></span><span style="display:flex;"><span>        ListNode <span style="color:#f92672">*</span>head <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ListNode(<span style="color:#ae81ff">10</span>); <span style="color:#75715e">// 哨兵節點
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        tmp <span style="color:#f92672">=</span> head;
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// 當兩條 linked list 都結束時退出
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">while</span>(l1 <span style="color:#f92672">||</span> l2){
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span>(l1 <span style="color:#f92672">==</span> NULL) val1 <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; <span style="color:#75715e">// 確定 linked list 是否結束
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            <span style="color:#66d9ef">else</span> val1 <span style="color:#f92672">=</span> l1 <span style="color:#f92672">-&gt;</span> val;
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span>(l2 <span style="color:#f92672">==</span> NULL) val2 <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; <span style="color:#75715e">// 確定 linked list 是否結束
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            <span style="color:#66d9ef">else</span> val2 <span style="color:#f92672">=</span> l2 <span style="color:#f92672">-&gt;</span> val;
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>            sum <span style="color:#f92672">=</span> val1 <span style="color:#f92672">+</span> val2 <span style="color:#f92672">+</span> carry; <span style="color:#75715e">// 計算當前加總
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            carry <span style="color:#f92672">=</span> sum <span style="color:#f92672">/</span> <span style="color:#ae81ff">10</span>; <span style="color:#75715e">// 計算進位
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            tmp <span style="color:#f92672">-&gt;</span> next <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ListNode(sum <span style="color:#f92672">%</span> <span style="color:#ae81ff">10</span>); <span style="color:#75715e">// 產生新節點
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            tmp <span style="color:#f92672">=</span> tmp <span style="color:#f92672">-&gt;</span> next;
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span>(l1) l1 <span style="color:#f92672">=</span> l1 <span style="color:#f92672">-&gt;</span> next; <span style="color:#75715e">// 避免進入空指標
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            <span style="color:#66d9ef">if</span>(l2) l2 <span style="color:#f92672">=</span> l2 <span style="color:#f92672">-&gt;</span> next; <span style="color:#75715e">// 避免進入空指標
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        }
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span>(carry <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span>) tmp <span style="color:#f92672">-&gt;</span> next <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ListNode(<span style="color:#ae81ff">1</span>); <span style="color:#75715e">// 最後的進位
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> head<span style="color:#f92672">-&gt;</span>next;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>};
+</span></span></code></pre></div>
+    
+</div>
+
+    
+<div class="footer">
+
+
+    
+        <div class="tags">
+            <i class="fa fa-tags"></i>
+            <div class="links">
+                
+                    
+                    
+                    <a href="https://DilemmaRabbit.github.io/tags/leetcode/">LeetCode</a>
+                    
+                
+            </div>
+        </div>
+    
+
+    
+</div>
+
+</article>
+
+        
+    </div>
+
+    
+        <div id="comments-container">
+            <div id="disqus_thread"></div>
+<script type="application/javascript">
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "Disable" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+            
+
+            
+
+            
+
+        </div>
+    
+
+    </div>
+
+    
+<footer>
+    <div class="container">
+
+        
+        <div class="recent-posts">
+            <strong>最新文章</strong>
+            <ul>
+                
+                
+                    <li>
+                        <a href="https://DilemmaRabbit.github.io/code/leetcode/623.-add-one-row-to-tree/">623. Add One Row to Tree</a>
+                    </li>
+                
+                    <li>
+                        <a href="https://DilemmaRabbit.github.io/code/leetcode/1578.-minimum-time-to-make-rope-colorful/">1578. Minimum Time to Make Rope Colorful</a>
+                    </li>
+                
+                    <li>
+                        <a href="https://DilemmaRabbit.github.io/code/leetcode/1155.-number-of-dice-rolls-with-target-sum/">1155. Number of Dice Rolls With Target Sum</a>
+                    </li>
+                
+                    <li>
+                        <a href="https://DilemmaRabbit.github.io/code/leetcode/91.-decode-ways/">91. Decode Ways</a>
+                    </li>
+                
+                    <li>
+                        <a href="https://DilemmaRabbit.github.io/code/leetcode/19.-remove-nth-node-from-end-of-list/">19. Remove Nth Node From End of List</a>
+                    </li>
+                
+                    <li>
+                        <a href="https://DilemmaRabbit.github.io/code/leetcode/838.-push-dominoes/">838. Push Dominoes</a>
+                    </li>
+                
+                    <li>
+                        <a href="https://DilemmaRabbit.github.io/code/leetcode/990.-satisfiability-of-equality-equations/">990. Satisfiability of Equality Equations</a>
+                    </li>
+                
+            </ul>
+        </div>
+        
+
+        
+        <div class="categories">
+            <a href="/categories/"><strong>分類</strong></a>
+            <ul>
+                
+                <li>
+                    <a href="/categories/leetcode">Leetcode
+                        (18)</a>
+                </li>
+                
+                <li>
+                    <a href="/categories/blog">Blog
+                        (1)</a>
+                </li>
+                
+            </ul>
+        </div>
+        
+
+        <div class="right">
+            
+            <div class="external-profiles">
+                <strong>社交媒體</strong>
+
+                
+                <a href="https://t.me/dilemmarabbit" target="_blank"><i class="fab fa-telegram"></i></a>
+                
+                <a href="https://github.com/DilemmaRabbit" target="_blank"><i class="fab fa-github"></i></a>
+                
+                <a href="mailto:a21663832@gmail.com" target="_blank"><i class="fa fa-envelope"></i></a>
+                
+            </div>
+            
+
+            
+
+            
+        </div>
+    </div>
+</footer>
+
+
+<div class="credits">
+    <div class="container">
+        <div class="copyright">
+            <a href="https://github.com/DilemmaRabbit" target="_blank">
+                &copy;
+                
+                2022
+                
+                by DilemmaRabbit
+            </a>
+            
+        </div>
+        <div class="author">
+            <a href="https://github.com/Lednerb/bilberry-hugo-theme"
+                target="_blank">Bilberry Hugo Theme</a>
+        </div>
+    </div>
+</div>
+
+
+    
+
+    
+
+
+    <script src="https://DilemmaRabbit.github.io/theme.js"></script>
+
+    
+    
+    
+
+    
+</body>
+
+</html>

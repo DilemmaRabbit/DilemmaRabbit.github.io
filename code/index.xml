@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Codes on Dilemma Rabbit&#39;s Blog 🐇</title>
+    <link>https://DilemmaRabbit.github.io/code/</link>
+    <description>Recent content in Codes on Dilemma Rabbit&#39;s Blog 🐇</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 05 Oct 2022 10:35:07 +0800</lastBuildDate><atom:link href="https://DilemmaRabbit.github.io/code/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>623. Add One Row to Tree</title>
+      <link>https://DilemmaRabbit.github.io/code/leetcode/623.-add-one-row-to-tree/</link>
+      <pubDate>Wed, 05 Oct 2022 10:35:07 +0800</pubDate>
+      
+      <guid>https://DilemmaRabbit.github.io/code/leetcode/623.-add-one-row-to-tree/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;難度：🟠 Normal 🟠&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;關鍵字：Binary Tree, DFS, BFS&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>1578. Minimum Time to Make Rope Colorful</title>
+      <link>https://DilemmaRabbit.github.io/code/leetcode/1578.-minimum-time-to-make-rope-colorful/</link>
+      <pubDate>Mon, 03 Oct 2022 09:45:24 +0800</pubDate>
+      
+      <guid>https://DilemmaRabbit.github.io/code/leetcode/1578.-minimum-time-to-make-rope-colorful/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;難度：🟠 Normal 🟠&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;關鍵字：Array&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>1155. Number of Dice Rolls With Target Sum</title>
+      <link>https://DilemmaRabbit.github.io/code/leetcode/1155.-number-of-dice-rolls-with-target-sum/</link>
+      <pubDate>Sun, 02 Oct 2022 12:59:55 +0800</pubDate>
+      
+      <guid>https://DilemmaRabbit.github.io/code/leetcode/1155.-number-of-dice-rolls-with-target-sum/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;難度：🟠 Normal 🟠&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;關鍵字：Dynamic Programing, Recursive&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>91. Decode Ways</title>
+      <link>https://DilemmaRabbit.github.io/code/leetcode/91.-decode-ways/</link>
+      <pubDate>Sat, 01 Oct 2022 14:46:09 +0800</pubDate>
+      
+      <guid>https://DilemmaRabbit.github.io/code/leetcode/91.-decode-ways/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;難度：🟠 Normal 🟠&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;關鍵字：Array, Dynamic Programing&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>19. Remove Nth Node From End of List</title>
+      <link>https://DilemmaRabbit.github.io/code/leetcode/19.-remove-nth-node-from-end-of-list/</link>
+      <pubDate>Wed, 28 Sep 2022 12:06:26 +0800</pubDate>
+      
+      <guid>https://DilemmaRabbit.github.io/code/leetcode/19.-remove-nth-node-from-end-of-list/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;難度：🟠 Normal 🟠&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;關鍵字：Linked List, Two Pointer&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>838. Push Dominoes</title>
+      <link>https://DilemmaRabbit.github.io/code/leetcode/838.-push-dominoes/</link>
+      <pubDate>Tue, 27 Sep 2022 14:42:21 +0800</pubDate>
+      
+      <guid>https://DilemmaRabbit.github.io/code/leetcode/838.-push-dominoes/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;難度：🟠 Normal 🟠&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;關鍵字：Simulation, Dynamic Programing&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>990. Satisfiability of Equality Equations</title>
+      <link>https://DilemmaRabbit.github.io/code/leetcode/990.-satisfiability-of-equality-equations/</link>
+      <pubDate>Mon, 26 Sep 2022 17:06:04 +0800</pubDate>
+      
+      <guid>https://DilemmaRabbit.github.io/code/leetcode/990.-satisfiability-of-equality-equations/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;難度：🟠 Normal 🟠&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;關鍵字：Union Find&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>622. Design Circular Queue</title>
+      <link>https://DilemmaRabbit.github.io/code/leetcode/622.-design-circular-queue/</link>
+      <pubDate>Sun, 25 Sep 2022 16:37:19 +0800</pubDate>
+      
+      <guid>https://DilemmaRabbit.github.io/code/leetcode/622.-design-circular-queue/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;難度：🟠 Normal 🟠&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;關鍵字：Queue, Two Pointer, Array&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>985. Sum of Even Numbers After Queries</title>
+      <link>https://DilemmaRabbit.github.io/code/leetcode/985.-sum-of-even-numbers-after-queries/</link>
+      <pubDate>Wed, 21 Sep 2022 11:43:56 +0800</pubDate>
+      
+      <guid>https://DilemmaRabbit.github.io/code/leetcode/985.-sum-of-even-numbers-after-queries/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;難度：🟠 Normal 🟠&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;關鍵字：Dynamic Programing&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>718. Maximum Length of Repeated Subarray</title>
+      <link>https://DilemmaRabbit.github.io/code/leetcode/718.-maximum-length-of-repeated-subarray/</link>
+      <pubDate>Tue, 20 Sep 2022 12:02:49 +0800</pubDate>
+      
+      <guid>https://DilemmaRabbit.github.io/code/leetcode/718.-maximum-length-of-repeated-subarray/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;難度：🟠 Normal 🟠&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;關鍵字：Array, Dynamic Programing&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>20. Valid Parentheses</title>
+      <link>https://DilemmaRabbit.github.io/code/leetcode/20.-valid-parentheses/</link>
+      <pubDate>Sun, 13 Mar 2022 12:04:42 +0800</pubDate>
+      
+      <guid>https://DilemmaRabbit.github.io/code/leetcode/20.-valid-parentheses/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;難度：🟢 Easy 🟢&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;關鍵字：Stack&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>138. Copy List With Random Pointer</title>
+      <link>https://DilemmaRabbit.github.io/code/leetcode/138.-copy-list-with-random-pointer/</link>
+      <pubDate>Sat, 12 Mar 2022 14:44:13 +0800</pubDate>
+      
+      <guid>https://DilemmaRabbit.github.io/code/leetcode/138.-copy-list-with-random-pointer/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;難度：🟠 Normal 🟠&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;關鍵字：Hash Map, Linked List&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>61. Rotate List</title>
+      <link>https://DilemmaRabbit.github.io/code/leetcode/61.-rotate-list/</link>
+      <pubDate>Fri, 11 Mar 2022 13:31:35 +0800</pubDate>
+      
+      <guid>https://DilemmaRabbit.github.io/code/leetcode/61.-rotate-list/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;難度：🟠 Normal 🟠&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;關鍵字：Linked List, Two Pointer&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>2. Add Two Numbers</title>
+      <link>https://DilemmaRabbit.github.io/code/leetcode/2.-add-two-numbers/</link>
+      <pubDate>Fri, 11 Mar 2022 13:23:24 +0800</pubDate>
+      
+      <guid>https://DilemmaRabbit.github.io/code/leetcode/2.-add-two-numbers/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;難度：🟠 Normal 🟠&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;關鍵字：Linked List, Sentinel Node&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>82. Remove Duplicates From Sorted List II</title>
+      <link>https://DilemmaRabbit.github.io/code/leetcode/82.-remove-duplicates-from-sorted-list-ii/</link>
+      <pubDate>Wed, 09 Mar 2022 11:05:07 +0800</pubDate>
+      
+      <guid>https://DilemmaRabbit.github.io/code/leetcode/82.-remove-duplicates-from-sorted-list-ii/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;難度：🟠 Normal 🟠&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;關鍵字：Linked List, Sentinel Node&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>141. Linked List Cycle</title>
+      <link>https://DilemmaRabbit.github.io/code/leetcode/141.-linked-list-cycle/</link>
+      <pubDate>Tue, 08 Mar 2022 10:23:50 +0800</pubDate>
+      
+      <guid>https://DilemmaRabbit.github.io/code/leetcode/141.-linked-list-cycle/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;難度：🟢 Easy 🟢&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;關鍵字：Linked List&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>21. Merge Two Sorted Lists</title>
+      <link>https://DilemmaRabbit.github.io/code/leetcode/21.-merge-two-sorted-lists/</link>
+      <pubDate>Mon, 07 Mar 2022 21:13:08 +0800</pubDate>
+      
+      <guid>https://DilemmaRabbit.github.io/code/leetcode/21.-merge-two-sorted-lists/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;難度：🟢 Easy 🟢&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;關鍵字：Linked List, Two Pointer&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>258. Add Digits</title>
+      <link>https://DilemmaRabbit.github.io/code/leetcode/258.-add-digits/</link>
+      <pubDate>Tue, 08 Feb 2022 16:04:48 +0800</pubDate>
+      
+      <guid>https://DilemmaRabbit.github.io/code/leetcode/258.-add-digits/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;難度：🟢 Easy 🟢&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;關鍵字：Bitwise&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
