@@ -2,25 +2,28 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://DilemmaRabbit.github.io/code/leetcode/623.-add-one-row-to-tree/</loc>
-    <lastmod>2022-10-05T10:35:07+08:00</lastmod>
+    <loc>https://DilemmaRabbit.github.io/code/leetcode/237.-delete-node-in-a-linked-list/</loc>
+    <lastmod>2022-10-13T12:12:46+08:00</lastmod>
   </url><url>
     <loc>https://DilemmaRabbit.github.io/categories/</loc>
-    <lastmod>2022-10-05T10:35:07+08:00</lastmod>
+    <lastmod>2022-10-13T12:12:46+08:00</lastmod>
   </url><url>
     <loc>https://DilemmaRabbit.github.io/code/</loc>
-    <lastmod>2022-10-05T10:35:07+08:00</lastmod>
+    <lastmod>2022-10-13T12:12:46+08:00</lastmod>
   </url><url>
     <loc>https://DilemmaRabbit.github.io/</loc>
-    <lastmod>2022-10-05T10:35:07+08:00</lastmod>
+    <lastmod>2022-10-13T12:12:46+08:00</lastmod>
   </url><url>
     <loc>https://DilemmaRabbit.github.io/categories/leetcode/</loc>
-    <lastmod>2022-10-05T10:35:07+08:00</lastmod>
+    <lastmod>2022-10-13T12:12:46+08:00</lastmod>
   </url><url>
     <loc>https://DilemmaRabbit.github.io/tags/leetcode/</loc>
-    <lastmod>2022-10-05T10:35:07+08:00</lastmod>
+    <lastmod>2022-10-13T12:12:46+08:00</lastmod>
   </url><url>
     <loc>https://DilemmaRabbit.github.io/tags/</loc>
+    <lastmod>2022-10-13T12:12:46+08:00</lastmod>
+  </url><url>
+    <loc>https://DilemmaRabbit.github.io/code/leetcode/623.-add-one-row-to-tree/</loc>
     <lastmod>2022-10-05T10:35:07+08:00</lastmod>
   </url><url>
     <loc>https://DilemmaRabbit.github.io/code/leetcode/1578.-minimum-time-to-make-rope-colorful/</loc>

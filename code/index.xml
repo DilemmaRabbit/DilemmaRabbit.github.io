@@ -5,7 +5,17 @@
     <link>https://DilemmaRabbit.github.io/code/</link>
     <description>Recent content in Codes on Dilemma Rabbit&#39;s Blog 🐇</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 05 Oct 2022 10:35:07 +0800</lastBuildDate><atom:link href="https://DilemmaRabbit.github.io/code/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 13 Oct 2022 12:12:46 +0800</lastBuildDate><atom:link href="https://DilemmaRabbit.github.io/code/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>237. Delete Node in a Linked List</title>
+      <link>https://DilemmaRabbit.github.io/code/leetcode/237.-delete-node-in-a-linked-list/</link>
+      <pubDate>Thu, 13 Oct 2022 12:12:46 +0800</pubDate>
+      
+      <guid>https://DilemmaRabbit.github.io/code/leetcode/237.-delete-node-in-a-linked-list/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;難度：🟠 Normal 🟠&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;關鍵字：Linked List&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>623. Add One Row to Tree</title>
       <link>https://DilemmaRabbit.github.io/code/leetcode/623.-add-one-row-to-tree/</link>

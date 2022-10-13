@@ -15,16 +15,16 @@
     <title>
         
            
-               990. Satisfiability of Equality Equations &vert; Dilemma Rabbit&#39;s Blog 🐇
+               237. Delete Node in a Linked List &vert; Dilemma Rabbit&#39;s Blog 🐇
            
         
     </title>
-    <meta itemprop="name" content="990. Satisfiability of Equality Equations">
-    <meta itemprop="description" content="990. Satisfiability of Equality Equations - DilemmaRabbit&#39;s hugo blog">
-    <meta property="og:title" content="990. Satisfiability of Equality Equations">
-    <meta property="og:description" content="990. Satisfiability of Equality Equations - DilemmaRabbit&#39;s hugo blog">
+    <meta itemprop="name" content="237. Delete Node in a Linked List">
+    <meta itemprop="description" content="237. Delete Node in a Linked List - DilemmaRabbit&#39;s hugo blog">
+    <meta property="og:title" content="237. Delete Node in a Linked List">
+    <meta property="og:description" content="237. Delete Node in a Linked List - DilemmaRabbit&#39;s hugo blog">
     <meta property="og:image" content="https://www.gravatar.com/avatar/d41d8cd98f00b204e9800998ecf8427e?size=200">
-    <meta property="og:url" content="https://DilemmaRabbit.github.io/code/leetcode/990.-satisfiability-of-equality-equations/">
+    <meta property="og:url" content="https://DilemmaRabbit.github.io/code/leetcode/237.-delete-node-in-a-linked-list/">
     <meta property="og:site_name" content="Dilemma Rabbit&#39;s Blog 🐇">
     <meta property="og:type" content="article">
 
@@ -34,12 +34,12 @@
     <script src="/modernizr-simple.js"></script>
 
     
-    <link href="/code/leetcode/990.-satisfiability-of-equality-equations/" rel="alternate" type="application/rss+xml" title="Dilemma Rabbit&#39;s Blog 🐇" />
-    <link href="/code/leetcode/990.-satisfiability-of-equality-equations/" rel="feed" type="application/rss+xml" title="Dilemma Rabbit&#39;s Blog 🐇" />
+    <link href="/code/leetcode/237.-delete-node-in-a-linked-list/" rel="alternate" type="application/rss+xml" title="Dilemma Rabbit&#39;s Blog 🐇" />
+    <link href="/code/leetcode/237.-delete-node-in-a-linked-list/" rel="feed" type="application/rss+xml" title="Dilemma Rabbit&#39;s Blog 🐇" />
     
 
     
-    <link rel="canonical" href="https://DilemmaRabbit.github.io/code/leetcode/990.-satisfiability-of-equality-equations/">
+    <link rel="canonical" href="https://DilemmaRabbit.github.io/code/leetcode/237.-delete-node-in-a-linked-list/">
     
 
     <link rel="stylesheet" href="https://DilemmaRabbit.github.io/theme.css">
@@ -110,7 +110,7 @@
         
     <div class="article-wrapper u-cf single">
         
-            <a class="bubble" href="https://DilemmaRabbit.github.io/code/leetcode/990.-satisfiability-of-equality-equations/">
+            <a class="bubble" href="https://DilemmaRabbit.github.io/code/leetcode/237.-delete-node-in-a-linked-list/">
     <i class="fas fa-fw fa-code"></i>
 </a>
 
@@ -119,15 +119,15 @@
 
     <div class="content">
     <h1 class="article-title">
-        <a href="https://DilemmaRabbit.github.io/code/leetcode/990.-satisfiability-of-equality-equations/">
-            990. Satisfiability of Equality Equations
+        <a href="https://DilemmaRabbit.github.io/code/leetcode/237.-delete-node-in-a-linked-list/">
+            237. Delete Node in a Linked List
         </a>
     </h1>
 
     <div class="meta">
         
             
-                <span class="date moment">2022-09-26</span>
+                <span class="date moment">2022-10-13</span>
             
         
 
@@ -151,60 +151,32 @@
         
 
         <p><strong>難度：🟠 Normal 🟠</strong></p>
-<p><strong>關鍵字：Union Find</strong></p>
+<p><strong>關鍵字：Linked List</strong></p>
 <hr>
 <h2 id="問題描述">問題描述</h2>
-<p>給予一個包含兩種狀況的判斷式，&ldquo;a==b&rdquo;、&ldquo;a!=b&rdquo;，判斷所有的判斷式是否合理，回傳 true/false</p>
+<ul>
+<li>給予一條Linked List 中要被刪除的 Node，返回刪除後的結果</li>
+<li>Node 不會位於 Linked List 最末端，因此不會有無法刪除的狀況</li>
+</ul>
 <hr>
 <h2 id="思路">思路</h2>
 <ul>
-<li>Union find</li>
+<li>由於不會獲得整條 Linked List，因此將所有的 val 往前挪一個位置，最後再刪除多餘的尾端節點</li>
 </ul>
-<ol>
-<li>把每個字母進行編號(分別代表不同的群組)</li>
-<li>當 &ldquo;==&quot;，把右邊字母的群組改成左邊字母的群組</li>
-<li>假如右邊字母的群組不是原本的群組(被歸類過)，則在找到源頭為止，把所有的源頭都改成左邊字母的群組</li>
-<li>完成分群後，掃過每一個 &ldquo;!=&quot;，當兩邊字母在同群組時，判斷為失敗</li>
-</ol>
 <hr>
 <h2 id="程式碼">程式碼</h2>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c++" data-lang="c++"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> {
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span><span style="color:#f92672">:</span>
-</span></span><span style="display:flex;"><span>    std<span style="color:#f92672">::</span>vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> group;
-</span></span><span style="display:flex;"><span>    
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">find_leader</span>(<span style="color:#66d9ef">int</span> cur){
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span>(group[cur] <span style="color:#f92672">==</span> cur) <span style="color:#66d9ef">return</span> cur;
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">else</span>{
-</span></span><span style="display:flex;"><span>            group[cur] <span style="color:#f92672">=</span> find_leader(group[cur]);
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> group[cur];
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">void</span> deleteNode(ListNode<span style="color:#f92672">*</span> node) {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">while</span>(node <span style="color:#f92672">-&gt;</span> next <span style="color:#f92672">-&gt;</span> next <span style="color:#f92672">!=</span> NULL){
+</span></span><span style="display:flex;"><span>            node <span style="color:#f92672">-&gt;</span> val <span style="color:#f92672">=</span> node <span style="color:#f92672">-&gt;</span> next <span style="color:#f92672">-&gt;</span> val;
+</span></span><span style="display:flex;"><span>            node <span style="color:#f92672">=</span> node <span style="color:#f92672">-&gt;</span> next;    
 </span></span><span style="display:flex;"><span>        }
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>    
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">merge</span>(<span style="color:#66d9ef">int</span> prev, <span style="color:#66d9ef">int</span> after){
-</span></span><span style="display:flex;"><span>        
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> g1 <span style="color:#f92672">=</span> find_leader(prev<span style="color:#f92672">-</span><span style="color:#ae81ff">97</span>);      
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> g2 <span style="color:#f92672">=</span> find_leader(after<span style="color:#f92672">-</span><span style="color:#ae81ff">97</span>);
-</span></span><span style="display:flex;"><span>        
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span>(g1 <span style="color:#f92672">!=</span> g2){
-</span></span><span style="display:flex;"><span>            group[g2] <span style="color:#f92672">=</span> g1;
-</span></span><span style="display:flex;"><span>        }
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>    
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">bool</span> <span style="color:#a6e22e">equationsPossible</span>(vector<span style="color:#f92672">&lt;</span>string<span style="color:#f92672">&gt;&amp;</span> equations) {
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">26</span>; i<span style="color:#f92672">++</span>) group.push_back(i);
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span>(string equal: equations){
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span>(equal[<span style="color:#ae81ff">1</span>] <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;=&#39;</span>){
-</span></span><span style="display:flex;"><span>                merge(equal[<span style="color:#ae81ff">0</span>], equal[<span style="color:#ae81ff">3</span>]);
-</span></span><span style="display:flex;"><span>            }
-</span></span><span style="display:flex;"><span>        }
-</span></span><span style="display:flex;"><span>        
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span>(string equal: equations){
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span>(equal[<span style="color:#ae81ff">1</span>] <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;!&#39;</span>){
-</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span>(find_leader(equal[<span style="color:#ae81ff">0</span>]<span style="color:#f92672">-</span><span style="color:#ae81ff">97</span>) <span style="color:#f92672">==</span> find_leader(equal[<span style="color:#ae81ff">3</span>]<span style="color:#f92672">-</span><span style="color:#ae81ff">97</span>)) <span style="color:#66d9ef">return</span> false;
-</span></span><span style="display:flex;"><span>            }
-</span></span><span style="display:flex;"><span>        }
-</span></span><span style="display:flex;"><span>        
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> true;
+</span></span><span style="display:flex;"><span>        node <span style="color:#f92672">-&gt;</span> val <span style="color:#f92672">=</span> node <span style="color:#f92672">-&gt;</span> next <span style="color:#f92672">-&gt;</span> val;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">delete</span>(node<span style="color:#f92672">-&gt;</span>next); <span style="color:#75715e">// 刪掉多出來的節點
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        node <span style="color:#f92672">-&gt;</span> next <span style="color:#f92672">=</span> NULL; <span style="color:#75715e">// 新的尾端指向 NULL
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">return</span>;
 </span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>};
 </span></span></code></pre></div>
