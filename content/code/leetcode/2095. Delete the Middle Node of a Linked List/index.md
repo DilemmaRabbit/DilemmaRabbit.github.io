@@ -10,6 +10,8 @@ Tags: ["LeetCode"]
 
 **關鍵字：Linked List, Two Pointer, Sentinel Pointer**
 
+<!--more-->
+
 ## 問題描述
 
 給予一條 linked list ，刪掉最中間的節點，如果是偶數節點的場合，則刪掉偏向右邊(較大)的節點
