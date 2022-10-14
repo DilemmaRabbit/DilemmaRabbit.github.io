@@ -15,16 +15,16 @@
     <title>
         
            
-               718. Maximum Length of Repeated Subarray &vert; Dilemma Rabbit&#39;s Blog 🐇
+               2095. Delete the Middle Node of a Linked List &vert; Dilemma Rabbit&#39;s Blog 🐇
            
         
     </title>
-    <meta itemprop="name" content="718. Maximum Length of Repeated Subarray">
-    <meta itemprop="description" content="718. Maximum Length of Repeated Subarray - DilemmaRabbit&#39;s hugo blog">
-    <meta property="og:title" content="718. Maximum Length of Repeated Subarray">
-    <meta property="og:description" content="718. Maximum Length of Repeated Subarray - DilemmaRabbit&#39;s hugo blog">
+    <meta itemprop="name" content="2095. Delete the Middle Node of a Linked List">
+    <meta itemprop="description" content="2095. Delete the Middle Node of a Linked List - DilemmaRabbit&#39;s hugo blog">
+    <meta property="og:title" content="2095. Delete the Middle Node of a Linked List">
+    <meta property="og:description" content="2095. Delete the Middle Node of a Linked List - DilemmaRabbit&#39;s hugo blog">
     <meta property="og:image" content="https://www.gravatar.com/avatar/d41d8cd98f00b204e9800998ecf8427e?size=200">
-    <meta property="og:url" content="https://DilemmaRabbit.github.io/code/leetcode/718.-maximum-length-of-repeated-subarray/">
+    <meta property="og:url" content="https://DilemmaRabbit.github.io/code/leetcode/2095.-delete-the-middle-node-of-a-linked-list/">
     <meta property="og:site_name" content="Dilemma Rabbit&#39;s Blog 🐇">
     <meta property="og:type" content="article">
 
@@ -34,12 +34,12 @@
     <script src="/modernizr-simple.js"></script>
 
     
-    <link href="/code/leetcode/718.-maximum-length-of-repeated-subarray/" rel="alternate" type="application/rss+xml" title="Dilemma Rabbit&#39;s Blog 🐇" />
-    <link href="/code/leetcode/718.-maximum-length-of-repeated-subarray/" rel="feed" type="application/rss+xml" title="Dilemma Rabbit&#39;s Blog 🐇" />
+    <link href="/code/leetcode/2095.-delete-the-middle-node-of-a-linked-list/" rel="alternate" type="application/rss+xml" title="Dilemma Rabbit&#39;s Blog 🐇" />
+    <link href="/code/leetcode/2095.-delete-the-middle-node-of-a-linked-list/" rel="feed" type="application/rss+xml" title="Dilemma Rabbit&#39;s Blog 🐇" />
     
 
     
-    <link rel="canonical" href="https://DilemmaRabbit.github.io/code/leetcode/718.-maximum-length-of-repeated-subarray/">
+    <link rel="canonical" href="https://DilemmaRabbit.github.io/code/leetcode/2095.-delete-the-middle-node-of-a-linked-list/">
     
 
     <link rel="stylesheet" href="https://DilemmaRabbit.github.io/theme.css">
@@ -110,7 +110,7 @@
         
     <div class="article-wrapper u-cf single">
         
-            <a class="bubble" href="https://DilemmaRabbit.github.io/code/leetcode/718.-maximum-length-of-repeated-subarray/">
+            <a class="bubble" href="https://DilemmaRabbit.github.io/code/leetcode/2095.-delete-the-middle-node-of-a-linked-list/">
     <i class="fas fa-fw fa-code"></i>
 </a>
 
@@ -119,15 +119,15 @@
 
     <div class="content">
     <h1 class="article-title">
-        <a href="https://DilemmaRabbit.github.io/code/leetcode/718.-maximum-length-of-repeated-subarray/">
-            718. Maximum Length of Repeated Subarray
+        <a href="https://DilemmaRabbit.github.io/code/leetcode/2095.-delete-the-middle-node-of-a-linked-list/">
+            2095. Delete the Middle Node of a Linked List
         </a>
     </h1>
 
     <div class="meta">
         
             
-                <span class="date moment">2022-09-20</span>
+                <span class="date moment">2022-10-14</span>
             
         
 
@@ -151,57 +151,55 @@
         
 
         <p><strong>難度：🟠 Normal 🟠</strong></p>
-<p><strong>關鍵字：Array, Dynamic Programing</strong></p>
-<hr>
+<p><strong>關鍵字：Linked List, Two Pointer, Sentinel Pointer</strong></p>
 <h2 id="問題描述">問題描述</h2>
-<p>給與兩個 array，返回最長公共子陣列的最大值</p>
+<p>給予一條 linked list ，刪掉最中間的節點，如果是偶數節點的場合，則刪掉偏向右邊(較大)的節點</p>
 <hr>
 <h2 id="思路">思路</h2>
-<ol>
-<li>每次比對到相同的元素，便去尋找上一個比對的結果並 + 1</li>
-</ol>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c++" data-lang="c++"><span style="display:flex;"><span><span style="color:#75715e">//正序
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>dp[i][j] <span style="color:#f92672">=</span> dp[i<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>][j<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>] <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">//倒序
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>dp[i][j] <span style="color:#f92672">=</span> dp[i<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>][j<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>] <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>
-</span></span></code></pre></div><ol start="2">
-<li>需要注意處理邊界的狀況</li>
-<li>每次更新後比較最大值</li>
-</ol>
-<p>BigO:O(n*m)</p>
+<ul>
+<li>雙指標
+<ul>
+<li>先建立一個 sentinel 節點，作為慢指標 slow 之前的一個指標，以方便進行新的串接</li>
+<li>以 sentinel、slow 前進一步，fast 前進兩部做為遍歷</li>
+<li>根據 fast 後是否有節點，判斷為單數或是雙數節點的狀況</li>
+<li>如果是雙數節點，則 sentinel、slow 節點需要再前進一步</li>
+</ul>
+</li>
+</ul>
 <hr>
 <h2 id="程式碼">程式碼</h2>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c++" data-lang="c++"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> {
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span><span style="color:#f92672">:</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> findLength(vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;&amp;</span> nums1, vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;&amp;</span> nums2) {
+</span></span><span style="display:flex;"><span>    ListNode<span style="color:#f92672">*</span> deleteMiddle(ListNode<span style="color:#f92672">*</span> head) {
 </span></span><span style="display:flex;"><span>        
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> res <span style="color:#f92672">=</span> INT_MIN;
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> dp[nums1.size()][nums2.size()];
-</span></span><span style="display:flex;"><span>        memset(dp, <span style="color:#ae81ff">0</span>, <span style="color:#66d9ef">sizeof</span>(dp));
-</span></span><span style="display:flex;"><span>        
-</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// 倒序 dp
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#75715e">// for(int i = nums1.size()-1; i &gt; -1; i--){
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#75715e">//     for(int j = nums2.size()-1; j &gt; -1; j--){
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#75715e">//         if(nums1[i] == nums2[j]){
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#75715e">//             if(i == nums1.size()-1 || j == nums2.size()-1) dp[i][j] = 1;
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#75715e">//             else dp[i][j] = dp[i+1][j+1] + 1;
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#75715e">//         }
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#75715e">//         res = max(res, dp[i][j]);
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#75715e">//     }
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#75715e">// }
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        
-</span></span><span style="display:flex;"><span>        
-</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// 正序 dp
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> nums1.size(); i<span style="color:#f92672">++</span>){
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> j <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; j <span style="color:#f92672">&lt;</span> nums2.size(); j<span style="color:#f92672">++</span>){
-</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span>(nums1[i] <span style="color:#f92672">==</span> nums2[j]){
-</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">if</span>(i <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">||</span> j <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>) dp[i][j] <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
-</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">else</span> dp[i][j] <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">+</span> dp[i<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>][j<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>];
-</span></span><span style="display:flex;"><span>                }
-</span></span><span style="display:flex;"><span>                res <span style="color:#f92672">=</span> max(res, dp[i][j]);
-</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// record previous node for slow.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        ListNode <span style="color:#f92672">*</span>sentinel <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ListNode(<span style="color:#ae81ff">0</span>,head);
+</span></span><span style="display:flex;"><span>        ListNode <span style="color:#f92672">*</span>fast, <span style="color:#f92672">*</span>slow;
+</span></span><span style="display:flex;"><span>        fast <span style="color:#f92672">=</span> slow <span style="color:#f92672">=</span> head;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// only one node
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">if</span>(head<span style="color:#f92672">-&gt;</span>next <span style="color:#f92672">==</span> NULL) <span style="color:#66d9ef">return</span> NULL;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// pointer treversal
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">while</span>(fast <span style="color:#f92672">-&gt;</span> next <span style="color:#f92672">!=</span> NULL <span style="color:#f92672">&amp;&amp;</span> fast <span style="color:#f92672">-&gt;</span> next <span style="color:#f92672">-&gt;</span> next <span style="color:#f92672">!=</span> NULL){
+</span></span><span style="display:flex;"><span>            fast <span style="color:#f92672">=</span> fast <span style="color:#f92672">-&gt;</span> next <span style="color:#f92672">-&gt;</span> next;
+</span></span><span style="display:flex;"><span>            slow <span style="color:#f92672">=</span> slow <span style="color:#f92672">-&gt;</span> next;
+</span></span><span style="display:flex;"><span>            sentinel <span style="color:#f92672">=</span> sentinel <span style="color:#f92672">-&gt;</span> next;
 </span></span><span style="display:flex;"><span>        }
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> res;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// even nodes
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">if</span>(fast <span style="color:#f92672">-&gt;</span> next <span style="color:#f92672">!=</span> NULL){ 
+</span></span><span style="display:flex;"><span>            sentinel <span style="color:#f92672">=</span> sentinel <span style="color:#f92672">-&gt;</span> next;
+</span></span><span style="display:flex;"><span>            slow <span style="color:#f92672">=</span> slow <span style="color:#f92672">-&gt;</span> next;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// connect new linked list
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        sentinel <span style="color:#f92672">-&gt;</span> next <span style="color:#f92672">=</span> slow <span style="color:#f92672">-&gt;</span> next;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// delete middle node
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">delete</span>(slow);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> head;
 </span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>};
 </span></span></code></pre></div>
