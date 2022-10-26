@@ -15,16 +15,16 @@
     <title>
         
            
-               21. Merge Two Sorted Lists &vert; Dilemma Rabbit&#39;s Blog 🐇
+               523. Continuous Subarray Sum &vert; Dilemma Rabbit&#39;s Blog 🐇
            
         
     </title>
-    <meta itemprop="name" content="21. Merge Two Sorted Lists">
-    <meta itemprop="description" content="21. Merge Two Sorted Lists - DilemmaRabbit&#39;s hugo blog">
-    <meta property="og:title" content="21. Merge Two Sorted Lists">
-    <meta property="og:description" content="21. Merge Two Sorted Lists - DilemmaRabbit&#39;s hugo blog">
+    <meta itemprop="name" content="523. Continuous Subarray Sum">
+    <meta itemprop="description" content="523. Continuous Subarray Sum - DilemmaRabbit&#39;s hugo blog">
+    <meta property="og:title" content="523. Continuous Subarray Sum">
+    <meta property="og:description" content="523. Continuous Subarray Sum - DilemmaRabbit&#39;s hugo blog">
     <meta property="og:image" content="https://www.gravatar.com/avatar/d41d8cd98f00b204e9800998ecf8427e?size=200">
-    <meta property="og:url" content="https://DilemmaRabbit.github.io/code/leetcode/21.-merge-two-sorted-lists/">
+    <meta property="og:url" content="https://DilemmaRabbit.github.io/code/leetcode/523.-continuous-subarray-sum/">
     <meta property="og:site_name" content="Dilemma Rabbit&#39;s Blog 🐇">
     <meta property="og:type" content="article">
 
@@ -34,12 +34,12 @@
     <script src="/modernizr-simple.js"></script>
 
     
-    <link href="/code/leetcode/21.-merge-two-sorted-lists/" rel="alternate" type="application/rss+xml" title="Dilemma Rabbit&#39;s Blog 🐇" />
-    <link href="/code/leetcode/21.-merge-two-sorted-lists/" rel="feed" type="application/rss+xml" title="Dilemma Rabbit&#39;s Blog 🐇" />
+    <link href="/code/leetcode/523.-continuous-subarray-sum/" rel="alternate" type="application/rss+xml" title="Dilemma Rabbit&#39;s Blog 🐇" />
+    <link href="/code/leetcode/523.-continuous-subarray-sum/" rel="feed" type="application/rss+xml" title="Dilemma Rabbit&#39;s Blog 🐇" />
     
 
     
-    <link rel="canonical" href="https://DilemmaRabbit.github.io/code/leetcode/21.-merge-two-sorted-lists/">
+    <link rel="canonical" href="https://DilemmaRabbit.github.io/code/leetcode/523.-continuous-subarray-sum/">
     
 
     <link rel="stylesheet" href="https://DilemmaRabbit.github.io/theme.css">
@@ -110,7 +110,7 @@
         
     <div class="article-wrapper u-cf single">
         
-            <a class="bubble" href="https://DilemmaRabbit.github.io/code/leetcode/21.-merge-two-sorted-lists/">
+            <a class="bubble" href="https://DilemmaRabbit.github.io/code/leetcode/523.-continuous-subarray-sum/">
     <i class="fas fa-fw fa-code"></i>
 </a>
 
@@ -119,29 +119,20 @@
 
     <div class="content">
     <h1 class="article-title">
-        <a href="https://DilemmaRabbit.github.io/code/leetcode/21.-merge-two-sorted-lists/">
-            21. Merge Two Sorted Lists
+        <a href="https://DilemmaRabbit.github.io/code/leetcode/523.-continuous-subarray-sum/">
+            523. Continuous Subarray Sum
         </a>
     </h1>
 
     <div class="meta">
         
             
-                <span class="date moment">2022-03-07</span>
+                <span class="date moment">2022-10-26</span>
             
         
 
         
 
-        
-            <span class="categories">
-                
-                    
-                    
-                        <a href="https://DilemmaRabbit.github.io/categories/leetcode/">Leetcode</a>
-                    
-                
-            </span>
         
 
         
@@ -150,94 +141,79 @@
     
         
 
-        <p><strong>難度：🟢 Easy 🟢</strong></p>
-<p><strong>關鍵字：Linked List, Two Pointer</strong></p>
-<hr>
+        <p><strong>難度：🟠 Normal 🟠</strong></p>
+<p><strong>關鍵字：Prefix, Hashmap, Math</strong></p>
 <h2 id="問題描述">問題描述</h2>
-<p>給定兩條已排序的 linked list，合併為一條排序的 linked list</p>
-<p>測資</p>
-<ul>
-<li>每條 node 數量 &lt; 50</li>
-<li>-100 &lt;= Node.val &lt;= 100</li>
-</ul>
+<p>給予一個 array，假設存在連續的 array 使得總和為 k 的倍數，返回 true</p>
 <hr>
 <h2 id="思路">思路</h2>
-<p>產生一個新的list head，用兩個 pointer 紀錄目前 list1 與 list2 位置，並比較大小決定下一個節點，直到其中一條結束，再由另一條補上</p>
+<ul>
+<li>Prefix
+<ul>
+<li>既然要紀錄的是從 n ~ n+m 個元素累加後的結果，把累加結果先取餘數</li>
+<li>當遇到兩個一樣的餘數時，代表這兩個數字中間的結果累加為倍數
+<ul>
+<li>在考慮是否為單獨一個的狀況</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 <hr>
 <h2 id="程式碼">程式碼</h2>
+<h3 id="個人寫法">個人寫法</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c++" data-lang="c++"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> {
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span><span style="color:#f92672">:</span>
-</span></span><span style="display:flex;"><span>    ListNode<span style="color:#f92672">*</span> mergeTwoLists(ListNode<span style="color:#f92672">*</span> list1, ListNode<span style="color:#f92672">*</span> list2) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">bool</span> checkSubarraySum(vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;&amp;</span> nums, <span style="color:#66d9ef">int</span> k) {
 </span></span><span style="display:flex;"><span>        
-</span></span><span style="display:flex;"><span>        ListNode <span style="color:#f92672">*</span>list<span style="color:#f92672">=</span>NULL;
-</span></span><span style="display:flex;"><span>        ListNode <span style="color:#f92672">*</span>head<span style="color:#f92672">=</span>NULL;
-</span></span><span style="display:flex;"><span>        ListNode <span style="color:#f92672">*</span>tmp<span style="color:#f92672">=</span>NULL;
-</span></span><span style="display:flex;"><span>        
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span>(list1<span style="color:#f92672">==</span>NULL){
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> list2;
+</span></span><span style="display:flex;"><span>        unordered_map<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span>, <span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> table;
+</span></span><span style="display:flex;"><span>        nums[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">%=</span> k;
+</span></span><span style="display:flex;"><span>        table[nums[<span style="color:#ae81ff">0</span>]] <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>; i <span style="color:#f92672">&lt;</span> nums.size(); i<span style="color:#f92672">++</span>){
+</span></span><span style="display:flex;"><span>            nums[i] <span style="color:#f92672">=</span> (nums[i] <span style="color:#f92672">+</span> nums[i<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]) <span style="color:#f92672">%</span> k;
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span>(nums[i] <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>) <span style="color:#66d9ef">return</span> true;
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span>(table[nums[i]] <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>) table[nums[i]] <span style="color:#f92672">=</span> i<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">else</span>{
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span>(i <span style="color:#f92672">-</span> (table[nums[i]]<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>) <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">1</span>) <span style="color:#66d9ef">return</span> true;
+</span></span><span style="display:flex;"><span>            }
 </span></span><span style="display:flex;"><span>        }
-</span></span><span style="display:flex;"><span>        
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span>(list2<span style="color:#f92672">==</span>NULL){
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> list1;
-</span></span><span style="display:flex;"><span>        }
-</span></span><span style="display:flex;"><span>        
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">while</span>(list1<span style="color:#f92672">!=</span>NULL <span style="color:#f92672">&amp;&amp;</span> list2<span style="color:#f92672">!=</span>NULL){
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span>(list1 <span style="color:#f92672">-&gt;</span> val <span style="color:#f92672">&gt;=</span> list2 <span style="color:#f92672">-&gt;</span> val){
-</span></span><span style="display:flex;"><span>                tmp <span style="color:#f92672">=</span> list2;
-</span></span><span style="display:flex;"><span>                list2 <span style="color:#f92672">=</span> list2 <span style="color:#f92672">-&gt;</span> next;
-</span></span><span style="display:flex;"><span>                tmp<span style="color:#f92672">-&gt;</span>next <span style="color:#f92672">=</span> NULL;
-</span></span><span style="display:flex;"><span>            }
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">else</span>{
-</span></span><span style="display:flex;"><span>                tmp <span style="color:#f92672">=</span> list1;
-</span></span><span style="display:flex;"><span>                list1 <span style="color:#f92672">=</span> list1 <span style="color:#f92672">-&gt;</span> next;
-</span></span><span style="display:flex;"><span>                tmp<span style="color:#f92672">-&gt;</span>next <span style="color:#f92672">=</span> NULL;
-</span></span><span style="display:flex;"><span>            }
-</span></span><span style="display:flex;"><span>            
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span>(head<span style="color:#f92672">==</span>NULL){
-</span></span><span style="display:flex;"><span>                head <span style="color:#f92672">=</span> tmp;
-</span></span><span style="display:flex;"><span>                list <span style="color:#f92672">=</span> tmp;
-</span></span><span style="display:flex;"><span>            }
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">else</span>{
-</span></span><span style="display:flex;"><span>                list <span style="color:#f92672">-&gt;</span> next <span style="color:#f92672">=</span> tmp;
-</span></span><span style="display:flex;"><span>                list <span style="color:#f92672">=</span> list <span style="color:#f92672">-&gt;</span> next;
-</span></span><span style="display:flex;"><span>            }
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span>(list1 <span style="color:#f92672">==</span> NULL <span style="color:#f92672">||</span> list2 <span style="color:#f92672">==</span> NULL){
-</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">break</span>;
-</span></span><span style="display:flex;"><span>            }
-</span></span><span style="display:flex;"><span>        }
-</span></span><span style="display:flex;"><span>        
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span>(list1){
-</span></span><span style="display:flex;"><span>            list<span style="color:#f92672">-&gt;</span>next<span style="color:#f92672">=</span>list1;
-</span></span><span style="display:flex;"><span>        }
-</span></span><span style="display:flex;"><span>        
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span>(list2){
-</span></span><span style="display:flex;"><span>            list<span style="color:#f92672">-&gt;</span>next<span style="color:#f92672">=</span>list2;
-</span></span><span style="display:flex;"><span>        }
-</span></span><span style="display:flex;"><span>        
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> head;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> false;
 </span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>};
-</span></span></code></pre></div><hr>
+</span></span></code></pre></div><h3 id="其他寫法">其他寫法</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c++" data-lang="c++"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> {
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">bool</span> checkSubarraySum(vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;&amp;</span> nums, <span style="color:#66d9ef">int</span> k) {
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        unordered_map<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span>, <span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> table;
+</span></span><span style="display:flex;"><span>        table[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">=</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>; <span style="color:#75715e">// 把 0 的倍數設為 -1，即可以達到(1)當 i 為 0 時判斷不存在,(2)當 i &gt; 0 時判斷存在
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">int</span> sum <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> nums.size(); i<span style="color:#f92672">++</span>){
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>            sum <span style="color:#f92672">+=</span> nums[i];
+</span></span><span style="display:flex;"><span>            sum <span style="color:#f92672">%=</span> k;    
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span>(table.find(sum)<span style="color:#f92672">!=</span>table.end()){ <span style="color:#75715e">// 直接用 find 可避免 hash map 初始值為 0 的狀況
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>                <span style="color:#66d9ef">if</span>(i <span style="color:#f92672">-</span> table[sum] <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">1</span>) <span style="color:#66d9ef">return</span> true;
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">else</span>{
+</span></span><span style="display:flex;"><span>                table[sum] <span style="color:#f92672">=</span> i;
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> false;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>};
+</span></span></code></pre></div>
     
 </div>
 
     
-<div class="footer">
+<div class="footer no-tags">
 
 
-    
-        <div class="tags">
-            <i class="fa fa-tags"></i>
-            <div class="links">
-                
-                    
-                    
-                    <a href="https://DilemmaRabbit.github.io/tags/leetcode/">LeetCode</a>
-                    
-                
-            </div>
-        </div>
     
 
     

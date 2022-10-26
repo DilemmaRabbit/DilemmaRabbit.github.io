@@ -111,6 +111,62 @@
     
         <div class="article-wrapper u-cf">
             
+                <a class="bubble" href="https://DilemmaRabbit.github.io/code/leetcode/523.-continuous-subarray-sum/">
+    <i class="fas fa-fw fa-code"></i>
+</a>
+
+<article class="default article">
+    
+
+    <div class="content">
+    <h1 class="article-title">
+        <a href="https://DilemmaRabbit.github.io/code/leetcode/523.-continuous-subarray-sum/">
+            523. Continuous Subarray Sum
+        </a>
+    </h1>
+
+    <div class="meta">
+        
+            
+                <span class="date moment">2022-10-26</span>
+            
+        
+
+        
+
+        
+
+        
+    </div>
+
+    
+        難度：🟠 Normal 🟠
+關鍵字：Prefix, Hashmap, Math
+問題描述 給予一個 array，假設存在連續的 array 使得總和為 k 的倍數，返回 true
+思路 Prefix 既然要紀錄的是從 n ~ n+m 個元素累加後的結果，把累加結果先取餘數 當遇到兩個一樣的餘數時，代表這兩個數字中間的結果累加為倍數 在考慮是否為單獨一個的狀況 程式碼 個人寫法 class Solution { public: bool checkSubarraySum(vector&lt;int&gt;&amp; nums, int k) { unordered_map&lt;int, int&gt; table; nums[0] %= k; table[nums[0]] = 1; for(int i = 1; i &lt; nums.size(); i++){ nums[i] = (nums[i] + nums[i-1]) % k; if(nums[i] == 0) return true; if(table[nums[i]] == 0) table[nums[i]] = i+1; else{ if(i - (table[nums[i]]-1) &gt; 1) return true; } } return false; } }; 其他寫法 class Solution { public: bool checkSubarraySum(vector&lt;int&gt;&amp; nums, int k) { unordered_map&lt;int, int&gt; table; table[0] = -1; // 把 0 的倍數設為 -1，即可以達到(1)當 i 為 0 時判斷不存在,(2)當 i &gt; 0 時判斷存在 int sum = 0; for(int i = 0; i &lt; nums.
+
+        
+            <a href="https://DilemmaRabbit.github.io/code/leetcode/523.-continuous-subarray-sum/" class="more">繼續閱讀</a>
+        
+    
+</div>
+
+    
+<div class="footer no-tags">
+
+
+    
+
+    
+</div>
+
+</article>
+
+            
+        </div>
+    
+        <div class="article-wrapper u-cf">
+            
                 <a class="bubble" href="https://DilemmaRabbit.github.io/code/leetcode/2095.-delete-the-middle-node-of-a-linked-list/">
     <i class="fas fa-fw fa-code"></i>
 </a>
@@ -559,81 +615,6 @@
             
         </div>
     
-        <div class="article-wrapper u-cf">
-            
-                <a class="bubble" href="https://DilemmaRabbit.github.io/code/leetcode/19.-remove-nth-node-from-end-of-list/">
-    <i class="fas fa-fw fa-code"></i>
-</a>
-
-<article class="default article">
-    
-
-    <div class="content">
-    <h1 class="article-title">
-        <a href="https://DilemmaRabbit.github.io/code/leetcode/19.-remove-nth-node-from-end-of-list/">
-            19. Remove Nth Node From End of List
-        </a>
-    </h1>
-
-    <div class="meta">
-        
-            
-                <span class="date moment">2022-09-28</span>
-            
-        
-
-        
-
-        
-            <span class="categories">
-                
-                    
-                    
-                        <a href="https://DilemmaRabbit.github.io/categories/leetcode/">Leetcode</a>
-                    
-                
-            </span>
-        
-
-        
-    </div>
-
-    
-        <p><strong>難度：🟠 Normal 🟠</strong></p>
-<p><strong>關鍵字：Linked List, Two Pointer</strong></p>
-
-        
-            <a href="https://DilemmaRabbit.github.io/code/leetcode/19.-remove-nth-node-from-end-of-list/" class="more">繼續閱讀</a>
-        
-    
-</div>
-
-    
-<div class="footer">
-
-
-    
-        <div class="tags">
-            <i class="fa fa-tags"></i>
-            <div class="links">
-                
-                    
-                    
-                    <a href="https://DilemmaRabbit.github.io/tags/leetcode/">LeetCode</a>
-                    
-                
-            </div>
-        </div>
-    
-
-    
-</div>
-
-</article>
-
-            
-        </div>
-    
 
     
     <div class="paginator">
@@ -659,6 +640,10 @@
                 
                 
                     <li>
+                        <a href="https://DilemmaRabbit.github.io/code/leetcode/523.-continuous-subarray-sum/">523. Continuous Subarray Sum</a>
+                    </li>
+                
+                    <li>
                         <a href="https://DilemmaRabbit.github.io/code/leetcode/2095.-delete-the-middle-node-of-a-linked-list/">2095. Delete the Middle Node of a Linked List</a>
                     </li>
                 
@@ -680,10 +665,6 @@
                 
                     <li>
                         <a href="https://DilemmaRabbit.github.io/code/leetcode/91.-decode-ways/">91. Decode Ways</a>
-                    </li>
-                
-                    <li>
-                        <a href="https://DilemmaRabbit.github.io/code/leetcode/19.-remove-nth-node-from-end-of-list/">19. Remove Nth Node From End of List</a>
                     </li>
                 
             </ul>
