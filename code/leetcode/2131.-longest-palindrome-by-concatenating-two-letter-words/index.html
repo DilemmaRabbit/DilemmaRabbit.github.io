@@ -15,16 +15,16 @@
     <title>
         
            
-               2095. Delete the Middle Node of a Linked List &vert; Dilemma Rabbit&#39;s Blog 🐇
+               2131. Longest Palindrome by Concatenating Two Letter Words &vert; Dilemma Rabbit&#39;s Blog 🐇
            
         
     </title>
-    <meta itemprop="name" content="2095. Delete the Middle Node of a Linked List">
-    <meta itemprop="description" content="2095. Delete the Middle Node of a Linked List - DilemmaRabbit&#39;s hugo blog">
-    <meta property="og:title" content="2095. Delete the Middle Node of a Linked List">
-    <meta property="og:description" content="2095. Delete the Middle Node of a Linked List - DilemmaRabbit&#39;s hugo blog">
+    <meta itemprop="name" content="2131. Longest Palindrome by Concatenating Two Letter Words">
+    <meta itemprop="description" content="2131. Longest Palindrome by Concatenating Two Letter Words - DilemmaRabbit&#39;s hugo blog">
+    <meta property="og:title" content="2131. Longest Palindrome by Concatenating Two Letter Words">
+    <meta property="og:description" content="2131. Longest Palindrome by Concatenating Two Letter Words - DilemmaRabbit&#39;s hugo blog">
     <meta property="og:image" content="https://www.gravatar.com/avatar/d41d8cd98f00b204e9800998ecf8427e?size=200">
-    <meta property="og:url" content="https://DilemmaRabbit.github.io/code/leetcode/2095.-delete-the-middle-node-of-a-linked-list/">
+    <meta property="og:url" content="https://DilemmaRabbit.github.io/code/leetcode/2131.-longest-palindrome-by-concatenating-two-letter-words/">
     <meta property="og:site_name" content="Dilemma Rabbit&#39;s Blog 🐇">
     <meta property="og:type" content="article">
 
@@ -34,12 +34,12 @@
     <script src="/modernizr-simple.js"></script>
 
     
-    <link href="/code/leetcode/2095.-delete-the-middle-node-of-a-linked-list/" rel="alternate" type="application/rss+xml" title="Dilemma Rabbit&#39;s Blog 🐇" />
-    <link href="/code/leetcode/2095.-delete-the-middle-node-of-a-linked-list/" rel="feed" type="application/rss+xml" title="Dilemma Rabbit&#39;s Blog 🐇" />
+    <link href="/code/leetcode/2131.-longest-palindrome-by-concatenating-two-letter-words/" rel="alternate" type="application/rss+xml" title="Dilemma Rabbit&#39;s Blog 🐇" />
+    <link href="/code/leetcode/2131.-longest-palindrome-by-concatenating-two-letter-words/" rel="feed" type="application/rss+xml" title="Dilemma Rabbit&#39;s Blog 🐇" />
     
 
     
-    <link rel="canonical" href="https://DilemmaRabbit.github.io/code/leetcode/2095.-delete-the-middle-node-of-a-linked-list/">
+    <link rel="canonical" href="https://DilemmaRabbit.github.io/code/leetcode/2131.-longest-palindrome-by-concatenating-two-letter-words/">
     
 
     <link rel="stylesheet" href="https://DilemmaRabbit.github.io/theme.css">
@@ -110,7 +110,7 @@
         
     <div class="article-wrapper u-cf single">
         
-            <a class="bubble" href="https://DilemmaRabbit.github.io/code/leetcode/2095.-delete-the-middle-node-of-a-linked-list/">
+            <a class="bubble" href="https://DilemmaRabbit.github.io/code/leetcode/2131.-longest-palindrome-by-concatenating-two-letter-words/">
     <i class="fas fa-fw fa-code"></i>
 </a>
 
@@ -119,29 +119,20 @@
 
     <div class="content">
     <h1 class="article-title">
-        <a href="https://DilemmaRabbit.github.io/code/leetcode/2095.-delete-the-middle-node-of-a-linked-list/">
-            2095. Delete the Middle Node of a Linked List
+        <a href="https://DilemmaRabbit.github.io/code/leetcode/2131.-longest-palindrome-by-concatenating-two-letter-words/">
+            2131. Longest Palindrome by Concatenating Two Letter Words
         </a>
     </h1>
 
     <div class="meta">
         
             
-                <span class="date moment">2022-10-14</span>
+                <span class="date moment">2022-11-03</span>
             
         
 
         
 
-        
-            <span class="categories">
-                
-                    
-                    
-                        <a href="https://DilemmaRabbit.github.io/categories/leetcode/">Leetcode</a>
-                    
-                
-            </span>
         
 
         
@@ -151,18 +142,50 @@
         
 
         <p><strong>難度：🟠 Normal 🟠</strong></p>
-<p><strong>關鍵字：Linked List, Two Pointer, Sentinel Pointer</strong></p>
+<p><strong>關鍵字：String, Hash Table</strong></p>
 <h2 id="問題描述">問題描述</h2>
-<p>給予一條 linked list ，刪掉最中間的節點，如果是偶數節點的場合，則刪掉偏向右邊(較大)的節點</p>
+<ul>
+<li>給予一個包含了兩個字元的陣列，返回可以形成的最長回文字串長度</li>
+</ul>
 <hr>
 <h2 id="思路">思路</h2>
 <ul>
-<li>雙指標
+<li>
+<p>給予的字串，可以有兩種情況</p>
+<ol>
+<li>同樣的字元(ex. aa, bb, gg)</li>
+<li>不同的字元(ex. ab, ck, kc)</li>
+</ol>
+</li>
+<li>
+<p>要形成回文，會有兩種情況</p>
+<ol>
+<li>字串在中間，分成兩端(只有同樣的字元可以達到這種狀況)</li>
+<li>字串在某一側，需要有相反的字串，相同/不同的字元都可以</li>
+</ol>
+</li>
+<li>
+<p>基於剛剛的想法，可以建立以下的規則</p>
+<ol>
+<li>相同字元的字串出現的情況下，如果是奇數次數，代表可以成為中間值，但後續出現的奇數字串卻不可以</li>
+<li>相同字元的字串把偶數次數 / 2，代表可以形成回文的兩側</li>
+<li>不同字串出現的情況下，取相反字串的次數，把最小的次數作為共同的次數</li>
+<li>將剛剛得到的次數依據相同/不同的狀況加總上去</li>
+</ol>
+</li>
+<li>
+<p>unordered_map</p>
 <ul>
-<li>先建立一個 sentinel 節點，作為慢指標 slow 之前的一個指標，以方便進行新的串接</li>
-<li>以 sentinel、slow 前進一步，fast 前進兩部做為遍歷</li>
-<li>根據 fast 後是否有節點，判斷為單數或是雙數節點的狀況</li>
-<li>如果是雙數節點，則 sentinel、slow 節點需要再前進一步</li>
+<li>如果對正在疊代的 unordered_map 進行存取的話，如果存取到不存在的值，會新增一個值進 table 中，造成疊代的順序出現問題
+<ul>
+<li>解決方法
+<ol>
+<li>使用 find() 去從 unordered_map 找值，不用直接存取的方式來尋找值</li>
+<li>使用 map 來實作 hash_map</li>
+</ol>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -170,36 +193,37 @@
 <h2 id="程式碼">程式碼</h2>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c++" data-lang="c++"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> {
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span><span style="color:#f92672">:</span>
-</span></span><span style="display:flex;"><span>    ListNode<span style="color:#f92672">*</span> deleteMiddle(ListNode<span style="color:#f92672">*</span> head) {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    string str_reverse(string s){
+</span></span><span style="display:flex;"><span>        reverse(s.begin(), s.end());
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> s;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">longestPalindrome</span>(vector<span style="color:#f92672">&lt;</span>string<span style="color:#f92672">&gt;&amp;</span> words) {
+</span></span><span style="display:flex;"><span>        unordered_map<span style="color:#f92672">&lt;</span>string, <span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> table;
 </span></span><span style="display:flex;"><span>        
-</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// record previous node for slow.
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        ListNode <span style="color:#f92672">*</span>sentinel <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ListNode(<span style="color:#ae81ff">0</span>,head);
-</span></span><span style="display:flex;"><span>        ListNode <span style="color:#f92672">*</span>fast, <span style="color:#f92672">*</span>slow;
-</span></span><span style="display:flex;"><span>        fast <span style="color:#f92672">=</span> slow <span style="color:#f92672">=</span> head;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> res <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// only one node
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">if</span>(head<span style="color:#f92672">-&gt;</span>next <span style="color:#f92672">==</span> NULL) <span style="color:#66d9ef">return</span> NULL;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// pointer treversal
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">while</span>(fast <span style="color:#f92672">-&gt;</span> next <span style="color:#f92672">!=</span> NULL <span style="color:#f92672">&amp;&amp;</span> fast <span style="color:#f92672">-&gt;</span> next <span style="color:#f92672">-&gt;</span> next <span style="color:#f92672">!=</span> NULL){
-</span></span><span style="display:flex;"><span>            fast <span style="color:#f92672">=</span> fast <span style="color:#f92672">-&gt;</span> next <span style="color:#f92672">-&gt;</span> next;
-</span></span><span style="display:flex;"><span>            slow <span style="color:#f92672">=</span> slow <span style="color:#f92672">-&gt;</span> next;
-</span></span><span style="display:flex;"><span>            sentinel <span style="color:#f92672">=</span> sentinel <span style="color:#f92672">-&gt;</span> next;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span>(string word: words){
+</span></span><span style="display:flex;"><span>            table[word]<span style="color:#f92672">++</span>; <span style="color:#75715e">// 建立對照表
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        }
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">auto</span> <span style="color:#f92672">&amp;</span>[k, v]<span style="color:#f92672">:</span> table){
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span>(k[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">==</span> k[<span style="color:#ae81ff">1</span>]){
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span>(v<span style="color:#f92672">%</span><span style="color:#ae81ff">2</span><span style="color:#f92672">==</span><span style="color:#ae81ff">1</span>){
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">if</span>((res<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span>)<span style="color:#f92672">%</span><span style="color:#ae81ff">2</span><span style="color:#f92672">==</span><span style="color:#ae81ff">0</span>) res<span style="color:#f92672">+=</span><span style="color:#ae81ff">2</span>; <span style="color:#75715e">// 如果還沒把中間的情況加進去的話
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>                    res<span style="color:#f92672">+=</span>(v<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>)<span style="color:#f92672">*</span><span style="color:#ae81ff">2</span>;
+</span></span><span style="display:flex;"><span>                }
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">else</span> res<span style="color:#f92672">+=</span>v<span style="color:#f92672">*</span><span style="color:#ae81ff">2</span>;
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">else</span>{
+</span></span><span style="display:flex;"><span>                string tmp <span style="color:#f92672">=</span> str_reverse(k); <span style="color:#75715e">// reverse string
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>                <span style="color:#66d9ef">if</span>(table.find(tmp) <span style="color:#f92672">!=</span> table.end()) res <span style="color:#f92672">+=</span> min(v, table[tmp])<span style="color:#f92672">*</span><span style="color:#ae81ff">4</span>; <span style="color:#75715e">// 把比較小的次數 * 4
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>                v <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; <span style="color:#75715e">// 把目前的 value 改成 0，遇到相反的字串時便不會處理
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            }
 </span></span><span style="display:flex;"><span>        }
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// even nodes
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">if</span>(fast <span style="color:#f92672">-&gt;</span> next <span style="color:#f92672">!=</span> NULL){ 
-</span></span><span style="display:flex;"><span>            sentinel <span style="color:#f92672">=</span> sentinel <span style="color:#f92672">-&gt;</span> next;
-</span></span><span style="display:flex;"><span>            slow <span style="color:#f92672">=</span> slow <span style="color:#f92672">-&gt;</span> next;
-</span></span><span style="display:flex;"><span>        }
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// connect new linked list
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        sentinel <span style="color:#f92672">-&gt;</span> next <span style="color:#f92672">=</span> slow <span style="color:#f92672">-&gt;</span> next;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// delete middle node
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">delete</span>(slow);
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> head;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> res;
 </span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>};
 </span></span></code></pre></div>
@@ -207,21 +231,9 @@
 </div>
 
     
-<div class="footer">
+<div class="footer no-tags">
 
 
-    
-        <div class="tags">
-            <i class="fa fa-tags"></i>
-            <div class="links">
-                
-                    
-                    
-                    <a href="https://DilemmaRabbit.github.io/tags/leetcode/">LeetCode</a>
-                    
-                
-            </div>
-        </div>
     
 
     
